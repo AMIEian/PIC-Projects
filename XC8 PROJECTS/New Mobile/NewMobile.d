@@ -1,0 +1,1 @@
+ NewMobile.d  NewMobile.p1:  C:/XC8\ PROJECTS/New\ Mobile/NewMobile.c

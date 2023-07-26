@@ -1,0 +1,1 @@
+ isr.d  isr.p1:  E:/Study\ Material/XC8\ PROJECTS/Remote\ Station\ Monitor/Central\ Unit/isr.c E:/Study\ Material/XC8\ PROJECTS/Remote\ Station\ Monitor/Central\ Unit/usart_pic18.h E:/Study\ Material/XC8\ PROJECTS/Remote\ Station\ Monitor/Central\ Unit/rtu.h

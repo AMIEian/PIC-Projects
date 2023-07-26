@@ -1,0 +1,1 @@
+ my_serial.d  my_serial.p1:  E:/Study\ Material/XC8\ PROJECTS/Android\ Cautery/my_serial.c E:/Study\ Material/XC8\ PROJECTS/Android\ Cautery/pins.h E:/Study\ Material/XC8\ PROJECTS/Android\ Cautery/my_serial.h

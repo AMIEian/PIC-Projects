@@ -1,0 +1,1 @@
+ beep.d  beep.p1:  E:/Study\ Material/XC8\ PROJECTS/Bluetooth\ Foot\ Switch/Transmitter/beep.c E:/Study\ Material/XC8\ PROJECTS/Bluetooth\ Foot\ Switch/Transmitter/beep.h

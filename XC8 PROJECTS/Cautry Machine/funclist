@@ -1,0 +1,19 @@
+___awdiv: CODE, 6396 0 168
+_Busy_eep: CODE, 7214 0 12
+___ftpack: CODE, 6224 0 172
+___awmod: CODE, 6712 0 148
+_main: CODE, 212 0 4622
+_Read_b_eep: CODE, 7192 0 22
+___lwtoft: CODE, 7112 0 40
+___ftadd: CODE, 4834 0 432
+_tmr_int: CODE, 8 0 198
+_Write_b_eep: CODE, 6946 0 60
+__initialization: CODE, 7064 0 42
+___lwdiv: CODE, 6860 0 86
+___lbtoft: CODE, 7152 0 40
+_sqrt: CODE, 5266 0 422
+___ftmul: CODE, 5992 0 232
+___fttol: CODE, 5688 0 304
+___ftsub: CODE, 7006 0 58
+___ftge: CODE, 6564 0 148
+Total: 7206

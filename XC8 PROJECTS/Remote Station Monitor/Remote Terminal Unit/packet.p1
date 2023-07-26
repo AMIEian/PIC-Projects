@@ -1,0 +1,542 @@
+Version 3.2 HI-TECH Software Intermediate Code
+"17 E:\Study Material\XC8 PROJECTS\Remote Station Monitor\Remote Terminal Unit\myrtc.h
+[v _ds1307_get_time `(v ~T0 @X0 0 ef ]
+"20 E:\Study Material\XC8 PROJECTS\Remote Station Monitor\Remote Terminal Unit\rtu.h
+[v _MyDelay `(v ~T0 @X0 0 ef1`ui ]
+"42 E:\Study Material\XC8 PROJECTS\Remote Station Monitor\Remote Terminal Unit\packet.h
+[v _Clear_Packet `(v ~T0 @X0 0 ef ]
+"44
+[v _Calculate_CRC `(i ~T0 @X0 0 ef ]
+"35 E:\Study Material\XC8 PROJECTS\Remote Station Monitor\Remote Terminal Unit\packet.h
+[v _PACKET `Vuc ~T0 @X0 -> 128 `i e ]
+[; ;packet.h: 35: volatile unsigned char PACKET[128];
+"36
+[v _Current_Pos `Vuc ~T0 @X0 1 e ]
+[; ;packet.h: 36: volatile char Current_Pos;
+"37
+[v _Data_End `Vuc ~T0 @X0 1 e ]
+[; ;packet.h: 37: volatile char Data_End;
+[; ;packet.h: 40: void Creat_Packet(char F_Code, char Readings);
+[; ;packet.h: 41: void Creat_RTC_Packet();
+[; ;packet.h: 42: void Clear_Packet();
+[; ;packet.h: 43: char Add_Reading_To_Packet(int t1, int h1, int t2, int h2);
+[; ;packet.h: 44: int Calculate_CRC();
+[; ;packet.h: 45: char Check_CRC();
+"6 E:\Study Material\XC8 PROJECTS\Remote Station Monitor\Remote Terminal Unit\myrtc.h
+[v _day `uc ~T0 @X0 1 e ]
+[; ;myrtc.h: 6: unsigned char day;
+"7
+[v _month `uc ~T0 @X0 1 e ]
+[; ;myrtc.h: 7: unsigned char month;
+"8
+[v _year `uc ~T0 @X0 1 e ]
+[; ;myrtc.h: 8: unsigned char year;
+"9
+[v _dow `uc ~T0 @X0 1 e ]
+[; ;myrtc.h: 9: unsigned char dow;
+"10
+[v _hr `uc ~T0 @X0 1 e ]
+[; ;myrtc.h: 10: unsigned char hr;
+"11
+[v _min `uc ~T0 @X0 1 e ]
+[; ;myrtc.h: 11: unsigned char min;
+"12
+[v _sec `uc ~T0 @X0 1 e ]
+[; ;myrtc.h: 12: unsigned char sec;
+[; ;myrtc.h: 14: void ds1307_init();
+[; ;myrtc.h: 15: void ds1307_set_date_time();
+[; ;myrtc.h: 16: void ds1307_get_date();
+[; ;myrtc.h: 17: void ds1307_get_time();
+[; ;myrtc.h: 18: unsigned char bin2bcd(unsigned char binary_value);
+[; ;myrtc.h: 19: unsigned char bcd2bin(unsigned char bcd_value);
+"10 E:\Study Material\XC8 PROJECTS\Remote Station Monitor\Remote Terminal Unit\rtu.h
+[v _Source_ID `uc ~T0 @X0 1 e ]
+[; ;rtu.h: 10: unsigned char Source_ID;
+"11
+[v _Destination_ID `uc ~T0 @X0 1 e ]
+[; ;rtu.h: 11: unsigned char Destination_ID;
+"12
+[v _sec_flag `uc ~T0 @X0 1 e ]
+[; ;rtu.h: 12: unsigned char sec_flag;
+"13
+[v _min_flag `uc ~T0 @X0 1 e ]
+[; ;rtu.h: 13: unsigned char min_flag;
+"14
+[v _seconds `uc ~T0 @X0 1 e ]
+[; ;rtu.h: 14: unsigned char seconds;
+"15
+[v _thresh_temp1 `f ~T0 @X0 1 e ]
+[v _thresh_hum1 `f ~T0 @X0 1 e ]
+[v _thresh_temp2 `f ~T0 @X0 1 e ]
+[v _thresh_hum2 `f ~T0 @X0 1 e ]
+[; ;rtu.h: 15: float thresh_temp1, thresh_hum1, thresh_temp2, thresh_hum2;
+"16
+[v _trig_temp1 `f ~T0 @X0 1 e ]
+[v _trig_hum1 `f ~T0 @X0 1 e ]
+[v _trig_temp2 `f ~T0 @X0 1 e ]
+[v _trig_hum2 `f ~T0 @X0 1 e ]
+[; ;rtu.h: 16: float trig_temp1, trig_hum1,trig_temp2, trig_hum2;
+[; ;rtu.h: 19: void RTUInit();
+[; ;rtu.h: 20: void MyDelay(unsigned int ms);
+[; ;rtu.h: 21: void SecondsInt();
+[; ;rtu.h: 22: unsigned char getkey(unsigned int msecs);
+[; ;rtu.h: 23: void beep(unsigned int del);
+[; ;string.h: 4: typedef int ptrdiff_t;
+[; ;string.h: 5: typedef unsigned size_t;
+[; ;string.h: 6: typedef unsigned short wchar_t;
+[; ;string.h: 9: extern int errno;
+[; ;string.h: 22: extern void * memcpy(void *, const void *, size_t);
+[; ;string.h: 23: extern void * memmove(void *, const void *, size_t);
+[; ;string.h: 24: extern void * memset(void *, int, size_t);
+[; ;string.h: 42: extern char * strcat(char *, const char *);
+[; ;string.h: 43: extern char * strcpy(char *, const char *);
+[; ;string.h: 44: extern char * strncat(char *, const char *, size_t);
+[; ;string.h: 45: extern char * strncpy(char *, const char *, size_t);
+[; ;string.h: 46: extern char * strdup(const char *);
+[; ;string.h: 47: extern char * strtok(char *, const char *);
+[; ;string.h: 50: extern int memcmp(const void *, const void *, size_t);
+[; ;string.h: 51: extern int strcmp(const char *, const char *);
+[; ;string.h: 52: extern int stricmp(const char *, const char *);
+[; ;string.h: 53: extern int strncmp(const char *, const char *, size_t);
+[; ;string.h: 54: extern int strnicmp(const char *, const char *, size_t);
+[; ;string.h: 55: extern void * memchr(const void *, int, size_t);
+[; ;string.h: 56: extern size_t strcspn(const char *, const char *);
+[; ;string.h: 57: extern char * strpbrk(const char *, const char *);
+[; ;string.h: 58: extern size_t strspn(const char *, const char *);
+[; ;string.h: 59: extern char * strstr(const char *, const char *);
+[; ;string.h: 60: extern char * stristr(const char *, const char *);
+[; ;string.h: 61: extern char * strerror(int);
+[; ;string.h: 62: extern size_t strlen(const char *);
+[; ;string.h: 63: extern char * strchr(const char *, int);
+[; ;string.h: 64: extern char * strichr(const char *, int);
+[; ;string.h: 65: extern char * strrchr(const char *, int);
+[; ;string.h: 66: extern char * strrichr(const char *, int);
+"6 E:\Study Material\XC8 PROJECTS\Remote Station Monitor\Remote Terminal Unit\packet.c
+[v _Creat_Packet `(v ~T0 @X0 1 ef2`uc`uc ]
+"7
+{
+[; ;packet.c: 6: void Creat_Packet(char F_Code, char Readings)
+[; ;packet.c: 7: {
+[e :U _Creat_Packet ]
+"6
+[v _F_Code `uc ~T0 @X0 1 r1 ]
+[v _Readings `uc ~T0 @X0 1 r2 ]
+"7
+[f ]
+[; ;packet.c: 8: PACKET[0] = 0xFA;
+"8
+[e = *U + &U _PACKET * -> -> -> 0 `i `ui `ux -> -> # *U &U _PACKET `ui `ux -> -> 250 `i `uc ]
+[; ;packet.c: 9: PACKET[1] = (Readings * 8) + 16;
+"9
+[e = *U + &U _PACKET * -> -> -> 1 `i `ui `ux -> -> # *U &U _PACKET `ui `ux -> + * -> _Readings `i -> 8 `i -> 16 `i `uc ]
+[; ;packet.c: 10: PACKET[2] = Source_ID;
+"10
+[e = *U + &U _PACKET * -> -> -> 2 `i `ui `ux -> -> # *U &U _PACKET `ui `ux _Source_ID ]
+[; ;packet.c: 11: PACKET[3] = Destination_ID;
+"11
+[e = *U + &U _PACKET * -> -> -> 3 `i `ui `ux -> -> # *U &U _PACKET `ui `ux _Destination_ID ]
+[; ;packet.c: 12: PACKET[4] = F_Code;
+"12
+[e = *U + &U _PACKET * -> -> -> 4 `i `ui `ux -> -> # *U &U _PACKET `ui `ux _F_Code ]
+[; ;packet.c: 13: PACKET[5] = Readings;
+"13
+[e = *U + &U _PACKET * -> -> -> 5 `i `ui `ux -> -> # *U &U _PACKET `ui `ux _Readings ]
+[; ;packet.c: 16: ds1307_get_time();
+"16
+[e ( _ds1307_get_time ..  ]
+[; ;packet.c: 17: MyDelay(100);
+"17
+[e ( _MyDelay (1 -> -> 100 `i `ui ]
+[; ;packet.c: 19: PACKET[6] = year;
+"19
+[e = *U + &U _PACKET * -> -> -> 6 `i `ui `ux -> -> # *U &U _PACKET `ui `ux _year ]
+[; ;packet.c: 20: PACKET[7] = month;
+"20
+[e = *U + &U _PACKET * -> -> -> 7 `i `ui `ux -> -> # *U &U _PACKET `ui `ux _month ]
+[; ;packet.c: 21: PACKET[8] = day;
+"21
+[e = *U + &U _PACKET * -> -> -> 8 `i `ui `ux -> -> # *U &U _PACKET `ui `ux _day ]
+[; ;packet.c: 22: PACKET[9] = dow;
+"22
+[e = *U + &U _PACKET * -> -> -> 9 `i `ui `ux -> -> # *U &U _PACKET `ui `ux _dow ]
+[; ;packet.c: 23: PACKET[10] = hr;
+"23
+[e = *U + &U _PACKET * -> -> -> 10 `i `ui `ux -> -> # *U &U _PACKET `ui `ux _hr ]
+[; ;packet.c: 24: PACKET[11] = min;
+"24
+[e = *U + &U _PACKET * -> -> -> 11 `i `ui `ux -> -> # *U &U _PACKET `ui `ux _min ]
+[; ;packet.c: 25: PACKET[12] = sec;
+"25
+[e = *U + &U _PACKET * -> -> -> 12 `i `ui `ux -> -> # *U &U _PACKET `ui `ux _sec ]
+[; ;packet.c: 27: Current_Pos = 13;
+"27
+[e = _Current_Pos -> -> 13 `i `uc ]
+[; ;packet.c: 28: Data_End = Readings * 8 + 13;
+"28
+[e = _Data_End -> + * -> _Readings `i -> 8 `i -> 13 `i `uc ]
+[; ;packet.c: 29: }
+"29
+[e :UE 1 ]
+}
+"31
+[v _Creat_RTC_Packet `(v ~T0 @X0 1 ef ]
+"32
+{
+[; ;packet.c: 31: void Creat_RTC_Packet()
+[; ;packet.c: 32: {
+[e :U _Creat_RTC_Packet ]
+[f ]
+[; ;packet.c: 33: Clear_Packet();
+"33
+[e ( _Clear_Packet ..  ]
+[; ;packet.c: 34: Creat_Packet(3, 0);
+"34
+[e ( _Creat_Packet (2 , -> -> 3 `i `uc -> -> 0 `i `uc ]
+"36
+[v _packet_crc `ui ~T0 @X0 1 a ]
+[; ;packet.c: 36: unsigned int packet_crc = 0;
+[e = _packet_crc -> -> 0 `i `ui ]
+"37
+[v _crc_h `uc ~T0 @X0 1 a ]
+[; ;packet.c: 37: unsigned char crc_h = 0, crc_l = 0;
+[e = _crc_h -> -> 0 `i `uc ]
+[v _crc_l `uc ~T0 @X0 1 a ]
+[e = _crc_l -> -> 0 `i `uc ]
+[; ;packet.c: 39: packet_crc = Calculate_CRC();
+"39
+[e = _packet_crc -> ( _Calculate_CRC ..  `ui ]
+[; ;packet.c: 40: crc_h = packet_crc >> 8;
+"40
+[e = _crc_h -> >> _packet_crc -> 8 `i `uc ]
+[; ;packet.c: 41: crc_l = packet_crc & 0x00FF;
+"41
+[e = _crc_l -> & _packet_crc -> -> 255 `i `ui `uc ]
+[; ;packet.c: 43: PACKET[Current_Pos] = crc_h;
+"43
+[e = *U + &U _PACKET * -> _Current_Pos `ux -> -> # *U &U _PACKET `ui `ux _crc_h ]
+[; ;packet.c: 44: Current_Pos++;
+"44
+[e ++ _Current_Pos -> -> 1 `i `uc ]
+[; ;packet.c: 45: PACKET[Current_Pos] = crc_l;
+"45
+[e = *U + &U _PACKET * -> _Current_Pos `ux -> -> # *U &U _PACKET `ui `ux _crc_l ]
+[; ;packet.c: 46: Current_Pos++;
+"46
+[e ++ _Current_Pos -> -> 1 `i `uc ]
+[; ;packet.c: 47: PACKET[Current_Pos] = 0xEA;
+"47
+[e = *U + &U _PACKET * -> _Current_Pos `ux -> -> # *U &U _PACKET `ui `ux -> -> 234 `i `uc ]
+[; ;packet.c: 49: }
+"49
+[e :UE 2 ]
+}
+"50
+[v _Add_Reading_To_Packet `(uc ~T0 @X0 1 ef4`i`i`i`i ]
+"51
+{
+[; ;packet.c: 50: char Add_Reading_To_Packet(int t1, int h1, int t2, int h2)
+[; ;packet.c: 51: {
+[e :U _Add_Reading_To_Packet ]
+"50
+[v _t1 `i ~T0 @X0 1 r1 ]
+[v _h1 `i ~T0 @X0 1 r2 ]
+[v _t2 `i ~T0 @X0 1 r3 ]
+[v _h2 `i ~T0 @X0 1 r4 ]
+"51
+[f ]
+"52
+[v _t1_h `uc ~T0 @X0 1 a ]
+[v _t1_l `uc ~T0 @X0 1 a ]
+[v _h1_h `uc ~T0 @X0 1 a ]
+[v _h1_l `uc ~T0 @X0 1 a ]
+"53
+[v _t2_h `uc ~T0 @X0 1 a ]
+[v _t2_l `uc ~T0 @X0 1 a ]
+[v _h2_h `uc ~T0 @X0 1 a ]
+[v _h2_l `uc ~T0 @X0 1 a ]
+"54
+[v _CRC `i ~T0 @X0 1 a ]
+"55
+[v _CRC_HI `uc ~T0 @X0 1 a ]
+[v _CRC_LOW `uc ~T0 @X0 1 a ]
+[; ;packet.c: 52: char t1_h, t1_l, h1_h, h1_l;
+[; ;packet.c: 53: char t2_h, t2_l, h2_h, h2_l;
+[; ;packet.c: 54: int CRC;
+[; ;packet.c: 55: char CRC_HI, CRC_LOW;
+[; ;packet.c: 57: t1_h = t1 >> 8;
+"57
+[e = _t1_h -> >> _t1 -> 8 `i `uc ]
+[; ;packet.c: 58: t1_l = t1 & 0x00FF;
+"58
+[e = _t1_l -> & _t1 -> 255 `i `uc ]
+[; ;packet.c: 60: h1_h = h1 >> 8;
+"60
+[e = _h1_h -> >> _h1 -> 8 `i `uc ]
+[; ;packet.c: 61: h1_l = h1 & 0x00FF;
+"61
+[e = _h1_l -> & _h1 -> 255 `i `uc ]
+[; ;packet.c: 63: t2_h = t2 >> 8;
+"63
+[e = _t2_h -> >> _t2 -> 8 `i `uc ]
+[; ;packet.c: 64: t2_l = t2 & 0x00FF;
+"64
+[e = _t2_l -> & _t2 -> 255 `i `uc ]
+[; ;packet.c: 66: h2_h = h2 >> 8;
+"66
+[e = _h2_h -> >> _h2 -> 8 `i `uc ]
+[; ;packet.c: 67: h2_l = h2 & 0x00FF;
+"67
+[e = _h2_l -> & _h2 -> 255 `i `uc ]
+[; ;packet.c: 69: PACKET[Current_Pos] = t1_h;
+"69
+[e = *U + &U _PACKET * -> _Current_Pos `ux -> -> # *U &U _PACKET `ui `ux _t1_h ]
+[; ;packet.c: 70: Current_Pos++;
+"70
+[e ++ _Current_Pos -> -> 1 `i `uc ]
+[; ;packet.c: 71: PACKET[Current_Pos] = t1_l;
+"71
+[e = *U + &U _PACKET * -> _Current_Pos `ux -> -> # *U &U _PACKET `ui `ux _t1_l ]
+[; ;packet.c: 72: Current_Pos++;
+"72
+[e ++ _Current_Pos -> -> 1 `i `uc ]
+[; ;packet.c: 73: PACKET[Current_Pos] = h1_h;
+"73
+[e = *U + &U _PACKET * -> _Current_Pos `ux -> -> # *U &U _PACKET `ui `ux _h1_h ]
+[; ;packet.c: 74: Current_Pos++;
+"74
+[e ++ _Current_Pos -> -> 1 `i `uc ]
+[; ;packet.c: 75: PACKET[Current_Pos] = h1_l;
+"75
+[e = *U + &U _PACKET * -> _Current_Pos `ux -> -> # *U &U _PACKET `ui `ux _h1_l ]
+[; ;packet.c: 76: Current_Pos++;
+"76
+[e ++ _Current_Pos -> -> 1 `i `uc ]
+[; ;packet.c: 77: PACKET[Current_Pos] = t2_h;
+"77
+[e = *U + &U _PACKET * -> _Current_Pos `ux -> -> # *U &U _PACKET `ui `ux _t2_h ]
+[; ;packet.c: 78: Current_Pos++;
+"78
+[e ++ _Current_Pos -> -> 1 `i `uc ]
+[; ;packet.c: 79: PACKET[Current_Pos] = t2_l;
+"79
+[e = *U + &U _PACKET * -> _Current_Pos `ux -> -> # *U &U _PACKET `ui `ux _t2_l ]
+[; ;packet.c: 80: Current_Pos++;
+"80
+[e ++ _Current_Pos -> -> 1 `i `uc ]
+[; ;packet.c: 81: PACKET[Current_Pos] = h2_h;
+"81
+[e = *U + &U _PACKET * -> _Current_Pos `ux -> -> # *U &U _PACKET `ui `ux _h2_h ]
+[; ;packet.c: 82: Current_Pos++;
+"82
+[e ++ _Current_Pos -> -> 1 `i `uc ]
+[; ;packet.c: 83: PACKET[Current_Pos] = h2_l;
+"83
+[e = *U + &U _PACKET * -> _Current_Pos `ux -> -> # *U &U _PACKET `ui `ux _h2_l ]
+[; ;packet.c: 84: Current_Pos++;
+"84
+[e ++ _Current_Pos -> -> 1 `i `uc ]
+[; ;packet.c: 86: if(Current_Pos == Data_End)
+"86
+[e $ ! == -> _Current_Pos `i -> _Data_End `i 4  ]
+[; ;packet.c: 87: {
+"87
+{
+[; ;packet.c: 89: CRC = Calculate_CRC();
+"89
+[e = _CRC ( _Calculate_CRC ..  ]
+[; ;packet.c: 90: CRC_HI = CRC >> 8;
+"90
+[e = _CRC_HI -> >> _CRC -> 8 `i `uc ]
+[; ;packet.c: 91: CRC_LOW = CRC & 0x00FF;
+"91
+[e = _CRC_LOW -> & _CRC -> 255 `i `uc ]
+[; ;packet.c: 92: PACKET[Current_Pos] = CRC_HI;
+"92
+[e = *U + &U _PACKET * -> _Current_Pos `ux -> -> # *U &U _PACKET `ui `ux _CRC_HI ]
+[; ;packet.c: 93: Current_Pos++;
+"93
+[e ++ _Current_Pos -> -> 1 `i `uc ]
+[; ;packet.c: 94: PACKET[Current_Pos] = CRC_LOW;
+"94
+[e = *U + &U _PACKET * -> _Current_Pos `ux -> -> # *U &U _PACKET `ui `ux _CRC_LOW ]
+[; ;packet.c: 95: Current_Pos++;
+"95
+[e ++ _Current_Pos -> -> 1 `i `uc ]
+[; ;packet.c: 96: PACKET[Current_Pos] = 0xEA;
+"96
+[e = *U + &U _PACKET * -> _Current_Pos `ux -> -> # *U &U _PACKET `ui `ux -> -> 234 `i `uc ]
+[; ;packet.c: 97: return 0;
+"97
+[e ) -> -> 0 `i `uc ]
+[e $UE 3  ]
+"98
+}
+[e :U 4 ]
+[; ;packet.c: 98: }
+[; ;packet.c: 99: return 1;
+"99
+[e ) -> -> 1 `i `uc ]
+[e $UE 3  ]
+[; ;packet.c: 100: }
+"100
+[e :UE 3 ]
+}
+"102
+[v _Calculate_CRC `(i ~T0 @X0 1 ef ]
+"103
+{
+[; ;packet.c: 102: int Calculate_CRC()
+[; ;packet.c: 103: {
+[e :U _Calculate_CRC ]
+[f ]
+"104
+[v _count `uc ~T0 @X0 1 a ]
+"105
+[v _sum `i ~T0 @X0 1 a ]
+[; ;packet.c: 104: char count;
+[; ;packet.c: 105: int sum = 0;
+[e = _sum -> 0 `i ]
+[; ;packet.c: 107: for(count = 0; count <= Data_End - 1; count++)
+"107
+{
+[e = _count -> -> 0 `i `uc ]
+[e $U 9  ]
+"108
+[e :U 6 ]
+[; ;packet.c: 108: sum = sum + PACKET[count];
+[e = _sum + _sum -> *U + &U _PACKET * -> _count `ux -> -> # *U &U _PACKET `ui `ux `i ]
+"107
+[e ++ _count -> -> 1 `i `uc ]
+[e :U 9 ]
+[e $ <= -> _count `i - -> _Data_End `i -> 1 `i 6  ]
+[e :U 7 ]
+"108
+}
+[; ;packet.c: 109: return sum;
+"109
+[e ) _sum ]
+[e $UE 5  ]
+[; ;packet.c: 110: }
+"110
+[e :UE 5 ]
+}
+"112
+[v _Check_CRC `(uc ~T0 @X0 1 ef ]
+"113
+{
+[; ;packet.c: 112: char Check_CRC()
+[; ;packet.c: 113: {
+[e :U _Check_CRC ]
+[f ]
+"114
+[v _count `uc ~T0 @X0 1 a ]
+[; ;packet.c: 114: char count = 0, length = 0, CRC_HI, CRC_LOW;
+[e = _count -> -> 0 `i `uc ]
+[v _length `uc ~T0 @X0 1 a ]
+[e = _length -> -> 0 `i `uc ]
+[v _CRC_HI `uc ~T0 @X0 1 a ]
+[v _CRC_LOW `uc ~T0 @X0 1 a ]
+"115
+[v _sum `i ~T0 @X0 1 a ]
+[v _CRC `i ~T0 @X0 1 a ]
+[; ;packet.c: 115: int sum, CRC;
+[; ;packet.c: 118: while(PACKET[length] != 0xEA)
+"118
+[e $U 11  ]
+[e :U 12 ]
+[; ;packet.c: 119: length++;
+"119
+[e ++ _length -> -> 1 `i `uc ]
+[e :U 11 ]
+"118
+[e $ != -> *U + &U _PACKET * -> _length `ux -> -> # *U &U _PACKET `ui `ux `i -> 234 `i 12  ]
+[e :U 13 ]
+[; ;packet.c: 121: CRC_LOW = PACKET[length - 1];
+"121
+[e = _CRC_LOW *U + &U _PACKET * -> -> - -> _length `i -> 1 `i `ui `ux -> -> # *U &U _PACKET `ui `ux ]
+[; ;packet.c: 122: CRC_HI = PACKET[length - 2];
+"122
+[e = _CRC_HI *U + &U _PACKET * -> -> - -> _length `i -> 2 `i `ui `ux -> -> # *U &U _PACKET `ui `ux ]
+[; ;packet.c: 123: CRC = 0x0000;
+"123
+[e = _CRC -> 0 `i ]
+[; ;packet.c: 124: CRC = CRC + CRC_HI;
+"124
+[e = _CRC + _CRC -> _CRC_HI `i ]
+[; ;packet.c: 125: CRC = CRC << 8;
+"125
+[e = _CRC << _CRC -> 8 `i ]
+[; ;packet.c: 126: CRC = CRC + CRC_LOW;
+"126
+[e = _CRC + _CRC -> _CRC_LOW `i ]
+[; ;packet.c: 128: sum = 0;
+"128
+[e = _sum -> 0 `i ]
+[; ;packet.c: 130: for(count = 0; count < length - 2; count++)
+"130
+{
+[e = _count -> -> 0 `i `uc ]
+[e $U 17  ]
+"131
+[e :U 14 ]
+[; ;packet.c: 131: sum = sum + PACKET[count];
+[e = _sum + _sum -> *U + &U _PACKET * -> _count `ux -> -> # *U &U _PACKET `ui `ux `i ]
+"130
+[e ++ _count -> -> 1 `i `uc ]
+[e :U 17 ]
+[e $ < -> _count `i - -> _length `i -> 2 `i 14  ]
+[e :U 15 ]
+"131
+}
+[; ;packet.c: 133: if(sum == CRC)
+"133
+[e $ ! == _sum _CRC 18  ]
+[; ;packet.c: 134: return 1;
+"134
+[e ) -> -> 1 `i `uc ]
+[e $UE 10  ]
+[e $U 19  ]
+"135
+[e :U 18 ]
+[; ;packet.c: 135: else
+[; ;packet.c: 136: return 0;
+"136
+[e ) -> -> 0 `i `uc ]
+[e $UE 10  ]
+[e :U 19 ]
+[; ;packet.c: 137: }
+"137
+[e :UE 10 ]
+}
+"139
+[v _Clear_Packet `(v ~T0 @X0 1 ef ]
+"140
+{
+[; ;packet.c: 139: void Clear_Packet()
+[; ;packet.c: 140: {
+[e :U _Clear_Packet ]
+[f ]
+"141
+[v _i `uc ~T0 @X0 1 a ]
+[; ;packet.c: 141: char i = 0;
+[e = _i -> -> 0 `i `uc ]
+[; ;packet.c: 142: for(i = 0; i < 128; i++)
+"142
+{
+[e = _i -> -> 0 `i `uc ]
+[e $ < -> _i `i -> 128 `i 21  ]
+[e $U 22  ]
+"143
+[e :U 21 ]
+[; ;packet.c: 143: PACKET[i] = 0xFF;
+[e = *U + &U _PACKET * -> _i `ux -> -> # *U &U _PACKET `ui `ux -> -> 255 `i `uc ]
+"142
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> 128 `i 21  ]
+[e :U 22 ]
+"143
+}
+[; ;packet.c: 144: }
+"144
+[e :UE 20 ]
+}

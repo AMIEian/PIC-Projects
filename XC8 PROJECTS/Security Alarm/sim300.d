@@ -1,0 +1,1 @@
+ sim300.d  sim300.p1:  E:/Study\ Material/XC8\ PROJECTS/Security\ Alarm/sim300.c E:/Study\ Material/XC8\ PROJECTS/Security\ Alarm/usart_pic16.h E:/Study\ Material/XC8\ PROJECTS/Security\ Alarm/sim300.h

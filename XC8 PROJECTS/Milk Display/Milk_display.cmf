@@ -1,0 +1,409 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$startup.obj
+end_init CODE 0 10 10 1 2
+reset_vec CODE 0 0 0 1 2
+$Milk_display.obj
+cinit CODE 0 11 11 D 2
+intentry CODE 0 4 4 C 2
+text2 CODE 0 FB FB 73 2
+text1 CODE 0 176 176 8 2
+maintext CODE 0 1E 1E DD 2
+cstackBANK0 BANK0 1 43 43 4 1
+cstackCOMMON COMMON 1 76 76 6 1
+clrtext CODE 0 16E 16E 8 2
+bssBANK0 BANK0 1 20 20 23 1
+dataCOMMON COMMON 1 7C 7C 1 1
+bssCOMMON COMMON 1 70 70 6 1
+idataCOMMON CODE 0 17E 17E 1 2
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+BANK0 047-06F 1
+BANK1 0A0-0BF 1
+CODE 001-003 2
+CODE 17F-7FF 2
+COMMON 07D-07D 1
+CONFIG 2007-2007 2
+CONST 001-003 2
+CONST 17F-7FF 2
+EEDATA 2100-213F 2
+ENTRY 001-003 2
+ENTRY 17F-7FF 2
+IDLOC 2000-2003 2
+RAM 047-06F 1
+RAM 0A0-0BF 1
+SFR0 000-01F 1
+SFR1 080-09F 1
+SFR2 100-16F 1
+SFR3 180-1EF 1
+STACK 047-06F 1
+STRCODE 001-003 2
+STRCODE 17F-7FF 2
+STRING 001-003 2
+STRING 17F-7FF 2
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <file name>:<line number> <address> <psect name> <class name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$Milk_display.obj
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.c":118 4 intentry CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.as":199 11 cinit CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.as":202 11 cinit CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.as":266 11 cinit CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.as":267 12 cinit CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.as":268 13 cinit CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.as":269 14 cinit CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.as":272 15 cinit CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.as":273 16 cinit CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.as":274 17 cinit CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.as":275 18 cinit CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.as":276 19 cinit CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.as":281 1A cinit CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.as":282 1B cinit CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.as":288 1C cinit CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.as":289 1C cinit CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.as":290 1D cinit CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.c":22 1E maintext CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.c":24 1E maintext CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.c":25 21 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.c":26 22 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.c":27 24 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.c":29 26 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.c":30 2A maintext CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.c":31 2C maintext CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.c":33 2E maintext CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.c":34 33 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.c":35 33 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.c":36 34 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.c":37 41 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.c":38 44 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.c":33 51 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.c":42 5B maintext CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.c":45 5F maintext CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.c":46 60 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.c":47 61 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.c":48 62 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.c":51 63 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.c":52 66 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.c":53 67 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.c":54 68 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.c":57 69 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.c":58 6C maintext CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.c":61 6D maintext CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.c":63 6E maintext CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.c":65 6E maintext CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.c":66 71 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.c":68 75 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.c":70 7D maintext CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.c":71 7E maintext CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.c":72 84 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.c":73 91 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.c":74 96 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.c":75 9E maintext CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.c":78 A0 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.c":79 A6 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.c":80 AA maintext CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.c":82 AE maintext CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.c":83 AF maintext CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.c":86 B0 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.c":87 B2 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.c":88 B4 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.c":90 B8 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.c":92 C0 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.c":93 C4 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.c":94 C7 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.c":97 CD maintext CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.c":98 D3 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.c":99 D7 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.c":101 DB maintext CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.c":102 DF maintext CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.c":105 E0 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.c":106 E1 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.c":107 E5 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.c":109 E8 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.c":110 EF maintext CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.c":112 F5 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.c":113 F7 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.c":63 FA maintext CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.c":118 FB text2 CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.c":120 FB text2 CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.c":121 103 text2 CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.c":122 107 text2 CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.c":124 122 text2 CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.c":132 125 text2 CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.c":134 129 text2 CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.c":135 131 text2 CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.c":137 135 text2 CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.c":138 139 text2 CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.c":139 13D text2 CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.c":140 13E text2 CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.c":143 13F text2 CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.c":145 143 text2 CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.c":147 148 text2 CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.c":145 14D text2 CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.c":149 155 text2 CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.c":150 156 text2 CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.c":151 157 text2 CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.c":152 15B text2 CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.c":153 15C text2 CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.c":154 15F text2 CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.c":159 161 text2 CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.as":253 16E clrtext CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.as":254 16E clrtext CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.as":255 16F clrtext CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.as":256 16F clrtext CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.as":257 170 clrtext CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.as":258 171 clrtext CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.as":259 172 clrtext CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.as":260 173 clrtext CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.as":261 174 clrtext CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.as":262 175 clrtext CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.c":162 176 text1 CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.c":163 176 text1 CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.c":164 179 text1 CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.c":165 17B text1 CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\Milk_display.c":166 17D text1 CODE
+$startup.obj
+"E:\Study Material\XC8 PROJECTS\Milk Display\startup.as":40 0 functab CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\startup.as":41 0 functab CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\startup.as":42 0 functab CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\startup.as":43 0 functab CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\startup.as":44 0 functab CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\startup.as":45 0 functab CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\startup.as":64 0 reset_vec CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\startup.as":69 0 reset_vec CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\startup.as":74 10 init CODE
+"E:\Study Material\XC8 PROJECTS\Milk Display\startup.as":77 10 end_init CODE
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+_ch 72 0 COMMON 1 bssCOMMON Milk_display.obj
+_PortB_Value 70 0 COMMON 1 bssCOMMON Milk_display.obj
+_RA5 2D 0 ABS 0 - Milk_display.obj
+_RC4 3C 0 ABS 0 - Milk_display.obj
+__S0 17F 0 ABS 0 - -
+__S1 7D 0 ABS 0 - -
+__S2 0 0 ABS 0 - -
+__S3 0 0 ABS 0 - -
+_GIE 5F 0 ABS 0 - Milk_display.obj
+_ISR 1F6 0 CODE 0 text2 Milk_display.obj
+__Hintentry 20 0 CODE 0 intentry -
+__Lintentry 8 0 CODE 0 intentry -
+__pintentry 8 0 CODE 0 intentry Milk_display.obj
+_RCIE 465 0 ABS 0 - Milk_display.obj
+_PEIE 5E 0 ABS 0 - Milk_display.obj
+_RCIF 65 0 ABS 0 - Milk_display.obj
+_flag 41 0 BANK0 1 bssBANK0 Milk_display.obj
+_data 20 0 BANK0 1 bssBANK0 Milk_display.obj
+_main 3C 0 CODE 0 maintext Milk_display.obj
+___sp 0 0 STACK 2 stack startup.obj
+btemp 7E 0 ABS 0 - Milk_display.obj
+ltemp 7E 0 ABS 0 - Milk_display.obj
+ttemp 7E 0 ABS 0 - Milk_display.obj
+wtemp 7E 0 ABS 0 - Milk_display.obj
+start 20 0 CODE 0 init startup.obj
+_RCREG 1A 0 ABS 0 - Milk_display.obj
+_TRISA 85 0 ABS 0 - Milk_display.obj
+_TRISB 86 0 ABS 0 - Milk_display.obj
+_TRISC 87 0 ABS 0 - Milk_display.obj
+_TXREG 19 0 ABS 0 - Milk_display.obj
+_PORTA 5 0 ABS 0 - Milk_display.obj
+reset_vec 0 0 CODE 0 reset_vec startup.obj
+_PORTB 6 0 ABS 0 - Milk_display.obj
+_SPBRG 99 0 ABS 0 - Milk_display.obj
+_PORTC 7 0 ABS 0 - Milk_display.obj
+ltemp0 7E 0 ABS 0 - Milk_display.obj
+ttemp0 7E 0 ABS 0 - Milk_display.obj
+wtemp0 7E 0 ABS 0 - Milk_display.obj
+ltemp1 82 0 ABS 0 - Milk_display.obj
+ttemp1 81 0 ABS 0 - Milk_display.obj
+wtemp1 80 0 ABS 0 - Milk_display.obj
+ltemp2 86 0 ABS 0 - Milk_display.obj
+ttemp2 84 0 ABS 0 - Milk_display.obj
+wtemp2 82 0 ABS 0 - Milk_display.obj
+ltemp3 80 0 ABS 0 - Milk_display.obj
+ttemp3 87 0 ABS 0 - Milk_display.obj
+wtemp3 84 0 ABS 0 - Milk_display.obj
+ttemp4 7F 0 ABS 0 - Milk_display.obj
+wtemp4 86 0 ABS 0 - Milk_display.obj
+wtemp5 88 0 ABS 0 - Milk_display.obj
+wtemp6 7F 0 ABS 0 - Milk_display.obj
+interrupt_function 8 0 CODE 0 intentry Milk_display.obj
+__Hconfig 0 0 CONFIG 0 config -
+__Lconfig 0 0 CONFIG 0 config -
+__Hram 0 0 ABS 0 ram -
+__Lram 0 0 ABS 0 ram -
+_index 74 0 COMMON 1 bssCOMMON Milk_display.obj
+_count 73 0 COMMON 1 bssCOMMON Milk_display.obj
+__end_of_ISR 2DC 0 CODE 0 text2 Milk_display.obj
+__Hfunctab 0 0 CODE 0 functab -
+__Lfunctab 0 0 CODE 0 functab -
+_ADCON1 9F 0 ABS 0 - Milk_display.obj
+__Hcommon 0 0 ABS 0 common -
+__Lcommon 0 0 ABS 0 common -
+__Heeprom_data 0 0 EEDATA 3 eeprom_data -
+__Leeprom_data 0 0 EEDATA 3 eeprom_data -
+_PIR1bits C 0 ABS 0 - Milk_display.obj
+___int_sp 0 0 STACK 2 stack startup.obj
+__Habs1 0 0 ABS 0 abs1 -
+__Labs1 0 0 ABS 0 abs1 -
+__Hsfr0 0 0 ABS 0 sfr0 -
+__Lsfr0 0 0 ABS 0 sfr0 -
+__Hsfr1 0 0 ABS 0 sfr1 -
+__Lsfr1 0 0 ABS 0 sfr1 -
+__Hsfr2 0 0 ABS 0 sfr2 -
+__Lsfr2 0 0 ABS 0 sfr2 -
+__Hsfr3 0 0 ABS 0 sfr3 -
+__Lsfr3 0 0 ABS 0 sfr3 -
+_USARTWriteChar 2EC 0 CODE 0 text1 Milk_display.obj
+USARTWriteChar@ch 43 0 BANK0 1 cstackBANK0 Milk_display.obj
+__Hcode 0 0 ABS 0 code -
+__Lcode 0 0 ABS 0 code -
+stackhi 0 0 ABS 0 - startup.obj
+__HcstackBANK0 0 0 ABS 0 cstackBANK0 -
+__LcstackBANK0 0 0 ABS 0 cstackBANK0 -
+__pcstackBANK0 43 0 BANK0 1 cstackBANK0 Milk_display.obj
+stacklo 0 0 ABS 0 - startup.obj
+saved_w 7E 0 ABS 0 - Milk_display.obj
+__Hinit 20 0 CODE 0 init -
+__Linit 20 0 CODE 0 init -
+__end_of_main 1F6 0 CODE 0 maintext Milk_display.obj
+__Htext 0 0 ABS 0 text -
+__Ltext 0 0 ABS 0 text -
+end_of_initialization 38 0 CODE 0 cinit Milk_display.obj
+__size_of_ISR 0 0 ABS 0 - Milk_display.obj
+_RCSTAbits 18 0 ABS 0 - Milk_display.obj
+_TXSTAbits 98 0 ABS 0 - Milk_display.obj
+__Hstrings 0 0 ABS 0 strings -
+__Lstrings 0 0 ABS 0 strings -
+_index_1 75 0 COMMON 1 bssCOMMON Milk_display.obj
+__Hbank0 0 0 ABS 0 bank0 -
+__Lbank0 0 0 ABS 0 bank0 -
+_index_2 7C 0 COMMON 1 dataCOMMON Milk_display.obj
+__Hbank1 0 0 ABS 0 bank1 -
+__Lbank1 0 0 ABS 0 bank1 -
+__Hbank2 0 0 BANK2 1 bank2 -
+__Lbank2 0 0 BANK2 1 bank2 -
+__Hbank3 0 0 BANK3 1 bank3 -
+__Lbank3 0 0 BANK3 1 bank3 -
+___latbits 0 0 ABS 0 - Milk_display.obj
+__Hpowerup 0 0 CODE 0 powerup -
+__Lpowerup 0 0 CODE 0 powerup -
+__ptext1 2EC 0 CODE 0 text1 Milk_display.obj
+__ptext2 1F6 0 CODE 0 text2 Milk_display.obj
+__Hclrtext 0 0 ABS 0 clrtext -
+__Lclrtext 0 0 ABS 0 clrtext -
+__HdataCOMMON 0 0 ABS 0 dataCOMMON -
+__LdataCOMMON 0 0 ABS 0 dataCOMMON -
+__pdataCOMMON 7C 0 COMMON 1 dataCOMMON Milk_display.obj
+__end_of__initialization 38 0 CODE 0 cinit Milk_display.obj
+__size_of_USARTWriteChar 0 0 ABS 0 - Milk_display.obj
+__Hidloc 0 0 IDLOC 0 idloc -
+__Lidloc 0 0 IDLOC 0 idloc -
+__Hstack 0 0 STACK 2 stack -
+__Lstack 0 0 STACK 2 stack -
+__Hspace_0 17F 0 ABS 0 - -
+__Lspace_0 0 0 ABS 0 - -
+__Hspace_1 7D 0 ABS 0 - -
+__Lspace_1 0 0 ABS 0 - -
+__Hspace_2 0 0 ABS 0 - -
+__Lspace_2 0 0 ABS 0 - -
+__Hcinit 3C 0 CODE 0 cinit -
+__Lcinit 22 0 CODE 0 cinit -
+__Hspace_3 0 0 ABS 0 - -
+__Lspace_3 0 0 ABS 0 - -
+__size_of_main 0 0 ABS 0 - Milk_display.obj
+_address_1 71 0 COMMON 1 bssCOMMON Milk_display.obj
+_address_2 40 0 BANK0 1 bssBANK0 Milk_display.obj
+clear_ram0 2DC 0 CODE 0 clrtext Milk_display.obj
+_micro_secs 42 0 BANK0 1 bssBANK0 Milk_display.obj
+__HbssBANK0 0 0 ABS 0 bssBANK0 -
+__LbssBANK0 0 0 ABS 0 bssBANK0 -
+__pbssBANK0 20 0 BANK0 1 bssBANK0 Milk_display.obj
+__end_of_USARTWriteChar 2FC 0 CODE 0 text1 Milk_display.obj
+__HbssCOMMON 0 0 ABS 0 bssCOMMON -
+__LbssCOMMON 0 0 ABS 0 bssCOMMON -
+__pbssCOMMON 70 0 COMMON 1 bssCOMMON Milk_display.obj
+__Hend_init 22 0 CODE 0 end_init -
+__Lend_init 20 0 CODE 0 end_init -
+__Hreset_vec 2 0 CODE 0 reset_vec -
+__Lreset_vec 0 0 CODE 0 reset_vec -
+intlevel0 0 0 CODE 0 functab startup.obj
+intlevel1 0 0 CODE 0 functab startup.obj
+intlevel2 0 0 CODE 0 functab startup.obj
+intlevel3 0 0 CODE 0 functab startup.obj
+intlevel4 0 0 CODE 0 functab startup.obj
+intlevel5 0 0 CODE 0 functab startup.obj
+__HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+__LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+__pcstackCOMMON 76 0 COMMON 1 cstackCOMMON Milk_display.obj
+start_initialization 22 0 CODE 0 cinit Milk_display.obj
+__Hmaintext 0 0 ABS 0 maintext -
+__Lmaintext 0 0 ABS 0 maintext -
+__pmaintext 3C 0 CODE 0 maintext Milk_display.obj
+__HidataCOMMON 0 0 ABS 0 idataCOMMON -
+__LidataCOMMON 0 0 ABS 0 idataCOMMON -
+__pidataCOMMON 2FC 0 CODE 0 idataCOMMON Milk_display.obj
+__initialization 22 0 CODE 0 cinit Milk_display.obj
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect in on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+- 1 7E 2
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+reset_vec 0 0 0 1 2
+intentry 0 4 8 17B 2
+bssCOMMON 1 70 70 D 1
+bssBANK0 1 20 20 27 1

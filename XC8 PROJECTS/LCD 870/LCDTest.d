@@ -1,0 +1,1 @@
+ LCDTest.d  LCDTest.p1:  E:/Study\ Material/XC8\ PROJECTS/LCD\ Test/LCDTest.c E:/Study\ Material/XC8\ PROJECTS/LCD\ Test/lcd_hd44780_pic16.h

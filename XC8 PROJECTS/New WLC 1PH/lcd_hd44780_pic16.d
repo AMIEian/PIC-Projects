@@ -1,0 +1,1 @@
+ lcd_hd44780_pic16.d  lcd_hd44780_pic16.p1:  E:/Study\ Material/XC8\ PROJECTS/New\ WLC\ 1PH/lcd_hd44780_pic16.c E:/Study\ Material/XC8\ PROJECTS/New\ WLC\ 1PH/myutils.h E:/Study\ Material/XC8\ PROJECTS/New\ WLC\ 1PH/custom_char.h E:/Study\ Material/XC8\ PROJECTS/New\ WLC\ 1PH/lcd_hd44780_pic16.h

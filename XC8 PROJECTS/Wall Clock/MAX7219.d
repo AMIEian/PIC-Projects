@@ -1,0 +1,1 @@
+ MAX7219.d  MAX7219.obj:  E:/Study\ Material/XC8\ PROJECTS/Wall\ Clock/MAX7219.C E:/Study\ Material/XC8\ PROJECTS/Wall\ Clock/max7219.h

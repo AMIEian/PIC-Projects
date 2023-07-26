@@ -1,0 +1,1 @@
+ test.d  test.obj:  E:/Study\ Material/XC8\ PROJECTS/RTC\ Library/test.C E:/Study\ Material/XC8\ PROJECTS/RTC\ Library/myrtc.h E:/Study\ Material/XC8\ PROJECTS/RTC\ Library/lcd_hd44780_pic16.h

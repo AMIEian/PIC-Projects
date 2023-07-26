@@ -1,0 +1,511 @@
+Microchip MPLAB XC8 Compiler V1.33 ()
+
+Linker command line:
+
+--edf=C:\Program Files (x86)\Microchip\xc8\v1.33\dat\en_msgs.txt -cs \
+  -h+Remote2.sym --cmf=Remote2.cmf -z -Q18F43K20 \
+  -oC:\Users\AMIEian\AppData\Local\Temp\s6t4.6 -MRemote2.map -E1 -ver=XC8 \
+  -ASTACK=060h-01ffh -pstack=STACK -ACODE=00h-01FFFh -ACONST=00h-01FFFh \
+  -ASMALLCONST=0200h-02FFhx30 -AMEDIUMCONST=0200h-01FFFh -ACOMRAM=01h-05Fh \
+  -AABS1=00h-01FFh -ABIGRAM=01h-01FFh -ARAM=060h-0FFh,0100h-01FFh \
+  -ABANK0=060h-0FFh -ABANK1=0100h-01FFh -ASFR=0F60h-0FFFh \
+  -preset_vec=00h,intcode=08h,intcodelo,powerup,init,end_init \
+  -pramtop=0200h -psmallconst=SMALLCONST -pmediumconst=MEDIUMCONST \
+  -pconst=CONST -AFARRAM=00h-00h -ACONFIG=0300000h-030000Dh -pconfig=CONFIG \
+  -AIDLOC=0200000h-0200007h -pidloc=IDLOC -AEEDATA=0F00000h-0F000FFh \
+  -peeprom_data=EEDATA \
+  -prdata=COMRAM,nvrram=COMRAM,nvbit=COMRAM,rbss=COMRAM,rbit=COMRAM \
+  -pfarbss=FARRAM,fardata=FARRAM,nvFARRAM=FARRAM \
+  -pintsave_regs=BIGRAM,bigbss=BIGRAM,bigdata=BIGRAM -pbss=RAM \
+  -pidata=CODE,irdata=CODE,ibigdata=CODE,ifardata=CODE startup.obj \
+  Remote2.obj 
+
+Object code version is 3.11
+
+Machine type is 18F43K20
+
+Call graph: (short form)
+
+
+
+
+                Name                               Link     Load   Length Selector   Space Scale
+startup.obj     end_init                            142      142        4        4       0
+                reset_vec                             0        0        4        0       0
+Remote2.obj     intcode                               8        8      13A        4       0
+                text3                               558      558       26        4       0
+                text2                               452      452       D4        4       0
+                text1                               5A0      5A0       12      2D0       0
+                text0                               146      146      30C        4       0
+                cstackCOMRAM                         22       22       1E        1       1
+                dataCOMRAM                            1        1       21        1       1
+                bssCOMRAM                            40       40        6        1       1
+                cinit                               526      526       32        4       0
+                idataCOMRAM                         57E      57E       21        4       0
+
+TOTAL           Name                               Link     Load   Length     Space
+        CLASS   STACK          
+
+        CLASS   CODE           
+                end_init                            142      142        4         0
+                intcode                               8        8      13A         0
+                reset_vec                             0        0        4         0
+                text3                               558      558       26         0
+                text2                               452      452       D4         0
+                text1                               5A0      5A0       12         0
+                text0                               146      146      30C         0
+                cinit                               526      526       32         0
+                idataCOMRAM                         57E      57E       21         0
+
+        CLASS   CONST          
+
+        CLASS   SMALLCONST     
+
+        CLASS   MEDIUMCONST    
+
+        CLASS   COMRAM         
+                cstackCOMRAM                         22       22       1E         1
+                dataCOMRAM                            1        1       21         1
+                bssCOMRAM                            40       40        6         1
+
+        CLASS   ABS1           
+
+        CLASS   BIGRAM         
+
+        CLASS   RAM            
+
+        CLASS   BANK0          
+
+        CLASS   BANK1          
+
+        CLASS   SFR            
+
+        CLASS   FARRAM         
+
+        CLASS   CONFIG         
+
+        CLASS   IDLOC          
+
+        CLASS   EEDATA         
+
+
+
+SEGMENTS        Name                           Load    Length   Top    Selector   Space  Class
+
+                reset_vec                      000000  000004  000004         0       0  CODE    
+                dataCOMRAM                     000001  000045  000046         1       1  COMRAM  
+                intcode                        000008  000597  00059F         4       0  CODE    
+                text1                          0005A0  000012  0005B2       2D0       0  CODE    
+
+
+UNUSED ADDRESS RANGES
+
+        Name                Unused          Largest block    Delta
+        BANK0            0060-00FF             A0
+        BANK1            0100-01FF            100
+        BIGRAM           0046-01FF            1BA
+        CODE             0004-0007              4
+                         059F-059F              1
+                         05B2-1FFF           1A4E
+        COMRAM           0046-005F             1A
+        CONFIG           300000-30000D              E
+        CONST            0004-0007              4
+                         059F-059F              1
+                         05B2-1FFF           1A4E
+        EEDATA           F00000-F000FF            100
+        IDLOC            200000-200007              8
+        MEDIUMCONST      059F-059F              1
+                         05B2-1FFF           1A4E
+        RAM              0060-01FF             A0
+        SFR              0F60-0FFF             A0
+        SMALLCONST       059F-059F              1
+                         05B2-1FFF            100
+        STACK            0060-01FF            1A0
+
+                                  Symbol Table
+
+MY_DELAY@ms                     cstackCOMRAM 0031
+_ADCON1                         (abs)        0FC1
+_INTCON                         (abs)        0FF2
+_IOCB                           (abs)        0F7D
+_ISR                            intcode      0008
+_Keyboard_Keys                  dataCOMRAM   0001
+_MY_DELAY                       text3        0558
+_OSCCON                         (abs)        0FD3
+_One_Minute_Timer               dataCOMRAM   001F
+_PORTA                          (abs)        0F80
+_PORTB                          (abs)        0F81
+_PORTC                          (abs)        0F82
+_PORTD                          (abs)        0F83
+_PORTE                          (abs)        0F84
+_RBIE                           (abs)        7F93
+_RBIF                           (abs)        7F90
+_RCON                           (abs)        0FD0
+_SWDTEN                         (abs)        7E88
+_Segment_Codes                  dataCOMRAM   0011
+_Sleep_Flag                     bssCOMRAM    0042
+_T0CON                          (abs)        0FD5
+_TMR0                           (abs)        0FD6
+_TMR0IF                         (abs)        7F92
+_TMR0ON                         (abs)        7EAF
+_TRISA                          (abs)        0F92
+_TRISB                          (abs)        0F93
+_TRISC                          (abs)        0F94
+_TRISD                          (abs)        0F95
+_TRISE                          (abs)        0F96
+__HRAM                          (abs)        0000
+__Habs1                         abs1         0000
+__Hbank0                        bank0        0000
+__Hbank1                        bank1        0000
+__Hbigbss                       bigbss       0000
+__Hbigdata                      bigdata      0000
+__Hbigram                       bigram       0000
+__Hbss                          bss          0000
+__HbssCOMRAM                    bssCOMRAM    0000
+__Hcinit                        cinit        0000
+__Hclrtext                      clrtext      0000
+__Hcomram                       comram       0000
+__Hconfig                       config       0000
+__Hconst                        const        0000
+__HcstackCOMRAM                 cstackCOMRAM 0000
+__Hdata                         data         0000
+__HdataCOMRAM                   dataCOMRAM   0000
+__Heeprom_data                  eeprom_data  0000
+__Hend_init                     end_init     0146
+__Hfarbss                       farbss       0000
+__Hfardata                      fardata      0000
+__Hibigdata                     ibigdata     0000
+__Hidata                        idata        0000
+__HidataCOMRAM                  idataCOMRAM  0000
+__Hidloc                        idloc        0000
+__Hifardata                     ifardata     0000
+__Hinit                         init         0142
+__Hintcode                      intcode      0142
+__Hintcode_body                 intcode_body 0000
+__Hintcodelo                    intcodelo    0142
+__Hintentry                     intentry     0000
+__Hintret                       intret       0000
+__Hintsave_regs                 intsave_regs 0000
+__Hirdata                       irdata       0000
+__Hmediumconst                  mediumconst  0000
+__HnvFARRAM                     nvFARRAM     0000
+__Hnvbit                        nvbit        0000
+__Hnvrram                       nvrram       0000
+__Hparam                        rparam       0000
+__Hpowerup                      powerup      0142
+__Hram                          ram          0000
+__Hramtop                       ramtop       0200
+__Hrbit                         rbit         0000
+__Hrbss                         rbss         0000
+__Hrdata                        rdata        0000
+__Hreset_vec                    reset_vec    0004
+__Hrparam                       rparam       0000
+__Hsfr                          sfr          0000
+__Hsmallconst                   smallconst   0000
+__Hspace_0                      (abs)        05B2
+__Hspace_1                      (abs)        0046
+__Hspace_2                      (abs)        0000
+__Hstack                        stack        0000
+__Hstruct                       struct       0000
+__Htemp                         temp         0000
+__Htext                         text         0000
+__Htext0                        text0        0000
+__Htext1                        text1        0000
+__Htext2                        text2        0000
+__Htext3                        text3        0000
+__LRAM                          (abs)        0001
+__Labs1                         abs1         0000
+__Lbank0                        bank0        0000
+__Lbank1                        bank1        0000
+__Lbigbss                       bigbss       0000
+__Lbigdata                      bigdata      0000
+__Lbigram                       bigram       0000
+__Lbss                          bss          0000
+__LbssCOMRAM                    bssCOMRAM    0000
+__Lcinit                        cinit        0000
+__Lclrtext                      clrtext      0000
+__Lcomram                       comram       0000
+__Lconfig                       config       0000
+__Lconst                        const        0000
+__LcstackCOMRAM                 cstackCOMRAM 0000
+__Ldata                         data         0000
+__LdataCOMRAM                   dataCOMRAM   0000
+__Leeprom_data                  eeprom_data  0000
+__Lend_init                     end_init     0142
+__Lfarbss                       farbss       0000
+__Lfardata                      fardata      0000
+__Libigdata                     ibigdata     0000
+__Lidata                        idata        0000
+__LidataCOMRAM                  idataCOMRAM  0000
+__Lidloc                        idloc        0000
+__Lifardata                     ifardata     0000
+__Linit                         init         0142
+__Lintcode                      intcode      0008
+__Lintcode_body                 intcode_body 0000
+__Lintcodelo                    intcodelo    0142
+__Lintentry                     intentry     0000
+__Lintret                       intret       0000
+__Lintsave_regs                 intsave_regs 0000
+__Lirdata                       irdata       0000
+__Lmediumconst                  mediumconst  0000
+__LnvFARRAM                     nvFARRAM     0000
+__Lnvbit                        nvbit        0000
+__Lnvrram                       nvrram       0000
+__Lparam                        rparam       0000
+__Lpowerup                      powerup      0142
+__Lram                          ram          0000
+__Lramtop                       ramtop       0200
+__Lrbit                         rbit         0000
+__Lrbss                         rbss         0000
+__Lrdata                        rdata        0000
+__Lreset_vec                    reset_vec    0000
+__Lrparam                       rparam       0000
+__Lsfr                          sfr          0000
+__Lsmallconst                   smallconst   0000
+__Lspace_0                      (abs)        0000
+__Lspace_1                      (abs)        0000
+__Lspace_2                      (abs)        0000
+__Lstack                        stack        0000
+__Lstruct                       struct       0000
+__Ltemp                         temp         0000
+__Ltext                         text         0000
+__Ltext0                        text0        0000
+__Ltext1                        text1        0000
+__Ltext2                        text2        0000
+__Ltext3                        text3        0000
+__S0                            (abs)        05B2
+__S1                            (abs)        0046
+__S2                            (abs)        0000
+___inthi_sp                     stack        0000
+___intlo_sp                     stack        0000
+___sp                           stack        0000
+__accesstop                     (abs)        0060
+__activetblptr                  (abs)        0000
+__end_of_ISR                    intcode      0142
+__end_of_MY_DELAY               text3        057E
+__end_of__initialization        cinit        0552
+__end_of_getKeyboardInput       text2        0526
+__end_of_initKeyboard           text1        05B2
+__end_of_main                   text0        0452
+__initialization                cinit        0526
+__mediumconst                   mediumconst  0000
+__pbssCOMRAM                    bssCOMRAM    0040
+__pcinit                        cinit        0526
+__pcstackCOMRAM                 cstackCOMRAM 0022
+__pdataCOMRAM                   dataCOMRAM   0001
+__pidataCOMRAM                  idataCOMRAM  057E
+__pintcode                      intcode      0008
+__ptext0                        text0        0146
+__ptext1                        text1        05A0
+__ptext2                        text2        0452
+__ptext3                        text3        0558
+__ramtop                        ramtop       0200
+__size_of_ISR                   (abs)        0000
+__size_of_MY_DELAY              (abs)        0000
+__size_of_getKeyboardInput      (abs)        0000
+__size_of_initKeyboard          (abs)        0000
+__size_of_main                  (abs)        0000
+__smallconst                    smallconst   0000
+_count                          bssCOMRAM    0043
+_data_timer                     bssCOMRAM    0040
+_digit                          dataCOMRAM   0021
+_digits                         dataCOMRAM   001C
+_getKeyboardInput               text2        0452
+_index                          bssCOMRAM    0044
+_initKeyboard                   text1        05A0
+_main                           text0        0146
+_t                              bssCOMRAM    0045
+end_of_initialization           cinit        0552
+getKeyboardInput@Keyboard_Input cstackCOMRAM 0034
+getKeyboardInput@column         cstackCOMRAM 0036
+getKeyboardInput@column_mask    cstackCOMRAM 0033
+getKeyboardInput@row            cstackCOMRAM 0035
+getKeyboardInput@temp           cstackCOMRAM 0037
+intlevel0                       text         0000
+intlevel1                       text         0000
+intlevel2                       text         0000
+intlevel3                       text         0000
+stackhi                         (abs)        01FF
+stacklo                         (abs)        0060
+start                           init         0142
+start_initialization            cinit        0526
+
+
+FUNCTION INFORMATION:
+
+ *************** function _main *****************
+ Defined at:
+		line 17 in file "E:\Study Material\XC8 PROJECTS\New Remote\Remote2\Remote.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+		None               void
+ Registers used:
+		wreg, fsr1l, fsr1h, fsr2l, fsr2h, status,2, status,0, prodl, prodh, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1
+      Params:         0       0       0
+      Locals:         0       0       0
+      Temps:          8       0       0
+      Totals:         8       0       0
+Total ram usage:        8 bytes
+ Hardware stack levels required when called:    2
+ This function calls:
+		_MY_DELAY
+		_getKeyboardInput
+		_initKeyboard
+ This function is called by:
+		Startup code after reset
+ This function uses a non-reentrant model
+
+
+ *************** function _initKeyboard *****************
+ Defined at:
+		line 5 in file "E:\Study Material\XC8 PROJECTS\New Remote\Remote2\keypad.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+		None               void
+ Registers used:
+		wreg, status,2
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1
+      Params:         0       0       0
+      Locals:         0       0       0
+      Temps:          0       0       0
+      Totals:         0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _getKeyboardInput *****************
+ Defined at:
+		line 13 in file "E:\Study Material\XC8 PROJECTS\New Remote\Remote2\keypad.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+  temp            1   21[COMRAM] unsigned char 
+  column          1   20[COMRAM] unsigned char 
+  row             1   19[COMRAM] unsigned char 
+  Keyboard_Inp    1   18[COMRAM] unsigned char 
+  column_mask     1   17[COMRAM] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      unsigned char 
+ Registers used:
+		wreg, fsr2l, fsr2h, status,2, status,0, prodl, prodh
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1
+      Params:         0       0       0
+      Locals:         5       0       0
+      Temps:          2       0       0
+      Totals:         7       0       0
+Total ram usage:        7 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _MY_DELAY *****************
+ Defined at:
+		line 218 in file "E:\Study Material\XC8 PROJECTS\New Remote\Remote2\Remote.c"
+ Parameters:    Size  Location     Type
+  ms              2   15[COMRAM] int 
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+		None               void
+ Registers used:
+		wreg, status,2, status,0, prodl
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1
+      Params:         2       0       0
+      Locals:         0       0       0
+      Temps:          0       0       0
+      Totals:         2       0       0
+Total ram usage:        2 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _ISR *****************
+ Defined at:
+		line 171 in file "E:\Study Material\XC8 PROJECTS\New Remote\Remote2\Remote.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+		None               void
+ Registers used:
+		wreg, fsr2l, fsr2h, status,2, status,0, prodl, prodh
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1
+      Params:         0       0       0
+      Locals:         0       0       0
+      Temps:         15       0       0
+      Totals:        15       0       0
+Total ram usage:       15 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		Interrupt level 2
+ This function uses a non-reentrant model
+
+
+
+MODULE INFORMATION
+
+Module		Function		Class		Link	Load	Size
+E:\Study Material\XC8 PROJECTS\New Remote\Remote2\Remote.c
+		_ISR           		CODE           	0008	0000	314
+		_main          		CODE           	0146	0000	780
+		_MY_DELAY      		CODE           	0558	0000	38
+
+E:\Study Material\XC8 PROJECTS\New Remote\Remote2\Remote.c estimated size: 1132
+
+shared
+		__initializatio		CODE           	0526	0000	44
+
+shared estimated size: 44
+
+E:\Study Material\XC8 PROJECTS\New Remote\Remote2\keypad.c
+		_initKeyboard  		CODE           	05A0	0000	18
+		_getKeyboardInp		CODE           	0452	0000	212
+
+E:\Study Material\XC8 PROJECTS\New Remote\Remote2\keypad.c estimated size: 230
+

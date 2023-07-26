@@ -1,0 +1,10 @@
+main@F3733: MEDIUMCONST, 32729 0 37
+_strlen: CODE, 14594 0 62
+_main: CODE, 14938 0 1446
+_MY_DELAY: CODE, 14544 0 50
+__initialization: CODE, 14480 0 12
+___lwdiv: CODE, 14656 0 86
+_CharData: MEDIUMCONST, 31209 0 1520
+___wmul: CODE, 14502 0 42
+_Send_Data: CODE, 14742 0 196
+Total: 3451

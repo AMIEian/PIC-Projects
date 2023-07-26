@@ -1,0 +1,1 @@
+ sim300.d  sim300.p1:  E:/Study\ Material/XC8\ PROJECTS/Aurangabad/sim300.c E:/Study\ Material/XC8\ PROJECTS/Aurangabad/sim300.h E:/Study\ Material/XC8\ PROJECTS/Aurangabad/usart_pic16.h

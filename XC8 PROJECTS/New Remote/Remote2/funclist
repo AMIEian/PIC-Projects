@@ -1,0 +1,7 @@
+_initKeyboard: CODE, 1440 0 18
+_ISR: CODE, 8 0 314
+_main: CODE, 326 0 780
+_getKeyboardInput: CODE, 1106 0 212
+_MY_DELAY: CODE, 1368 0 38
+__initialization: CODE, 1318 0 44
+Total: 1406

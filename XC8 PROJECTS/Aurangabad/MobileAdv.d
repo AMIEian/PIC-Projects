@@ -1,0 +1,1 @@
+ MobileAdv.d  MobileAdv.p1:  E:/Study\ Material/XC8\ PROJECTS/Aurangabad/MobileAdv.c E:/Study\ Material/XC8\ PROJECTS/Aurangabad/sim300.h

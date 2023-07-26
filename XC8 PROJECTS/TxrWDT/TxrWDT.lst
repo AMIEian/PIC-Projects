@@ -1,0 +1,423 @@
+
+
+HI-TECH Software PIC LITE Macro Assembler V1.00 build 12136 
+                                                                                               Wed Dec 12 19:43:22 2012
+
+HI-TECH Software Omniscient Code Generator (Lite mode) build 12136
+     1  0000                     opt subtitle "HI-TECH Software Omniscient Code Generator (Lite mode) build 12136"
+     2                           
+     3                           opt pagewidth 120
+     4                           
+     5                           	opt lm
+     6                           
+     7                           	processor	16F628A
+     8                           clrc	macro
+     9                           	bcf	3,0
+    10  0000                     	endm
+    11                           clrz	macro
+    12                           	bcf	3,2
+    13  0000                     	endm
+    14                           setc	macro
+    15                           	bsf	3,0
+    16  0000                     	endm
+    17                           setz	macro
+    18                           	bsf	3,2
+    19  0000                     	endm
+    20                           skipc	macro
+    21                           	btfss	3,0
+    22  0000                     	endm
+    23                           skipz	macro
+    24                           	btfss	3,2
+    25  0000                     	endm
+    26                           skipnc	macro
+    27                           	btfsc	3,0
+    28  0000                     	endm
+    29                           skipnz	macro
+    30                           	btfsc	3,2
+    31  0000                     	endm
+    32  0000                     indf	equ	0
+    33  0000                     indf0	equ	0
+    34  0002                     pc	equ	2
+    35  0002                     pcl	equ	2
+    36  0003                     status	equ	3
+    37  0004                     fsr	equ	4
+    38  0004                     fsr0	equ	4
+    39  0001                     c	equ	1
+    40  0000                     z	equ	0
+    41  000A                     pclath	equ	10
+    42                           	FNROOT	_main
+    43                           	global	_RB4
+    44  0034                     _RB4	set	0x34
+    45                           	global	_OPTION_REG
+    46  0081                     _OPTION_REG	set	0x81
+    47                           	global	_PCON
+    48  008E                     _PCON	set	0x8E
+    49                           	global	_TRISB
+    50  0086                     _TRISB	set	0x86
+    51                           psect	maintext,global,class=CODE,delta=2,split=1
+    52                           global __pmaintext
+    53  07D4                     __pmaintext:
+    54                           	file	"TxrWDT.as"
+    55                           	line	#
+    56                           psect cinit,class=CODE,delta=2
+    57                           global start_initialization
+    58  07D2                     start_initialization:
+    59                           
+    60                           psect cinit,class=CODE,delta=2,merge=1
+    61                           global end_of_initialization
+    62                           
+    63                           ;End of C runtime variable initialization code
+    64                           
+    65  07D2                     end_of_initialization:
+    66  07D2  0183               clrf status
+    67  07D3  2FD4               ljmp _main	;jump to C main() function
+    68                           psect	cstackCOMMON,class=COMMON,space=1
+    69                           global __pcstackCOMMON
+    70  0070                     __pcstackCOMMON:
+    71                           	global	?_main
+    72  0070                     ?_main:	; 0 bytes @ 0x0
+    73                           	global	??_main
+    74  0070                     ??_main:	; 0 bytes @ 0x0
+    75  0070                     	ds	1
+    76                           	global	main@count
+    77  0071                     main@count:	; 1 bytes @ 0x1
+    78  0071                     	ds	1
+    79                           ;!
+    80                           ;!Data Sizes:
+    81                           ;!    Strings     0
+    82                           ;!    Constant    0
+    83                           ;!    Data        0
+    84                           ;!    BSS         0
+    85                           ;!    Persistent  0
+    86                           ;!    Stack       0
+    87                           ;!
+    88                           ;!Auto Spaces:
+    89                           ;!    Space          Size  Autos    Used
+    90                           ;!    COMMON           14      2       2
+    91                           ;!    BANK0            80      0       0
+    92                           ;!    BANK1            80      0       0
+    93                           ;!    BANK2            48      0       0
+    94                           
+    95                           ;!
+    96                           ;!Pointer List with Targets:
+    97                           ;!
+    98                           ;!    None.
+    99                           
+   100                           
+   101                           ;!
+   102                           ;!Critical Paths under _main in COMMON
+   103                           ;!
+   104                           ;!    None.
+   105                           ;!
+   106                           ;!Critical Paths under _main in BANK0
+   107                           ;!
+   108                           ;!    None.
+   109                           ;!
+   110                           ;!Critical Paths under _main in BANK1
+   111                           ;!
+   112                           ;!    None.
+   113                           ;!
+   114                           ;!Critical Paths under _main in BANK2
+   115                           ;!
+   116                           ;!    None.
+   117                           
+   118 ;;
+   119 ;;Main: autosize = 0, tempsize = 1, incstack = 0, save=0
+   120 ;;
+   121                           
+   122                           ;!
+   123                           ;!Call Graph Tables:
+   124                           ;!
+   125                           ;! ---------------------------------------------------------------------------------
+   126                           ;! (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+   127                           ;! ---------------------------------------------------------------------------------
+   128                           ;! (0) _main                                                 2     2      0      30
+   129                           ;!                                              0 COMMON     2     2      0
+   130                           ;! ---------------------------------------------------------------------------------
+   131                           ;! Estimated maximum stack depth 0
+   132                           ;! ---------------------------------------------------------------------------------
+   133                           ;!
+   134                           ;! Call Graph Graphs:
+   135                           ;!
+   136                           ;! _main (ROOT)
+   137                           ;!
+   138                           
+   139                           ;! Address spaces:
+   140                           
+   141                           ;!Name               Size   Autos  Total    Cost      Usage
+   142                           ;!BITCOMMON            E      0       0       0        0.0%
+   143                           ;!EEDATA              80      0       0       0        0.0%
+   144                           ;!NULL                 0      0       0       0        0.0%
+   145                           ;!CODE                 0      0       0       0        0.0%
+   146                           ;!COMMON               E      2       2       1       14.3%
+   147                           ;!BITSFR0              0      0       0       1        0.0%
+   148                           ;!SFR0                 0      0       0       1        0.0%
+   149                           ;!BITSFR1              0      0       0       2        0.0%
+   150                           ;!SFR1                 0      0       0       2        0.0%
+   151                           ;!STACK                0      0       0       2        0.0%
+   152                           ;!BANK0               50      0       0       3        0.0%
+   153                           ;!BITSFR3              0      0       0       4        0.0%
+   154                           ;!SFR3                 0      0       0       4        0.0%
+   155                           ;!ABS                  0      0       0       4        0.0%
+   156                           ;!BITBANK0            50      0       0       5        0.0%
+   157                           ;!BITSFR2              0      0       0       5        0.0%
+   158                           ;!SFR2                 0      0       0       5        0.0%
+   159                           ;!BITBANK1            50      0       0       6        0.0%
+   160                           ;!BANK1               50      0       0       7        0.0%
+   161                           ;!BITBANK2            30      0       0       8        0.0%
+   162                           ;!BANK2               30      0       0       9        0.0%
+   163                           ;!DATA                 0      0       0      10        0.0%
+   164                           
+   165                           	global	_main
+   166                           
+   167 ;; *************** function _main *****************
+   168 ;; Defined at:
+   169 ;;		line 6 in file "C:\XC8 PROJECTS\TxrWDT\TxrWDT.C"
+   170 ;; Parameters:    Size  Location     Type
+   171 ;;		None
+   172 ;; Auto vars:     Size  Location     Type
+   173 ;;  count           1    1[COMMON] unsigned char 
+   174 ;; Return value:  Size  Location     Type
+   175 ;;		None               void
+   176 ;; Registers used:
+   177 ;;		wreg, status,2, status,0
+   178 ;; Tracked objects:
+   179 ;;		On entry : 17F/0
+   180 ;;		On exit  : 0/0
+   181 ;;		Unchanged: 0/0
+   182 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2
+   183 ;;      Params:         0       0       0       0
+   184 ;;      Locals:         1       0       0       0
+   185 ;;      Temps:          1       0       0       0
+   186 ;;      Totals:         2       0       0       0
+   187 ;;Total ram usage:        2 bytes
+   188 ;; This function calls:
+   189 ;;		Nothing
+   190 ;; This function is called by:
+   191 ;;		Startup code after reset
+   192 ;; This function uses a non-reentrant model
+   193 ;;
+   194                           psect	maintext
+   195                           psect	maintext
+   196                           	file	"C:\XC8 PROJECTS\TxrWDT\TxrWDT.C"
+   197                           	line	6
+   198                           	global	__size_of_main
+   199  002C                     	__size_of_main	equ	__end_of_main-_main
+   200                           	
+   201  07D4                     _main:	
+   202                           	opt	stack 8
+   203                           ; Regs used in _main: [wreg+status,2+status,0]
+   204                           	line	7
+   205                           	
+   206  07D4                     l473:	
+   207                           ;TxrWDT.C: 7: PCON = 0x00;
+   208  07D4  1683               	bsf	status, 5	;RP0=1, select bank1
+   209  07D5  1303               	bcf	status, 6	;RP1=0, select bank1
+   210  07D6  018E               	clrf	(142)^080h	;volatile
+   211                           	line	8
+   212                           	
+   213  07D7                     l475:	
+   214                           ;TxrWDT.C: 8: TRISB = 0x6F;
+   215  07D7  306F               	movlw	(06Fh)
+   216  07D8  0086               	movwf	(134)^080h	;volatile
+   217                           	line	9
+   218                           	
+   219  07D9                     l477:	
+   220                           ;TxrWDT.C: 9: RB4 = 1;
+   221  07D9  1283               	bcf	status, 5	;RP0=0, select bank0
+   222  07DA  1303               	bcf	status, 6	;RP1=0, select bank0
+   223  07DB  1606               	bsf	(52/8),(52)&7	;volatile
+   224                           	line	10
+   225                           	
+   226  07DC                     l479:	
+   227                           ;TxrWDT.C: 10: OPTION_REG = 0x8F;
+   228  07DC  308F               	movlw	(08Fh)
+   229  07DD  1683               	bsf	status, 5	;RP0=1, select bank1
+   230  07DE  1303               	bcf	status, 6	;RP1=0, select bank1
+   231  07DF  0081               	movwf	(129)^080h	;volatile
+   232                           	line	12
+   233                           	
+   234  07E0                     l481:	
+   235                           ;TxrWDT.C: 12: unsigned char count = 0;
+   236  07E0  01F1               	clrf	(main@count)
+   237  07E1  2FE2               	goto	l483
+   238                           	line	13
+   239                           ;TxrWDT.C: 13: while(1)
+   240                           	
+   241  07E2                     l11:	
+   242                           	line	16
+   243                           	
+   244  07E2                     l483:	
+   245                           ;TxrWDT.C: 14: {
+   246                           ;TxrWDT.C: 16: for( count = 0; count < 26; count++ )
+   247  07E2  01F1               	clrf	(main@count)
+   248                           	
+   249  07E3                     l485:	
+   250  07E3  301A               	movlw	(01Ah)
+   251  07E4  0271               	subwf	(main@count),w
+   252  07E5  1C03               	skipc
+   253  07E6  2FE8               	goto	u11
+   254  07E7  2FE9               	goto	u10
+   255  07E8                     u11:
+   256  07E8  2FEB               	goto	l12
+   257  07E9                     u10:
+   258  07E9  2FF6               	goto	l13
+   259                           	
+   260  07EA                     l487:	
+   261  07EA  2FF6               	goto	l13
+   262                           	line	17
+   263                           	
+   264  07EB                     l12:	
+   265                           	line	19
+   266                           # 19 "C:\XC8 PROJECTS\TxrWDT\TxrWDT.C"
+   267  07EB  0063               SLEEP ;GO TO SLEEP MODE ;# 
+   268                           psect	maintext
+   269                           	line	16
+   270                           	
+   271  07EC                     l489:	
+   272  07EC  3001               	movlw	(01h)
+   273  07ED  00F0               	movwf	(??_main+0)+0
+   274  07EE  0870               	movf	(??_main+0)+0,w
+   275  07EF  07F1               	addwf	(main@count),f
+   276                           	
+   277  07F0                     l491:	
+   278  07F0  301A               	movlw	(01Ah)
+   279  07F1  0271               	subwf	(main@count),w
+   280  07F2  1C03               	skipc
+   281  07F3  2FF5               	goto	u21
+   282  07F4  2FF6               	goto	u20
+   283  07F5                     u21:
+   284  07F5  2FEB               	goto	l12
+   285  07F6                     u20:
+   286                           	
+   287  07F6                     l13:	
+   288                           	line	24
+   289                           ;TxrWDT.C: 21: }
+   290                           ;TxrWDT.C: 24: RB4 = 0;
+   291  07F6  1283               	bcf	status, 5	;RP0=0, select bank0
+   292  07F7  1303               	bcf	status, 6	;RP1=0, select bank0
+   293  07F8  1206               	bcf	(52/8),(52)&7	;volatile
+   294                           	line	28
+   295                           # 28 "C:\XC8 PROJECTS\TxrWDT\TxrWDT.C"
+   296  07F9  0063               SLEEP ;GO TO SLEEP MODE ;# 
+   297                           psect	maintext
+   298                           	line	31
+   299                           ;TxrWDT.C: 31: RB4 = 1;
+   300  07FA  1283               	bcf	status, 5	;RP0=0, select bank0
+   301  07FB  1303               	bcf	status, 6	;RP1=0, select bank0
+   302  07FC  1606               	bsf	(52/8),(52)&7	;volatile
+   303  07FD  2FE2               	goto	l483
+   304                           	line	32
+   305                           	
+   306  07FE                     l14:	
+   307                           	line	13
+   308  07FE  2FE2               	goto	l483
+   309                           	
+   310  07FF                     l15:	
+   311                           	line	33
+   312                           	
+   313  07FF                     l16:	
+   314                           	global	start
+   315  07FF  2800               	ljmp	start
+   316                           	opt stack 0
+   317                           GLOBAL	__end_of_main
+   318  0800                     	__end_of_main:
+   319                           	signat	_main,88
+   320                           psect	maintext
+   321                           	global	btemp
+   322  007E                     	btemp set 07Eh
+   323                           
+   324                           	DABS	1,126,2	;btemp
+   325                           	global	wtemp0
+   326  007E                     	wtemp0 set btemp
+
+
+Data Sizes:
+    Strings     0
+    Constant    0
+    Data        0
+    BSS         0
+    Persistent  0
+    Stack       0
+
+Auto Spaces:
+    Space          Size  Autos    Used
+    COMMON           14      2       2
+    BANK0            80      0       0
+    BANK1            80      0       0
+    BANK2            48      0       0
+
+Pointer List with Targets:
+
+    None.
+
+Critical Paths under _main in COMMON
+
+    None.
+
+Critical Paths under _main in BANK0
+
+    None.
+
+Critical Paths under _main in BANK1
+
+    None.
+
+Critical Paths under _main in BANK2
+
+    None.
+
+Call Graph Tables:
+
+ ---------------------------------------------------------------------------------
+ (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+ ---------------------------------------------------------------------------------
+ (0) _main                                                 2     2      0      30
+                                              0 COMMON     2     2      0
+ ---------------------------------------------------------------------------------
+ Estimated maximum stack depth 0
+ ---------------------------------------------------------------------------------
+
+ Call Graph Graphs:
+
+ _main (ROOT)
+
+ Address spaces:
+Name               Size   Autos  Total    Cost      Usage
+BITCOMMON            E      0       0       0        0.0%
+EEDATA              80      0       0       0        0.0%
+NULL                 0      0       0       0        0.0%
+CODE                 0      0       0       0        0.0%
+COMMON               E      2       2       1       14.3%
+BITSFR0              0      0       0       1        0.0%
+SFR0                 0      0       0       1        0.0%
+BITSFR1              0      0       0       2        0.0%
+SFR1                 0      0       0       2        0.0%
+STACK                0      0       0       2        0.0%
+BANK0               50      0       0       3        0.0%
+BITSFR3              0      0       0       4        0.0%
+SFR3                 0      0       0       4        0.0%
+ABS                  0      0       0       4        0.0%
+BITBANK0            50      0       0       5        0.0%
+BITSFR2              0      0       0       5        0.0%
+SFR2                 0      0       0       5        0.0%
+BITBANK1            50      0       0       6        0.0%
+BANK1               50      0       0       7        0.0%
+BITBANK2            30      0       0       8        0.0%
+BANK2               30      0       0       9        0.0%
+DATA                 0      0       0      10        0.0%
+
+
+HI-TECH Software PICC Macro Assembler V1.00 build 12136 
+Symbol Table                                                                                   Wed Dec 12 19:43:22 2012
+
+                  l11 07E2                    l12 07EB                    l13 07F6                    l14 07FE  
+                  l15 07FF                    l16 07FF                    u10 07E9                    u11 07E8  
+                  u20 07F6                    u21 07F5                   l481 07E0                   l473 07D4  
+                 l491 07F0                   l483 07E2                   l475 07D7                   l485 07E3  
+                 l477 07D9                   l487 07EA                   l479 07DC                   l489 07EC  
+                 _RB4 0034                  _PCON 008E                  _main 07D4                  btemp 007E  
+                start 0000                 ?_main 0070                 _TRISB 0086                 status 0003  
+               wtemp0 007E          __end_of_main 0800                ??_main 0070        __pcstackCOMMON 0070  
+          __pmaintext 07D4  end_of_initialization 07D2   start_initialization 07D2             main@count 0071  
+       __size_of_main 002C            _OPTION_REG 0081  

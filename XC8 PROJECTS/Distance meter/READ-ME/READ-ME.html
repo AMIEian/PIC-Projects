@@ -1,0 +1,311 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Read me ! For Sure !</title>
+<style>
+
+body{
+	margin:0px;
+	padding:0px;
+	font-family:Verdana, Geneva, sans-serif;
+}
+h1{
+	border-bottom:2px solid #0046A6;
+	color:#2080FF;
+}
+.warning, .tip, .download{
+	padding:16px;
+	margin:16px;
+	border:1px solid;
+	border-radius:4px;
+	padding-left:30px;
+	
+}
+
+.warning{
+	border-color:#FC0;
+	background:url(images/warning-icon.png);
+	background-color:#FFC;
+	background-repeat:no-repeat;
+	background-position:left center;	
+}
+
+.tip{
+	border-color:#39F;
+	background:url(images/face-angel-icon.png);
+	background-color:#EAF3FF;
+	background-repeat:no-repeat;
+	background-position:left center;
+}
+
+.download{
+	border-color:#39F;
+	background-color:#EAF3FF;
+}
+.download a{
+	text-decoration:none;
+	font-size:150%;
+}
+
+.extra_info{
+	font-style:italic;
+	color:#666;
+}
+
+.image_caption{
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-weight:bold;
+}
+
+.image_caption::before{
+	content:"Fig.",
+}
+
+.highlight{
+	background:#9F0;
+}
+
+.ui{
+	border:1px solid #999;
+	background-color:#EEE;
+	font-style:italic;
+	padding-left:4px;
+	padding-right:4px;
+	font-size:80%;
+}
+
+#content{
+	width:950px;
+	margin-left:320px;
+	margin-right:auto;
+}
+#author_box{
+	border:1px solid #CCC;
+	margin:32px;
+	padding-left:16px;
+	padding-right:16px;
+	background-color:#EEE;
+	height:158px;
+}
+
+#author_box h3{
+	font-weight: bold;
+	text-shadow: 1px 1px 0px #FFF;
+	color: #474539;
+	font-family: "Rokkitt","Lucida Sans","Lucida Grande","Lucida Sans Unicode",sans-serif;
+	margin-top:1px;
+}
+
+#author_image{
+	margin-top:8px;
+	border: 8px solid #FFF;
+	float:left;
+	box-shadow: 2px 2px 3px #888888;
+}
+
+#author_bio{
+	margin-top:8px;
+	margin-left:8px;
+	width:700px;
+	float:left;
+}
+
+#author_social{
+	border:2px solid #fff;
+	padding:4px;
+	display:inline;
+	padding-bottom:8px;
+}
+
+#author_social img{
+	vertical-align:middle;
+}
+	
+#sidebar_left{
+	width:250px;
+	height:550px;
+	position:fixed;
+	top: 16px;
+	left:16px;
+	background-color:#0CF;
+	border-radius:16px;
+	color:#FFF;
+	padding-left:16px;
+	padding-right:16px;
+	box-shadow:3px 3px 3px #888888;
+	
+}
+.btn-download {
+	-moz-box-shadow: 0px 1px 0px 0px #fff6af;
+	-webkit-box-shadow: 0px 1px 0px 0px #fff6af;
+	box-shadow: 0px 1px 0px 0px #fff6af;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffec64), color-stop(1, #ffab23));
+	background:-moz-linear-gradient(top, #ffec64 5%, #ffab23 100%);
+	background:-webkit-linear-gradient(top, #ffec64 5%, #ffab23 100%);
+	background:-o-linear-gradient(top, #ffec64 5%, #ffab23 100%);
+	background:-ms-linear-gradient(top, #ffec64 5%, #ffab23 100%);
+	background:linear-gradient(to bottom, #ffec64 5%, #ffab23 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffec64', endColorstr='#ffab23',GradientType=0);
+	background-color:#ffec64;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #ffaa22;
+	display:inline-block;
+	cursor:pointer;
+	color:#333333;
+	font-family:arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffee66;
+	width:70%;
+	margin:8px;
+	text-align:center;
+}
+.btn-download:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffab23), color-stop(1, #ffec64));
+	background:-moz-linear-gradient(top, #ffab23 5%, #ffec64 100%);
+	background:-webkit-linear-gradient(top, #ffab23 5%, #ffec64 100%);
+	background:-o-linear-gradient(top, #ffab23 5%, #ffec64 100%);
+	background:-ms-linear-gradient(top, #ffab23 5%, #ffec64 100%);
+	background:linear-gradient(to bottom, #ffab23 5%, #ffec64 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffab23', endColorstr='#ffec64',GradientType=0);
+	background-color:#ffab23;
+}
+.btn-download:active {
+	position:relative;
+	top:1px;
+}
+
+.align_center{
+	margin-left:auto;
+	margin-right:auto;
+	display:block;
+}
+
+</style>
+</head>
+
+<body>
+<div id="sidebar_left">
+ <p>To compile the source code you need following essential software installed properly on your system.</p>
+ <a href="" class="btn-download">MPLAB X v2.3</a>
+ <a href="http://ww1.microchip.com/downloads/en/DeviceDoc/xc8-v1_12-win.exe" class="btn-download">XC8 v1.12</a>
+ <p  style="border: 1px solid #FFF;background-color:inherit; font-size:70%; padding:2px; margin:2px; text-align:center;"> Both are available as free download !</p>
+ <a href="http://extremeelectronics.co.in"><img src="images/logo.png" class="align_center" style="position:absolute; bottom:0px;"/></a>
+</div>
+<div id="content">
+    <h1>READ ME TWICE FOR SURE !</h1>
+    <p>This tutorial will help you understand what you have just downloaded. We have provided this guide because many people wonders how to properly compile the source code. <span class="highlight">So first thing I would tell you is that the source code is in form of <strong>MPLABX</strong> project.</span> Thus you need MPLABX in order to open, edit and build the project.</p>
+    <p>You should create a folder where you can keep all source code you download from our website. Create a folder named <strong>PIC16</strong> in a drive say <strong>E:</strong></p>
+    <p>Make sure whatever name you choose there should NOT be any space in the entire pathname.</p>
+    <p>So <span class="ui">E:\PIC16</span> is correct !</p>
+    <p>While <span class="ui">E:\My Projects\PIC18</span> is BAD!</p>
+    <p>Inside this download package there is a folder called the <span class="ui">source</span> copy the folder which is present inside <span class="ui">source</span> to your project folder (<span class="ui">E:\PIC16</span>).</p>
+    <p>Now open MPLABX <a href="#IDE">IDE</a> from its desktop icon. Then from <span class="ui">File</span> Menu Select <span class="ui">Open Project ...</span></p>
+    <p><img src="images/mplabx_open_project.png" width="900" height="500" alt="mplabx open project" /></p>
+    <p>From the dialog that opens, goto <span class="ui">E:\</span> then <span class="ui">PIC16</span> and select the project you wish to open. In the image below the project name is <span class="ui">ADCDemo.X</span></p>
+    <p><img src="images/mplabx_select_folder.png" width="686" height="377" alt="mplabx select folder" /></p>
+    <p>MPLAB will load all the files in the project. A project may be made up of several sources files. Each file may have some dedicated function, like handling the LCD module or GSM Modem. These files are called library files and they can be reused in several other project.</p>
+    <p>After the project is opened in MPLABX, our next task is editing the project. That means to make the changes we need in the program.</p>
+    <p>If the program uses LCD to display its output to the user, the first thing you wanna change is some messages that program show on startup. In all my program I write my name &quot;By Avinash&quot; on the LCD module at startup. You may find this and change it to your name !</p>
+    <p>The project view on the top left hand side of MPLABX shows all the projects which you have opened.</p>
+    <p>Expand the project node to see all the files that are present in the project.</p>
+    <p>They are grouped by their type</p>
+    <ul>
+      <li>Header</li>
+      <li>Important</li>
+      <li>Linker</li>
+      <li><strong>Source</strong></li>
+      <li>Libraries</li>
+      <li>Loadables</li>
+    </ul>
+    <p>The most important type of files are source files. So expand the source files group and find a file named <strong><span class="ui">main.c</span></strong>, in most cases you need to make changes to this file only. The rest other files are supporting library files that you should not touch initially.</p>
+    <p><img src="images/mplabx_open_main.png" width="873" height="655" alt="MPLAB X Load main.c" /></p>
+    <p>Once you have made the changes, its time to build the project. To build the project.</p>
+    <ol>
+      <li>Right click on the project you wish to build</li>
+      <li>Select build from the menu.</li>
+    </ol>
+    <p><img src="images/mplabx_build_project.png" width="873" height="655" alt="mplabx build project" /></p>
+    <p>If you are good at C programming language and have made no syntax error while editing the program, it should compile without any problem and you should get <span class="ui">BUILD SUCCESSFUL</span> message as the build output.</p>
+    <p><img src="images/mplab_build_success.png" width="900" height="609" alt="MPLAB X Build Success" /></p>
+    <p>After a successful build, the final hex file is generated which you can burn directly to the PIC16F877a using a <a href="http://extremeelectronics.co.in/eXtremeBurnerPIC/docs/user_guide_pic16.htm#BURNING">USB Programmer</a>. This HEX file can be found at the following location inside your project folder.</p>
+    <p><span class="ui">\dist\default\production</span></p>
+    <p>The extension if HEX file is <span class="ui">.hex</span></p>
+    <div id="author_box">
+    	<a href="https://www.facebook.com/avinash.gupta.x"><img src="images/avinash.jpg" id="author_image"/></a>
+        <div id="author_bio">
+    		<h3>The man behind this virus</h3>
+            <p>Avinash Gupta is solely focused on free and high quality tutorial to make learning embedded system fun !</p>
+            <div id="author_social">
+            	<p style="display:inline; font-size:80%; vertical-align:middle;"> You can easily get in touch with him </p>
+            	<a href="https://www.facebook.com/avinash.gupta.x" title="Follow on Facebook"><img src="images/facebook-icon.png" /></a>
+                <a href="https://plus.google.com/+AvinashGuptaa" title="Follow on Google Plus"><img src="images/google-icon.png" /></a>
+            </div>
+        </div>
+    </div>
+    <p class="tip">eXtreme Electronics is a membership only site. Downloads of source codes are allowed only to approved members. So to keep your membership in a healthy state please follow us on <a href="https://www.facebook.com/eXtremeElectronics">Facebook</a> and also share our articles that helped you on your social networking accounts.</p>
+    <h1>PIC Development Made Easy    </h1>
+    <table width="850" border="0" cellspacing="2" cellpadding="5">
+      <tr>
+        <td><div align="center"><strong><a href="http://store.extremeelectronics.co.in/40-PIN-PIC-Development-Board.html"><img src="images/PIC40DEVSide.jpg" width="400" height="271" alt="PIC Development Board" /></a></strong></div></td>
+        <td><div align="center"><strong><a href="http://store.extremeelectronics.co.in/eXtreme-Burner-PIC.html"><img src="images/eXtremeBurnerPICv1_1.jpg" width="400" height="325" alt="PIC Programmer" /></a></strong></div></td>
+      </tr>
+      <tr>
+        <td><div align="center"><strong>PIC Development Board for 40 Pin PIC MCUs</strong></div></td>
+        <td><div align="center"><strong>USB PIC Programmer</strong></div></td>
+      </tr>
+      <tr>
+        <td><div align="center"></div></td>
+        <td><div align="center"></div></td>
+      </tr>
+      <tr>
+        <td><div align="center"><strong><a href="http://store.extremeelectronics.co.in/Adapters/"><img src="images/12v_dc_adapter_1amps.jpg" width="400" height="276" alt="Adapter 12v" /></a></strong></div></td>
+        <td><div align="center"><strong><a href="http://store.extremeelectronics.co.in/Alphanumeric-LCD-Modules/"><img src="images/lcd_blue_text.jpg" width="400" height="193" alt="LCD Modules" /></a></strong></div></td>
+      </tr>
+      <tr>
+        <td><div align="center"><strong>12V 1A Adapter</strong></div></td>
+        <td><div align="center"><strong>LCD Modules</strong></div></td>
+      </tr>
+    </table>
+    <p>More electronics for your everyday needs, delivered to your door steps! <a href="http://store.extremeelectronics.co.in">Online Store</a>.</p>
+    <h1>About the Source Code</h1>
+    <p>In computer science <strong>&quot;source code&quot;</strong> is a program written in a language that is easily understood by a human being. These type of language are called high level language. There are several standard high level language like C, C++, BASIC, Java, PHP etc. But most professional embedded applications are written in C or C++. <strong>The source code that you have just downloaded is written in C language.</strong></p>
+    <p class="warning">A program written in high level language cannot be directly executed on CPU! It must first be converted into machine language.</p>
+    <p class="tip">Learning a programming language is NOT an one night affair! It takes years to get expert on them. Also some programming languages like C looks very tough to new programmers. Thus they must first learn concepts of programming with some easier languages like <a href="http://en.wikipedia.org/wiki/BASIC">BASIC</a> or <a href="http://en.wikipedia.org/wiki/Logo_(programming_language)">LOGO</a>.</p>
+    <p class="tip">Luckily I was born in the times when they taught programming to school kids like they teach MS Office nowadays!</p>
+    <h2>Compilers</h2>
+    <p>Compiler is a computer software that converts a program written high level language to machine code that can be directly executed on a CPU. So we need a compiler that converts the program written in <strong>C language</strong> to machine code for <strong>PIC18F</strong> series MCUs. Since compiler is a &quot;product&quot; thus it is developed by many companies and sold at different prices. I have selected a compiler that is also good for your pocket. Microchip, the company that makes the PIC series microcontroller also makes a C compiler available for free! The latest C compiler released by Microchip is the <strong>XC8</strong>  for 8 bit MCUs like the PIC18F</p>
+    <p class="download"><a href="http://www.microchip.com/pagehandler/en_us/devtools/mplabxc/">Download XC8</a><br /><span class="extra_info">Download <strong>XC8</strong> and NOT XC16 or XC32</span></p>
+    <p class="warning"><strong>NOTE:</strong> The latest version <strong>1.33</strong> has some installation bugs. So I suggest you to go for <a href="http://ww1.microchip.com/downloads/en/DeviceDoc/xc8-v1_12-win.exe">version 1.12</a></p>
+    <p>The installation is very easy and takes less than 5 minutes.</p>
+    <p><img src="images/1.png" width="516" height="438" /></p>
+    <p><img src="images/3.png" width="516" height="438" /></p>
+    <p><img src="images/4.png" width="516" height="438" /></p>
+    <p><img src="images/6.png" width="516" height="438" /></p>
+    <p><img src="images/8.png" width="516" height="438" /></p>
+    <h2><a name="IDE"></a>IDE or Integrated Development Environment</h2>
+    <p><span class="highlight">Installing a compiler only is NOT enough to get started with development.</span> Because a compiler takes as input the programs written in high level language in form of text files. You can theoretically create those program files in any text editor like Notepad under Windows. But to make the entire task manageable, one GUI software called the IDE is required to create those program files. An IDE offers much more than just editing programs.</p>
+    <ul>
+      <li>Add and edit files to project.</li>
+      <li>The editor is much more powerful than Notepad and is specially designed for writing programs in C and thus has following advantage.
+        <ul>
+          <li>Your typing gets faster with the assistance of auto-complete where the editor offers you to chose long variable and function names from a list.</li>
+          <li>Any syntax error is underlined RED in real time thus allowing to to make corrections.</li>
+          <li>Better view of the program. Thanks to <strong>syntax highlight</strong> feature different parts of the program gets different colours and looks.</li>
+        </ul>
+      </li>
+      <li>Compiler also manages the <strong>compiler settings</strong> which are very crucial for proper and error free compilation of the programs.</li>
+      <li>It calls the compiler for your from just a click of menu.</li>
+      <li>Shows the result of the compilation process.</li>
+      <li>It also helps in debugging of the programs.</li>
+    </ul>
+    <p><img src="images/mplabx.png" width="900" height="643" alt="MPLAB X IDE" /></p>
+    <p class="image_caption">The MPLAB X IDE</p>
+</div>
+</body>
+</html>

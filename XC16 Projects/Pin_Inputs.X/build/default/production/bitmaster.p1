@@ -1,0 +1,113 @@
+Version 4.0 HI-TECH Software Intermediate Code
+"1 bitmaster.c
+[; ;bitmaster.c: 1: int setBit(int number, int position)
+[v _setBit `(i ~T0 @X0 1 ef2`i`i ]
+"2
+[; ;bitmaster.c: 2:     {
+{
+[e :U _setBit ]
+"1
+[; ;bitmaster.c: 1: int setBit(int number, int position)
+[v _number `i ~T0 @X0 1 r1 ]
+[v _position `i ~T0 @X0 1 r2 ]
+"2
+[; ;bitmaster.c: 2:     {
+[f ]
+"3
+[; ;bitmaster.c: 3:         int newNumber;
+[v _newNumber `i ~T0 @X0 1 a ]
+"4
+[; ;bitmaster.c: 4:         newNumber = (1 << position) | number;
+[e = _newNumber | << -> 1 `i _position _number ]
+"5
+[; ;bitmaster.c: 5:         return newNumber;
+[e ) _newNumber ]
+[e $UE 1  ]
+"6
+[; ;bitmaster.c: 6:     }
+[e :UE 1 ]
+}
+"8
+[; ;bitmaster.c: 8: int clearBit(int number, int position)
+[v _clearBit `(i ~T0 @X0 1 ef2`i`i ]
+"9
+[; ;bitmaster.c: 9:     {
+{
+[e :U _clearBit ]
+"8
+[; ;bitmaster.c: 8: int clearBit(int number, int position)
+[v _number `i ~T0 @X0 1 r1 ]
+[v _position `i ~T0 @X0 1 r2 ]
+"9
+[; ;bitmaster.c: 9:     {
+[f ]
+"10
+[; ;bitmaster.c: 10:         int newNumber;
+[v _newNumber `i ~T0 @X0 1 a ]
+"11
+[; ;bitmaster.c: 11:         newNumber = number & (~(1 << position));
+[e = _newNumber & _number ~ << -> 1 `i _position ]
+"12
+[; ;bitmaster.c: 12:         return newNumber;
+[e ) _newNumber ]
+[e $UE 2  ]
+"13
+[; ;bitmaster.c: 13:     }
+[e :UE 2 ]
+}
+"15
+[; ;bitmaster.c: 15: int toggleBit(int number, int position)
+[v _toggleBit `(i ~T0 @X0 1 ef2`i`i ]
+"16
+[; ;bitmaster.c: 16:     {
+{
+[e :U _toggleBit ]
+"15
+[; ;bitmaster.c: 15: int toggleBit(int number, int position)
+[v _number `i ~T0 @X0 1 r1 ]
+[v _position `i ~T0 @X0 1 r2 ]
+"16
+[; ;bitmaster.c: 16:     {
+[f ]
+"17
+[; ;bitmaster.c: 17:         int newNumber;
+[v _newNumber `i ~T0 @X0 1 a ]
+"18
+[; ;bitmaster.c: 18:         newNumber = number ^ (1 << position);
+[e = _newNumber ^ _number << -> 1 `i _position ]
+"19
+[; ;bitmaster.c: 19:         return newNumber;
+[e ) _newNumber ]
+[e $UE 3  ]
+"20
+[; ;bitmaster.c: 20:     }
+[e :UE 3 ]
+}
+"22
+[; ;bitmaster.c: 22: int getBit(int number, int position)
+[v _getBit `(i ~T0 @X0 1 ef2`i`i ]
+"23
+[; ;bitmaster.c: 23:     {
+{
+[e :U _getBit ]
+"22
+[; ;bitmaster.c: 22: int getBit(int number, int position)
+[v _number `i ~T0 @X0 1 r1 ]
+[v _position `i ~T0 @X0 1 r2 ]
+"23
+[; ;bitmaster.c: 23:     {
+[f ]
+"24
+[; ;bitmaster.c: 24:         int bitStatus;
+[v _bitStatus `i ~T0 @X0 1 a ]
+"25
+[; ;bitmaster.c: 25:         bitStatus = (number >> position) & 1;
+[e = _bitStatus & >> _number _position -> 1 `i ]
+"26
+[; ;bitmaster.c: 26:         return bitStatus;
+[e ) _bitStatus ]
+[e $UE 4  ]
+"27
+[; ;bitmaster.c: 27:     }
+[e :UE 4 ]
+}

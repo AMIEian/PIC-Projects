@@ -1,0 +1,53 @@
+G:\Remote Station Monitor\RemoteMonitor\RemoteMonitor\bin\Debug\RemoteMonitor.exe.config
+G:\Remote Station Monitor\RemoteMonitor\RemoteMonitor\bin\Debug\RemoteMonitor.exe
+G:\Remote Station Monitor\RemoteMonitor\RemoteMonitor\bin\Debug\RemoteMonitor.pdb
+G:\Remote Station Monitor\RemoteMonitor\RemoteMonitor\obj\Debug\RemoteMonitor.Login_Form.resources
+G:\Remote Station Monitor\RemoteMonitor\RemoteMonitor\obj\Debug\RemoteMonitor.main_window.resources
+G:\Remote Station Monitor\RemoteMonitor\RemoteMonitor\obj\Debug\RemoteMonitor.Properties.Resources.resources
+G:\Remote Station Monitor\RemoteMonitor\RemoteMonitor\obj\Debug\RemoteMonitor.csproj.GenerateResource.Cache
+G:\Remote Station Monitor\RemoteMonitor\RemoteMonitor\obj\Debug\RemoteMonitor.exe
+G:\Remote Station Monitor\RemoteMonitor\RemoteMonitor\obj\Debug\RemoteMonitor.pdb
+G:\Remote Station Monitor\RemoteMonitor\RemoteMonitor\bin\Debug\goras.mdb
+G:\Remote Station Monitor\RemoteMonitor\RemoteMonitor\obj\Debug\RemoteMonitor.PORTSettings.resources
+G:\Remote Station Monitor\RemoteMonitor\RemoteMonitor\bin\Debug\RemoteMonitor.exe.manifest
+G:\Remote Station Monitor\RemoteMonitor\RemoteMonitor\bin\Debug\RemoteMonitor.application
+G:\Remote Station Monitor\RemoteMonitor\RemoteMonitor\obj\Debug\RemoteMonitor.exe.manifest
+G:\Remote Station Monitor\RemoteMonitor\RemoteMonitor\obj\Debug\RemoteMonitor.application
+G:\Remote Station Monitor\RemoteMonitor\RemoteMonitor\obj\Debug\RemoteMonitor.csprojResolveAssemblyReference.cache
+G:\Remote Station Monitor\RemoteMonitor\RemoteMonitor\obj\Debug\RemoteMonitor.GetData.resources
+G:\Remote Station Monitor\RemoteMonitor\RemoteMonitor\obj\Debug\RemoteMonitor.RTU1HistoryCombined.resources
+G:\Remote Station Monitor\RemoteMonitor\RemoteMonitor\obj\Debug\RemoteMonitor.RTU2HistoryCombined.resources
+G:\Remote Station Monitor\RemoteMonitor\RemoteMonitor\obj\Debug\RemoteMonitor.RTU1HistorySeperate.resources
+G:\Remote Station Monitor\RemoteMonitor\RemoteMonitor\obj\Debug\RemoteMonitor.RTU2HistorySeperate.resources
+G:\Remote Station Monitor\RemoteMonitor\RemoteMonitor\obj\Debug\RemoteMonitor.RTCSettings.resources
+G:\Remote Station Monitor\RemoteMonitor\RemoteMonitor\obj\Debug\RemoteMonitor.ThreshSettings.resources
+G:\Remote Station Monitor\RemoteMonitor\RemoteMonitor\obj\Debug\RemoteMonitor.RTU1RealtimeCom.resources
+G:\Remote Station Monitor\RemoteMonitor\RemoteMonitor\obj\Debug\RemoteMonitor.RTU1RealTimeSep.resources
+G:\Remote Station Monitor\RemoteMonitor\RemoteMonitor\obj\Debug\RemoteMonitor.RTU2RealTimeCom.resources
+G:\Remote Station Monitor\RemoteMonitor\RemoteMonitor\obj\Debug\RemoteMonitor.RTU2RealTimeSep.resources
+E:\Study Material\XC8 PROJECTS\Remote Station Monitor\Remote Station Monitor\RemoteMonitor\RemoteMonitor\bin\Debug\RemoteMonitor.exe.config
+E:\Study Material\XC8 PROJECTS\Remote Station Monitor\Remote Station Monitor\RemoteMonitor\RemoteMonitor\obj\Debug\RemoteMonitor.exe
+E:\Study Material\XC8 PROJECTS\Remote Station Monitor\Remote Station Monitor\RemoteMonitor\RemoteMonitor\obj\Debug\RemoteMonitor.pdb
+E:\Study Material\XC8 PROJECTS\Remote Station Monitor\Remote Station Monitor\RemoteMonitor\RemoteMonitor\bin\Debug\goras.mdb
+E:\Study Material\XC8 PROJECTS\Remote Station Monitor\Remote Station Monitor\RemoteMonitor\RemoteMonitor\bin\Debug\RemoteMonitor.exe.manifest
+E:\Study Material\XC8 PROJECTS\Remote Station Monitor\Remote Station Monitor\RemoteMonitor\RemoteMonitor\bin\Debug\RemoteMonitor.application
+E:\Study Material\XC8 PROJECTS\Remote Station Monitor\Remote Station Monitor\RemoteMonitor\RemoteMonitor\bin\Debug\RemoteMonitor.exe
+E:\Study Material\XC8 PROJECTS\Remote Station Monitor\Remote Station Monitor\RemoteMonitor\RemoteMonitor\bin\Debug\RemoteMonitor.pdb
+E:\Study Material\XC8 PROJECTS\Remote Station Monitor\Remote Station Monitor\RemoteMonitor\RemoteMonitor\obj\Debug\RemoteMonitor.Login_Form.resources
+E:\Study Material\XC8 PROJECTS\Remote Station Monitor\Remote Station Monitor\RemoteMonitor\RemoteMonitor\obj\Debug\RemoteMonitor.GetData.resources
+E:\Study Material\XC8 PROJECTS\Remote Station Monitor\Remote Station Monitor\RemoteMonitor\RemoteMonitor\obj\Debug\RemoteMonitor.main_window.resources
+E:\Study Material\XC8 PROJECTS\Remote Station Monitor\Remote Station Monitor\RemoteMonitor\RemoteMonitor\obj\Debug\RemoteMonitor.PORTSettings.resources
+E:\Study Material\XC8 PROJECTS\Remote Station Monitor\Remote Station Monitor\RemoteMonitor\RemoteMonitor\obj\Debug\RemoteMonitor.Properties.Resources.resources
+E:\Study Material\XC8 PROJECTS\Remote Station Monitor\Remote Station Monitor\RemoteMonitor\RemoteMonitor\obj\Debug\RemoteMonitor.RTCSettings.resources
+E:\Study Material\XC8 PROJECTS\Remote Station Monitor\Remote Station Monitor\RemoteMonitor\RemoteMonitor\obj\Debug\RemoteMonitor.RTU1HistoryCombined.resources
+E:\Study Material\XC8 PROJECTS\Remote Station Monitor\Remote Station Monitor\RemoteMonitor\RemoteMonitor\obj\Debug\RemoteMonitor.RTU1HistorySeperate.resources
+E:\Study Material\XC8 PROJECTS\Remote Station Monitor\Remote Station Monitor\RemoteMonitor\RemoteMonitor\obj\Debug\RemoteMonitor.RTU1RealtimeCom.resources
+E:\Study Material\XC8 PROJECTS\Remote Station Monitor\Remote Station Monitor\RemoteMonitor\RemoteMonitor\obj\Debug\RemoteMonitor.RTU1RealTimeSep.resources
+E:\Study Material\XC8 PROJECTS\Remote Station Monitor\Remote Station Monitor\RemoteMonitor\RemoteMonitor\obj\Debug\RemoteMonitor.RTU2HistoryCombined.resources
+E:\Study Material\XC8 PROJECTS\Remote Station Monitor\Remote Station Monitor\RemoteMonitor\RemoteMonitor\obj\Debug\RemoteMonitor.RTU2HistorySeperate.resources
+E:\Study Material\XC8 PROJECTS\Remote Station Monitor\Remote Station Monitor\RemoteMonitor\RemoteMonitor\obj\Debug\RemoteMonitor.RTU2RealTimeCom.resources
+E:\Study Material\XC8 PROJECTS\Remote Station Monitor\Remote Station Monitor\RemoteMonitor\RemoteMonitor\obj\Debug\RemoteMonitor.RTU2RealTimeSep.resources
+E:\Study Material\XC8 PROJECTS\Remote Station Monitor\Remote Station Monitor\RemoteMonitor\RemoteMonitor\obj\Debug\RemoteMonitor.ThreshSettings.resources
+E:\Study Material\XC8 PROJECTS\Remote Station Monitor\Remote Station Monitor\RemoteMonitor\RemoteMonitor\obj\Debug\RemoteMonitor.csproj.GenerateResource.Cache
+E:\Study Material\XC8 PROJECTS\Remote Station Monitor\Remote Station Monitor\RemoteMonitor\RemoteMonitor\obj\Debug\RemoteMonitor.exe.manifest
+E:\Study Material\XC8 PROJECTS\Remote Station Monitor\Remote Station Monitor\RemoteMonitor\RemoteMonitor\obj\Debug\RemoteMonitor.application

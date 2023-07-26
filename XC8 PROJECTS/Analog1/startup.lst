@@ -1,0 +1,130 @@
+
+
+Microchip Technology PIC18 Macro Assembler V1.12 build 49521 
+                                                                                                           Tue Aug 13 13:52:50 2013
+
+
+     1                           
+     2                           	; Microchip MPLAB XC8 C Compiler V1.12
+     3                           	; Copyright (C) 1984-2012 HI-TECH Software
+     4                           
+     5                           	; Auto-generated runtime startup code for final link stage.
+     6                           
+     7                           	;
+     8                           	; Compiler options:
+     9                           	;
+    10                           	; -oAnalog.cof -mAnalog.map --summary=default --output=default CO2.p1 \
+    11                           	; --chip=18F452 -P --runtime=default --opt=default -N-1 -D__DEBUG=1 -g \
+    12                           	; --asmlist --errformat=Error   [%n] %f; %l.%c %s \
+    13                           	; --msgformat=Advisory[%n] %s --warnformat=Warning [%n] %f; %l.%c %s
+    14                           	;
+    15                           
+    16                           
+    17                           	processor	18F452
+    18                           
+    19                           	GLOBAL	_main,start
+    20                           	FNROOT	_main
+    21                           
+    22  0000                     	pic18cxx	equ	1
+    23                           
+    24                           	; Microchip MPLAB XC8 C Compiler V1.12
+    25                           	; Copyright (C) 1984-2012 HI-TECH Software
+    26                           
+    27                           	; Auto-generated runtime startup code for final link stage.
+    28                           
+    29                           	;
+    30                           	; Compiler options:
+    31                           	;
+    32                           	; -oAnalog.cof -mAnalog.map --summary=default --output=default CO2.p1 \
+    33                           	; --chip=18F452 -P --runtime=default --opt=default -N-1 -D__DEBUG=1 -g \
+    34                           	; --asmlist --errformat=Error   [%n] %f; %l.%c %s \
+    35                           	; --msgformat=Advisory[%n] %s --warnformat=Warning [%n] %f; %l.%c %s
+    36                           	;
+    37                           
+    38                           
+    39                           	processor	18F452
+    40                           
+    41                           	GLOBAL	_main,start
+    42                           	FNROOT	_main
+    43                           
+    44                           	pic18cxx	equ	1
+    45                           
+    46                           	psect	config,class=CONFIG,delta=1
+    47                           	psect	idloc,class=IDLOC,delta=1
+    48                           	psect	const,class=CODE,delta=1,reloc=2
+    49                           	psect	smallconst,class=SMALLCONST,delta=1,reloc=2
+    50                           	psect	mediumconst,class=MEDIUMCONST,delta=1,reloc=2
+    51                           	psect	rbss,class=COMRAM,space=1
+    52                           	psect	bss,class=RAM,space=1
+    53                           	psect	rdata,class=COMRAM,space=1
+    54                           	psect	irdata,class=CODE,space=0,reloc=2
+    55                           	psect	bss,class=RAM,space=1
+    56                           	psect	data,class=RAM,space=1
+    57                           	psect	idata,class=CODE,space=0,reloc=2
+    58                           	psect	nvrram,class=COMRAM,space=1
+    59                           	psect	nvbit,class=COMRAM,bit,space=1
+    60  000000                     intlevel0:
+    61  000000                     intlevel1:
+    62  000000                     intlevel2:
+    63                           
+    64  000000                     intlevel3:
+    65                           
+    66                           	; Microchip MPLAB XC8 C Compiler V1.12
+    67                           	; Copyright (C) 1984-2012 HI-TECH Software
+    68                           
+    69                           	; Auto-generated runtime startup code for final link stage.
+    70                           
+    71  000000                     __smallconst:
+    72                           
+    73                           	; Microchip MPLAB XC8 C Compiler V1.12
+    74  000000                     __mediumconst:
+    75  0000                     wreg	EQU	0FE8h
+    76  0000                     fsr0l	EQU	0FE9h
+    77  0000                     fsr0h	EQU	0FEAh
+    78  0000                     fsr1l	EQU	0FE1h
+    79  0000                     fsr1h	EQU	0FE2h
+    80  0000                     fsr2l	EQU	0FD9h
+    81  0000                     fsr2h	EQU	0FDAh
+    82  0000                     postinc0	EQU	0FEEh
+    83  0000                     postdec0	EQU	0FEDh
+    84  0000                     postinc1	EQU	0FE6h
+    85  0000                     postdec1	EQU	0FE5h
+    86  0000                     postinc2	EQU	0FDEh
+    87  0000                     postdec2	EQU	0FDDh
+    88  0000                     tblptrl	EQU	0FF6h
+    89  0000                     tblptrh	EQU	0FF7h
+    90  0000                     tblptru	EQU	0FF8h
+    91  0000                     tablat		EQU	0FF5h
+    92                           
+    93                           	; Microchip MPLAB XC8 C Compiler V1.12
+    94                           	; Copyright (C) 1984-2012 HI-TECH Software
+    95                           
+    96                           	; Auto-generated runtime startup code for final link stage.
+    97  000600                     __ramtop:
+    98                           
+    99                           	; Microchip MPLAB XC8 C Compiler V1.12
+   100  000000                     reset_vec:
+   101  000000  F000               	nop	; NOP for reset vector (precedes GOTO instruction)
+   102                           
+   103                           	; Microchip MPLAB XC8 C Compiler V1.12
+   104                           	; Copyright (C) 1984-2012 HI-TECH Software
+   105                           
+   106  000002  EF6E  F000         	goto start
+   107                           
+   108  0000                     __accesstop EQU 128
+   109                           
+   110                           	; Microchip MPLAB XC8 C Compiler V1.12
+   111                           	; Copyright (C) 1984-2012 HI-TECH Software
+   112  0000DC                     start:
+   113                           
+   114                           	; Microchip MPLAB XC8 C Compiler V1.12
+   115  0000DC  EFF3  F00C         	goto start_initialization	;jump to C runtime clear & initialization
+
+
+Microchip Technology PIC18 Macro Assembler V1.12 build 49521 
+Symbol Table                                                                                               Tue Aug 13 13:52:50 2013
+
+                __S1 004A                 _main 00E0                 start 00DC                __HRAM 0000  
+              __LRAM 0001         __mediumconst 0000           __accesstop 000080              __ramtop 0600  
+start_initialization 19E6          __smallconst 0000             intlevel0 0000             intlevel1 0000  
+           intlevel2 0000             intlevel3 0000             reset_vec 0000  

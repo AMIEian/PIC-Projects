@@ -1,0 +1,1 @@
+ WLC_NEW.d  WLC_NEW.obj:  E:/Study\ Material/XC8\ PROJECTS/WLC\ 1PH\ TRIP/WLC_NEW.C

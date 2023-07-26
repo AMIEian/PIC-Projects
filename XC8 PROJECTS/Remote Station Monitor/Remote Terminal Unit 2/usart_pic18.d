@@ -1,0 +1,1 @@
+ usart_pic18.d  usart_pic18.p1:  E:/Study\ Material/XC8\ PROJECTS/Remote\ Station\ Monitor/Remote\ Terminal\ Unit\ 2/usart_pic18.c E:/Study\ Material/XC8\ PROJECTS/Remote\ Station\ Monitor/Remote\ Terminal\ Unit\ 2/usart_pic18.h

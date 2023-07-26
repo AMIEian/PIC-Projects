@@ -1,0 +1,1 @@
+ display.d  display.obj:  E:/Study\ Material/XC8\ PROJECTS/Wall\ Clock/display.C E:/Study\ Material/XC8\ PROJECTS/Wall\ Clock/pins.h E:/Study\ Material/XC8\ PROJECTS/Wall\ Clock/timekeeper.h E:/Study\ Material/XC8\ PROJECTS/Wall\ Clock/max7219.h E:/Study\ Material/XC8\ PROJECTS/Wall\ Clock/display.h

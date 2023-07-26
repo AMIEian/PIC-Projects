@@ -1,0 +1,7 @@
+_PIN_MANAGER_Initialize: CODE, 1976 0 34
+_WDT_Initialize: CODE, 1956 0 4
+_main: CODE, 2010 0 34
+__initialization: CODE, 2044 0 0
+_OSCILLATOR_Initialize: CODE, 1960 0 7
+_SYSTEM_Initialize: CODE, 1967 0 9
+Total: 88

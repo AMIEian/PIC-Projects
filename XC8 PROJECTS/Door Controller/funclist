@@ -1,0 +1,20 @@
+___ftneg: CODE, 2029 0 10
+___ftpack: CODE, 1684 0 106
+_main: CODE, 32 0 586
+___lwtoft: CODE, 3845 0 24
+___ftadd: CODE, 957 0 265
+_check_over_current: CODE, 1575 0 109
+__initialization: CODE, 21 0 7
+___lwdiv: CODE, 1965 0 64
+___lbtoft: CODE, 3869 0 30
+_ReadADC: CODE, 3899 0 32
+___attoft: CODE, 3965 0 41
+_Tx_Received: CODE, 4050 0 46
+_modf: CODE, 1885 0 80
+_over_current_config: CODE, 618 0 339
+___ftmul: CODE, 1222 0 211
+_eeprom_read: CODE, 3931 0 34
+___fttol: CODE, 1433 0 142
+___ftge: CODE, 1790 0 95
+_eeprom_write: CODE, 4006 0 44
+Total: 2265

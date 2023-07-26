@@ -1,0 +1,1 @@
+ myrtc.d  myrtc.obj:  E:/Study\ Material/XC8\ PROJECTS/RTC\ Library/myrtc.C E:/Study\ Material/XC8\ PROJECTS/RTC\ Library/myrtc.h

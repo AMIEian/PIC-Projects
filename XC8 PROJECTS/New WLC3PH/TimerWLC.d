@@ -1,0 +1,1 @@
+ TimerWLC.d  TimerWLC.p1:  E:/Study\ Material/XC8\ PROJECTS/New\ WLC3PH/TimerWLC.c E:/Study\ Material/XC8\ PROJECTS/New\ WLC3PH/lcd_hd44780_pic16.h

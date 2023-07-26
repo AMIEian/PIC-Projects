@@ -1,0 +1,1 @@
+ WLC.d  WLC.obj:  C:/XC8\ PROJECTS/WLC\ 1PH\ TRIP/WLC.C

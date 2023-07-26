@@ -1,0 +1,432 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PIC14E ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F1717 ]
+[d frameptr 6 ]
+"10 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"49 D:\Study Material\XC8 PROJECTS\IFT Machine\Controller\IFTController.X\main.c
+[v _main main `(v  1 e 1 0 ]
+"88 D:\Study Material\XC8 PROJECTS\IFT Machine\Controller\IFTController.X\mcc_generated_files/eusart.c
+[v _EUSART_Initialize EUSART_Initialize `(v  1 e 1 0 ]
+"151
+[v _EUSART_Read EUSART_Read `(uc  1 e 1 0 ]
+"173
+[v _EUSART_Write EUSART_Write `(v  1 e 1 0 ]
+"206
+[v _EUSART_Transmit_ISR EUSART_Transmit_ISR `(v  1 e 1 0 ]
+"225
+[v _EUSART_Receive_ISR EUSART_Receive_ISR `(v  1 e 1 0 ]
+"249
+[v _EUSART_RxDataHandler EUSART_RxDataHandler `(v  1 e 1 0 ]
+"259
+[v _EUSART_DefaultFramingErrorHandler EUSART_DefaultFramingErrorHandler `(v  1 e 1 0 ]
+"261
+[v _EUSART_DefaultOverrunErrorHandler EUSART_DefaultOverrunErrorHandler `(v  1 e 1 0 ]
+"269
+[v _EUSART_DefaultErrorHandler EUSART_DefaultErrorHandler `(v  1 e 1 0 ]
+"273
+[v _EUSART_SetFramingErrorHandler EUSART_SetFramingErrorHandler `(v  1 e 1 0 ]
+"277
+[v _EUSART_SetOverrunErrorHandler EUSART_SetOverrunErrorHandler `(v  1 e 1 0 ]
+"281
+[v _EUSART_SetErrorHandler EUSART_SetErrorHandler `(v  1 e 1 0 ]
+"285
+[v _EUSART_SetTxInterruptHandler EUSART_SetTxInterruptHandler `(v  1 e 1 0 ]
+"289
+[v _EUSART_SetRxInterruptHandler EUSART_SetRxInterruptHandler `(v  1 e 1 0 ]
+"52 D:\Study Material\XC8 PROJECTS\IFT Machine\Controller\IFTController.X\mcc_generated_files/interrupt_manager.c
+[v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `II(v  1 e 1 0 ]
+"50 D:\Study Material\XC8 PROJECTS\IFT Machine\Controller\IFTController.X\mcc_generated_files/mcc.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+"62
+[v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
+"72
+[v _WDT_Initialize WDT_Initialize `(v  1 e 1 0 ]
+"55 D:\Study Material\XC8 PROJECTS\IFT Machine\Controller\IFTController.X\mcc_generated_files/pin_manager.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+"58 D:\Study Material\XC8 PROJECTS\IFT Machine\Controller\IFTController.X\mcc_generated_files/pwm3.c
+[v _PWM3_Initialize PWM3_Initialize `(v  1 e 1 0 ]
+"58 D:\Study Material\XC8 PROJECTS\IFT Machine\Controller\IFTController.X\mcc_generated_files/pwm4.c
+[v _PWM4_Initialize PWM4_Initialize `(v  1 e 1 0 ]
+"62 D:\Study Material\XC8 PROJECTS\IFT Machine\Controller\IFTController.X\mcc_generated_files/tmr2.c
+[v _TMR2_Initialize TMR2_Initialize `(v  1 e 1 0 ]
+[s S281 . 1 `uc 1 IOCIF 1 0 :1:0 
+`uc 1 INTF 1 0 :1:1 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 IOCIE 1 0 :1:3 
+`uc 1 INTE 1 0 :1:4 
+`uc 1 TMR0IE 1 0 :1:5 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+"374 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1717.h
+[s S290 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 T0IF 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 T0IE 1 0 :1:5 
+]
+[u S295 . 1 `S281 1 . 1 0 `S290 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES295  1 e 1 @11 ]
+[s S143 . 1 `uc 1 TMR1IF 1 0 :1:0 
+`uc 1 TMR2IF 1 0 :1:1 
+`uc 1 CCP1IF 1 0 :1:2 
+`uc 1 SSP1IF 1 0 :1:3 
+`uc 1 TXIF 1 0 :1:4 
+`uc 1 RCIF 1 0 :1:5 
+`uc 1 ADIF 1 0 :1:6 
+`uc 1 TMR1GIF 1 0 :1:7 
+]
+"732
+[u S152 . 1 `S143 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES152  1 e 1 @17 ]
+"1099
+[v _TMR2 TMR2 `VEuc  1 e 1 @26 ]
+"1119
+[v _PR2 PR2 `VEuc  1 e 1 @27 ]
+"1139
+[v _T2CON T2CON `VEuc  1 e 1 @28 ]
+[s S165 . 1 `uc 1 T2CKPS 1 0 :2:0 
+`uc 1 TMR2ON 1 0 :1:2 
+`uc 1 T2OUTPS 1 0 :4:3 
+]
+"1160
+[s S169 . 1 `uc 1 T2CKPS0 1 0 :1:0 
+`uc 1 T2CKPS1 1 0 :1:1 
+`uc 1 . 1 0 :1:2 
+`uc 1 T2OUTPS0 1 0 :1:3 
+`uc 1 T2OUTPS1 1 0 :1:4 
+`uc 1 T2OUTPS2 1 0 :1:5 
+`uc 1 T2OUTPS3 1 0 :1:6 
+]
+[u S177 . 1 `S165 1 . 1 0 `S169 1 . 1 0 ]
+[v _T2CONbits T2CONbits `VES177  1 e 1 @28 ]
+"1210
+[v _TRISA TRISA `VEuc  1 e 1 @140 ]
+"1272
+[v _TRISB TRISB `VEuc  1 e 1 @141 ]
+"1334
+[v _TRISC TRISC `VEuc  1 e 1 @142 ]
+"1396
+[v _TRISD TRISD `VEuc  1 e 1 @143 ]
+"1458
+[v _TRISE TRISE `VEuc  1 e 1 @144 ]
+[s S313 . 1 `uc 1 TMR1IE 1 0 :1:0 
+`uc 1 TMR2IE 1 0 :1:1 
+`uc 1 CCP1IE 1 0 :1:2 
+`uc 1 SSP1IE 1 0 :1:3 
+`uc 1 TXIE 1 0 :1:4 
+`uc 1 RCIE 1 0 :1:5 
+`uc 1 ADIE 1 0 :1:6 
+`uc 1 TMR1GIE 1 0 :1:7 
+]
+"1513
+[u S322 . 1 `S313 1 . 1 0 ]
+[v _PIE1bits PIE1bits `VES322  1 e 1 @145 ]
+[s S42 . 1 `uc 1 PS 1 0 :3:0 
+`uc 1 PSA 1 0 :1:3 
+`uc 1 TMR0SE 1 0 :1:4 
+`uc 1 TMR0CS 1 0 :1:5 
+`uc 1 INTEDG 1 0 :1:6 
+`uc 1 nWPUEN 1 0 :1:7 
+]
+"1694
+[s S49 . 1 `uc 1 PS0 1 0 :1:0 
+`uc 1 PS1 1 0 :1:1 
+`uc 1 PS2 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 T0SE 1 0 :1:4 
+`uc 1 T0CS 1 0 :1:5 
+]
+[u S56 . 1 `S42 1 . 1 0 `S49 1 . 1 0 ]
+[v _OPTION_REGbits OPTION_REGbits `VES56  1 e 1 @149 ]
+"1811
+[v _WDTCON WDTCON `VEuc  1 e 1 @151 ]
+"1870
+[v _OSCTUNE OSCTUNE `VEuc  1 e 1 @152 ]
+"1928
+[v _OSCCON OSCCON `VEuc  1 e 1 @153 ]
+"2290
+[v _LATA LATA `VEuc  1 e 1 @268 ]
+"2352
+[v _LATB LATB `VEuc  1 e 1 @269 ]
+"2414
+[v _LATC LATC `VEuc  1 e 1 @270 ]
+"2476
+[v _LATD LATD `VEuc  1 e 1 @271 ]
+"2538
+[v _LATE LATE `VEuc  1 e 1 @272 ]
+"2862
+[v _BORCON BORCON `VEuc  1 e 1 @278 ]
+"3804
+[v _ANSELA ANSELA `VEuc  1 e 1 @396 ]
+"3854
+[v _ANSELB ANSELB `VEuc  1 e 1 @397 ]
+"3904
+[v _ANSELC ANSELC `VEuc  1 e 1 @398 ]
+"3955
+[v _ANSELD ANSELD `VEuc  1 e 1 @399 ]
+"4017
+[v _ANSELE ANSELE `VEuc  1 e 1 @400 ]
+"4240
+[v _RC1REG RC1REG `VEuc  1 e 1 @409 ]
+"4294
+[v _TX1REG TX1REG `VEuc  1 e 1 @410 ]
+"4355
+[v _SP1BRGL SP1BRGL `VEuc  1 e 1 @411 ]
+"4425
+[v _SP1BRGH SP1BRGH `VEuc  1 e 1 @412 ]
+"4479
+[v _RC1STA RC1STA `VEuc  1 e 1 @413 ]
+[s S475 . 1 `uc 1 RX9D 1 0 :1:0 
+`uc 1 OERR 1 0 :1:1 
+`uc 1 FERR 1 0 :1:2 
+`uc 1 ADDEN 1 0 :1:3 
+`uc 1 CREN 1 0 :1:4 
+`uc 1 SREN 1 0 :1:5 
+`uc 1 RX9 1 0 :1:6 
+`uc 1 SPEN 1 0 :1:7 
+]
+"4505
+[u S484 . 1 `S475 1 . 1 0 ]
+[v _RC1STAbits RC1STAbits `VES484  1 e 1 @413 ]
+"4659
+[v _TX1STA TX1STA `VEuc  1 e 1 @414 ]
+[s S453 . 1 `uc 1 TX9D 1 0 :1:0 
+`uc 1 TRMT 1 0 :1:1 
+`uc 1 BRGH 1 0 :1:2 
+`uc 1 SENDB 1 0 :1:3 
+`uc 1 SYNC 1 0 :1:4 
+`uc 1 TXEN 1 0 :1:5 
+`uc 1 TX9 1 0 :1:6 
+`uc 1 CSRC 1 0 :1:7 
+]
+"4685
+[u S462 . 1 `S453 1 . 1 0 ]
+[v _TX1STAbits TX1STAbits `VES462  1 e 1 @414 ]
+"4839
+[v _BAUD1CON BAUD1CON `VEuc  1 e 1 @415 ]
+"5085
+[v _WPUA WPUA `VEuc  1 e 1 @524 ]
+"5147
+[v _WPUB WPUB `VEuc  1 e 1 @525 ]
+"5209
+[v _WPUC WPUC `VEuc  1 e 1 @526 ]
+"5271
+[v _WPUD WPUD `VEuc  1 e 1 @527 ]
+"5333
+[v _WPUE WPUE `VEuc  1 e 1 @528 ]
+"6769
+[v _ODCONA ODCONA `VEuc  1 e 1 @652 ]
+"6831
+[v _ODCONB ODCONB `VEuc  1 e 1 @653 ]
+"6893
+[v _ODCONC ODCONC `VEuc  1 e 1 @654 ]
+"6955
+[v _ODCOND ODCOND `VEuc  1 e 1 @655 ]
+"7017
+[v _ODCONE ODCONE `VEuc  1 e 1 @656 ]
+[s S218 . 1 `uc 1 C1TSEL 1 0 :2:0 
+`uc 1 C2TSEL 1 0 :2:2 
+`uc 1 P3TSEL 1 0 :2:4 
+`uc 1 P4TSEL 1 0 :2:6 
+]
+"7478
+[s S223 . 1 `uc 1 C1TSEL0 1 0 :1:0 
+`uc 1 C1TSEL1 1 0 :1:1 
+`uc 1 C2TSEL0 1 0 :1:2 
+`uc 1 C2TSEL1 1 0 :1:3 
+`uc 1 P3TSEL0 1 0 :1:4 
+`uc 1 P3TSEL1 1 0 :1:5 
+`uc 1 P4TSEL0 1 0 :1:6 
+`uc 1 P4TSEL1 1 0 :1:7 
+]
+[u S232 . 1 `S218 1 . 1 0 `S223 1 . 1 0 ]
+[v _CCPTMRSbits CCPTMRSbits `VES232  1 e 1 @670 ]
+"7543
+[v _SLRCONA SLRCONA `VEuc  1 e 1 @780 ]
+"7605
+[v _SLRCONB SLRCONB `VEuc  1 e 1 @781 ]
+"7667
+[v _SLRCONC SLRCONC `VEuc  1 e 1 @782 ]
+"7729
+[v _SLRCOND SLRCOND `VEuc  1 e 1 @783 ]
+"7791
+[v _SLRCONE SLRCONE `VEuc  1 e 1 @784 ]
+"7823
+[v _INLVLA INLVLA `VEuc  1 e 1 @908 ]
+"7885
+[v _INLVLB INLVLB `VEuc  1 e 1 @909 ]
+"7947
+[v _INLVLC INLVLC `VEuc  1 e 1 @910 ]
+"8009
+[v _INLVLD INLVLD `VEuc  1 e 1 @911 ]
+"8071
+[v _INLVLE INLVLE `VEuc  1 e 1 @912 ]
+"9550
+[v _PWM3DCL PWM3DCL `VEuc  1 e 1 @1559 ]
+"9586
+[v _PWM3DCH PWM3DCH `VEuc  1 e 1 @1560 ]
+"9656
+[v _PWM3CON PWM3CON `VEuc  1 e 1 @1561 ]
+"9722
+[v _PWM4DCL PWM4DCL `VEuc  1 e 1 @1562 ]
+"9758
+[v _PWM4DCH PWM4DCH `VEuc  1 e 1 @1563 ]
+"9828
+[v _PWM4CON PWM4CON `VEuc  1 e 1 @1564 ]
+"10998
+[v _RXPPS RXPPS `VEuc  1 e 1 @3620 ]
+"11398
+[v _RB6PPS RB6PPS `VEuc  1 e 1 @3742 ]
+"11418
+[v _RB7PPS RB7PPS `VEuc  1 e 1 @3743 ]
+"11558
+[v _RC6PPS RC6PPS `VEuc  1 e 1 @3750 ]
+"62 D:\Study Material\XC8 PROJECTS\IFT Machine\Controller\IFTController.X\mcc_generated_files/eusart.c
+[v _eusartTxHead eusartTxHead `VEuc  1 e 1 0 ]
+"63
+[v _eusartTxTail eusartTxTail `VEuc  1 e 1 0 ]
+"64
+[v _eusartTxBuffer eusartTxBuffer `VE[8]uc  1 e 8 0 ]
+"65
+[v _eusartTxBufferRemaining eusartTxBufferRemaining `VEuc  1 e 1 0 ]
+"67
+[v _eusartRxHead eusartRxHead `VEuc  1 e 1 0 ]
+"68
+[v _eusartRxTail eusartRxTail `VEuc  1 e 1 0 ]
+"69
+[v _eusartRxBuffer eusartRxBuffer `VE[64]uc  1 e 64 0 ]
+[s S373 . 1 `uc 1 perr 1 0 :1:0 
+`uc 1 ferr 1 0 :1:1 
+`uc 1 oerr 1 0 :1:2 
+`uc 1 reserved 1 0 :5:3 
+]
+"70
+[u S378 . 1 `S373 1 . 1 0 `uc 1 status 1 0 ]
+[v _eusartRxStatusBuffer eusartRxStatusBuffer `VE[64]S378  1 e 64 0 ]
+"71
+[v _eusartRxCount eusartRxCount `VEuc  1 e 1 0 ]
+"72
+[v _eusartRxLastError eusartRxLastError `VES378  1 e 1 0 ]
+"77
+[v _EUSART_TxDefaultInterruptHandler EUSART_TxDefaultInterruptHandler `*.37(v  1 e 2 0 ]
+"78
+[v _EUSART_RxDefaultInterruptHandler EUSART_RxDefaultInterruptHandler `*.37(v  1 e 2 0 ]
+"80
+[v _EUSART_FramingErrorHandler EUSART_FramingErrorHandler `*.37(v  1 e 2 0 ]
+"81
+[v _EUSART_OverrunErrorHandler EUSART_OverrunErrorHandler `*.37(v  1 e 2 0 ]
+"82
+[v _EUSART_ErrorHandler EUSART_ErrorHandler `*.37(v  1 e 2 0 ]
+"49 D:\Study Material\XC8 PROJECTS\IFT Machine\Controller\IFTController.X\main.c
+[v _main main `(v  1 e 1 0 ]
+{
+"73
+} 0
+"50 D:\Study Material\XC8 PROJECTS\IFT Machine\Controller\IFTController.X\mcc_generated_files/mcc.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+{
+"60
+} 0
+"72
+[v _WDT_Initialize WDT_Initialize `(v  1 e 1 0 ]
+{
+"76
+} 0
+"62 D:\Study Material\XC8 PROJECTS\IFT Machine\Controller\IFTController.X\mcc_generated_files/tmr2.c
+[v _TMR2_Initialize TMR2_Initialize `(v  1 e 1 0 ]
+{
+"77
+} 0
+"58 D:\Study Material\XC8 PROJECTS\IFT Machine\Controller\IFTController.X\mcc_generated_files/pwm4.c
+[v _PWM4_Initialize PWM4_Initialize `(v  1 e 1 0 ]
+{
+"72
+} 0
+"58 D:\Study Material\XC8 PROJECTS\IFT Machine\Controller\IFTController.X\mcc_generated_files/pwm3.c
+[v _PWM3_Initialize PWM3_Initialize `(v  1 e 1 0 ]
+{
+"72
+} 0
+"55 D:\Study Material\XC8 PROJECTS\IFT Machine\Controller\IFTController.X\mcc_generated_files/pin_manager.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+{
+"132
+} 0
+"62 D:\Study Material\XC8 PROJECTS\IFT Machine\Controller\IFTController.X\mcc_generated_files/mcc.c
+[v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
+{
+"70
+} 0
+"88 D:\Study Material\XC8 PROJECTS\IFT Machine\Controller\IFTController.X\mcc_generated_files/eusart.c
+[v _EUSART_Initialize EUSART_Initialize `(v  1 e 1 0 ]
+{
+"130
+} 0
+"285
+[v _EUSART_SetTxInterruptHandler EUSART_SetTxInterruptHandler `(v  1 e 1 0 ]
+{
+[v EUSART_SetTxInterruptHandler@interruptHandler interruptHandler `*.37(v  1 p 2 1 ]
+"287
+} 0
+"289
+[v _EUSART_SetRxInterruptHandler EUSART_SetRxInterruptHandler `(v  1 e 1 0 ]
+{
+[v EUSART_SetRxInterruptHandler@interruptHandler interruptHandler `*.37(v  1 p 2 1 ]
+"291
+} 0
+"277
+[v _EUSART_SetOverrunErrorHandler EUSART_SetOverrunErrorHandler `(v  1 e 1 0 ]
+{
+[v EUSART_SetOverrunErrorHandler@interruptHandler interruptHandler `*.37(v  1 p 2 1 ]
+"279
+} 0
+"273
+[v _EUSART_SetFramingErrorHandler EUSART_SetFramingErrorHandler `(v  1 e 1 0 ]
+{
+[v EUSART_SetFramingErrorHandler@interruptHandler interruptHandler `*.37(v  1 p 2 1 ]
+"275
+} 0
+"281
+[v _EUSART_SetErrorHandler EUSART_SetErrorHandler `(v  1 e 1 0 ]
+{
+[v EUSART_SetErrorHandler@interruptHandler interruptHandler `*.37(v  1 p 2 1 ]
+"283
+} 0
+"52 D:\Study Material\XC8 PROJECTS\IFT Machine\Controller\IFTController.X\mcc_generated_files/interrupt_manager.c
+[v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `II(v  1 e 1 0 ]
+{
+"74
+} 0
+"206 D:\Study Material\XC8 PROJECTS\IFT Machine\Controller\IFTController.X\mcc_generated_files/eusart.c
+[v _EUSART_Transmit_ISR EUSART_Transmit_ISR `(v  1 e 1 0 ]
+{
+"223
+} 0
+"225
+[v _EUSART_Receive_ISR EUSART_Receive_ISR `(v  1 e 1 0 ]
+{
+"247
+} 0
+"261
+[v _EUSART_DefaultOverrunErrorHandler EUSART_DefaultOverrunErrorHandler `(v  1 e 1 0 ]
+{
+"267
+} 0
+"259
+[v _EUSART_DefaultFramingErrorHandler EUSART_DefaultFramingErrorHandler `(v  1 e 1 0 ]
+{
+} 0
+"269
+[v _EUSART_DefaultErrorHandler EUSART_DefaultErrorHandler `(v  1 e 1 0 ]
+{
+"271
+} 0
+"249
+[v _EUSART_RxDataHandler EUSART_RxDataHandler `(v  1 e 1 0 ]
+{
+"257
+} 0

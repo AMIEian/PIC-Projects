@@ -1,0 +1,18 @@
+_first_screen: CODE, 485 0 176
+_LCDByte: CODE, 1168 0 60
+__stringtab: STRING, 256 0 6
+__stringdata: STRING, 262 0 223
+_main: CODE, 818 0 129
+_LCDInit: CODE, 947 0 79
+__initialization: CODE, 17 0 48
+_LCDWriteString: CODE, 1228 0 58
+_phase_display: CODE, 1385 0 26
+_motor_stop: CODE, 1286 0 33
+_motor_start: CODE, 1319 0 33
+_Tx_Received: CODE, 661 0 157
+_LCDGotoXY: CODE, 1352 0 33
+_update_display: CODE, 1105 0 63
+_display_upper_tank: CODE, 1431 0 18
+_display_lower_tank: CODE, 1411 0 20
+_LCDBusyLoop: CODE, 1026 0 79
+Total: 1241

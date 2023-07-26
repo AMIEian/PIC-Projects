@@ -1,0 +1,1 @@
+ WLC\ Wired.d  WLC\ Wired.obj:  E:/Study\ Material/XC8\ PROJECTS/WLC\ Wired/WLC\ Wired.C

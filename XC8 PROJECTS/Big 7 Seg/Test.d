@@ -1,0 +1,1 @@
+ Test.d  Test.p1:  E:/Study\ Material/XC8\ PROJECTS/Big\ 7\ Seg/Test.c

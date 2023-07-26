@@ -1,0 +1,81 @@
+
+
+Microchip Technology PIC Macro Assembler V1.12 build 49521 
+                                                                                                           Mon Jul 28 13:15:31 2014
+
+
+     1                           
+     2                           	; Microchip MPLAB XC8 C Compiler V1.12
+     3                           	; Copyright (C) 1984-2012 HI-TECH Software
+     4                           
+     5                           	; Auto-generated runtime startup code for final link stage.
+     6                           
+     7                           	;
+     8                           	; Compiler options:
+     9                           	;
+    10                           	; -oWLC870.cof -mWLC870.map --summary=default --output=default WLC.p1 \
+    11                           	; --chip=16F870 -P --runtime=default --opt=default -N-1 -D__DEBUG=1 -g \
+    12                           	; --asmlist --errformat=Error   [%n] %f; %l.%c %s \
+    13                           	; --msgformat=Advisory[%n] %s --warnformat=Warning [%n] %f; %l.%c %s
+    14                           	;
+    15                           
+    16                           
+    17                           	processor	16F870
+    18                           
+    19                           	global	_main,start,reset_vec
+    20                           	fnroot	_main
+    21                           	psect	config,class=CONFIG,delta=2
+    22                           	psect	idloc,class=IDLOC,delta=2
+    23                           	psect	code,class=CODE,delta=2
+    24                           	psect	powerup,class=CODE,delta=2
+    25                           	psect	reset_vec,class=CODE,delta=2
+    26                           	psect	maintext,class=CODE,delta=2
+    27  0000                     	C	set	0
+    28  0002                     	Z	set	2
+    29  0002                     	PCL	set	2
+    30  0000                     	INDF	set	0
+    31                           
+    32  0003                     	STATUS	equ	3
+    33  000A                     	PCLATH	equ	0Ah
+    34                           
+    35                           	; Microchip MPLAB XC8 C Compiler V1.12
+    36                           	; Copyright (C) 1984-2012 HI-TECH Software
+    37                           
+    38                           	; Auto-generated runtime startup code for final link stage.
+    39  0000                     intlevel0:
+    40  0000                     intlevel1:
+    41  0000                     intlevel2:
+    42  0000                     intlevel3:
+    43  0000                     intlevel4:
+    44  0000                     intlevel5:
+    45                           
+    46                           	; Microchip MPLAB XC8 C Compiler V1.12
+    47                           	; Copyright (C) 1984-2012 HI-TECH Software
+    48                           
+    49                           	; Auto-generated runtime startup code for final link stage.
+    50  0004                     	FSR	set	4
+    51                           
+    52                           	; Microchip MPLAB XC8 C Compiler V1.12
+    53                           	; Copyright (C) 1984-2012 HI-TECH Software
+    54  0000                     reset_vec:
+    55                           
+    56                           	; Microchip MPLAB XC8 C Compiler V1.12
+    57                           	; Copyright (C) 1984-2012 HI-TECH Software
+    58                           
+    59  0000  2810               	goto	start & 0x7FF | (reset_vec & not 0x7FF)
+    60                           
+    61                           	; Microchip MPLAB XC8 C Compiler V1.12
+    62                           	; Copyright (C) 1984-2012 HI-TECH Software
+    63                           
+    64  0010                     start
+    65                           
+    66                           	; Microchip MPLAB XC8 C Compiler V1.12
+    67  0010  2A53               	ljmp start_initialization	;jump to C runtime clear & initialization
+
+
+Microchip Technology PIC Macro Assembler V1.12 build 49521 
+Symbol Table                                                                                               Mon Jul 28 13:15:31 2014
+
+               _main 0011                 start 0010  start_initialization 0253             intlevel0 0000  
+           intlevel1 0000             intlevel2 0000             intlevel3 0000             intlevel4 0000  
+           intlevel5 0000             reset_vec 0000  

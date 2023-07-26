@@ -1,0 +1,21 @@
+_get_char: CODE, 12532 0 70
+_liga_Operation: CODE, 12866 0 118
+___ftpack: CODE, 13132 0 172
+_main: CODE, 15128 0 1256
+___ftadd: CODE, 14696 0 432
+_coag_Operation: CODE, 13304 0 188
+_load_Digipot: CODE, 13940 0 338
+_MY_DELAY: CODE, 12362 0 52
+_put_char: CODE, 12302 0 16
+__initialization: CODE, 12318 0 12
+_cut_Operation: CODE, 12758 0 108
+_sqrt: CODE, 14278 0 418
+_init_Values: CODE, 12474 0 58
+_bi_Operation: CODE, 12678 0 80
+___ftmul: CODE, 13708 0 232
+___awtoft: CODE, 12602 0 76
+_USARTInit: CODE, 12336 0 26
+___fttol: CODE, 13492 0 216
+___ftsub: CODE, 12416 0 58
+___ftge: CODE, 12984 0 148
+Total: 4074

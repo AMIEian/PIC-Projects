@@ -1,0 +1,219 @@
+[p LITE_MODE AUTOSTATIC PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F877A ]
+"2568 D:\Program Files\Microchip\xc8\v1.12\include\pic16f877a.h
+[s S33 . 1 `uc 1 TRISD0 1 0 :1:0 
+`uc 1 TRISD1 1 0 :1:1 
+`uc 1 TRISD2 1 0 :1:2 
+`uc 1 TRISD3 1 0 :1:3 
+`uc 1 TRISD4 1 0 :1:4 
+`uc 1 TRISD5 1 0 :1:5 
+`uc 1 TRISD6 1 0 :1:6 
+`uc 1 TRISD7 1 0 :1:7 
+]
+[u S42 . 1 `S33 1 . 1 0 ]
+"5 D:\Program Files\Microchip\xc8\v1.12\sources\abdiv.c
+[v ___abdiv `(c  1 e 1 0 ]
+"5 D:\Program Files\Microchip\xc8\v1.12\sources\abmod.c
+[v ___abmod `(c  1 e 1 0 ]
+"34 D:\Program Files\Microchip\xc8\v1.12\sources\abtoft.c
+[v ___abtoft `(f  1 e 3 0 ]
+"5 D:\Program Files\Microchip\xc8\v1.12\sources\aldiv.c
+[v ___aldiv `(l  1 e 4 0 ]
+"5 D:\Program Files\Microchip\xc8\v1.12\sources\almod.c
+[v ___almod `(l  1 e 4 0 ]
+"43 D:\Program Files\Microchip\xc8\v1.12\sources\altoft.c
+[v ___altoft `(f  1 e 3 0 ]
+"5 D:\Program Files\Microchip\xc8\v1.12\sources\atdiv.c
+[v ___atdiv `(m  1 e 3 0 ]
+"5 D:\Program Files\Microchip\xc8\v1.12\sources\atmod.c
+[v ___atmod `(m  1 e 3 0 ]
+"38 D:\Program Files\Microchip\xc8\v1.12\sources\attoft.c
+[v ___attoft `(f  1 e 3 0 ]
+"5 D:\Program Files\Microchip\xc8\v1.12\sources\awdiv.c
+[v ___awdiv `(i  1 e 2 0 ]
+"5 D:\Program Files\Microchip\xc8\v1.12\sources\awmod.c
+[v ___awmod `(i  1 e 2 0 ]
+"33 D:\Program Files\Microchip\xc8\v1.12\sources\awtoft.c
+[v ___awtoft `(f  1 e 3 0 ]
+"3 D:\Program Files\Microchip\xc8\v1.12\sources\bmul.c
+[v ___bmul `(uc  1 e 1 0 ]
+"63 D:\Program Files\Microchip\xc8\v1.12\sources\float.c
+[v ___ftpack `(f  1 e 3 0 ]
+"87 D:\Program Files\Microchip\xc8\v1.12\sources\ftadd.c
+[v ___ftadd `(f  1 e 3 0 ]
+"50 D:\Program Files\Microchip\xc8\v1.12\sources\ftdiv.c
+[v ___ftdiv `(f  1 e 3 0 ]
+"5 D:\Program Files\Microchip\xc8\v1.12\sources\ftge.c
+[v ___ftge `(b  1 e 0 0 ]
+"52 D:\Program Files\Microchip\xc8\v1.12\sources\ftmul.c
+[v ___ftmul `(f  1 e 3 0 ]
+"16 D:\Program Files\Microchip\xc8\v1.12\sources\ftneg.c
+[v ___ftneg `(f  1 e 3 0 ]
+"17 D:\Program Files\Microchip\xc8\v1.12\sources\ftsub.c
+[v ___ftsub `(f  1 e 3 0 ]
+"45 D:\Program Files\Microchip\xc8\v1.12\sources\fttol.c
+[v ___fttol `(l  1 e 4 0 ]
+"5 D:\Program Files\Microchip\xc8\v1.12\sources\lbdiv.c
+[v ___lbdiv `(uc  1 e 1 0 ]
+"5 D:\Program Files\Microchip\xc8\v1.12\sources\lbmod.c
+[v ___lbmod `(uc  1 e 1 0 ]
+"28 D:\Program Files\Microchip\xc8\v1.12\sources\lbtoft.c
+[v ___lbtoft `(f  1 e 3 0 ]
+"5 D:\Program Files\Microchip\xc8\v1.12\sources\lldiv.c
+[v ___lldiv `(ul  1 e 4 0 ]
+"5 D:\Program Files\Microchip\xc8\v1.12\sources\llmod.c
+[v ___llmod `(ul  1 e 4 0 ]
+"36 D:\Program Files\Microchip\xc8\v1.12\sources\lltoft.c
+[v ___lltoft `(f  1 e 3 0 ]
+"3 D:\Program Files\Microchip\xc8\v1.12\sources\lmul.c
+[v ___lmul `(ul  1 e 4 0 ]
+"5 D:\Program Files\Microchip\xc8\v1.12\sources\ltdiv.c
+[v ___ltdiv `(um  1 e 3 0 ]
+"5 D:\Program Files\Microchip\xc8\v1.12\sources\ltmod.c
+[v ___ltmod `(um  1 e 3 0 ]
+"31 D:\Program Files\Microchip\xc8\v1.12\sources\lttoft.c
+[v ___lttoft `(f  1 e 3 0 ]
+"5 D:\Program Files\Microchip\xc8\v1.12\sources\lwdiv.c
+[v ___lwdiv `(ui  1 e 2 0 ]
+"5 D:\Program Files\Microchip\xc8\v1.12\sources\lwmod.c
+[v ___lwmod `(ui  1 e 2 0 ]
+"29 D:\Program Files\Microchip\xc8\v1.12\sources\lwtoft.c
+[v ___lwtoft `(f  1 e 3 0 ]
+"3 D:\Program Files\Microchip\xc8\v1.12\sources\tmul.c
+[v ___tmul `(um  1 e 3 0 ]
+"3 D:\Program Files\Microchip\xc8\v1.12\sources\wmul.c
+[v ___wmul `(ui  1 e 2 0 ]
+"7 eeprom.c
+[v _eecpymem `(v  1 e 0 0 ]
+"25
+[v _memcpyee `(v  1 e 0 0 ]
+"49
+[v ___eetoc `(uc  1 e 1 0 ]
+"57
+[v ___eetoi `(ui  1 e 2 0 ]
+"65
+[v ___eetom `(um  1 e 3 0 ]
+"73
+[v ___eetol `(ul  1 e 4 0 ]
+"81
+[v ___ctoee `(uc  1 e 1 0 ]
+"88
+[v ___itoee `(ui  1 e 2 0 ]
+"95
+[v ___mtoee `(um  1 e 3 0 ]
+"102
+[v ___ltoee `(ul  1 e 4 0 ]
+"109
+[v ___eetoft `(f  1 e 3 0 ]
+"117
+[v ___eetofl `(d  1 e 3 0 ]
+"125
+[v ___fttoee `(f  1 e 3 0 ]
+"132
+[v ___fltoee `(d  1 e 3 0 ]
+"81 lcd_hd44780_pic16.c
+[v _LCDByte `(v  1 e 0 0 ]
+"136
+[v _LCDBusyLoop `(v  1 e 0 0 ]
+"194
+[v _LCDInit `(v  1 e 0 0 ]
+"252
+[v _LCDWriteString `(v  1 e 0 0 ]
+"308
+[v _LCDWriteInt `(v  1 e 0 0 ]
+"353
+[v _LCDGotoXY `(v  1 e 0 0 ]
+"43 LCDTest.c
+[v _main `(v  1 e 0 0 ]
+"2228 /Volumes/build/bamboo/xml-data/build-dir/XC8-RELEASE-JOB1/nz/build/dist/osx/include/pic16f877a.h
+[v _EEDATA `VEuc  1 e 1 @268 ]
+"2234
+[v _EEADR `VEuc  1 e 1 @269 ]
+"2252
+[v _EECON1 `VEuc  1 e 1 @396 ]
+"2296
+[v _EECON2 `VEuc  1 e 1 @397 ]
+"2346
+[v _CARRY `VEb  1 e 0 @24 ]
+"2438
+[v _GIE `VEb  1 e 0 @95 ]
+"2556
+[v _RD `VEb  1 e 0 @3168 ]
+"2756
+[v _WR `VEb  1 e 0 @3169 ]
+"2758
+[v _WREN `VEb  1 e 0 @3170 ]
+"15 custom_char.h
+[v ___cgram `[64]uc  1 e 64 0 ]
+"326 D:\Program Files\Microchip\xc8\v1.12\include\pic16f877a.h
+[v _PORTD `VEuc  1 e 1 @8 ]
+"1454
+[v _TRISD `VEuc  1 e 1 @136 ]
+[s S33 . 1 `uc 1 TRISD0 1 0 :1:0 
+`uc 1 TRISD1 1 0 :1:1 
+`uc 1 TRISD2 1 0 :1:2 
+`uc 1 TRISD3 1 0 :1:3 
+`uc 1 TRISD4 1 0 :1:4 
+`uc 1 TRISD5 1 0 :1:5 
+`uc 1 TRISD6 1 0 :1:6 
+`uc 1 TRISD7 1 0 :1:7 
+]
+"1471
+[u S42 . 1 `S33 1 . 1 0 ]
+[v _TRISDbits `VES42  1 e 1 @136 ]
+"2566
+[v _RD4 `VEb  1 e 0 @68 ]
+"2568
+[v _RD5 `VEb  1 e 0 @69 ]
+"2570
+[v _RD6 `VEb  1 e 0 @70 ]
+"43 LCDTest.c
+[v _main `(v  1 e 0 0 ]
+{
+"58
+} 0
+"194 lcd_hd44780_pic16.c
+[v _LCDInit `(v  1 e 0 0 ]
+{
+[v LCDInit@style `uc  1 a 1 wreg ]
+"245
+[v LCDInit@__i `uc  1 a 1 1 ]
+"194
+[v LCDInit@style `uc  1 a 1 wreg ]
+"250
+} 0
+"252
+[v _LCDWriteString `(v  1 e 0 0 ]
+{
+[v LCDWriteString@msg `*.cDCCuc  1 a 1 wreg ]
+"287
+[v LCDWriteString@cc `c  1 a 1 0 ]
+"252
+[v LCDWriteString@msg `*.cDCCuc  1 a 1 wreg ]
+"305
+} 0
+"81
+[v _LCDByte `(v  1 e 0 0 ]
+{
+[v LCDByte@c `uc  1 a 1 wreg ]
+"90
+[v LCDByte@temp `uc  1 a 1 11 ]
+"89
+[v LCDByte@ln `uc  1 a 1 9 ]
+[v LCDByte@hn `uc  1 a 1 8 ]
+"81
+[v LCDByte@c `uc  1 a 1 wreg ]
+[v LCDByte@isdata `uc  1 p 1 5 ]
+"133
+} 0
+"136
+[v _LCDBusyLoop `(v  1 e 0 0 ]
+{
+"139
+[v LCDBusyLoop@status `uc  1 a 1 4 ]
+[v LCDBusyLoop@temp `uc  1 a 1 3 ]
+[v LCDBusyLoop@busy `uc  1 a 1 2 ]
+"191
+} 0

@@ -1,0 +1,22 @@
+___awdiv: CODE, 736 0 114
+_LCDByte: CODE, 259 0 77
+__stringtab: STRING, 2048 0 6
+__stringdata: STRING, 2054 0 16
+_ADCInit: CODE, 4032 0 18
+___ftpack: CODE, 965 0 123
+___awmod: CODE, 425 0 100
+_LCDWriteInt: CODE, 1599 0 211
+_main: CODE, 525 0 102
+___lwtoft: CODE, 4050 0 23
+_LCDInit: CODE, 627 0 109
+__initialization: CODE, 4073 0 19
+___lwdiv: CODE, 182 0 77
+_LCDWriteString: CODE, 850 0 115
+_ReadADC: CODE, 22 0 47
+_LCDGotoXY: CODE, 69 0 49
+___ftmul: CODE, 1810 0 238
+_LCDBusyLoop: CODE, 336 0 89
+___fttol: CODE, 1235 0 164
+_LM35ReadTemp: CODE, 1088 0 147
+___ftdiv: CODE, 1399 0 200
+Total: 2044

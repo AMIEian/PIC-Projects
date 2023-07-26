@@ -1,0 +1,211 @@
+[Header]
+MagicCookie={0b13fe8c-dfe0-40eb-8900-6712719559a7}
+Version=1.0
+[File000]
+Location=E:\Study Material\XC8 PROJECTS\EEPROM Library\lcd_hd44780_pic16.p1
+Folder=Intermediary
+DeviceName=PIC18F452
+LanguageToolSuiteID={38171385-97B2-4EC5-BF2C-C2C027BA5B04}
+LanguageToolID={B6D1F1C2-3E8A-49F6-9C0A-75F5EBE32222}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\xc8\v1.33\bin\xc8.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|lcd_hd44780_pic16.c|myeeprom.c|Test.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=C9=1 FE=31 EC=1 F0=0 EF=1 EE=0 104=0 E9= C4=0 F2= F3= F4= F8=1 F5= F9=0 FA=0 FB=0 C0=0 C1=0 BD=0 BC=0 BB=0 BF=0 BE=0 B8= 101=0 103= 102=0 BA= FF=0 100=0 106=0 109=0 10A=1 10B=0 10C=0 10E=0 10F=1 110=1 118=0 116=0 117= 10D=0 114=-1 113=-1 111=0 115=-1
+TraceCmdString=
+DebugOptions=
+[File001]
+Location=E:\Study Material\XC8 PROJECTS\EEPROM Library\myeeprom.p1
+Folder=Intermediary
+DeviceName=PIC18F452
+LanguageToolSuiteID={38171385-97B2-4EC5-BF2C-C2C027BA5B04}
+LanguageToolID={B6D1F1C2-3E8A-49F6-9C0A-75F5EBE32222}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\xc8\v1.33\bin\xc8.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|lcd_hd44780_pic16.c|myeeprom.c|Test.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=C9=1 FE=31 EC=1 F0=0 EF=1 EE=0 104=0 E9= C4=0 F2= F3= F4= F8=1 F5= F9=0 FA=0 FB=0 C0=0 C1=0 BD=0 BC=0 BB=0 BF=0 BE=0 B8= 101=0 103= 102=0 BA= FF=0 100=0 106=0 109=0 10A=1 10B=0 10C=0 10E=0 10F=1 110=1 118=0 116=0 117= 10D=0 114=-1 113=-1 111=0 115=-1
+TraceCmdString=
+DebugOptions=
+[File002]
+Location=E:\Study Material\XC8 PROJECTS\EEPROM Library\Test.p1
+Folder=Intermediary
+DeviceName=PIC18F452
+LanguageToolSuiteID={38171385-97B2-4EC5-BF2C-C2C027BA5B04}
+LanguageToolID={B6D1F1C2-3E8A-49F6-9C0A-75F5EBE32222}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\xc8\v1.33\bin\xc8.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|lcd_hd44780_pic16.c|myeeprom.c|Test.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=C9=1 FE=31 EC=1 F0=0 EF=1 EE=0 104=0 E9= C4=0 F2= F3= F4= F8=1 F5= F9=0 FA=0 FB=0 C0=0 C1=0 BD=0 BC=0 BB=0 BF=0 BE=0 B8= 101=0 103= 102=0 BA= FF=0 100=0 106=0 109=0 10A=1 10B=0 10C=0 10E=0 10F=1 110=1 118=0 116=0 117= 10D=0 114=-1 113=-1 111=0 115=-1
+TraceCmdString=
+DebugOptions=
+[File003]
+Location=E:\Study Material\XC8 PROJECTS\EEPROM Library\EEPROM.cof
+Folder=Output
+DeviceName=PIC18F452
+LanguageToolSuiteID={38171385-97B2-4EC5-BF2C-C2C027BA5B04}
+LanguageToolID={B6D1F1C2-3E8A-49F6-9C0A-75F5EBE32222}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\xc8\v1.33\bin\xc8.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|lcd_hd44780_pic16.c|myeeprom.c|Test.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=C9=1 FE=31 EC=1 F0=0 EF=1 EE=0 104=0 E9= C4=0 F2= F3= F4= F8=1 F5= F9=0 FA=0 FB=0 C0=0 C1=0 BD=0 BC=0 BB=0 BF=0 BE=0 B8= 101=0 103= 102=0 BA= FF=0 100=0 106=0 109=0 10A=1 10B=0 10C=0 10E=0 10F=1 110=1 118=0 116=0 117= 10D=0 114=-1 113=-1 111=0 115=-1
+TraceCmdString=
+DebugOptions=
+[File004]
+Location=E:\Study Material\XC8 PROJECTS\EEPROM Library\EEPROM.hex
+Folder=Output
+DeviceName=PIC18F452
+LanguageToolSuiteID={38171385-97B2-4EC5-BF2C-C2C027BA5B04}
+LanguageToolID={B6D1F1C2-3E8A-49F6-9C0A-75F5EBE32222}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\xc8\v1.33\bin\xc8.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|lcd_hd44780_pic16.c|myeeprom.c|Test.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=C9=1 FE=31 EC=1 F0=0 EF=1 EE=0 104=0 E9= C4=0 F2= F3= F4= F8=1 F5= F9=0 FA=0 FB=0 C0=0 C1=0 BD=0 BC=0 BB=0 BF=0 BE=0 B8= 101=0 103= 102=0 BA= FF=0 100=0 106=0 109=0 10A=1 10B=0 10C=0 10E=0 10F=1 110=1 118=0 116=0 117= 10D=0 114=-1 113=-1 111=0 115=-1
+TraceCmdString=
+DebugOptions=
+[File005]
+Location=E:\Study Material\XC8 PROJECTS\EEPROM Library\EEPROM.sym
+Folder=Output
+DeviceName=PIC18F452
+LanguageToolSuiteID={38171385-97B2-4EC5-BF2C-C2C027BA5B04}
+LanguageToolID={B6D1F1C2-3E8A-49F6-9C0A-75F5EBE32222}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\xc8\v1.33\bin\xc8.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|lcd_hd44780_pic16.c|myeeprom.c|Test.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=C9=1 FE=31 EC=1 F0=0 EF=1 EE=0 104=0 E9= C4=0 F2= F3= F4= F8=1 F5= F9=0 FA=0 FB=0 C0=0 C1=0 BD=0 BC=0 BB=0 BF=0 BE=0 B8= 101=0 103= 102=0 BA= FF=0 100=0 106=0 109=0 10A=1 10B=0 10C=0 10E=0 10F=1 110=1 118=0 116=0 117= 10D=0 114=-1 113=-1 111=0 115=-1
+TraceCmdString=
+DebugOptions=
+[File006]
+Location=E:\Study Material\XC8 PROJECTS\EEPROM Library\EEPROM.map
+Folder=Output
+DeviceName=PIC18F452
+LanguageToolSuiteID={38171385-97B2-4EC5-BF2C-C2C027BA5B04}
+LanguageToolID={B6D1F1C2-3E8A-49F6-9C0A-75F5EBE32222}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\xc8\v1.33\bin\xc8.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|lcd_hd44780_pic16.c|myeeprom.c|Test.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=C9=1 FE=31 EC=1 F0=0 EF=1 EE=0 104=0 E9= C4=0 F2= F3= F4= F8=1 F5= F9=0 FA=0 FB=0 C0=0 C1=0 BD=0 BC=0 BB=0 BF=0 BE=0 B8= 101=0 103= 102=0 BA= FF=0 100=0 106=0 109=0 10A=1 10B=0 10C=0 10E=0 10F=1 110=1 118=0 116=0 117= 10D=0 114=-1 113=-1 111=0 115=-1
+TraceCmdString=
+DebugOptions=
+[File007]
+Location=E:\Study Material\XC8 PROJECTS\EEPROM Library\EEPROM.hxl
+Folder=Output
+DeviceName=PIC18F452
+LanguageToolSuiteID={38171385-97B2-4EC5-BF2C-C2C027BA5B04}
+LanguageToolID={B6D1F1C2-3E8A-49F6-9C0A-75F5EBE32222}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\xc8\v1.33\bin\xc8.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|lcd_hd44780_pic16.c|myeeprom.c|Test.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=C9=1 FE=31 EC=1 F0=0 EF=1 EE=0 104=0 E9= C4=0 F2= F3= F4= F8=1 F5= F9=0 FA=0 FB=0 C0=0 C1=0 BD=0 BC=0 BB=0 BF=0 BE=0 B8= 101=0 103= 102=0 BA= FF=0 100=0 106=0 109=0 10A=1 10B=0 10C=0 10E=0 10F=1 110=1 118=0 116=0 117= 10D=0 114=-1 113=-1 111=0 115=-1
+TraceCmdString=
+DebugOptions=
+[File008]
+Location=E:\Study Material\XC8 PROJECTS\EEPROM Library\startup.lst
+Folder=Output
+DeviceName=PIC18F452
+LanguageToolSuiteID={38171385-97B2-4EC5-BF2C-C2C027BA5B04}
+LanguageToolID={B6D1F1C2-3E8A-49F6-9C0A-75F5EBE32222}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\xc8\v1.33\bin\xc8.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|lcd_hd44780_pic16.c|myeeprom.c|Test.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=C9=1 FE=31 EC=1 F0=0 EF=1 EE=0 104=0 E9= C4=0 F2= F3= F4= F8=1 F5= F9=0 FA=0 FB=0 C0=0 C1=0 BD=0 BC=0 BB=0 BF=0 BE=0 B8= 101=0 103= 102=0 BA= FF=0 100=0 106=0 109=0 10A=1 10B=0 10C=0 10E=0 10F=1 110=1 118=0 116=0 117= 10D=0 114=-1 113=-1 111=0 115=-1
+TraceCmdString=
+DebugOptions=
+[File009]
+Location=E:\Study Material\XC8 PROJECTS\EEPROM Library\startup.rlf
+Folder=Output
+DeviceName=PIC18F452
+LanguageToolSuiteID={38171385-97B2-4EC5-BF2C-C2C027BA5B04}
+LanguageToolID={B6D1F1C2-3E8A-49F6-9C0A-75F5EBE32222}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\xc8\v1.33\bin\xc8.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|lcd_hd44780_pic16.c|myeeprom.c|Test.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=C9=1 FE=31 EC=1 F0=0 EF=1 EE=0 104=0 E9= C4=0 F2= F3= F4= F8=1 F5= F9=0 FA=0 FB=0 C0=0 C1=0 BD=0 BC=0 BB=0 BF=0 BE=0 B8= 101=0 103= 102=0 BA= FF=0 100=0 106=0 109=0 10A=1 10B=0 10C=0 10E=0 10F=1 110=1 118=0 116=0 117= 10D=0 114=-1 113=-1 111=0 115=-1
+TraceCmdString=
+DebugOptions=
+[File010]
+Location=E:\Study Material\XC8 PROJECTS\EEPROM Library\doprnt.p1
+Folder=Output
+DeviceName=PIC18F452
+LanguageToolSuiteID={38171385-97B2-4EC5-BF2C-C2C027BA5B04}
+LanguageToolID={B6D1F1C2-3E8A-49F6-9C0A-75F5EBE32222}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\xc8\v1.33\bin\xc8.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|lcd_hd44780_pic16.c|myeeprom.c|Test.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=C9=1 FE=31 EC=1 F0=0 EF=1 EE=0 104=0 E9= C4=0 F2= F3= F4= F8=1 F5= F9=0 FA=0 FB=0 C0=0 C1=0 BD=0 BC=0 BB=0 BF=0 BE=0 B8= 101=0 103= 102=0 BA= FF=0 100=0 106=0 109=0 10A=1 10B=0 10C=0 10E=0 10F=1 110=1 118=0 116=0 117= 10D=0 114=-1 113=-1 111=0 115=-1
+TraceCmdString=
+DebugOptions=
+[File011]
+Location=E:\Study Material\XC8 PROJECTS\EEPROM Library\doprnt.pre
+Folder=Output
+DeviceName=PIC18F452
+LanguageToolSuiteID={38171385-97B2-4EC5-BF2C-C2C027BA5B04}
+LanguageToolID={B6D1F1C2-3E8A-49F6-9C0A-75F5EBE32222}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\xc8\v1.33\bin\xc8.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|lcd_hd44780_pic16.c|myeeprom.c|Test.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=C9=1 FE=31 EC=1 F0=0 EF=1 EE=0 104=0 E9= C4=0 F2= F3= F4= F8=1 F5= F9=0 FA=0 FB=0 C0=0 C1=0 BD=0 BC=0 BB=0 BF=0 BE=0 B8= 101=0 103= 102=0 BA= FF=0 100=0 106=0 109=0 10A=1 10B=0 10C=0 10E=0 10F=1 110=1 118=0 116=0 117= 10D=0 114=-1 113=-1 111=0 115=-1
+TraceCmdString=
+DebugOptions=
+[File012]
+Location=E:\Study Material\XC8 PROJECTS\EEPROM Library\EEPROM.obj
+Folder=Output
+DeviceName=PIC18F452
+LanguageToolSuiteID={38171385-97B2-4EC5-BF2C-C2C027BA5B04}
+LanguageToolID={B6D1F1C2-3E8A-49F6-9C0A-75F5EBE32222}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\xc8\v1.33\bin\xc8.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|lcd_hd44780_pic16.c|myeeprom.c|Test.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=C9=1 FE=31 EC=1 F0=0 EF=1 EE=0 104=0 E9= C4=0 F2= F3= F4= F8=1 F5= F9=0 FA=0 FB=0 C0=0 C1=0 BD=0 BC=0 BB=0 BF=0 BE=0 B8= 101=0 103= 102=0 BA= FF=0 100=0 106=0 109=0 10A=1 10B=0 10C=0 10E=0 10F=1 110=1 118=0 116=0 117= 10D=0 114=-1 113=-1 111=0 115=-1
+TraceCmdString=
+DebugOptions=
+[File013]
+Location=E:\Study Material\XC8 PROJECTS\EEPROM Library\EEPROM.lst
+Folder=Output
+DeviceName=PIC18F452
+LanguageToolSuiteID={38171385-97B2-4EC5-BF2C-C2C027BA5B04}
+LanguageToolID={B6D1F1C2-3E8A-49F6-9C0A-75F5EBE32222}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\xc8\v1.33\bin\xc8.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|lcd_hd44780_pic16.c|myeeprom.c|Test.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=C9=1 FE=31 EC=1 F0=0 EF=1 EE=0 104=0 E9= C4=0 F2= F3= F4= F8=1 F5= F9=0 FA=0 FB=0 C0=0 C1=0 BD=0 BC=0 BB=0 BF=0 BE=0 B8= 101=0 103= 102=0 BA= FF=0 100=0 106=0 109=0 10A=1 10B=0 10C=0 10E=0 10F=1 110=1 118=0 116=0 117= 10D=0 114=-1 113=-1 111=0 115=-1
+TraceCmdString=
+DebugOptions=
+[File014]
+Location=E:\Study Material\XC8 PROJECTS\EEPROM Library\EEPROM.rlf
+Folder=Output
+DeviceName=PIC18F452
+LanguageToolSuiteID={38171385-97B2-4EC5-BF2C-C2C027BA5B04}
+LanguageToolID={B6D1F1C2-3E8A-49F6-9C0A-75F5EBE32222}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\xc8\v1.33\bin\xc8.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|lcd_hd44780_pic16.c|myeeprom.c|Test.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=C9=1 FE=31 EC=1 F0=0 EF=1 EE=0 104=0 E9= C4=0 F2= F3= F4= F8=1 F5= F9=0 FA=0 FB=0 C0=0 C1=0 BD=0 BC=0 BB=0 BF=0 BE=0 B8= 101=0 103= 102=0 BA= FF=0 100=0 106=0 109=0 10A=1 10B=0 10C=0 10E=0 10F=1 110=1 118=0 116=0 117= 10D=0 114=-1 113=-1 111=0 115=-1
+TraceCmdString=
+DebugOptions=
+[File015]
+Location=E:\Study Material\XC8 PROJECTS\EEPROM Library\EEPROM.sdb
+Folder=Output
+DeviceName=PIC18F452
+LanguageToolSuiteID={38171385-97B2-4EC5-BF2C-C2C027BA5B04}
+LanguageToolID={B6D1F1C2-3E8A-49F6-9C0A-75F5EBE32222}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\xc8\v1.33\bin\xc8.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|lcd_hd44780_pic16.c|myeeprom.c|Test.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=C9=1 FE=31 EC=1 F0=0 EF=1 EE=0 104=0 E9= C4=0 F2= F3= F4= F8=1 F5= F9=0 FA=0 FB=0 C0=0 C1=0 BD=0 BC=0 BB=0 BF=0 BE=0 B8= 101=0 103= 102=0 BA= FF=0 100=0 106=0 109=0 10A=1 10B=0 10C=0 10E=0 10F=1 110=1 118=0 116=0 117= 10D=0 114=-1 113=-1 111=0 115=-1
+TraceCmdString=
+DebugOptions=

@@ -1,0 +1,14 @@
+Microchip MPLAB XC8 C Compiler (Free Mode) V1.33
+Part Support Version: 1.33 (A)
+Copyright (C) 2014 Microchip Technology Inc.
+License type: Node Configuration
+
+Advisory[1233] Employing 18F452 errata work-arounds:
+Advisory[1234]  * Address 4000h boundary
+Advisory[1234]  * Faulty table reads at -40 degrees C
+Advisory[1234]  * GOTO instruction at reset vector must be preceded by NOP
+Advisory[1234]  * Peripherals can misbehave if BSR = 15
+Advisory[1234]  * DAW instruction may improperly clear CARRY bit
+Advisory[1234]  * Specifically disable interrupt sources during tblwt instruction
+Advisory[1234]  * Writes to flash must target opposite side of 4000h boundary
+Warning [1273] ; . Omniscient Code Generation not available in Free mode

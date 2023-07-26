@@ -1,0 +1,8 @@
+_ISR: CODE, 302 0 31
+_main: CODE, 28 0 135
+__initialization: CODE, 17 0 9
+_Beeper: CODE, 333 0 29
+_USARTWriteChar: CODE, 370 0 8
+_USARTHandleRxInt: CODE, 235 0 67
+_USARTInit: CODE, 163 0 72
+Total: 351

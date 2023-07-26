@@ -1,0 +1,383 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$startup.obj
+end_init CODE 0 0 0 1 2
+$WLC Wired.obj
+cinit CODE 0 7F6 7F6 A 2
+text1 CODE 0 644 644 CF 2
+maintext CODE 0 713 713 E3 2
+cstackCOMMON COMMON 1 78 78 4 1
+bssCOMMON COMMON 1 70 70 8 1
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+BANK0 0020-006F 1
+BANK1 00A0-00BF 1
+CODE 0001-0643 2
+COMMON 007C-007D 1
+CONFIG 2007-2007 2
+CONST 0001-0643 2
+EEDATA 2100-213F 2
+ENTRY 0001-0643 2
+IDLOC 2000-2003 2
+RAM 0020-006F 1
+RAM 00A0-00BF 1
+SFR0 0000-001F 1
+SFR1 0080-009F 1
+SFR2 0100-016F 1
+SFR3 0180-01EF 1
+STACK 0020-006F 1
+STRCODE 0001-0643 2
+STRING 0001-0643 2
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <file name>:<line number> <address> <psect name> <class name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$WLC Wired.obj
+"C:\Program Files (x86)\Microchip\xc8\v1.32\include\pic16f870.h":1794 0 text0 CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":82 644 text1 CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":85 644 text1 CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":86 647 text1 CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":88 64A text1 CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":89 64E text1 CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":90 652 text1 CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":93 659 text1 CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":95 65D text1 CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":96 664 text1 CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":98 668 text1 CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":99 66A text1 CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":101 66B text1 CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":104 66C text1 CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":105 66D text1 CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":106 66E text1 CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":109 66E text1 CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":110 671 text1 CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":112 674 text1 CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":113 678 text1 CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":114 67C text1 CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":116 683 text1 CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":118 687 text1 CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":119 68E text1 CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":121 692 text1 CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":122 694 text1 CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":124 695 text1 CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":127 696 text1 CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":128 697 text1 CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":129 698 text1 CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":132 698 text1 CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":133 69B text1 CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":135 69E text1 CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":136 6A2 text1 CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":137 6A6 text1 CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":139 6AD text1 CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":141 6B1 text1 CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":142 6B8 text1 CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":144 6BC text1 CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":145 6BE text1 CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":147 6BF text1 CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":150 6C0 text1 CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":151 6C1 text1 CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":152 6C2 text1 CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":155 6C2 text1 CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":156 6C5 text1 CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":158 6C8 text1 CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":159 6CC text1 CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":160 6D0 text1 CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":162 6D7 text1 CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":164 6DB text1 CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":165 6E2 text1 CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":167 6E6 text1 CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":168 6E8 text1 CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":170 6E9 text1 CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":173 6EA text1 CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":174 6EB text1 CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":175 6EC text1 CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":178 6EC text1 CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":179 6EF text1 CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":181 6F2 text1 CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":183 6F6 text1 CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":185 6FD text1 CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":186 6FE text1 CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":189 6FF text1 CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":191 700 text1 CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":194 701 text1 CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":196 70F text1 CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":197 710 text1 CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":200 711 text1 CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":201 712 text1 CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":15 713 maintext CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":17 713 maintext CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":18 717 maintext CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":19 718 maintext CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":20 71A maintext CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":22 71B maintext CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":23 71E maintext CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":24 71F maintext CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":27 720 maintext CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":28 722 maintext CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":29 72F maintext CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":30 732 maintext CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":31 73F maintext CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":32 743 maintext CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":33 750 maintext CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":34 753 maintext CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":35 760 maintext CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":36 764 maintext CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":37 771 maintext CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":38 774 maintext CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":39 781 maintext CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":40 785 maintext CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":41 792 maintext CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":42 795 maintext CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":43 7A2 maintext CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":44 7A6 maintext CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":45 7B3 maintext CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":46 7B6 maintext CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":50 7C3 maintext CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":53 7C7 maintext CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":55 7CA maintext CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":56 7CD maintext CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":57 7CF maintext CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":58 7D1 maintext CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":59 7D2 maintext CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":61 7D4 maintext CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":66 7D5 maintext CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":68 7D9 maintext CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":69 7DC maintext CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":70 7DD maintext CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":71 7DE maintext CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":73 7DF maintext CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":75 7DF maintext CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":77 7E4 maintext CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.C":75 7F1 maintext CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.as":186 7F6 cinit CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.as":189 7F6 cinit CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.as":220 7F6 cinit CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.as":221 7F7 cinit CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.as":222 7F8 cinit CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.as":223 7F9 cinit CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.as":224 7FA cinit CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.as":225 7FB cinit CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.as":226 7FC cinit CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.as":227 7FD cinit CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.as":233 7FE cinit CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.as":234 7FE cinit CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\WLC Wired.as":235 7FF cinit CODE
+$startup.obj
+"E:\Study Material\XC8 PROJECTS\WLC Wired\startup.as":39 0 functab CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\startup.as":40 0 functab CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\startup.as":41 0 functab CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\startup.as":42 0 functab CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\startup.as":43 0 functab CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\startup.as":44 0 functab CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\startup.as":63 0 reset_vec CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\startup.as":69 0 init CODE
+"E:\Study Material\XC8 PROJECTS\WLC Wired\startup.as":72 0 end_init CODE
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+_ll 72 0 COMMON 1 bssCOMMON WLC Wired.obj
+_ul 76 0 COMMON 1 bssCOMMON WLC Wired.obj
+_lu 74 0 COMMON 1 bssCOMMON WLC Wired.obj
+_uu 77 0 COMMON 1 bssCOMMON WLC Wired.obj
+_RA1 29 0 ABS 0 - WLC Wired.obj
+_RB1 31 0 ABS 0 - WLC Wired.obj
+_RA2 2A 0 ABS 0 - WLC Wired.obj
+_RB2 32 0 ABS 0 - WLC Wired.obj
+_RA3 2B 0 ABS 0 - WLC Wired.obj
+_RB3 33 0 ABS 0 - WLC Wired.obj
+_RB4 34 0 ABS 0 - WLC Wired.obj
+_RA5 2D 0 ABS 0 - WLC Wired.obj
+_RC4 3C 0 ABS 0 - WLC Wired.obj
+_RC5 3D 0 ABS 0 - WLC Wired.obj
+__S0 800 0 ABS 0 - -
+__S1 7C 0 ABS 0 - -
+__S2 0 0 ABS 0 - -
+__S3 0 0 ABS 0 - -
+__Hintentry 0 0 CODE 0 intentry -
+__Lintentry 0 0 CODE 0 intentry -
+_main E26 0 CODE 0 maintext WLC Wired.obj
+___sp 0 0 STACK 2 stack startup.obj
+btemp 7E 0 ABS 0 - WLC Wired.obj
+ltemp 7E 0 ABS 0 - WLC Wired.obj
+ttemp 7E 0 ABS 0 - WLC Wired.obj
+wtemp 7E 0 ABS 0 - WLC Wired.obj
+start 0 0 CODE 0 init startup.obj
+_TRISA 85 0 ABS 0 - WLC Wired.obj
+_TRISB 86 0 ABS 0 - WLC Wired.obj
+_TRISC 87 0 ABS 0 - WLC Wired.obj
+_PORTA 5 0 ABS 0 - WLC Wired.obj
+reset_vec 0 0 CODE 0 reset_vec startup.obj
+_PORTB 6 0 ABS 0 - WLC Wired.obj
+_PORTC 7 0 ABS 0 - WLC Wired.obj
+ltemp0 7E 0 ABS 0 - WLC Wired.obj
+ttemp0 7E 0 ABS 0 - WLC Wired.obj
+wtemp0 7E 0 ABS 0 - WLC Wired.obj
+ltemp1 82 0 ABS 0 - WLC Wired.obj
+ttemp1 81 0 ABS 0 - WLC Wired.obj
+wtemp1 80 0 ABS 0 - WLC Wired.obj
+ltemp2 86 0 ABS 0 - WLC Wired.obj
+ttemp2 84 0 ABS 0 - WLC Wired.obj
+wtemp2 82 0 ABS 0 - WLC Wired.obj
+ltemp3 80 0 ABS 0 - WLC Wired.obj
+ttemp3 87 0 ABS 0 - WLC Wired.obj
+wtemp3 84 0 ABS 0 - WLC Wired.obj
+ttemp4 7F 0 ABS 0 - WLC Wired.obj
+wtemp4 86 0 ABS 0 - WLC Wired.obj
+wtemp5 88 0 ABS 0 - WLC Wired.obj
+wtemp6 7F 0 ABS 0 - WLC Wired.obj
+__Hconfig 0 0 CONFIG 0 config -
+__Lconfig 0 0 CONFIG 0 config -
+__Hram 0 0 ABS 0 ram -
+__Lram 0 0 ABS 0 ram -
+_count 70 0 COMMON 1 bssCOMMON WLC Wired.obj
+__Hfunctab 0 0 CODE 0 functab -
+__Lfunctab 0 0 CODE 0 functab -
+_ADCON1 9F 0 ABS 0 - WLC Wired.obj
+__Hcommon 0 0 ABS 0 common -
+__Lcommon 0 0 ABS 0 common -
+__Heeprom_data 0 0 EEDATA 3 eeprom_data -
+__Leeprom_data 0 0 EEDATA 3 eeprom_data -
+___int_sp 0 0 STACK 2 stack startup.obj
+__Habs1 0 0 ABS 0 abs1 -
+__Labs1 0 0 ABS 0 abs1 -
+__Hsfr0 0 0 ABS 0 sfr0 -
+__Lsfr0 0 0 ABS 0 sfr0 -
+__Hsfr1 0 0 ABS 0 sfr1 -
+__Lsfr1 0 0 ABS 0 sfr1 -
+__Hsfr2 0 0 ABS 0 sfr2 -
+__Lsfr2 0 0 ABS 0 sfr2 -
+__Hsfr3 0 0 ABS 0 sfr3 -
+__Lsfr3 0 0 ABS 0 sfr3 -
+__Hcode 0 0 ABS 0 code -
+__Lcode 0 0 ABS 0 code -
+stackhi 0 0 ABS 0 - startup.obj
+stacklo 0 0 ABS 0 - startup.obj
+__Hinit 0 0 CODE 0 init -
+__Linit 0 0 CODE 0 init -
+__end_of_main FEC 0 CODE 0 maintext WLC Wired.obj
+__Htext 0 0 ABS 0 text -
+__Ltext 0 0 ABS 0 text -
+end_of_initialization FFC 0 CODE 0 cinit WLC Wired.obj
+__Hstrings 0 0 ABS 0 strings -
+__Lstrings 0 0 ABS 0 strings -
+_motor_flag 75 0 COMMON 1 bssCOMMON WLC Wired.obj
+__Hbank0 0 0 ABS 0 bank0 -
+__Lbank0 0 0 ABS 0 bank0 -
+__Hbank1 0 0 ABS 0 bank1 -
+__Lbank1 0 0 ABS 0 bank1 -
+__Hbank2 0 0 BANK2 1 bank2 -
+__Lbank2 0 0 BANK2 1 bank2 -
+__Hbank3 0 0 BANK3 1 bank3 -
+__Lbank3 0 0 BANK3 1 bank3 -
+___latbits 0 0 ABS 0 - WLC Wired.obj
+__Hpowerup 0 0 CODE 0 powerup -
+__Lpowerup 0 0 CODE 0 powerup -
+__ptext0 0 0 CODE 0 text0 WLC Wired.obj
+__ptext1 C88 0 CODE 0 text1 WLC Wired.obj
+__Hclrtext 0 0 ABS 0 clrtext -
+__Lclrtext 0 0 ABS 0 clrtext -
+__end_of__initialization FFC 0 CODE 0 cinit WLC Wired.obj
+_lp_flag 73 0 COMMON 1 bssCOMMON WLC Wired.obj
+__Hidloc 0 0 IDLOC 0 idloc -
+__Lidloc 0 0 IDLOC 0 idloc -
+__end_of_level_check E26 0 CODE 0 text1 WLC Wired.obj
+__Hstack 0 0 STACK 2 stack -
+__Lstack 0 0 STACK 2 stack -
+__Hspace_0 800 0 ABS 0 - -
+__Lspace_0 0 0 ABS 0 - -
+__Hspace_1 7C 0 ABS 0 - -
+__Lspace_1 0 0 ABS 0 - -
+__Hspace_2 0 0 ABS 0 - -
+__Lspace_2 0 0 ABS 0 - -
+__Hcinit 1000 0 CODE 0 cinit -
+__Lcinit FEC 0 CODE 0 cinit -
+_dry_run 71 0 COMMON 1 bssCOMMON WLC Wired.obj
+__Hspace_3 0 0 ABS 0 - -
+__Lspace_3 0 0 ABS 0 - -
+__size_of_main 0 0 ABS 0 - WLC Wired.obj
+__HbssCOMMON 0 0 ABS 0 bssCOMMON -
+__LbssCOMMON 0 0 ABS 0 bssCOMMON -
+__pbssCOMMON 70 0 COMMON 1 bssCOMMON WLC Wired.obj
+__Hend_init 2 0 CODE 0 end_init -
+__Lend_init 0 0 CODE 0 end_init -
+__Hreset_vec 0 0 CODE 0 reset_vec -
+__Lreset_vec 0 0 CODE 0 reset_vec -
+intlevel0 0 0 CODE 0 functab startup.obj
+intlevel1 0 0 CODE 0 functab startup.obj
+intlevel2 0 0 CODE 0 functab startup.obj
+intlevel3 0 0 CODE 0 functab startup.obj
+intlevel4 0 0 CODE 0 functab startup.obj
+intlevel5 0 0 CODE 0 functab startup.obj
+__HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+__LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+__pcstackCOMMON 78 0 COMMON 1 cstackCOMMON WLC Wired.obj
+start_initialization FEC 0 CODE 0 cinit WLC Wired.obj
+__size_of_level_check 0 0 ABS 0 - WLC Wired.obj
+_level_check C88 0 CODE 0 text1 WLC Wired.obj
+__Hmaintext 0 0 ABS 0 maintext -
+__Lmaintext 0 0 ABS 0 maintext -
+__pmaintext E26 0 CODE 0 maintext WLC Wired.obj
+__initialization FEC 0 CODE 0 cinit WLC Wired.obj
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect in on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+- 1 7E 2
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+reset_vec 0 0 0 1 2
+cinit 0 7F6 FEC A 2
+bssCOMMON 1 70 70 C 1
+maintext 0 713 E26 E3 2
+text1 0 644 C88 CF 2

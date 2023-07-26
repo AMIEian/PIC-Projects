@@ -1,0 +1,1 @@
+ Android_Cautery.d  Android_Cautery.p1:  E:/Study\ Material/XC8\ PROJECTS/Android\ Cautery/Android_Cautery.c E:/Study\ Material/XC8\ PROJECTS/Android\ Cautery/cautery.h E:/Study\ Material/XC8\ PROJECTS/Android\ Cautery/pins.h E:/Study\ Material/XC8\ PROJECTS/Android\ Cautery/my_serial.h

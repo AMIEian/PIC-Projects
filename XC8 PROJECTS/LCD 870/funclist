@@ -1,0 +1,14 @@
+___awdiv: CODE, 1581 0 91
+_LCDByte: CODE, 1292 0 62
+__stringtab: STRING, 1 0 6
+__stringdata: STRING, 7 0 19
+___awmod: CODE, 1504 0 77
+_LCDWriteInt: CODE, 1672 0 163
+_main: CODE, 1835 0 174
+_LCDInit: CODE, 1354 0 73
+__initialization: CODE, 2009 0 37
+_LCDWriteString: CODE, 1236 0 56
+_My_Delay: CODE, 1179 0 24
+_LCDGotoXY: CODE, 1203 0 33
+_LCDBusyLoop: CODE, 1427 0 77
+Total: 892

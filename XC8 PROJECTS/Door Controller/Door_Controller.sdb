@@ -1,0 +1,405 @@
+[p LITE_MODE AUTOSTATIC PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F876A ]
+[d frameptr 6 ]
+"47 E:\Study Material\XC8 PROJECTS\Door Controller\door1ph.c
+[e E1045 States `uc
+Opened 0
+Closed 1
+Opening 2
+Closing 3
+Stoped 4
+]
+"4 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\abdiv.c
+[v ___abdiv __abdiv `(c  1 e 1 0 ]
+"4 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\abmod.c
+[v ___abmod __abmod `(c  1 e 1 0 ]
+"33 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\abtoft.c
+[v ___abtoft __abtoft `(f  1 e 3 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\aldiv.c
+[v ___aldiv __aldiv `(l  1 e 4 0 ]
+"5 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\almod.c
+[v ___almod __almod `(l  1 e 4 0 ]
+"42 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\altoft.c
+[v ___altoft __altoft `(f  1 e 3 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\atdiv.c
+[v ___atdiv __atdiv `(m  1 e 3 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\atmod.c
+[v ___atmod __atmod `(m  1 e 3 0 ]
+"37 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\attoft.c
+[v ___attoft __attoft `(f  1 e 3 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+"32 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\awtoft.c
+[v ___awtoft __awtoft `(f  1 e 3 0 ]
+"62 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"86 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"4 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\ftge.c
+[v ___ftge __ftge `(b  1 e 0 0 ]
+"62 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 3 0 ]
+"15 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\ftneg.c
+[v ___ftneg __ftneg `(f  1 e 3 0 ]
+"18 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\ftsub.c
+[v ___ftsub __ftsub `(f  1 e 3 0 ]
+"44 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\fttol.c
+[v ___fttol __fttol `(l  1 e 4 0 ]
+"4 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\lbdiv.c
+[v ___lbdiv __lbdiv `(uc  1 e 1 0 ]
+"4 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\lbmod.c
+[v ___lbmod __lbmod `(uc  1 e 1 0 ]
+"27 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\lbtoft.c
+[v ___lbtoft __lbtoft `(f  1 e 3 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\lldiv.c
+[v ___lldiv __lldiv `(ul  1 e 4 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\llmod.c
+[v ___llmod __llmod `(ul  1 e 4 0 ]
+"35 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\lltoft.c
+[v ___lltoft __lltoft `(f  1 e 3 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\ltdiv.c
+[v ___ltdiv __ltdiv `(um  1 e 3 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\ltmod.c
+[v ___ltmod __ltmod `(um  1 e 3 0 ]
+"30 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\lttoft.c
+[v ___lttoft __lttoft `(f  1 e 3 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
+"28 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\lwtoft.c
+[v ___lwtoft __lwtoft `(f  1 e 3 0 ]
+"8 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\modf.c
+[v _modf modf `(d  1 e 3 0 ]
+"15 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+"15 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\Umul24.c
+[v ___tmul __tmul `(um  1 e 3 0 ]
+"15 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+"4 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\Umul8.c
+[v ___bmul __bmul `(uc  1 e 1 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\pic\eeprom.c
+[v _eecpymem eecpymem `(v  1 e 0 0 ]
+"24
+[v _memcpyee memcpyee `(v  1 e 0 0 ]
+"48
+[v ___eetoc __eetoc `(uc  1 e 1 0 ]
+"56
+[v ___eetoi __eetoi `(ui  1 e 2 0 ]
+"64
+[v ___eetom __eetom `(um  1 e 3 0 ]
+"72
+[v ___eetol __eetol `(ul  1 e 4 0 ]
+"80
+[v ___ctoee __ctoee `(uc  1 e 1 0 ]
+"87
+[v ___itoee __itoee `(ui  1 e 2 0 ]
+"94
+[v ___mtoee __mtoee `(um  1 e 3 0 ]
+"101
+[v ___ltoee __ltoee `(ul  1 e 4 0 ]
+"108
+[v ___eetoft __eetoft `(f  1 e 3 0 ]
+"116
+[v ___eetofl __eetofl `(d  1 e 3 0 ]
+"124
+[v ___fttoee __fttoee `(f  1 e 3 0 ]
+"131
+[v ___fltoee __fltoee `(d  1 e 3 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\pic\eeread.c
+[v _eeprom_read eeprom_read `(uc  1 e 1 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\pic\eewrite.c
+[v _eeprom_write eeprom_write `(v  1 e 0 0 ]
+"49 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\pic\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 3 0 ]
+"49 E:\Study Material\XC8 PROJECTS\Door Controller\door1ph.c
+[v _main main `(v  1 e 0 0 ]
+"229
+[v _Tx_Received Tx_Received `II(v  1 e 0 0 ]
+"254
+[v _over_current_config over_current_config `(v  1 e 0 0 ]
+"320
+[v _check_over_current check_over_current `(uc  1 e 1 0 ]
+"343
+[v _ReadADC ReadADC `(ui  1 e 2 0 ]
+"348 C:\Program Files (x86)\Microchip\xc8\v1.32\include\pic16f876a.h
+[v _INTCON INTCON `VEuc  1 e 1 @11 ]
+"1018
+[v _ADRESH ADRESH `VEuc  1 e 1 @30 ]
+"1024
+[v _ADCON0 ADCON0 `VEuc  1 e 1 @31 ]
+[s S84 . 1 `uc 1 ADON 1 0 :1:0 
+`uc 1 . 1 0 :1:1 
+`uc 1 GO_nDONE 1 0 :1:2 
+`uc 1 CHS 1 0 :3:3 
+`uc 1 ADCS 1 0 :2:6 
+]
+"1055
+[s S90 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 GO 1 0 :1:2 
+`uc 1 CHS0 1 0 :1:3 
+`uc 1 CHS1 1 0 :1:4 
+`uc 1 CHS2 1 0 :1:5 
+`uc 1 ADCS0 1 0 :1:6 
+`uc 1 ADCS1 1 0 :1:7 
+]
+[s S98 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 nDONE 1 0 :1:2 
+]
+[s S101 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 GO_DONE 1 0 :1:2 
+]
+[u S104 . 1 `S84 1 . 1 0 `S90 1 . 1 0 `S98 1 . 1 0 `S101 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES104  1 e 1 @31 ]
+"1119
+[v _OPTION_REG OPTION_REG `VEuc  1 e 1 @129 ]
+"1188
+[v _TRISA TRISA `VEuc  1 e 1 @133 ]
+"1237
+[v _TRISB TRISB `VEuc  1 e 1 @134 ]
+"1298
+[v _TRISC TRISC `VEuc  1 e 1 @135 ]
+"1946
+[v _ADRESL ADRESL `VEuc  1 e 1 @158 ]
+"1952
+[v _ADCON1 ADCON1 `VEuc  1 e 1 @159 ]
+"2010
+[v _EEDATA EEDATA `VEuc  1 e 1 @268 ]
+"2016
+[v _EEADR EEADR `VEuc  1 e 1 @269 ]
+"2034
+[v _EECON1 EECON1 `VEuc  1 e 1 @396 ]
+"2078
+[v _EECON2 EECON2 `VEuc  1 e 1 @397 ]
+"2110
+[v _ADON ADON `VEb  1 e 0 @248 ]
+"2128
+[v _CARRY CARRY `VEb  1 e 0 @24 ]
+"2220
+[v _GIE GIE `VEb  1 e 0 @95 ]
+"2222
+[v _GO GO `VEb  1 e 0 @250 ]
+"2268
+[v _RA1 RA1 `VEb  1 e 0 @41 ]
+"2270
+[v _RA2 RA2 `VEb  1 e 0 @42 ]
+"2272
+[v _RA3 RA3 `VEb  1 e 0 @43 ]
+"2280
+[v _RB1 RB1 `VEb  1 e 0 @49 ]
+"2282
+[v _RB2 RB2 `VEb  1 e 0 @50 ]
+"2284
+[v _RB3 RB3 `VEb  1 e 0 @51 ]
+"2286
+[v _RB4 RB4 `VEb  1 e 0 @52 ]
+"2298
+[v _RC0 RC0 `VEb  1 e 0 @56 ]
+"2300
+[v _RC1 RC1 `VEb  1 e 0 @57 ]
+"2302
+[v _RC2 RC2 `VEb  1 e 0 @58 ]
+"2306
+[v _RC4 RC4 `VEb  1 e 0 @60 ]
+"2308
+[v _RC5 RC5 `VEb  1 e 0 @61 ]
+"2310
+[v _RC6 RC6 `VEb  1 e 0 @62 ]
+"2326
+[v _RD RD `VEb  1 e 0 @3168 ]
+"2482
+[v _WR WR `VEb  1 e 0 @3169 ]
+"2484
+[v _WREN WREN `VEb  1 e 0 @3170 ]
+"36 E:\Study Material\XC8 PROJECTS\Door Controller\door1ph.c
+[v _normal_current normal_current `f  1 e 3 0 ]
+"47
+[v _door_State door_State `E1045  1 e 1 0 ]
+"49
+[v _main main `(v  1 e 0 0 ]
+{
+"60
+[v main@Over_Current_Timer Over_Current_Timer `i  1 a 2 6 ]
+"59
+[v main@seconds seconds `i  1 a 2 3 ]
+"62
+[v main@count count `uc  1 a 1 5 ]
+"63
+[v main@fraction fraction `uc  1 a 1 2 ]
+[v main@integer integer `uc  1 a 1 1 ]
+"61
+[v main@Auto_Close Auto_Close `uc  1 a 1 0 ]
+"227
+} 0
+"254
+[v _over_current_config over_current_config `(v  1 e 0 0 ]
+{
+"262
+[v over_current_config@integral integral `d  1 a 3 65 ]
+"263
+[v over_current_config@fractional fractional `d  1 a 3 62 ]
+"257
+[v over_current_config@avg_reading avg_reading `f  1 a 3 59 ]
+"256
+[v over_current_config@over_current_reading over_current_reading `f  1 a 3 51 ]
+"258
+[v over_current_config@sum sum `ui  1 a 2 68 ]
+"259
+[v over_current_config@res res `ui  1 a 2 56 ]
+"260
+[v over_current_config@readings readings `uc  1 a 1 58 ]
+"261
+[v over_current_config@points points `uc  1 a 1 55 ]
+[v over_current_config@decimals decimals `uc  1 a 1 54 ]
+"318
+} 0
+"8 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\modf.c
+[v _modf modf `(d  1 e 3 0 ]
+{
+[v modf@value value `d  1 p 3 44 ]
+[v modf@iptr iptr `*.4d  1 p 1 47 ]
+"32
+} 0
+"44 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\fttol.c
+[v ___fttol __fttol `(l  1 e 4 0 ]
+{
+"47
+[v ___fttol@lval lval `ul  1 a 4 9 ]
+"46
+[v ___fttol@exp1 exp1 `uc  1 a 1 13 ]
+[v ___fttol@sign1 sign1 `uc  1 a 1 8 ]
+"44
+[v ___fttol@f1 f1 `f  1 p 3 0 ]
+"73
+} 0
+"15 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\ftneg.c
+[v ___ftneg __ftneg `(f  1 e 3 0 ]
+{
+[v ___ftneg@f1 f1 `f  1 p 3 0 ]
+"20
+} 0
+"86 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+{
+"88
+[v ___ftadd@exp1 exp1 `uc  1 a 1 43 ]
+[v ___ftadd@exp2 exp2 `uc  1 a 1 42 ]
+[v ___ftadd@sign sign `uc  1 a 1 41 ]
+"86
+[v ___ftadd@f1 f1 `f  1 p 3 31 ]
+[v ___ftadd@f2 f2 `f  1 p 3 34 ]
+"148
+} 0
+"37 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\attoft.c
+[v ___attoft __attoft `(f  1 e 3 0 ]
+{
+"39
+[v ___attoft@sign sign `uc  1 a 1 5 ]
+"37
+[v ___attoft@c c `m  1 p 3 14 ]
+"47
+} 0
+"6 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\pic\eewrite.c
+[v _eeprom_write eeprom_write `(v  1 e 0 0 ]
+{
+[v eeprom_write@addr addr `uc  1 a 1 wreg ]
+[v eeprom_write@addr addr `uc  1 a 1 wreg ]
+[v eeprom_write@value value `uc  1 p 1 5 ]
+[v eeprom_write@addr addr `uc  1 a 1 1 ]
+"9
+} 0
+"6 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+{
+"11
+[v ___lwdiv@quotient quotient `ui  1 a 2 5 ]
+"12
+[v ___lwdiv@counter counter `uc  1 a 1 4 ]
+"6
+[v ___lwdiv@divisor divisor `ui  1 p 2 0 ]
+[v ___lwdiv@dividend dividend `ui  1 p 2 2 ]
+"31
+} 0
+"62 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 3 0 ]
+{
+"65
+[v ___ftmul@f3_as_product f3_as_product `um  1 a 3 26 ]
+"64
+[v ___ftmul@sign sign `uc  1 a 1 30 ]
+[v ___ftmul@cntr cntr `uc  1 a 1 29 ]
+[v ___ftmul@exp exp `uc  1 a 1 25 ]
+"62
+[v ___ftmul@f1 f1 `f  1 p 3 15 ]
+[v ___ftmul@f2 f2 `f  1 p 3 18 ]
+"157
+} 0
+"6 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\pic\eeread.c
+[v _eeprom_read eeprom_read `(uc  1 e 1 0 ]
+{
+[v eeprom_read@addr addr `uc  1 a 1 wreg ]
+[v eeprom_read@addr addr `uc  1 a 1 wreg ]
+"9
+[v eeprom_read@addr addr `uc  1 a 1 0 ]
+"12
+} 0
+"320 E:\Study Material\XC8 PROJECTS\Door Controller\door1ph.c
+[v _check_over_current check_over_current `(uc  1 e 1 0 ]
+{
+"322
+[v check_over_current@avg_reading avg_reading `f  1 a 3 14 ]
+"323
+[v check_over_current@sum sum `ui  1 a 2 19 ]
+"324
+[v check_over_current@res res `ui  1 a 2 17 ]
+"325
+[v check_over_current@readings readings `uc  1 a 1 21 ]
+"341
+} 0
+"28 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\lwtoft.c
+[v ___lwtoft __lwtoft `(f  1 e 3 0 ]
+{
+[v ___lwtoft@c c `ui  1 p 2 8 ]
+"31
+} 0
+"4 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\ftge.c
+[v ___ftge __ftge `(b  1 e 0 0 ]
+{
+[v ___ftge@ff1 ff1 `f  1 p 3 0 ]
+[v ___ftge@ff2 ff2 `f  1 p 3 3 ]
+"13
+} 0
+"343 E:\Study Material\XC8 PROJECTS\Door Controller\door1ph.c
+[v _ReadADC ReadADC `(ui  1 e 2 0 ]
+{
+"345
+[v ReadADC@result result `ui  1 a 2 2 ]
+"359
+} 0
+"27 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\lbtoft.c
+[v ___lbtoft __lbtoft `(f  1 e 3 0 ]
+{
+[v ___lbtoft@c c `uc  1 a 1 wreg ]
+[v ___lbtoft@c c `uc  1 a 1 wreg ]
+"29
+[v ___lbtoft@c c `uc  1 a 1 5 ]
+"30
+} 0
+"62 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+{
+[v ___ftpack@arg arg `um  1 p 3 0 ]
+[v ___ftpack@exp exp `uc  1 p 1 3 ]
+[v ___ftpack@sign sign `uc  1 p 1 4 ]
+"86
+} 0
+"229 E:\Study Material\XC8 PROJECTS\Door Controller\door1ph.c
+[v _Tx_Received Tx_Received `II(v  1 e 0 0 ]
+{
+"252
+} 0

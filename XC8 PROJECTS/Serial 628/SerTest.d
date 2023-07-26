@@ -1,0 +1,1 @@
+ SerTest.d  SerTest.p1:  E:/Study\ Material/XC8\ PROJECTS/Serial\ 628/SerTest.c E:/Study\ Material/XC8\ PROJECTS/Serial\ 628/usart_pic16.h

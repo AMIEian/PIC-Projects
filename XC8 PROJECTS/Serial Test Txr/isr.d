@@ -1,0 +1,1 @@
+ isr.d  isr.p1:  E:/Study\ Material/XC8\ PROJECTS/Serial\ Test\ Txr/isr.c E:/Study\ Material/XC8\ PROJECTS/Serial\ Test\ Txr/usart_pic16.h

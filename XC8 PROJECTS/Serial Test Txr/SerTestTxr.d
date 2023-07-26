@@ -1,0 +1,1 @@
+ SerTestTxr.d  SerTestTxr.p1:  E:/Study\ Material/XC8\ PROJECTS/Serial\ Test\ Txr/SerTestTxr.c E:/Study\ Material/XC8\ PROJECTS/Serial\ Test\ Txr/usart_pic16.h

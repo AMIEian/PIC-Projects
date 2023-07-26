@@ -1,0 +1,482 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$startup.obj
+end_init CODE 0 10 10 1 2
+reset_vec CODE 0 0 0 1 2
+$AndoTest.obj
+cinit CODE 0 11 11 21 2
+intentry CODE 0 4 4 C 2
+swtext2 CONST 0 299 299 6 2
+text2 CODE 0 244 244 38 2
+text1 CODE 0 28B 28B 8 2
+swtext1 CONST 0 293 293 6 2
+maintext CODE 0 32 32 212 2
+cstackBANK0 BANK0 1 2F 2F 6 1
+cstackCOMMON COMMON 1 70 70 6 1
+dataBANK0 BANK0 1 20 20 F 1
+bssCOMMON COMMON 1 76 76 1 1
+idataBANK0 CODE 0 27C 27C F 2
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+BANK0 035-06F 1
+BANK1 0A0-0BF 1
+CODE 001-003 2
+CODE 29F-7FF 2
+COMMON 077-07D 1
+CONFIG 2007-2007 2
+CONST 001-003 2
+CONST 29F-7FF 2
+EEDATA 2100-213F 2
+ENTRY 001-003 2
+ENTRY 29F-7FF 2
+IDLOC 2000-2003 2
+RAM 035-06F 1
+RAM 0A0-0BF 1
+SFR0 000-01F 1
+SFR1 080-09F 1
+SFR2 100-16F 1
+SFR3 180-1EF 1
+STACK 035-06F 1
+STRCODE 001-003 2
+STRCODE 29F-7FF 2
+STRING 001-003 2
+STRING 29F-7FF 2
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <file name>:<line number> <address> <psect name> <class name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$AndoTest.obj
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":251 4 intentry CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.as":214 11 cinit CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.as":217 11 cinit CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.as":254 11 cinit CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.as":259 12 cinit CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.as":260 13 cinit CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.as":261 14 cinit CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.as":262 15 cinit CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.as":263 16 cinit CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.as":264 17 cinit CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.as":265 18 cinit CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.as":266 19 cinit CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.as":267 1A cinit CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.as":268 1B cinit CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.as":269 1C cinit CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.as":270 1D cinit CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.as":271 1E cinit CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.as":272 1F cinit CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.as":273 20 cinit CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.as":274 21 cinit CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.as":275 22 cinit CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.as":276 23 cinit CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.as":277 24 cinit CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.as":278 25 cinit CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.as":279 26 cinit CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.as":280 27 cinit CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.as":281 28 cinit CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.as":282 29 cinit CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.as":283 2A cinit CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.as":284 2B cinit CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.as":285 2C cinit CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.as":286 2D cinit CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.as":287 2E cinit CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.as":288 2F cinit CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.as":294 30 cinit CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.as":295 30 cinit CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.as":296 31 cinit CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":27 32 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":29 32 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":30 35 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":31 36 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":32 38 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":34 3A maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":35 3E maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":36 40 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":39 42 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":40 4F maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":41 4F maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":42 52 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":43 5F maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":44 62 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":39 6F maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":46 82 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":49 86 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":52 8A maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":53 8B maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":54 8C maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":55 8D maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":58 8E maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":59 91 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":60 92 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":61 93 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":64 94 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":65 97 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":68 98 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":75 99 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":77 9A maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":79 9F maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":81 A0 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":83 A2 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":85 A3 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":86 A8 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":88 AA maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":91 AB maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":92 B0 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":94 B5 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":95 B6 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":96 BB maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":98 C0 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":99 C1 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":100 C6 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":102 CB maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":103 CF maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":104 D3 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":109 D7 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":111 D9 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":112 E0 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":113 E2 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":115 E4 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":116 EB maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":117 ED maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":119 EF maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":120 F6 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":121 F8 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":126 104 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":127 109 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":129 10B maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":130 10F maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":131 114 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":133 116 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":134 11A maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":135 11F maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":137 121 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":138 122 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":139 123 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":144 124 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":146 126 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":147 12D maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":148 12F maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":150 131 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":151 138 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":152 13A maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":154 13C maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":155 143 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":156 145 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":157 150 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":161 151 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":162 156 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":164 15B maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":165 15C maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":166 161 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":168 166 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":169 167 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":170 16C maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":172 171 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":173 175 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":174 179 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":179 17D maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":181 17F maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":182 186 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":183 188 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":185 18A maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":186 191 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":187 193 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":189 195 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":190 19C maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":191 19E maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":192 1AD maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":195 1AE maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":196 1B5 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":198 1B7 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":199 1BB maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":200 1C0 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":202 1C2 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":203 1C6 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":204 1CB maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":206 1CD maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":207 1CE maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":208 1CF maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":213 1D0 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":215 1D2 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":216 1D9 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":217 1DB maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":219 1DD maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":220 1E4 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":221 1E6 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":223 1E8 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":224 1EF maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":225 1F1 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":226 200 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":229 201 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":231 207 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":232 209 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":234 20B maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":236 210 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":237 212 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":239 214 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":73 21A maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":74 223 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":75 22B maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":88 236 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":71 243 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":251 244 text2 CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":253 244 text2 CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":254 24C text2 CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":256 250 text2 CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":259 251 text2 CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":260 252 text2 CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":261 253 text2 CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":262 253 text2 CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":263 255 text2 CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":265 256 text2 CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":268 257 text2 CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":271 259 text2 CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":274 25B text2 CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":277 25D text2 CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":279 261 text2 CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":256 262 text2 CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":282 270 text2 CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":285 28B text1 CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":286 28B text1 CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":287 28C text1 CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":288 290 text1 CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":289 292 text1 CODE
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":88 293 swtext1 CONST
+"E:\Study Material\XC8 PROJECTS\Android\AndoTest.c":256 299 swtext2 CONST
+$startup.obj
+"E:\Study Material\XC8 PROJECTS\Android\startup.as":39 0 functab CODE
+"E:\Study Material\XC8 PROJECTS\Android\startup.as":40 0 functab CODE
+"E:\Study Material\XC8 PROJECTS\Android\startup.as":41 0 functab CODE
+"E:\Study Material\XC8 PROJECTS\Android\startup.as":42 0 functab CODE
+"E:\Study Material\XC8 PROJECTS\Android\startup.as":43 0 functab CODE
+"E:\Study Material\XC8 PROJECTS\Android\startup.as":44 0 functab CODE
+"E:\Study Material\XC8 PROJECTS\Android\startup.as":63 0 reset_vec CODE
+"E:\Study Material\XC8 PROJECTS\Android\startup.as":68 0 reset_vec CODE
+"E:\Study Material\XC8 PROJECTS\Android\startup.as":73 10 init CODE
+"E:\Study Material\XC8 PROJECTS\Android\startup.as":76 10 end_init CODE
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+_ch 76 0 COMMON 1 bssCOMMON AndoTest.obj
+_RC4 3C 0 ABS 0 - AndoTest.obj
+__S0 29F 0 ABS 0 - -
+__S1 77 0 ABS 0 - -
+__S2 0 0 ABS 0 - -
+__S3 0 0 ABS 0 - -
+_GIE 5F 0 ABS 0 - AndoTest.obj
+_ISR 488 0 CODE 0 text2 AndoTest.obj
+__Hintentry 20 0 CODE 0 intentry -
+__Lintentry 8 0 CODE 0 intentry -
+__pintentry 8 0 CODE 0 intentry AndoTest.obj
+_RCIE 465 0 ABS 0 - AndoTest.obj
+_PEIE 5E 0 ABS 0 - AndoTest.obj
+_RCIF 65 0 ABS 0 - AndoTest.obj
+_main 64 0 CODE 0 maintext AndoTest.obj
+___sp 0 0 STACK 2 stack startup.obj
+btemp 7E 0 ABS 0 - AndoTest.obj
+ltemp 7E 0 ABS 0 - AndoTest.obj
+ttemp 7E 0 ABS 0 - AndoTest.obj
+wtemp 7E 0 ABS 0 - AndoTest.obj
+_foot 2E 0 BANK0 1 dataBANK0 AndoTest.obj
+start 20 0 CODE 0 init startup.obj
+main@data 34 0 BANK0 1 cstackBANK0 AndoTest.obj
+_RCREG 1A 0 ABS 0 - AndoTest.obj
+_TRISA 85 0 ABS 0 - AndoTest.obj
+_TRISB 86 0 ABS 0 - AndoTest.obj
+_TRISC 87 0 ABS 0 - AndoTest.obj
+_TXREG 19 0 ABS 0 - AndoTest.obj
+_PORTA 5 0 ABS 0 - AndoTest.obj
+reset_vec 0 0 CODE 0 reset_vec startup.obj
+_PORTB 6 0 ABS 0 - AndoTest.obj
+_SPBRG 99 0 ABS 0 - AndoTest.obj
+_PORTC 7 0 ABS 0 - AndoTest.obj
+ltemp0 7E 0 ABS 0 - AndoTest.obj
+ttemp0 7E 0 ABS 0 - AndoTest.obj
+wtemp0 7E 0 ABS 0 - AndoTest.obj
+ltemp1 82 0 ABS 0 - AndoTest.obj
+ttemp1 81 0 ABS 0 - AndoTest.obj
+wtemp1 80 0 ABS 0 - AndoTest.obj
+ltemp2 86 0 ABS 0 - AndoTest.obj
+ttemp2 84 0 ABS 0 - AndoTest.obj
+wtemp2 82 0 ABS 0 - AndoTest.obj
+ltemp3 80 0 ABS 0 - AndoTest.obj
+ttemp3 87 0 ABS 0 - AndoTest.obj
+wtemp3 84 0 ABS 0 - AndoTest.obj
+ttemp4 7F 0 ABS 0 - AndoTest.obj
+wtemp4 86 0 ABS 0 - AndoTest.obj
+wtemp5 88 0 ABS 0 - AndoTest.obj
+wtemp6 7F 0 ABS 0 - AndoTest.obj
+interrupt_function 8 0 CODE 0 intentry AndoTest.obj
+__Hconfig 0 0 CONFIG 0 config -
+__Lconfig 0 0 CONFIG 0 config -
+__Hram 0 0 ABS 0 ram -
+__Lram 0 0 ABS 0 ram -
+__end_of_ISR 4F8 0 CODE 0 text2 AndoTest.obj
+__Hfunctab 0 0 CODE 0 functab -
+__Lfunctab 0 0 CODE 0 functab -
+_ADCON1 9F 0 ABS 0 - AndoTest.obj
+__Hcommon 0 0 ABS 0 common -
+__Lcommon 0 0 ABS 0 common -
+__Heeprom_data 0 0 EEDATA 3 eeprom_data -
+__Leeprom_data 0 0 EEDATA 3 eeprom_data -
+_PIR1bits C 0 ABS 0 - AndoTest.obj
+___int_sp 0 0 STACK 2 stack startup.obj
+__Habs1 0 0 ABS 0 abs1 -
+__Labs1 0 0 ABS 0 abs1 -
+__Hsfr0 0 0 ABS 0 sfr0 -
+__Lsfr0 0 0 ABS 0 sfr0 -
+__Hsfr1 0 0 ABS 0 sfr1 -
+__Lsfr1 0 0 ABS 0 sfr1 -
+__Hsfr2 0 0 ABS 0 sfr2 -
+__Lsfr2 0 0 ABS 0 sfr2 -
+__Hsfr3 0 0 ABS 0 sfr3 -
+__Lsfr3 0 0 ABS 0 sfr3 -
+_USARTWriteChar 516 0 CODE 0 text1 AndoTest.obj
+USARTWriteChar@ch 75 0 COMMON 1 cstackCOMMON AndoTest.obj
+__Hcode 0 0 ABS 0 code -
+__Lcode 0 0 ABS 0 code -
+stackhi 0 0 ABS 0 - startup.obj
+__HcstackBANK0 0 0 ABS 0 cstackBANK0 -
+__LcstackBANK0 0 0 ABS 0 cstackBANK0 -
+__pcstackBANK0 2F 0 BANK0 1 cstackBANK0 AndoTest.obj
+stacklo 0 0 ABS 0 - startup.obj
+saved_w 7E 0 ABS 0 - AndoTest.obj
+__Hinit 20 0 CODE 0 init -
+__Linit 20 0 CODE 0 init -
+__end_of_main 488 0 CODE 0 maintext AndoTest.obj
+_digits 2A 0 BANK0 1 dataBANK0 AndoTest.obj
+__Htext 0 0 ABS 0 text -
+__Ltext 0 0 ABS 0 text -
+__HdataBANK0 0 0 ABS 0 dataBANK0 -
+__LdataBANK0 0 0 ABS 0 dataBANK0 -
+__pdataBANK0 20 0 BANK0 1 dataBANK0 AndoTest.obj
+end_of_initialization 60 0 CODE 0 cinit AndoTest.obj
+__size_of_ISR 0 0 ABS 0 - AndoTest.obj
+_RCSTAbits 18 0 ABS 0 - AndoTest.obj
+_TXSTAbits 98 0 ABS 0 - AndoTest.obj
+__Hstrings 0 0 ABS 0 strings -
+__Lstrings 0 0 ABS 0 strings -
+__Hbank0 0 0 ABS 0 bank0 -
+__Lbank0 0 0 ABS 0 bank0 -
+__Hbank1 0 0 ABS 0 bank1 -
+__Lbank1 0 0 ABS 0 bank1 -
+__Hbank2 0 0 BANK2 1 bank2 -
+__Lbank2 0 0 BANK2 1 bank2 -
+__Hbank3 0 0 BANK3 1 bank3 -
+__Lbank3 0 0 BANK3 1 bank3 -
+___latbits 0 0 ABS 0 - AndoTest.obj
+__Hpowerup 0 0 CODE 0 powerup -
+__Lpowerup 0 0 CODE 0 powerup -
+main@count 32 0 BANK0 1 cstackBANK0 AndoTest.obj
+__ptext1 516 0 CODE 0 text1 AndoTest.obj
+__ptext2 488 0 CODE 0 text2 AndoTest.obj
+__Hclrtext 0 0 ABS 0 clrtext -
+__Lclrtext 0 0 ABS 0 clrtext -
+__end_of__initialization 60 0 CODE 0 cinit AndoTest.obj
+__size_of_USARTWriteChar 0 0 ABS 0 - AndoTest.obj
+_Command 2D 0 BANK0 1 dataBANK0 AndoTest.obj
+__Hidloc 0 0 IDLOC 0 idloc -
+__Lidloc 0 0 IDLOC 0 idloc -
+__Hstack 0 0 STACK 2 stack -
+__Lstack 0 0 STACK 2 stack -
+__Hspace_0 29F 0 ABS 0 - -
+__Lspace_0 0 0 ABS 0 - -
+__Hspace_1 77 0 ABS 0 - -
+__Lspace_1 0 0 ABS 0 - -
+__Hspace_2 0 0 ABS 0 - -
+__Lspace_2 0 0 ABS 0 - -
+__Hcinit 64 0 CODE 0 cinit -
+__Lcinit 22 0 CODE 0 cinit -
+__Hspace_3 0 0 ABS 0 - -
+__Lspace_3 0 0 ABS 0 - -
+_display 20 0 BANK0 1 dataBANK0 AndoTest.obj
+__size_of_main 0 0 ABS 0 - AndoTest.obj
+__HidataBANK0 0 0 ABS 0 idataBANK0 -
+__LidataBANK0 0 0 ABS 0 idataBANK0 -
+__pidataBANK0 4F8 0 CODE 0 idataBANK0 AndoTest.obj
+__end_of_USARTWriteChar 526 0 CODE 0 text1 AndoTest.obj
+__HbssCOMMON 0 0 ABS 0 bssCOMMON -
+__LbssCOMMON 0 0 ABS 0 bssCOMMON -
+__pbssCOMMON 76 0 COMMON 1 bssCOMMON AndoTest.obj
+__Hend_init 22 0 CODE 0 end_init -
+__Lend_init 20 0 CODE 0 end_init -
+__pswtext1 526 0 CONST 0 swtext1 AndoTest.obj
+__pswtext2 532 0 CONST 0 swtext2 AndoTest.obj
+__Hreset_vec 2 0 CODE 0 reset_vec -
+__Lreset_vec 0 0 CODE 0 reset_vec -
+intlevel0 0 0 CODE 0 functab startup.obj
+intlevel1 0 0 CODE 0 functab startup.obj
+intlevel2 0 0 CODE 0 functab startup.obj
+intlevel3 0 0 CODE 0 functab startup.obj
+intlevel4 0 0 CODE 0 functab startup.obj
+intlevel5 0 0 CODE 0 functab startup.obj
+__HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+__LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+__pcstackCOMMON 70 0 COMMON 1 cstackCOMMON AndoTest.obj
+start_initialization 22 0 CODE 0 cinit AndoTest.obj
+__Hmaintext 0 0 ABS 0 maintext -
+__Lmaintext 0 0 ABS 0 maintext -
+__pmaintext 64 0 CODE 0 maintext AndoTest.obj
+__initialization 22 0 CODE 0 cinit AndoTest.obj
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect in on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+- 1 7E 2
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+reset_vec 0 0 0 1 2
+intentry 0 4 8 28F 2
+cstackCOMMON 1 70 70 7 1
+dataBANK0 1 20 20 15 1
+swtext1 0 293 526 C 2

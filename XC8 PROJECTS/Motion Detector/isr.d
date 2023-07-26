@@ -1,0 +1,1 @@
+ isr.d  isr.p1:  E:/Study\ Material/XC8\ PROJECTS/Motion\ Detector/isr.c E:/Study\ Material/XC8\ PROJECTS/Motion\ Detector/usart_pic16.h

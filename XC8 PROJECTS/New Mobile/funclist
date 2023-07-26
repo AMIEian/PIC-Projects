@@ -1,0 +1,15 @@
+__stringtab: STRING, 1033 0 16
+__stringdata: STRING, 1049 0 24
+_ISR: CODE, 1177 0 28
+_stop: CODE, 1109 0 36
+_main: CODE, 17 0 599
+_strcmp: CODE, 987 0 46
+__initialization: CODE, 1264 0 7
+_USARTWritestring: CODE, 1205 0 25
+_USARTWriteChar: CODE, 1252 0 12
+_USARTHandleRxInt: CODE, 616 0 295
+_start: CODE, 1073 0 36
+_phase_check: CODE, 1230 0 22
+_USARTInit: CODE, 911 0 76
+_ATCommand: CODE, 1145 0 32
+Total: 1254

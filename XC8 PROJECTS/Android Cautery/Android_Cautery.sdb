@@ -1,0 +1,502 @@
+[p LITE_MODE AUTOSTATIC LFSROK ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 18F452 ]
+[d frameptr 4065 ]
+"4 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\abdiv.c
+[v ___abdiv __abdiv `(c  1 e 1 0 ]
+"4 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\abmod.c
+[v ___abmod __abmod `(c  1 e 1 0 ]
+"31 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\abtofl.c
+[v ___abtofl __abtofl `(d  1 e 3 0 ]
+"33 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\abtoft.c
+[v ___abtoft __abtoft `(f  1 e 3 0 ]
+"8 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\aldiv.c
+[v ___aldiv __aldiv `(l  1 e 4 0 ]
+"8 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\almod.c
+[v ___almod __almod `(l  1 e 4 0 ]
+"36 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\altofl.c
+[v ___altofl __altofl `(d  1 e 3 0 ]
+"42 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\altoft.c
+[v ___altoft __altoft `(f  1 e 3 0 ]
+"8 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\atdiv.c
+[v ___atdiv __atdiv `(m  1 e 3 0 ]
+"8 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\atmod.c
+[v ___atmod __atmod `(m  1 e 3 0 ]
+"37 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\attofl.c
+[v ___attofl __attofl `(d  1 e 3 0 ]
+"37 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\attoft.c
+[v ___attoft __attoft `(f  1 e 3 0 ]
+"8 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+"8 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+"31 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awtofl.c
+[v ___awtofl __awtofl `(d  1 e 3 0 ]
+"32 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awtoft.c
+[v ___awtoft __awtoft `(f  1 e 3 0 ]
+"63 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\double.c
+[v ___flpack __flpack `(d  1 e 3 0 ]
+"88 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fladd.c
+[v ___fladd __fladd `(d  1 e 3 0 ]
+"49 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fldiv.c
+[v ___fldiv __fldiv `(d  1 e 3 0 ]
+"4 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\flge.c
+[v ___flge __flge `(b  1 e 0 0 ]
+"62 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\flmul.c
+[v ___flmul __flmul `(d  1 e 3 0 ]
+"15 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\flneg.c
+[v ___flneg __flneg `(d  1 e 3 0 ]
+"62 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"20 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\flsub.c
+[v ___flsub __flsub `(d  1 e 3 0 ]
+"43 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fltol.c
+[v ___fltol __fltol `(l  1 e 4 0 ]
+"86 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"49 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 3 0 ]
+"4 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftge.c
+[v ___ftge __ftge `(b  1 e 0 0 ]
+"62 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 3 0 ]
+"15 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftneg.c
+[v ___ftneg __ftneg `(f  1 e 3 0 ]
+"20 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftsub.c
+[v ___ftsub __ftsub `(f  1 e 3 0 ]
+"44 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fttol.c
+[v ___fttol __fttol `(l  1 e 4 0 ]
+"4 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lbdiv.c
+[v ___lbdiv __lbdiv `(uc  1 e 1 0 ]
+"4 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lbmod.c
+[v ___lbmod __lbmod `(uc  1 e 1 0 ]
+"27 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lbtofl.c
+[v ___lbtofl __lbtofl `(d  1 e 3 0 ]
+"27 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lbtoft.c
+[v ___lbtoft __lbtoft `(f  1 e 3 0 ]
+"8 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lldiv.c
+[v ___lldiv __lldiv `(ul  1 e 4 0 ]
+"8 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\llmod.c
+[v ___llmod __llmod `(ul  1 e 4 0 ]
+"30 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lltofl.c
+[v ___lltofl __lltofl `(d  1 e 3 0 ]
+"35 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lltoft.c
+[v ___lltoft __lltoft `(f  1 e 3 0 ]
+"8 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ltdiv.c
+[v ___ltdiv __ltdiv `(um  1 e 3 0 ]
+"8 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ltmod.c
+[v ___ltmod __ltmod `(um  1 e 3 0 ]
+"30 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lttofl.c
+[v ___lttofl __lttofl `(d  1 e 3 0 ]
+"30 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lttoft.c
+[v ___lttoft __lttoft `(f  1 e 3 0 ]
+"8 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+"8 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
+"28 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwtofl.c
+[v ___lwtofl __lwtofl `(d  1 e 3 0 ]
+"28 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwtoft.c
+[v ___lwtoft __lwtoft `(f  1 e 3 0 ]
+"13 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\sqrt.c
+[v _sqrt sqrt `(d  1 e 3 0 ]
+"15 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+"15 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul24.c
+[v ___tmul __tmul `(um  1 e 3 0 ]
+"15 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+"4 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul8.c
+[v ___bmul __bmul `(uc  1 e 1 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic18\asfladd.c
+[v ___asfladd __asfladd `(d  1 e 3 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic18\asfldiv.c
+[v ___asfldiv __asfldiv `(d  1 e 3 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic18\asflmul.c
+[v ___asflmul __asflmul `(d  1 e 3 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic18\asflsub.c
+[v ___asflsub __asflsub `(d  1 e 3 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic18\asftadd.c
+[v ___asftadd __asftadd `(f  1 e 3 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic18\asftdiv.c
+[v ___asftdiv __asftdiv `(f  1 e 3 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic18\asftmul.c
+[v ___asftmul __asftmul `(f  1 e 3 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic18\asftsub.c
+[v ___asftsub __asftsub `(f  1 e 3 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic18\aslmul.c
+[v ___aslmul __aslmul `(ul  1 e 4 0 ]
+"12 E:\Study Material\XC8 PROJECTS\Android Cautery\Android_Cautery.c
+[v _main main `(v  1 e 0 0 ]
+"333
+[v _MY_DELAY MY_DELAY `(v  1 e 0 0 ]
+"7 E:\Study Material\XC8 PROJECTS\Android Cautery\cautery.c
+[v _init_Values init_Values `(v  1 e 0 0 ]
+"20
+[v _cut_Operation cut_Operation `(v  1 e 0 0 ]
+"73
+[v _coag_Operation coag_Operation `(v  1 e 0 0 ]
+"167
+[v _bi_Operation bi_Operation `(v  1 e 0 0 ]
+"208
+[v _liga_Operation liga_Operation `(v  1 e 0 0 ]
+"256
+[v _load_Digipot load_Digipot `(v  1 e 0 0 ]
+"7 E:\Study Material\XC8 PROJECTS\Android Cautery\my_serial.c
+[v _USARTInit USARTInit `(v  1 e 0 0 ]
+"27
+[v _put_char put_char `(v  1 e 0 0 ]
+"33
+[v _get_char get_char `(uc  1 e 1 0 ]
+"1513 C:\Program Files (x86)\Microchip\xc8\v1.33\include\pic18f452.h
+[v _TRISA TRISA `VEuc  1 e 1 @3986 ]
+"1710
+[v _TRISB TRISB `VEuc  1 e 1 @3987 ]
+"1949
+[v _TRISC TRISC `VEuc  1 e 1 @3988 ]
+[s S108 . 1 `uc 1 TRISC0 1 0 :1:0 
+`uc 1 TRISC1 1 0 :1:1 
+`uc 1 TRISC2 1 0 :1:2 
+`uc 1 TRISC3 1 0 :1:3 
+`uc 1 TRISC4 1 0 :1:4 
+`uc 1 TRISC5 1 0 :1:5 
+`uc 1 TRISC6 1 0 :1:6 
+`uc 1 TRISC7 1 0 :1:7 
+]
+"1985
+[s S117 . 1 `uc 1 RC0 1 0 :1:0 
+`uc 1 RC1 1 0 :1:1 
+`uc 1 RC2 1 0 :1:2 
+`uc 1 RC3 1 0 :1:3 
+`uc 1 RC4 1 0 :1:4 
+`uc 1 RC5 1 0 :1:5 
+`uc 1 RC6 1 0 :1:6 
+`uc 1 RC7 1 0 :1:7 
+]
+[s S126 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 CCP2 1 0 :1:1 
+]
+[u S129 . 1 `S108 1 . 1 0 `S117 1 . 1 0 `S126 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES129  1 e 1 @3988 ]
+[s S305 . 1 `uc 1 TMR1IF 1 0 :1:0 
+`uc 1 TMR2IF 1 0 :1:1 
+`uc 1 CCP1IF 1 0 :1:2 
+`uc 1 SSPIF 1 0 :1:3 
+`uc 1 TXIF 1 0 :1:4 
+`uc 1 RCIF 1 0 :1:5 
+`uc 1 ADIF 1 0 :1:6 
+`uc 1 PSPIF 1 0 :1:7 
+]
+"2664
+[s S314 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 RC1IF 1 0 :1:5 
+]
+[s S317 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 TX1IF 1 0 :1:4 
+]
+[u S320 . 1 `S305 1 . 1 0 `S314 1 . 1 0 `S317 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES320  1 e 1 @3998 ]
+[s S246 . 1 `uc 1 RX9D 1 0 :1:0 
+`uc 1 OERR 1 0 :1:1 
+`uc 1 FERR 1 0 :1:2 
+`uc 1 ADDEN 1 0 :1:3 
+`uc 1 CREN 1 0 :1:4 
+`uc 1 SREN 1 0 :1:5 
+`uc 1 RX9 1 0 :1:6 
+`uc 1 SPEN 1 0 :1:7 
+]
+"3052
+[s S255 . 1 `uc 1 RCD8 1 0 :1:0 
+`uc 1 . 1 0 :5:1 
+`uc 1 RC8_9 1 0 :1:6 
+]
+[s S259 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 NOT_RC8 1 0 :1:6 
+]
+[s S262 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 nRC8 1 0 :1:6 
+]
+[s S265 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 RC9 1 0 :1:6 
+]
+[s S268 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 SRENA 1 0 :1:5 
+]
+[u S271 . 1 `S246 1 . 1 0 `S255 1 . 1 0 `S259 1 . 1 0 `S262 1 . 1 0 `S265 1 . 1 0 `S268 1 . 1 0 ]
+[v _RCSTAbits RCSTAbits `VES271  1 e 1 @4011 ]
+[s S155 . 1 `uc 1 TX9D 1 0 :1:0 
+`uc 1 TRMT 1 0 :1:1 
+`uc 1 BRGH 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 SYNC 1 0 :1:4 
+`uc 1 TXEN 1 0 :1:5 
+`uc 1 TX9 1 0 :1:6 
+`uc 1 CSRC 1 0 :1:7 
+]
+"3294
+[s S164 . 1 `uc 1 TXD8 1 0 :1:0 
+`uc 1 . 1 0 :5:1 
+`uc 1 TX8_9 1 0 :1:6 
+]
+[s S168 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 NOT_TX8 1 0 :1:6 
+]
+[s S171 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 nTX8 1 0 :1:6 
+]
+[s S174 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 BRGH1 1 0 :1:2 
+]
+[s S177 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 CSRC1 1 0 :1:7 
+]
+[s S180 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 SYNC1 1 0 :1:4 
+]
+[s S183 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 TRMT1 1 0 :1:1 
+]
+[s S186 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 TX91 1 0 :1:6 
+]
+[s S189 . 1 `uc 1 TX9D1 1 0 :1:0 
+]
+[s S191 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 TXEN1 1 0 :1:5 
+]
+[u S194 . 1 `S155 1 . 1 0 `S164 1 . 1 0 `S168 1 . 1 0 `S171 1 . 1 0 `S174 1 . 1 0 `S177 1 . 1 0 `S180 1 . 1 0 `S183 1 . 1 0 `S186 1 . 1 0 `S189 1 . 1 0 `S191 1 . 1 0 ]
+[v _TXSTAbits TXSTAbits `VES194  1 e 1 @4012 ]
+"3533
+[v _TXREG TXREG `VEuc  1 e 1 @4013 ]
+"3544
+[v _RCREG RCREG `VEuc  1 e 1 @4014 ]
+"3555
+[v _SPBRG SPBRG `VEuc  1 e 1 @4015 ]
+"3907
+[v _ADCON1 ADCON1 `VEuc  1 e 1 @4033 ]
+"6147
+[v _CARRY CARRY `VEb  1 e 0 @32448 ]
+"6635
+[v _RA0 RA0 `VEb  1 e 0 @31744 ]
+"6637
+[v _RA1 RA1 `VEb  1 e 0 @31745 ]
+"6639
+[v _RA2 RA2 `VEb  1 e 0 @31746 ]
+"6641
+[v _RA3 RA3 `VEb  1 e 0 @31747 ]
+"6643
+[v _RA4 RA4 `VEb  1 e 0 @31748 ]
+"6645
+[v _RA5 RA5 `VEb  1 e 0 @31749 ]
+"6653
+[v _RB1 RB1 `VEb  1 e 0 @31753 ]
+"6655
+[v _RB2 RB2 `VEb  1 e 0 @31754 ]
+"6657
+[v _RB3 RB3 `VEb  1 e 0 @31755 ]
+"6659
+[v _RB4 RB4 `VEb  1 e 0 @31756 ]
+"6661
+[v _RB5 RB5 `VEb  1 e 0 @31757 ]
+"6663
+[v _RB6 RB6 `VEb  1 e 0 @31758 ]
+"6665
+[v _RB7 RB7 `VEb  1 e 0 @31759 ]
+"6675
+[v _RC0 RC0 `VEb  1 e 0 @31760 ]
+"6677
+[v _RC1 RC1 `VEb  1 e 0 @31761 ]
+"3 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\errno.c
+[v _errno errno `i  1 e 2 0 ]
+"6 E:\Study Material\XC8 PROJECTS\Android Cautery\cautery.h
+[v _Cut_Power Cut_Power `i  1 e 2 0 ]
+"7
+[v _Coag_Power Coag_Power `i  1 e 2 0 ]
+"8
+[v _Bi_Power Bi_Power `i  1 e 2 0 ]
+"10
+[v _Cut_Mode Cut_Mode `uc  1 e 1 0 ]
+"11
+[v _Coag_Mode Coag_Mode `uc  1 e 1 0 ]
+"12
+[v _Bi_Mode Bi_Mode `uc  1 e 1 0 ]
+"14
+[v _train train `uc  1 e 1 0 ]
+"12 E:\Study Material\XC8 PROJECTS\Android Cautery\Android_Cautery.c
+[v _main main `(v  1 e 0 0 ]
+{
+"30
+[v main@addition addition `i  1 a 2 76 ]
+"35
+[v main@milis milis `i  1 a 2 73 ]
+"32
+[v main@value value `uc  1 a 1 82 ]
+"33
+[v main@count count `uc  1 a 1 81 ]
+"32
+[v main@multiplier multiplier `uc  1 a 1 80 ]
+"36
+[v main@data_flag data_flag `uc  1 a 1 79 ]
+"37
+[v main@e_enable e_enable `uc  1 a 1 78 ]
+"31
+[v main@inact_flag inact_flag `uc  1 a 1 75 ]
+"34
+[v main@communication communication `uc  1 a 1 72 ]
+"331
+} 0
+"208 E:\Study Material\XC8 PROJECTS\Android Cautery\cautery.c
+[v _liga_Operation liga_Operation `(v  1 e 0 0 ]
+{
+"211
+[v liga_Operation@wait wait `ui  1 a 2 2 ]
+"210
+[v liga_Operation@dry_fl dry_fl `uc  1 a 1 1 ]
+"254
+} 0
+"27 E:\Study Material\XC8 PROJECTS\Android Cautery\my_serial.c
+[v _put_char put_char `(v  1 e 0 0 ]
+{
+[v put_char@ch ch `uc  1 a 1 wreg ]
+[v put_char@ch ch `uc  1 a 1 wreg ]
+[v put_char@ch ch `uc  1 a 1 0 ]
+"31
+} 0
+"7 E:\Study Material\XC8 PROJECTS\Android Cautery\cautery.c
+[v _init_Values init_Values `(v  1 e 0 0 ]
+{
+"18
+} 0
+"256
+[v _load_Digipot load_Digipot `(v  1 e 0 0 ]
+{
+"258
+[v load_Digipot@temp temp `uc  1 a 1 70 ]
+"259
+[v load_Digipot@j j `uc  1 a 1 69 ]
+[v load_Digipot@i i `uc  1 a 1 68 ]
+[v load_Digipot@R1 R1 `uc  1 a 1 67 ]
+"256
+[v load_Digipot@Power Power `i  1 p 2 60 ]
+[v load_Digipot@Mode Mode `uc  1 p 1 62 ]
+"318
+} 0
+"13 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\sqrt.c
+[v _sqrt sqrt `(d  1 e 3 0 ]
+{
+"15
+[v sqrt@x x `d  1 a 3 42 ]
+[v sqrt@q q `d  1 a 3 39 ]
+[v sqrt@z z `d  1 a 3 35 ]
+[v sqrt@og og `d  1 a 3 32 ]
+"16
+[v sqrt@i i `uc  1 a 1 38 ]
+"13
+[v sqrt@y y `d  1 p 3 26 ]
+"44
+} 0
+"20 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftsub.c
+[v ___ftsub __ftsub `(f  1 e 3 0 ]
+{
+[v ___ftsub@f1 f1 `f  1 p 3 20 ]
+[v ___ftsub@f2 f2 `f  1 p 3 23 ]
+"25
+} 0
+"86 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+{
+"88
+[v ___ftadd@exp1 exp1 `uc  1 a 1 19 ]
+[v ___ftadd@exp2 exp2 `uc  1 a 1 18 ]
+[v ___ftadd@sign sign `uc  1 a 1 17 ]
+"86
+[v ___ftadd@f1 f1 `f  1 p 3 8 ]
+[v ___ftadd@f2 f2 `f  1 p 3 11 ]
+"148
+} 0
+"62 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 3 0 ]
+{
+"65
+[v ___ftmul@f3_as_product f3_as_product `um  1 a 3 17 ]
+"64
+[v ___ftmul@sign sign `uc  1 a 1 22 ]
+[v ___ftmul@cntr cntr `uc  1 a 1 21 ]
+[v ___ftmul@exp exp `uc  1 a 1 20 ]
+"62
+[v ___ftmul@f1 f1 `f  1 p 3 8 ]
+[v ___ftmul@f2 f2 `f  1 p 3 11 ]
+"157
+} 0
+"4 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftge.c
+[v ___ftge __ftge `(b  1 e 0 0 ]
+{
+[v ___ftge@ff1 ff1 `f  1 p 3 0 ]
+[v ___ftge@ff2 ff2 `f  1 p 3 3 ]
+"13
+} 0
+"44 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fttol.c
+[v ___fttol __fttol `(l  1 e 4 0 ]
+{
+"47
+[v ___fttol@lval lval `ul  1 a 4 55 ]
+"46
+[v ___fttol@exp1 exp1 `uc  1 a 1 59 ]
+[v ___fttol@sign1 sign1 `uc  1 a 1 54 ]
+"44
+[v ___fttol@f1 f1 `f  1 p 3 45 ]
+"73
+} 0
+"32 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awtoft.c
+[v ___awtoft __awtoft `(f  1 e 3 0 ]
+{
+"34
+[v ___awtoft@sign sign `uc  1 a 1 11 ]
+"32
+[v ___awtoft@c c `i  1 p 2 8 ]
+"42
+} 0
+"62 C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+{
+[v ___ftpack@arg arg `um  1 p 3 0 ]
+[v ___ftpack@exp exp `uc  1 p 1 3 ]
+[v ___ftpack@sign sign `uc  1 p 1 4 ]
+"86
+} 0
+"33 E:\Study Material\XC8 PROJECTS\Android Cautery\my_serial.c
+[v _get_char get_char `(uc  1 e 1 0 ]
+{
+"36
+[v get_char@rx_delay rx_delay `ui  1 a 2 1 ]
+"35
+[v get_char@data data `uc  1 a 1 0 ]
+"50
+} 0
+"20 E:\Study Material\XC8 PROJECTS\Android Cautery\cautery.c
+[v _cut_Operation cut_Operation `(v  1 e 0 0 ]
+{
+"71
+} 0
+"73
+[v _coag_Operation coag_Operation `(v  1 e 0 0 ]
+{
+"165
+} 0
+"167
+[v _bi_Operation bi_Operation `(v  1 e 0 0 ]
+{
+"206
+} 0
+"7 E:\Study Material\XC8 PROJECTS\Android Cautery\my_serial.c
+[v _USARTInit USARTInit `(v  1 e 0 0 ]
+{
+"25
+} 0
+"333 E:\Study Material\XC8 PROJECTS\Android Cautery\Android_Cautery.c
+[v _MY_DELAY MY_DELAY `(v  1 e 0 0 ]
+{
+[v MY_DELAY@ms ms `i  1 p 2 0 ]
+"341
+} 0

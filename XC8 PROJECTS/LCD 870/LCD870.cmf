@@ -1,0 +1,586 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$startup.obj
+end_init CODE 0 0 0 1 2
+$LCD870.obj
+cinit CODE 0 7D9 7D9 27 2
+text9 CODE 0 593 593 4D 2
+text8 CODE 0 50C 50C 3E 2
+swtext1 CONST 0 1A 1A 4 2
+text7 CODE 0 4B3 4B3 21 2
+text6 CODE 0 54A 54A 49 2
+text5 CODE 0 62D 62D 5B 2
+text4 CODE 0 5E0 5E0 4D 2
+text3 CODE 0 688 688 A3 2
+text2 CODE 0 4D4 4D4 38 2
+text1 CODE 0 49B 49B 18 2
+maintext CODE 0 72B 72B AE 2
+cstackBANK0 BANK0 1 20 20 15 1
+cstackCOMMON COMMON 1 70 70 E 1
+dataBANK0 BANK0 1 35 35 10 1
+bssBANK0 BANK0 1 45 45 5 1
+strings STRING 0 1 1 19 2
+idataBANK0 CODE 0 48B 48B 10 2
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+BANK0 004A-006F 1
+BANK1 00A0-00BF 1
+CODE 001E-048A 2
+CONFIG 2007-2007 2
+CONST 001E-048A 2
+EEDATA 2100-213F 2
+ENTRY 001E-048A 2
+IDLOC 2000-2003 2
+RAM 004A-006F 1
+RAM 00A0-00BF 1
+SFR0 0000-001F 1
+SFR1 0080-009F 1
+SFR2 0100-016F 1
+SFR3 0180-01EF 1
+STACK 004A-006F 1
+STRCODE 001E-048A 2
+STRING 001E-048A 2
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <file name>:<line number> <address> <psect name> <class name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$LCD870.obj
+"E:\Study Material\XC8 PROJECTS\LCD Test\lcd_hd44780_pic16.c":360 1A swtext1 CONST
+"E:\Study Material\XC8 PROJECTS\LCD Test\LCDTest.c":33 49B text1 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\LCDTest.c":35 49C text1 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\LCDTest.c":37 49F text1 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\LCDTest.c":38 4A0 text1 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\LCDTest.c":39 4A4 text1 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\LCDTest.c":41 4A8 text1 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\LCDTest.c":42 4AA text1 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\LCDTest.c":43 4AB text1 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\LCDTest.c":39 4AF text1 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\LCDTest.c":45 4B0 text1 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\LCDTest.c":35 4B2 text1 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\lcd_hd44780_pic16.c":354 4B3 text7 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\lcd_hd44780_pic16.c":356 4B6 text7 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\lcd_hd44780_pic16.c":364 4BB text7 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\lcd_hd44780_pic16.c":365 4BB text7 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\lcd_hd44780_pic16.c":366 4BC text7 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\lcd_hd44780_pic16.c":368 4BD text7 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\lcd_hd44780_pic16.c":371 4BF text7 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\lcd_hd44780_pic16.c":373 4C3 text7 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\lcd_hd44780_pic16.c":360 4C4 text7 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\lcd_hd44780_pic16.c":373 4CF text7 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\lcd_hd44780_pic16.c":395 4CF text7 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\lcd_hd44780_pic16.c":396 4D0 text7 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\lcd_hd44780_pic16.c":397 4D3 text7 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\lcd_hd44780_pic16.c":253 4D4 text2 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\lcd_hd44780_pic16.c":283 4D7 text2 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\lcd_hd44780_pic16.c":286 4DD text2 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\lcd_hd44780_pic16.c":288 4E3 text2 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\lcd_hd44780_pic16.c":289 4E7 text2 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\lcd_hd44780_pic16.c":291 4EE text2 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\lcd_hd44780_pic16.c":293 4F5 text2 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\lcd_hd44780_pic16.c":297 4F9 text2 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\lcd_hd44780_pic16.c":303 4FD text2 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\lcd_hd44780_pic16.c":305 505 text2 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\lcd_hd44780_pic16.c":283 50B text2 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\lcd_hd44780_pic16.c":82 50C text8 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\lcd_hd44780_pic16.c":94 50D text8 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\lcd_hd44780_pic16.c":95 519 text8 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\lcd_hd44780_pic16.c":97 51E text8 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\lcd_hd44780_pic16.c":98 521 text8 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\lcd_hd44780_pic16.c":99 525 text8 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\lcd_hd44780_pic16.c":100 525 text8 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\lcd_hd44780_pic16.c":104 528 text8 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\lcd_hd44780_pic16.c":108 52B text8 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\lcd_hd44780_pic16.c":109 531 text8 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\lcd_hd44780_pic16.c":111 533 text8 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\lcd_hd44780_pic16.c":115 534 text8 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\lcd_hd44780_pic16.c":117 537 text8 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\lcd_hd44780_pic16.c":120 538 text8 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\lcd_hd44780_pic16.c":122 53B text8 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\lcd_hd44780_pic16.c":124 541 text8 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\lcd_hd44780_pic16.c":126 543 text8 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\lcd_hd44780_pic16.c":130 544 text8 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\lcd_hd44780_pic16.c":132 547 text8 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\lcd_hd44780_pic16.c":134 548 text8 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\lcd_hd44780_pic16.c":135 549 text8 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\lcd_hd44780_pic16.c":195 54A text6 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\lcd_hd44780_pic16.c":211 54D text6 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\lcd_hd44780_pic16.c":214 555 text6 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\lcd_hd44780_pic16.c":216 55B text6 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\lcd_hd44780_pic16.c":217 55C text6 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\lcd_hd44780_pic16.c":218 55D text6 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\lcd_hd44780_pic16.c":220 55E text6 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\lcd_hd44780_pic16.c":222 564 text6 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\lcd_hd44780_pic16.c":223 565 text6 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\lcd_hd44780_pic16.c":224 566 text6 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\lcd_hd44780_pic16.c":229 567 text6 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\lcd_hd44780_pic16.c":230 56A text6 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\lcd_hd44780_pic16.c":231 56B text6 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\lcd_hd44780_pic16.c":232 56C text6 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\lcd_hd44780_pic16.c":233 56F text6 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\lcd_hd44780_pic16.c":236 570 text6 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\lcd_hd44780_pic16.c":241 571 text6 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\lcd_hd44780_pic16.c":242 574 text6 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\lcd_hd44780_pic16.c":245 57A text6 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\lcd_hd44780_pic16.c":248 57D text6 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\lcd_hd44780_pic16.c":249 584 text6 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\lcd_hd44780_pic16.c":248 58C text6 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\lcd_hd44780_pic16.c":137 593 text9 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\lcd_hd44780_pic16.c":141 593 text9 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\lcd_hd44780_pic16.c":144 594 text9 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\lcd_hd44780_pic16.c":147 59A text9 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\lcd_hd44780_pic16.c":148 59D text9 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\lcd_hd44780_pic16.c":158 59E text9 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\lcd_hd44780_pic16.c":163 5A1 text9 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\lcd_hd44780_pic16.c":164 5A7 text9 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\lcd_hd44780_pic16.c":169 5B4 text9 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\lcd_hd44780_pic16.c":170 5B7 text9 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\lcd_hd44780_pic16.c":172 5B8 text9 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\lcd_hd44780_pic16.c":175 5BB text9 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\lcd_hd44780_pic16.c":176 5C1 text9 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\lcd_hd44780_pic16.c":178 5C5 text9 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\lcd_hd44780_pic16.c":180 5CA text9 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\lcd_hd44780_pic16.c":184 5CF text9 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\lcd_hd44780_pic16.c":185 5D2 text9 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\lcd_hd44780_pic16.c":186 5D3 text9 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\lcd_hd44780_pic16.c":188 5D6 text9 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\lcd_hd44780_pic16.c":191 5D9 text9 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\lcd_hd44780_pic16.c":193 5DF text9 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":6 5E0 text4 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":13 5E0 text4 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":14 5E1 text4 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":15 5E3 text4 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":16 5E8 text4 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":18 5EA text4 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":19 5EC text4 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":20 5F1 text4 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":21 5F5 text4 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":22 5F7 text4 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":23 5F9 text4 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":24 600 text4 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":22 604 text4 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":27 605 text4 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":28 60D text4 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":29 613 text4 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":30 61A text4 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":32 61E text4 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":33 621 text4 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":34 626 text4 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awdiv.c":6 62D text5 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awdiv.c":14 62D text5 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awdiv.c":15 62E text5 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awdiv.c":16 630 text5 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awdiv.c":17 635 text5 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awdiv.c":19 637 text5 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awdiv.c":20 639 text5 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awdiv.c":21 63E text5 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awdiv.c":23 642 text5 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awdiv.c":24 644 text5 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awdiv.c":25 648 text5 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awdiv.c":26 64A text5 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awdiv.c":27 64C text5 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awdiv.c":28 653 text5 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awdiv.c":26 657 text5 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awdiv.c":31 658 text5 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awdiv.c":32 65F text5 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awdiv.c":33 667 text5 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awdiv.c":34 66D text5 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awdiv.c":36 66E text5 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awdiv.c":37 675 text5 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awdiv.c":39 679 text5 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awdiv.c":40 67C text5 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awdiv.c":41 681 text5 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\lcd_hd44780_pic16.c":309 688 text3 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\lcd_hd44780_pic16.c":322 688 text3 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\lcd_hd44780_pic16.c":323 69B text3 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\lcd_hd44780_pic16.c":326 6A1 text3 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\lcd_hd44780_pic16.c":328 6A3 text3 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\lcd_hd44780_pic16.c":329 6A7 text3 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\lcd_hd44780_pic16.c":332 6AE text3 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\lcd_hd44780_pic16.c":334 6B2 text3 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\lcd_hd44780_pic16.c":335 6C7 text3 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\lcd_hd44780_pic16.c":336 6DA text3 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\lcd_hd44780_pic16.c":332 6E0 text3 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\lcd_hd44780_pic16.c":338 6E1 text3 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\lcd_hd44780_pic16.c":339 6E6 text3 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\lcd_hd44780_pic16.c":341 6F4 text3 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\lcd_hd44780_pic16.c":344 706 text3 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\lcd_hd44780_pic16.c":346 717 text3 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\lcd_hd44780_pic16.c":344 722 text3 CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\LCDTest.c":60 72B maintext CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\LCDTest.c":62 72B maintext CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\LCDTest.c":63 735 maintext CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\LCDTest.c":64 738 maintext CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\LCDTest.c":66 739 maintext CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\LCDTest.c":67 748 maintext CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\LCDTest.c":68 748 maintext CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\LCDTest.c":69 74B maintext CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\LCDTest.c":70 74D maintext CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\LCDTest.c":71 750 maintext CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\LCDTest.c":66 752 maintext CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\LCDTest.c":75 765 maintext CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\LCDTest.c":78 767 maintext CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\LCDTest.c":81 76A maintext CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\LCDTest.c":82 76C maintext CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\LCDTest.c":83 770 maintext CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\LCDTest.c":84 77D maintext CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\LCDTest.c":85 781 maintext CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\LCDTest.c":86 783 maintext CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\LCDTest.c":87 787 maintext CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\LCDTest.c":88 794 maintext CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\LCDTest.c":89 798 maintext CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\LCDTest.c":90 79A maintext CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\LCDTest.c":91 79E maintext CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\LCDTest.c":95 7AB maintext CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\LCDTest.c":96 7AD maintext CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\LCDTest.c":97 7B5 maintext CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\LCDTest.c":99 7BA maintext CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\LCDTest.c":100 7BC maintext CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\LCDTest.c":101 7C2 maintext CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\LCDTest.c":103 7C7 maintext CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\LCDTest.c":104 7C9 maintext CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\LCDTest.c":105 7CF maintext CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\LCDTest.c":106 7D4 maintext CODE
+"E:\Study Material\XC8 PROJECTS\LCD Test\LCDTest.c":110 7D8 maintext CODE
+"E:\Study Material\XC8 PROJECTS\LCD 870\LCD870.as":339 7D9 cinit CODE
+"E:\Study Material\XC8 PROJECTS\LCD 870\LCD870.as":342 7D9 cinit CODE
+"E:\Study Material\XC8 PROJECTS\LCD 870\LCD870.as":361 7D9 cinit CODE
+"E:\Study Material\XC8 PROJECTS\LCD 870\LCD870.as":362 7DA cinit CODE
+"E:\Study Material\XC8 PROJECTS\LCD 870\LCD870.as":363 7DB cinit CODE
+"E:\Study Material\XC8 PROJECTS\LCD 870\LCD870.as":364 7DC cinit CODE
+"E:\Study Material\XC8 PROJECTS\LCD 870\LCD870.as":365 7DD cinit CODE
+"E:\Study Material\XC8 PROJECTS\LCD 870\LCD870.as":370 7DE cinit CODE
+"E:\Study Material\XC8 PROJECTS\LCD 870\LCD870.as":371 7DF cinit CODE
+"E:\Study Material\XC8 PROJECTS\LCD 870\LCD870.as":372 7E0 cinit CODE
+"E:\Study Material\XC8 PROJECTS\LCD 870\LCD870.as":373 7E1 cinit CODE
+"E:\Study Material\XC8 PROJECTS\LCD 870\LCD870.as":374 7E2 cinit CODE
+"E:\Study Material\XC8 PROJECTS\LCD 870\LCD870.as":375 7E3 cinit CODE
+"E:\Study Material\XC8 PROJECTS\LCD 870\LCD870.as":376 7E4 cinit CODE
+"E:\Study Material\XC8 PROJECTS\LCD 870\LCD870.as":377 7E5 cinit CODE
+"E:\Study Material\XC8 PROJECTS\LCD 870\LCD870.as":378 7E6 cinit CODE
+"E:\Study Material\XC8 PROJECTS\LCD 870\LCD870.as":379 7E7 cinit CODE
+"E:\Study Material\XC8 PROJECTS\LCD 870\LCD870.as":380 7E8 cinit CODE
+"E:\Study Material\XC8 PROJECTS\LCD 870\LCD870.as":381 7E9 cinit CODE
+"E:\Study Material\XC8 PROJECTS\LCD 870\LCD870.as":382 7EA cinit CODE
+"E:\Study Material\XC8 PROJECTS\LCD 870\LCD870.as":383 7EB cinit CODE
+"E:\Study Material\XC8 PROJECTS\LCD 870\LCD870.as":384 7EC cinit CODE
+"E:\Study Material\XC8 PROJECTS\LCD 870\LCD870.as":385 7ED cinit CODE
+"E:\Study Material\XC8 PROJECTS\LCD 870\LCD870.as":386 7EE cinit CODE
+"E:\Study Material\XC8 PROJECTS\LCD 870\LCD870.as":387 7EF cinit CODE
+"E:\Study Material\XC8 PROJECTS\LCD 870\LCD870.as":388 7F0 cinit CODE
+"E:\Study Material\XC8 PROJECTS\LCD 870\LCD870.as":389 7F1 cinit CODE
+"E:\Study Material\XC8 PROJECTS\LCD 870\LCD870.as":390 7F2 cinit CODE
+"E:\Study Material\XC8 PROJECTS\LCD 870\LCD870.as":391 7F3 cinit CODE
+"E:\Study Material\XC8 PROJECTS\LCD 870\LCD870.as":392 7F4 cinit CODE
+"E:\Study Material\XC8 PROJECTS\LCD 870\LCD870.as":393 7F5 cinit CODE
+"E:\Study Material\XC8 PROJECTS\LCD 870\LCD870.as":394 7F6 cinit CODE
+"E:\Study Material\XC8 PROJECTS\LCD 870\LCD870.as":395 7F7 cinit CODE
+"E:\Study Material\XC8 PROJECTS\LCD 870\LCD870.as":396 7F8 cinit CODE
+"E:\Study Material\XC8 PROJECTS\LCD 870\LCD870.as":397 7F9 cinit CODE
+"E:\Study Material\XC8 PROJECTS\LCD 870\LCD870.as":398 7FA cinit CODE
+"E:\Study Material\XC8 PROJECTS\LCD 870\LCD870.as":399 7FB cinit CODE
+"E:\Study Material\XC8 PROJECTS\LCD 870\LCD870.as":400 7FC cinit CODE
+"E:\Study Material\XC8 PROJECTS\LCD 870\LCD870.as":401 7FD cinit CODE
+"E:\Study Material\XC8 PROJECTS\LCD 870\LCD870.as":407 7FE cinit CODE
+"E:\Study Material\XC8 PROJECTS\LCD 870\LCD870.as":408 7FE cinit CODE
+"E:\Study Material\XC8 PROJECTS\LCD 870\LCD870.as":409 7FF cinit CODE
+$startup.obj
+"E:\Study Material\XC8 PROJECTS\LCD 870\startup.as":40 0 functab CODE
+"E:\Study Material\XC8 PROJECTS\LCD 870\startup.as":41 0 functab CODE
+"E:\Study Material\XC8 PROJECTS\LCD 870\startup.as":42 0 functab CODE
+"E:\Study Material\XC8 PROJECTS\LCD 870\startup.as":43 0 functab CODE
+"E:\Study Material\XC8 PROJECTS\LCD 870\startup.as":44 0 functab CODE
+"E:\Study Material\XC8 PROJECTS\LCD 870\startup.as":45 0 functab CODE
+"E:\Study Material\XC8 PROJECTS\LCD 870\startup.as":64 0 reset_vec CODE
+"E:\Study Material\XC8 PROJECTS\LCD 870\startup.as":70 0 init CODE
+"E:\Study Material\XC8 PROJECTS\LCD 870\startup.as":73 0 end_init CODE
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+_LCDGotoXY 966 0 CODE 0 text7 LCD870.obj
+___awdiv@counter 75 0 COMMON 1 cstackCOMMON LCD870.obj
+_RC4 3C 0 ABS 0 - LCD870.obj
+_RC5 3D 0 ABS 0 - LCD870.obj
+_RC6 3E 0 ABS 0 - LCD870.obj
+_RC7 3F 0 ABS 0 - LCD870.obj
+__S0 800 0 ABS 0 - -
+__S1 7E 0 ABS 0 - -
+__S2 0 0 ABS 0 - -
+__S3 0 0 ABS 0 - -
+__Hintentry 0 0 CODE 0 intentry -
+__Lintentry 0 0 CODE 0 intentry -
+__end_of___awdiv D10 0 CODE 0 text5 LCD870.obj
+_main E56 0 CODE 0 maintext LCD870.obj
+___sp 0 0 STACK 2 stack startup.obj
+btemp 7E 0 ABS 0 - LCD870.obj
+ltemp 7E 0 ABS 0 - LCD870.obj
+ttemp 7E 0 ABS 0 - LCD870.obj
+wtemp 7E 0 ABS 0 - LCD870.obj
+start 0 0 CODE 0 init startup.obj
+_TRISB 86 0 ABS 0 - LCD870.obj
+_TRISC 87 0 ABS 0 - LCD870.obj
+reset_vec 0 0 CODE 0 reset_vec startup.obj
+_PORTC 7 0 ABS 0 - LCD870.obj
+_T1CON 10 0 ABS 0 - LCD870.obj
+ltemp0 7E 0 ABS 0 - LCD870.obj
+ttemp0 7E 0 ABS 0 - LCD870.obj
+wtemp0 7E 0 ABS 0 - LCD870.obj
+ltemp1 82 0 ABS 0 - LCD870.obj
+ttemp1 81 0 ABS 0 - LCD870.obj
+wtemp1 80 0 ABS 0 - LCD870.obj
+ltemp2 86 0 ABS 0 - LCD870.obj
+ttemp2 84 0 ABS 0 - LCD870.obj
+wtemp2 82 0 ABS 0 - LCD870.obj
+ltemp3 80 0 ABS 0 - LCD870.obj
+ttemp3 87 0 ABS 0 - LCD870.obj
+wtemp3 84 0 ABS 0 - LCD870.obj
+ttemp4 7F 0 ABS 0 - LCD870.obj
+wtemp4 86 0 ABS 0 - LCD870.obj
+wtemp5 88 0 ABS 0 - LCD870.obj
+wtemp6 7F 0 ABS 0 - LCD870.obj
+__Hconfig 0 0 CONFIG 0 config -
+__Lconfig 0 0 CONFIG 0 config -
+__end_of_LCDByte A94 0 CODE 0 text8 LCD870.obj
+?___awmod 70 0 COMMON 1 cstackCOMMON LCD870.obj
+__end_of__stringtab E 0 STRING 0 strings LCD870.obj
+__size_of_LCDInit 0 0 ABS 0 - LCD870.obj
+__Hram 0 0 ABS 0 ram -
+__Lram 0 0 ABS 0 ram -
+__end_of__stringdata 34 0 STRING 0 strings LCD870.obj
+main@secs 2F 0 BANK0 1 cstackBANK0 LCD870.obj
+__Hfunctab 0 0 CODE 0 functab -
+__Lfunctab 0 0 CODE 0 functab -
+__Hcommon 0 0 ABS 0 common -
+__Lcommon 0 0 ABS 0 common -
+__Heeprom_data 0 0 EEDATA 3 eeprom_data -
+__Leeprom_data 0 0 EEDATA 3 eeprom_data -
+_My_Delay 936 0 CODE 0 text1 LCD870.obj
+main@mins 31 0 BANK0 1 cstackBANK0 LCD870.obj
+___int_sp 0 0 STACK 2 stack startup.obj
+_TMR1IF 60 0 ABS 0 - LCD870.obj
+LCDByte@hn 78 0 COMMON 1 cstackCOMMON LCD870.obj
+?___awdiv 70 0 COMMON 1 cstackCOMMON LCD870.obj
+__Habs1 0 0 ABS 0 abs1 -
+__Labs1 0 0 ABS 0 abs1 -
+__Hsfr0 0 0 ABS 0 sfr0 -
+__Lsfr0 0 0 ABS 0 sfr0 -
+__Hsfr1 0 0 ABS 0 sfr1 -
+__Lsfr1 0 0 ABS 0 sfr1 -
+__Hsfr2 0 0 ABS 0 sfr2 -
+__Lsfr2 0 0 ABS 0 sfr2 -
+LCDByte@ln 79 0 COMMON 1 cstackCOMMON LCD870.obj
+__Hsfr3 0 0 ABS 0 sfr3 -
+__Lsfr3 0 0 ABS 0 sfr3 -
+LCDByte@isdata 75 0 COMMON 1 cstackCOMMON LCD870.obj
+LCDInit@__i 21 0 BANK0 1 cstackBANK0 LCD870.obj
+LCDInit@style 20 0 BANK0 1 cstackBANK0 LCD870.obj
+_LCDWriteInt D10 0 CODE 0 text3 LCD870.obj
+__end_of___awmod C5A 0 CODE 0 text4 LCD870.obj
+__Hcode 0 0 ABS 0 code -
+__Lcode 0 0 ABS 0 code -
+LCDGotoXY@x 20 0 BANK0 1 cstackBANK0 LCD870.obj
+stackhi 0 0 ABS 0 - startup.obj
+__HcstackBANK0 0 0 ABS 0 cstackBANK0 -
+__size_of_LCDByte 0 0 ABS 0 - LCD870.obj
+__LcstackBANK0 0 0 ABS 0 cstackBANK0 -
+__pcstackBANK0 20 0 BANK0 1 cstackBANK0 LCD870.obj
+___awmod@sign 76 0 COMMON 1 cstackCOMMON LCD870.obj
+__size_of_LCDBusyLoop 0 0 ABS 0 - LCD870.obj
+stacklo 0 0 ABS 0 - startup.obj
+LCDGotoXY@y 7C 0 COMMON 1 cstackCOMMON LCD870.obj
+__Hinit 0 0 CODE 0 init -
+__Linit 0 0 CODE 0 init -
+__end_of_LCDWriteInt E56 0 CODE 0 text3 LCD870.obj
+__end_of_main FB2 0 CODE 0 maintext LCD870.obj
+__Htext 0 0 ABS 0 text -
+__Ltext 0 0 ABS 0 text -
+__HdataBANK0 0 0 ABS 0 dataBANK0 -
+__LdataBANK0 0 0 ABS 0 dataBANK0 -
+__pdataBANK0 35 0 BANK0 1 dataBANK0 LCD870.obj
+LCDByte@temp 7B 0 COMMON 1 cstackCOMMON LCD870.obj
+end_of_initialization FFC 0 CODE 0 cinit LCD870.obj
+___awdiv@sign 76 0 COMMON 1 cstackCOMMON LCD870.obj
+__stringtab 2 0 STRING 0 strings LCD870.obj
+LCDBusyLoop@temp 73 0 COMMON 1 cstackCOMMON LCD870.obj
+LCDWriteInt@val 20 0 BANK0 1 cstackBANK0 LCD870.obj
+__end_of_LCDInit B26 0 CODE 0 text6 LCD870.obj
+_TRISCbits 87 0 ABS 0 - LCD870.obj
+__Hstrings 0 0 ABS 0 strings -
+__Lstrings 0 0 ABS 0 strings -
+__pstrings 2 0 STRING 0 strings LCD870.obj
+_LCDBusyLoop B26 0 CODE 0 text9 LCD870.obj
+LCDWriteString@msg 21 0 BANK0 1 cstackBANK0 LCD870.obj
+__Hbank0 0 0 ABS 0 bank0 -
+__Lbank0 0 0 ABS 0 bank0 -
+__Hbank1 0 0 ABS 0 bank1 -
+__Lbank1 0 0 ABS 0 bank1 -
+LCDWriteInt@i 2A 0 BANK0 1 cstackBANK0 LCD870.obj
+__Hbank2 0 0 BANK2 1 bank2 -
+__Lbank2 0 0 BANK2 1 bank2 -
+__Hbank3 0 0 BANK3 1 bank3 -
+__Lbank3 0 0 BANK3 1 bank3 -
+___latbits 0 0 ABS 0 - LCD870.obj
+__Hpowerup 0 0 CODE 0 powerup -
+__Lpowerup 0 0 CODE 0 powerup -
+main@count 2D 0 BANK0 1 cstackBANK0 LCD870.obj
+__ptext1 936 0 CODE 0 text1 LCD870.obj
+LCDWriteInt@str 23 0 BANK0 1 cstackBANK0 LCD870.obj
+__ptext2 9A8 0 CODE 0 text2 LCD870.obj
+__ptext3 D10 0 CODE 0 text3 LCD870.obj
+__ptext4 BC0 0 CODE 0 text4 LCD870.obj
+__ptext5 C5A 0 CODE 0 text5 LCD870.obj
+__ptext6 A94 0 CODE 0 text6 LCD870.obj
+__ptext7 966 0 CODE 0 text7 LCD870.obj
+__ptext8 A18 0 CODE 0 text8 LCD870.obj
+__ptext9 B26 0 CODE 0 text9 LCD870.obj
+__Hclrtext 0 0 ABS 0 clrtext -
+__Lclrtext 0 0 ABS 0 clrtext -
+LCDBusyLoop@status 74 0 COMMON 1 cstackCOMMON LCD870.obj
+My_Delay@Count 72 0 COMMON 1 cstackCOMMON LCD870.obj
+__size_of_LCDWriteString 0 0 ABS 0 - LCD870.obj
+__end_of__initialization FFC 0 CODE 0 cinit LCD870.obj
+LCDWriteInt@j 28 0 BANK0 1 cstackBANK0 LCD870.obj
+LCDWriteString@cc 20 0 BANK0 1 cstackBANK0 LCD870.obj
+__end_of_LCDWriteString A18 0 CODE 0 text2 LCD870.obj
+__Hidloc 0 0 IDLOC 0 idloc -
+__Lidloc 0 0 IDLOC 0 idloc -
+_LCDByte A18 0 CODE 0 text8 LCD870.obj
+__Hstack 0 0 STACK 2 stack -
+__Lstack 0 0 STACK 2 stack -
+___awmod BC0 0 CODE 0 text4 LCD870.obj
+___cgram 35 0 BANK0 1 dataBANK0 LCD870.obj
+__Hspace_0 800 0 ABS 0 - -
+__Lspace_0 0 0 ABS 0 - -
+_LCDInit A94 0 CODE 0 text6 LCD870.obj
+__Hspace_1 7E 0 ABS 0 - -
+__Lspace_1 0 0 ABS 0 - -
+__Hspace_2 0 0 ABS 0 - -
+__Lspace_2 0 0 ABS 0 - -
+main@hrs 33 0 BANK0 1 cstackBANK0 LCD870.obj
+__Hcinit 1000 0 CODE 0 cinit -
+__Lcinit FB2 0 CODE 0 cinit -
+___awdiv C5A 0 CODE 0 text5 LCD870.obj
+My_Delay@sec 71 0 COMMON 1 cstackCOMMON LCD870.obj
+__Hspace_3 0 0 ABS 0 - -
+__Lspace_3 0 0 ABS 0 - -
+__size_of_main 0 0 ABS 0 - LCD870.obj
+__HidataBANK0 0 0 ABS 0 idataBANK0 -
+__LidataBANK0 0 0 ABS 0 idataBANK0 -
+__pidataBANK0 916 0 CODE 0 idataBANK0 LCD870.obj
+__HbssBANK0 0 0 ABS 0 bssBANK0 -
+__LbssBANK0 0 0 ABS 0 bssBANK0 -
+__pbssBANK0 45 0 BANK0 1 bssBANK0 LCD870.obj
+__end_of_My_Delay 966 0 CODE 0 text1 LCD870.obj
+__size_of___awdiv 0 0 ABS 0 - LCD870.obj
+__size_of_LCDGotoXY 0 0 ABS 0 - LCD870.obj
+__end_of_LCDGotoXY 9A8 0 CODE 0 text7 LCD870.obj
+___awmod@divisor 70 0 COMMON 1 cstackCOMMON LCD870.obj
+__Hend_init 2 0 CODE 0 end_init -
+__Lend_init 0 0 CODE 0 end_init -
+__pswtext1 34 0 CONST 0 swtext1 LCD870.obj
+___awdiv@divisor 70 0 COMMON 1 cstackCOMMON LCD870.obj
+_LCDWriteString 9A8 0 CODE 0 text2 LCD870.obj
+__Hreset_vec 0 0 CODE 0 reset_vec -
+__Lreset_vec 0 0 CODE 0 reset_vec -
+LCDBusyLoop@busy 72 0 COMMON 1 cstackCOMMON LCD870.obj
+__stringdata E 0 STRING 0 strings LCD870.obj
+intlevel0 0 0 CODE 0 functab startup.obj
+LCDWriteInt@field_length 22 0 BANK0 1 cstackBANK0 LCD870.obj
+intlevel1 0 0 CODE 0 functab startup.obj
+intlevel2 0 0 CODE 0 functab startup.obj
+intlevel3 0 0 CODE 0 functab startup.obj
+intlevel4 0 0 CODE 0 functab startup.obj
+intlevel5 0 0 CODE 0 functab startup.obj
+__end_of_LCDBusyLoop BC0 0 CODE 0 text9 LCD870.obj
+__HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+__LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+__pcstackCOMMON 70 0 COMMON 1 cstackCOMMON LCD870.obj
+start_initialization FB2 0 CODE 0 cinit LCD870.obj
+LCDWriteInt@F784 45 0 BANK0 1 bssBANK0 LCD870.obj
+___awdiv@quotient 77 0 COMMON 1 cstackCOMMON LCD870.obj
+__size_of_My_Delay 0 0 ABS 0 - LCD870.obj
+__Hmaintext 0 0 ABS 0 maintext -
+__Lmaintext 0 0 ABS 0 maintext -
+__pmaintext E56 0 CODE 0 maintext LCD870.obj
+__size_of___awmod 0 0 ABS 0 - LCD870.obj
+__initialization FB2 0 CODE 0 cinit LCD870.obj
+__stringbase C 0 STRING 0 strings LCD870.obj
+___awmod@dividend 72 0 COMMON 1 cstackCOMMON LCD870.obj
+___awmod@counter 75 0 COMMON 1 cstackCOMMON LCD870.obj
+LCDByte@c 7A 0 COMMON 1 cstackCOMMON LCD870.obj
+__size_of_LCDWriteInt 0 0 ABS 0 - LCD870.obj
+___awdiv@dividend 72 0 COMMON 1 cstackCOMMON LCD870.obj
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect in on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+- 1 7E 2
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+reset_vec 0 0 0 1 2
+cinit 0 7D9 FB2 27 2
+cstackCOMMON 1 70 70 E 1
+cstackBANK0 1 20 20 2A 1
+maintext 0 72B E56 AE 2
+text3 0 688 D10 A3 2
+text5 0 62D C5A 5B 2
+text4 0 5E0 BC0 4D 2
+text9 0 593 B26 4D 2
+text6 0 54A A94 49 2
+text8 0 50C A18 3E 2
+text2 0 4D4 9A8 38 2
+text7 0 4B3 966 21 2
+strings 0 1 2 19 2
+text1 0 49B 936 18 2
+idataBANK0 0 48B 916 10 2
+swtext1 0 1A 34 4 2

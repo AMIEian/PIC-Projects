@@ -1,0 +1,7 @@
+___awdiv: CODE, 708 0 168
+___awmod: CODE, 876 0 148
+_main: CODE, 208 0 500
+_tmr_int: CODE, 8 0 194
+_MY_DELAY: CODE, 1072 0 42
+__initialization: CODE, 1024 0 38
+Total: 1090

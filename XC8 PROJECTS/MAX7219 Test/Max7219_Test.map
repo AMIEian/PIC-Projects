@@ -1,0 +1,660 @@
+Microchip MPLAB XC8 Compiler V1.33 ()
+
+Linker command line:
+
+--edf=C:\Program Files (x86)\Microchip\xc8\v1.33\dat\en_msgs.txt -cs \
+  -h+Max7219_Test.sym --cmf=Max7219_Test.cmf -z -Q16F870 \
+  -oC:\Users\AMIEian\AppData\Local\Temp\sbs.6 -MMax7219_Test.map -E1 \
+  -ver=XC8 -ASTACK=020h-06fh -pstack=STACK -ACONST=00h-0FFhx8 \
+  -ACODE=00h-07FFh -ASTRCODE=00h-07FFh -AENTRY=00h-0FFhx8 \
+  -ASTRING=00h-0FFhx8 -ACOMMON=070h-07Fh -ABANK0=020h-06Fh \
+  -ABANK1=0A0h-0BFh -ARAM=020h-06Fh,0A0h-0BFh -AABS1=020h-07Fh,0A0h-0BFh \
+  -ASFR0=00h-01Fh -ASFR1=080h-09Fh -ASFR2=0100h-016Fh -ASFR3=0180h-01EFh \
+  -preset_vec=00h,intentry,init,end_init -ppowerup=CODE -pcinit=CODE \
+  -pfunctab=CODE -ACONFIG=02007h-02007h -pconfig=CONFIG -DCONFIG=2 \
+  -AIDLOC=02000h-02003h -pidloc=IDLOC -DIDLOC=2 -AEEDATA=00h-03Fh/02100h \
+  -peeprom_data=EEDATA -DEEDATA=2 -DCODE=2 -DSTRCODE=2 -DSTRING=2 -DCONST=2 \
+  -DENTRY=2 -k startup.obj Max7219_Test.obj 
+
+Object code version is 3.11
+
+Machine type is 16F870
+
+
+
+                Name                               Link     Load   Length Selector   Space Scale
+startup.obj     end_init                              0        0        1        0       0
+Max7219_Test.obj
+                cinit                               7FE      7FE        2      FFC       0
+                text9                               77B      77B       21      EF6       0
+                text8                               79C      79C       25      F38       0
+                text7                               737      737        D      E6E       0
+                text6                               765      765       16      ECA       0
+                text5                               744      744        D      E88       0
+                text4                               722      722        4      E44       0
+                text3                               72B      72B        C      E56       0
+                text2                               726      726        5      E4C       0
+                text1                               751      751       14      EA2       0
+                maintext                            7C1      7C1       3D      F82       0
+                cstackCOMMON                         70       70        D       70       1
+                strings                               1        1       2C        2       0
+
+TOTAL           Name                               Link     Load   Length     Space
+        CLASS   STACK          
+
+        CLASS   CONST          
+
+        CLASS   CODE           
+                end_init                              0        0        1         0
+                cinit                               7FE      7FE        2         0
+                text9                               77B      77B       21         0
+                text8                               79C      79C       25         0
+                text7                               737      737        D         0
+                text6                               765      765       16         0
+                text5                               744      744        D         0
+                text4                               722      722        4         0
+                text3                               72B      72B        C         0
+                text2                               726      726        5         0
+                text1                               751      751       14         0
+                maintext                            7C1      7C1       3D         0
+
+        CLASS   STRCODE        
+
+        CLASS   ENTRY          
+
+        CLASS   STRING         
+                strings                               1        1       2C         0
+
+        CLASS   COMMON         
+                cstackCOMMON                         70       70        D         1
+
+        CLASS   BANK0          
+
+        CLASS   BANK1          
+
+        CLASS   RAM            
+
+        CLASS   ABS1           
+                abs_s1                               7E       7E        2         1
+
+        CLASS   SFR0           
+
+        CLASS   SFR1           
+
+        CLASS   SFR2           
+
+        CLASS   SFR3           
+
+        CLASS   CONFIG         
+
+        CLASS   IDLOC          
+
+        CLASS   EEDATA         
+
+        CLASS   BANK3          
+
+        CLASS   BANK2          
+
+
+
+SEGMENTS        Name                           Load    Length   Top    Selector   Space  Class     Delta
+
+                reset_vec                      000000  000001  000001         0       0  CODE        2
+                strings                        000001  00002C  00002D         2       0  STRING      2
+                cstackCOMMON                   000070  00000D  00007D        70       1  COMMON      1
+                text4                          000722  000004  000726       E44       0  CODE        2
+                text2                          000726  000005  00072B       E4C       0  CODE        2
+                text3                          00072B  00000C  000737       E56       0  CODE        2
+                text7                          000737  00000D  000744       E6E       0  CODE        2
+                text5                          000744  00000D  000751       E88       0  CODE        2
+                text1                          000751  000014  000765       EA2       0  CODE        2
+                text6                          000765  000016  00077B       ECA       0  CODE        2
+                text9                          00077B  000021  00079C       EF6       0  CODE        2
+                text8                          00079C  000025  0007C1       F38       0  CODE        2
+                maintext                       0007C1  00003D  0007FE       F82       0  CODE        2
+                cinit                          0007FE  000002  000800       FFC       0  CODE        2
+
+
+UNUSED ADDRESS RANGES
+
+        Name                Unused          Largest block    Delta
+        BANK0            0020-006F             50           1
+        BANK1            00A0-00BF             20           1
+        CODE             002D-0721            6F5           2
+        COMMON           007D-007D              1           1
+        CONFIG           2007-2007              1           2
+        CONST            002D-0721            100           2
+        EEDATA           2100-213F             40           2
+        ENTRY            002D-0721            100           2
+        IDLOC            2000-2003              4           2
+        RAM              0020-006F             50           1
+                         00A0-00BF             20
+        SFR0             0000-001F             20           1
+        SFR1             0080-009F             20           1
+        SFR2             0100-016F             70           1
+        SFR3             0180-01EF             70           1
+        STACK            0020-006F             50           1
+        STRCODE          002D-0721            6F5           2
+        STRING           002D-0721            100           2
+
+                                  Symbol Table
+
+MAX7219_Clear@i                   cstackCOMMON 0078
+MAX7219_DisplayChar@ch            cstackCOMMON 007B
+MAX7219_DisplayChar@character     cstackCOMMON 0077
+MAX7219_DisplayChar@digit         cstackCOMMON 007A
+MAX7219_DisplayChar@dot           cstackCOMMON 0078
+MAX7219_LookupCode@character      cstackCOMMON 0071
+MAX7219_LookupCode@i              cstackCOMMON 0072
+MAX7219_SendByte@dataout          cstackCOMMON 0072
+MAX7219_SendByte@i                cstackCOMMON 0074
+MAX7219_SendByte@mask             cstackCOMMON 0073
+MAX7219_SetBrightness@brightness  cstackCOMMON 0078
+MAX7219_Write@dataout             cstackCOMMON 0075
+MAX7219_Write@reg_number          cstackCOMMON 0076
+_MAX7219_Clear                    text5        0744
+_MAX7219_DisplayChar              text6        0765
+_MAX7219_DisplayTestStop          text4        0722
+_MAX7219_Font                     strings      0007
+_MAX7219_Init                     text1        0751
+_MAX7219_LookupCode               text9        077B
+_MAX7219_SendByte                 text8        079C
+_MAX7219_SetBrightness            text3        072B
+_MAX7219_ShutdownStop             text2        0726
+_MAX7219_Write                    text7        0737
+_RC0                              (abs)        0038
+_RC1                              (abs)        0039
+_RC2                              (abs)        003A
+_TRISC                            (abs)        0087
+__Habs1                           abs1         0000
+__Hbank0                          bank0        0000
+__Hbank1                          bank1        0000
+__Hbank2                          bank2        0000
+__Hbank3                          bank3        0000
+__Hcinit                          cinit        0800
+__Hclrtext                        clrtext      0000
+__Hcode                           code         0000
+__Hcommon                         common       0000
+__Hconfig                         config       0000
+__HcstackCOMMON                   cstackCOMMON 0000
+__Heeprom_data                    eeprom_data  0000
+__Hend_init                       end_init     0001
+__Hfunctab                        functab      0000
+__Hidloc                          idloc        0000
+__Hinit                           init         0000
+__Hintentry                       intentry     0000
+__Hmaintext                       maintext     0000
+__Hpowerup                        powerup      0000
+__Hram                            ram          0000
+__Hreset_vec                      reset_vec    0000
+__Hsfr0                           sfr0         0000
+__Hsfr1                           sfr1         0000
+__Hsfr2                           sfr2         0000
+__Hsfr3                           sfr3         0000
+__Hspace_0                        (abs)        0800
+__Hspace_1                        (abs)        007D
+__Hspace_2                        (abs)        0000
+__Hspace_3                        (abs)        0000
+__Hstack                          stack        0000
+__Hstrings                        strings      0000
+__Htext                           text         0000
+__Labs1                           abs1         0000
+__Lbank0                          bank0        0000
+__Lbank1                          bank1        0000
+__Lbank2                          bank2        0000
+__Lbank3                          bank3        0000
+__Lcinit                          cinit        07FE
+__Lclrtext                        clrtext      0000
+__Lcode                           code         0000
+__Lcommon                         common       0000
+__Lconfig                         config       0000
+__LcstackCOMMON                   cstackCOMMON 0000
+__Leeprom_data                    eeprom_data  0000
+__Lend_init                       end_init     0000
+__Lfunctab                        functab      0000
+__Lidloc                          idloc        0000
+__Linit                           init         0000
+__Lintentry                       intentry     0000
+__Lmaintext                       maintext     0000
+__Lpowerup                        powerup      0000
+__Lram                            ram          0000
+__Lreset_vec                      reset_vec    0000
+__Lsfr0                           sfr0         0000
+__Lsfr1                           sfr1         0000
+__Lsfr2                           sfr2         0000
+__Lsfr3                           sfr3         0000
+__Lspace_0                        (abs)        0000
+__Lspace_1                        (abs)        0000
+__Lspace_2                        (abs)        0000
+__Lspace_3                        (abs)        0000
+__Lstack                          stack        0000
+__Lstrings                        strings      0000
+__Ltext                           text         0000
+__S0                              (abs)        0800
+__S1                              (abs)        007D
+__S2                              (abs)        0000
+__S3                              (abs)        0000
+___int_sp                         stack        0000
+___latbits                        (abs)        0000
+___sp                             stack        0000
+__end_of_MAX7219_Clear            text5        0751
+__end_of_MAX7219_DisplayChar      text6        077B
+__end_of_MAX7219_DisplayTestStop  text4        0726
+__end_of_MAX7219_Font             strings      002D
+__end_of_MAX7219_Init             text1        0765
+__end_of_MAX7219_LookupCode       text9        079C
+__end_of_MAX7219_SendByte         text8        07C1
+__end_of_MAX7219_SetBrightness    text3        0737
+__end_of_MAX7219_ShutdownStop     text2        072B
+__end_of_MAX7219_Write            text7        0744
+__end_of__initialization          cinit        07FE
+__end_of__stringtab               strings      0007
+__end_of_main                     maintext     07FE
+__initialization                  cinit        07FE
+__pcstackCOMMON                   cstackCOMMON 0070
+__pmaintext                       maintext     07C1
+__pstrings                        strings      0001
+__ptext1                          text1        0751
+__ptext2                          text2        0726
+__ptext3                          text3        072B
+__ptext4                          text4        0722
+__ptext5                          text5        0744
+__ptext6                          text6        0765
+__ptext7                          text7        0737
+__ptext8                          text8        079C
+__ptext9                          text9        077B
+__size_of_MAX7219_Clear           (abs)        0000
+__size_of_MAX7219_DisplayChar     (abs)        0000
+__size_of_MAX7219_DisplayTestStop (abs)        0000
+__size_of_MAX7219_Init            (abs)        0000
+__size_of_MAX7219_LookupCode      (abs)        0000
+__size_of_MAX7219_SendByte        (abs)        0000
+__size_of_MAX7219_SetBrightness   (abs)        0000
+__size_of_MAX7219_ShutdownStop    (abs)        0000
+__size_of_MAX7219_Write           (abs)        0000
+__size_of_main                    (abs)        0000
+__stringbase                      strings      0006
+__stringtab                       strings      0001
+_main                             maintext     07C1
+btemp                             (abs)        007E
+end_of_initialization             cinit        07FE
+intlevel0                         functab      0000
+intlevel1                         functab      0000
+intlevel2                         functab      0000
+intlevel3                         functab      0000
+intlevel4                         functab      0000
+intlevel5                         functab      0000
+ltemp                             (abs)        007E
+ltemp0                            (abs)        007E
+ltemp1                            (abs)        0082
+ltemp2                            (abs)        0086
+ltemp3                            (abs)        0080
+reset_vec                         reset_vec    0000
+stackhi                           (abs)        0000
+stacklo                           (abs)        0000
+start                             init         0000
+start_initialization              cinit        07FE
+ttemp                             (abs)        007E
+ttemp0                            (abs)        007E
+ttemp1                            (abs)        0081
+ttemp2                            (abs)        0084
+ttemp3                            (abs)        0087
+ttemp4                            (abs)        007F
+wtemp                             (abs)        007E
+wtemp0                            (abs)        007E
+wtemp1                            (abs)        0080
+wtemp2                            (abs)        0082
+wtemp3                            (abs)        0084
+wtemp4                            (abs)        0086
+wtemp5                            (abs)        0088
+wtemp6                            (abs)        007F
+
+
+FUNCTION INFORMATION:
+
+ *************** function _main *****************
+ Defined at:
+		line 4 in file "E:\Study Material\XC8 PROJECTS\MAX7219 Test\Test.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+		None               void
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1
+      Params:         0       0       0
+      Locals:         0       0       0
+      Temps:          1       0       0
+      Totals:         1       0       0
+Total ram usage:        1 bytes
+ Hardware stack levels required when called:    4
+ This function calls:
+		_MAX7219_DisplayChar
+		_MAX7219_Init
+ This function is called by:
+		Startup code after reset
+ This function uses a non-reentrant model
+
+
+ *************** function _MAX7219_Init *****************
+ Defined at:
+		line 120 in file "E:\Study Material\XC8 PROJECTS\MAX7219 Test\MAX7219.C"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+		None               void
+ Registers used:
+		wreg, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1
+      Params:         0       0       0
+      Locals:         0       0       0
+      Temps:          1       0       0
+      Totals:         1       0       0
+Total ram usage:        1 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    3
+ This function calls:
+		_MAX7219_Clear
+		_MAX7219_DisplayTestStop
+		_MAX7219_SetBrightness
+		_MAX7219_ShutdownStop
+		_MAX7219_Write
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _MAX7219_ShutdownStop *****************
+ Defined at:
+		line 159 in file "E:\Study Material\XC8 PROJECTS\MAX7219 Test\MAX7219.C"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+		None               void
+ Registers used:
+		wreg, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1
+      Params:         0       0       0
+      Locals:         0       0       0
+      Temps:          0       0       0
+      Totals:         0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    2
+ This function calls:
+		_MAX7219_Write
+ This function is called by:
+		_MAX7219_Init
+ This function uses a non-reentrant model
+
+
+ *************** function _MAX7219_SetBrightness *****************
+ Defined at:
+		line 204 in file "E:\Study Material\XC8 PROJECTS\MAX7219 Test\MAX7219.C"
+ Parameters:    Size  Location     Type
+  brightness      1    wreg     unsigned char 
+ Auto vars:     Size  Location     Type
+  brightness      1    8[COMMON] unsigned char 
+ Return value:  Size  Location     Type
+		None               void
+ Registers used:
+		wreg, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1
+      Params:         0       0       0
+      Locals:         1       0       0
+      Temps:          1       0       0
+      Totals:         2       0       0
+Total ram usage:        2 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    2
+ This function calls:
+		_MAX7219_Write
+ This function is called by:
+		_MAX7219_Init
+ This function uses a non-reentrant model
+
+
+ *************** function _MAX7219_DisplayTestStop *****************
+ Defined at:
+		line 189 in file "E:\Study Material\XC8 PROJECTS\MAX7219 Test\MAX7219.C"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+		None               void
+ Registers used:
+		wreg, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1
+      Params:         0       0       0
+      Locals:         0       0       0
+      Temps:          0       0       0
+      Totals:         0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    2
+ This function calls:
+		_MAX7219_Write
+ This function is called by:
+		_MAX7219_Init
+ This function uses a non-reentrant model
+
+
+ *************** function _MAX7219_Clear *****************
+ Defined at:
+		line 220 in file "E:\Study Material\XC8 PROJECTS\MAX7219 Test\MAX7219.C"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+  i               1    8[COMMON] unsigned char 
+ Return value:  Size  Location     Type
+		None               void
+ Registers used:
+		wreg, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1
+      Params:         0       0       0
+      Locals:         1       0       0
+      Temps:          1       0       0
+      Totals:         2       0       0
+Total ram usage:        2 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    2
+ This function calls:
+		_MAX7219_Write
+ This function is called by:
+		_MAX7219_Init
+ This function uses a non-reentrant model
+
+
+ *************** function _MAX7219_DisplayChar *****************
+ Defined at:
+		line 238 in file "E:\Study Material\XC8 PROJECTS\MAX7219 Test\MAX7219.C"
+ Parameters:    Size  Location     Type
+  digit           1    wreg     unsigned char 
+  character       1    7[COMMON] unsigned char 
+  dot             1    8[COMMON] unsigned char 
+ Auto vars:     Size  Location     Type
+  digit           1   10[COMMON] unsigned char 
+  ch              1   11[COMMON] unsigned char 
+ Return value:  Size  Location     Type
+		None               void
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1
+      Params:         2       0       0
+      Locals:         2       0       0
+      Temps:          1       0       0
+      Totals:         5       0       0
+Total ram usage:        5 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    2
+ This function calls:
+		_MAX7219_LookupCode
+		_MAX7219_Write
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _MAX7219_Write *****************
+ Defined at:
+		line 321 in file "E:\Study Material\XC8 PROJECTS\MAX7219 Test\MAX7219.C"
+ Parameters:    Size  Location     Type
+  reg_number      1    wreg     unsigned char 
+  dataout         1    5[COMMON] unsigned char 
+ Auto vars:     Size  Location     Type
+  reg_number      1    6[COMMON] unsigned char 
+ Return value:  Size  Location     Type
+		None               void
+ Registers used:
+		wreg, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1
+      Params:         1       0       0
+      Locals:         1       0       0
+      Temps:          0       0       0
+      Totals:         2       0       0
+Total ram usage:        2 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    1
+ This function calls:
+		_MAX7219_SendByte
+ This function is called by:
+		_MAX7219_Init
+		_MAX7219_ShutdownStop
+		_MAX7219_DisplayTestStop
+		_MAX7219_SetBrightness
+		_MAX7219_Clear
+		_MAX7219_DisplayChar
+		_MAX7219_ShutdownStart
+		_MAX7219_DisplayTestStart
+ This function uses a non-reentrant model
+
+
+ *************** function _MAX7219_SendByte *****************
+ Defined at:
+		line 340 in file "E:\Study Material\XC8 PROJECTS\MAX7219 Test\MAX7219.C"
+ Parameters:    Size  Location     Type
+  dataout         1    wreg     unsigned char 
+ Auto vars:     Size  Location     Type
+  dataout         1    2[COMMON] unsigned char 
+  mask            1    3[COMMON] unsigned char 
+  i               1    4[COMMON] unsigned char 
+ Return value:  Size  Location     Type
+		None               void
+ Registers used:
+		wreg, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1
+      Params:         0       0       0
+      Locals:         3       0       0
+      Temps:          2       0       0
+      Totals:         5       0       0
+Total ram usage:        5 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_MAX7219_Write
+ This function uses a non-reentrant model
+
+
+ *************** function _MAX7219_LookupCode *****************
+ Defined at:
+		line 301 in file "E:\Study Material\XC8 PROJECTS\MAX7219 Test\MAX7219.C"
+ Parameters:    Size  Location     Type
+  character       1    wreg     unsigned char 
+ Auto vars:     Size  Location     Type
+  character       1    1[COMMON] unsigned char 
+  i               1    2[COMMON] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      unsigned char 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, pclath
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1
+      Params:         0       0       0
+      Locals:         2       0       0
+      Temps:          1       0       0
+      Totals:         3       0       0
+Total ram usage:        3 bytes
+ Hardware stack levels used:    2
+ This function calls:
+		Nothing
+ This function is called by:
+		_MAX7219_DisplayChar
+ This function uses a non-reentrant model
+
+
+
+MODULE INFORMATION
+
+Module		Function		Class		Link	Load	Size
+E:\Study Material\XC8 PROJECTS\MAX7219 Test\Test.c
+		_main          		CODE           	07C1	0000	61
+
+E:\Study Material\XC8 PROJECTS\MAX7219 Test\Test.c estimated size: 61
+
+E:\Study Material\XC8 PROJECTS\MAX7219 Test\MAX7219.C
+		_MAX7219_SetBri		CODE           	072B	0000	12
+		_MAX7219_Displa		CODE           	0722	0000	4
+		_MAX7219_Shutdo		CODE           	0726	0000	5
+		_MAX7219_Displa		CODE           	0765	0000	22
+		_MAX7219_Init  		CODE           	0751	0000	20
+		_MAX7219_SendBy		CODE           	079C	0000	37
+		_MAX7219_Write 		CODE           	0737	0000	13
+		_MAX7219_Clear 		CODE           	0744	0000	13
+		_MAX7219_Lookup		CODE           	077B	0000	33
+
+E:\Study Material\XC8 PROJECTS\MAX7219 Test\MAX7219.C estimated size: 159
+
+shared
+		__stringtab    		STRING         	0001	0000	6
+		__initializatio		CODE           	07FE	0000	0
+		_MAX7219_Font  		STRING         	0007	0000	38
+
+shared estimated size: 44
+

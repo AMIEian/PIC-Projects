@@ -1,0 +1,1 @@
+ sim300.d  sim300.p1:  E:/Study\ Material/XC8\ PROJECTS/Security\ 870/sim300.c E:/Study\ Material/XC8\ PROJECTS/Security\ 870/usart_pic16.h E:/Study\ Material/XC8\ PROJECTS/Security\ 870/sim300.h

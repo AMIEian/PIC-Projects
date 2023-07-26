@@ -1,0 +1,38 @@
+LABCENTER PROTEUS TOOL INFORMATION FILE
+=======================================
+
+In case of difficulty, please e-mail support@labcenter.co.uk
+
+Tool set up for Proteus layout 'LED PCB.pdsprj'.
+CADCAM generated at PM 01:19:50 on 08 September 2015.
+
+File List
+---------
+Top Copper              : LED PCB - CADCAM Top Copper.TXT
+Bottom Copper           : LED PCB - CADCAM Bottom Copper.TXT
+Top Silk Screen         : LED PCB - CADCAM Top Silk Screen.TXT
+Top Solder Resist       : LED PCB - CADCAM Top Solder Resist.TXT
+Bottom Solder Resist    : LED PCB - CADCAM Bottom Solder Resist.TXT
+Mechanical 1            : LED PCB - CADCAM Mechanical 1.TXT
+Drill                   : LED PCB - CADCAM Drill.TXT
+
+Photoplotter Setup
+------------------
+Format: RS274X, ASCII, 2.4, imperial, absolute, eob=*, LZO
+Notes:  D=Diameter, S=Side, W=Width, H=Height, C=Chamfer
+
+D10	CIRCLE  D=50th                                                            DRAW
+D11	SQUARE  S=80th                                                            FLASH
+D12	CIRCLE  D=8th                                                             DRAW
+D13	SQUARE  S=100th                                                           FLASH
+
+NC Drill Setup
+--------------
+Format: ASCII, 2.4, imperial, absolute, eob=<CR><LF>, no zero suppression.
+Notes:  Tool sizes are diameters. Layer sets are in brackets - 0=TOP, 15=BOTTOM, 1-14=INNER.
+
+T01	40th (0-15)
+T02	157.4th (0-15)
+
+
+[END OF FILE]

@@ -1,0 +1,703 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$C:\Users\AMIEian\AppData\Local\Temp\s108.obj
+end_init CODE 0 10 10 1 2
+reset_vec CODE 0 0 0 1 2
+$WLC3PH.obj
+cinit CODE 0 11 11 32 2
+intentry CODE 0 4 4 C 2
+text13 CODE 0 295 295 9D 2
+text12 CODE 0 402 402 4F 2
+text11 CODE 0 490 490 3C 2
+text10 CODE 0 3B3 3B3 4F 2
+swtext1 CONST 0 43 43 4 2
+text9 CODE 0 548 548 21 2
+text8 CODE 0 4CC 4CC 3A 2
+text7 CODE 0 1E5 1E5 B0 2
+text6 CODE 0 527 527 21 2
+text5 CODE 0 506 506 21 2
+text4 CODE 0 583 583 14 2
+text3 CODE 0 597 597 12 2
+text2 CODE 0 569 569 1A 2
+text1 CODE 0 451 451 3F 2
+maintext CODE 0 332 332 81 2
+cstackBANK0 BANK0 1 20 20 15 1
+cstackCOMMON COMMON 1 70 70 5 1
+dataBANK0 BANK0 1 35 35 10 1
+bssBANK0 BANK0 1 45 45 A 1
+dataCOMMON COMMON 1 79 79 1 1
+bssCOMMON COMMON 1 75 75 4 1
+strings STRING 0 100 100 E5 2
+idataBANK0 CODE 0 5A9 5A9 10 2
+idataCOMMON CODE 0 5B9 5B9 1 2
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+BANK0 04F-06F 1
+BANK1 0A0-0BF 1
+CODE 001-003 2
+CODE 047-0FF 2
+CODE 5BA-7FF 2
+COMMON 07A-07D 1
+CONFIG 2007-2007 2
+CONST 001-003 2
+CONST 047-0FF 2
+CONST 5BA-7FF 2
+EEDATA 2100-213F 2
+ENTRY 001-003 2
+ENTRY 047-0FF 2
+ENTRY 5BA-7FF 2
+IDLOC 2000-2003 2
+RAM 04F-06F 1
+RAM 0A0-0BF 1
+SFR0 000-01F 1
+SFR1 080-09F 1
+SFR2 100-16F 1
+SFR3 180-1EF 1
+STACK 04F-06F 1
+STRCODE 001-003 2
+STRCODE 047-0FF 2
+STRCODE 5BA-7FF 2
+STRING 001-003 2
+STRING 047-0FF 2
+STRING 5BA-7FF 2
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <file name>:<line number> <address> <psect name> <class name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$WLC3PH.obj
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":169 4 intentry CODE
+"C:\Users\AMIEian\AppData\Local\Temp\s108.":666 11 cinit CODE
+"C:\Users\AMIEian\AppData\Local\Temp\s108.":669 11 cinit CODE
+"C:\Users\AMIEian\AppData\Local\Temp\s108.":726 11 cinit CODE
+"C:\Users\AMIEian\AppData\Local\Temp\s108.":727 12 cinit CODE
+"C:\Users\AMIEian\AppData\Local\Temp\s108.":728 13 cinit CODE
+"C:\Users\AMIEian\AppData\Local\Temp\s108.":729 14 cinit CODE
+"C:\Users\AMIEian\AppData\Local\Temp\s108.":732 15 cinit CODE
+"C:\Users\AMIEian\AppData\Local\Temp\s108.":733 16 cinit CODE
+"C:\Users\AMIEian\AppData\Local\Temp\s108.":734 17 cinit CODE
+"C:\Users\AMIEian\AppData\Local\Temp\s108.":735 18 cinit CODE
+"C:\Users\AMIEian\AppData\Local\Temp\s108.":736 19 cinit CODE
+"C:\Users\AMIEian\AppData\Local\Temp\s108.":737 1A cinit CODE
+"C:\Users\AMIEian\AppData\Local\Temp\s108.":738 1B cinit CODE
+"C:\Users\AMIEian\AppData\Local\Temp\s108.":739 1C cinit CODE
+"C:\Users\AMIEian\AppData\Local\Temp\s108.":740 1D cinit CODE
+"C:\Users\AMIEian\AppData\Local\Temp\s108.":741 1E cinit CODE
+"C:\Users\AMIEian\AppData\Local\Temp\s108.":746 1F cinit CODE
+"C:\Users\AMIEian\AppData\Local\Temp\s108.":747 20 cinit CODE
+"C:\Users\AMIEian\AppData\Local\Temp\s108.":748 21 cinit CODE
+"C:\Users\AMIEian\AppData\Local\Temp\s108.":749 22 cinit CODE
+"C:\Users\AMIEian\AppData\Local\Temp\s108.":750 23 cinit CODE
+"C:\Users\AMIEian\AppData\Local\Temp\s108.":751 24 cinit CODE
+"C:\Users\AMIEian\AppData\Local\Temp\s108.":752 25 cinit CODE
+"C:\Users\AMIEian\AppData\Local\Temp\s108.":753 26 cinit CODE
+"C:\Users\AMIEian\AppData\Local\Temp\s108.":754 27 cinit CODE
+"C:\Users\AMIEian\AppData\Local\Temp\s108.":755 28 cinit CODE
+"C:\Users\AMIEian\AppData\Local\Temp\s108.":756 29 cinit CODE
+"C:\Users\AMIEian\AppData\Local\Temp\s108.":757 2A cinit CODE
+"C:\Users\AMIEian\AppData\Local\Temp\s108.":758 2B cinit CODE
+"C:\Users\AMIEian\AppData\Local\Temp\s108.":759 2C cinit CODE
+"C:\Users\AMIEian\AppData\Local\Temp\s108.":760 2D cinit CODE
+"C:\Users\AMIEian\AppData\Local\Temp\s108.":761 2E cinit CODE
+"C:\Users\AMIEian\AppData\Local\Temp\s108.":762 2F cinit CODE
+"C:\Users\AMIEian\AppData\Local\Temp\s108.":763 30 cinit CODE
+"C:\Users\AMIEian\AppData\Local\Temp\s108.":764 31 cinit CODE
+"C:\Users\AMIEian\AppData\Local\Temp\s108.":765 32 cinit CODE
+"C:\Users\AMIEian\AppData\Local\Temp\s108.":766 33 cinit CODE
+"C:\Users\AMIEian\AppData\Local\Temp\s108.":767 34 cinit CODE
+"C:\Users\AMIEian\AppData\Local\Temp\s108.":768 35 cinit CODE
+"C:\Users\AMIEian\AppData\Local\Temp\s108.":769 36 cinit CODE
+"C:\Users\AMIEian\AppData\Local\Temp\s108.":770 37 cinit CODE
+"C:\Users\AMIEian\AppData\Local\Temp\s108.":771 38 cinit CODE
+"C:\Users\AMIEian\AppData\Local\Temp\s108.":772 39 cinit CODE
+"C:\Users\AMIEian\AppData\Local\Temp\s108.":773 3A cinit CODE
+"C:\Users\AMIEian\AppData\Local\Temp\s108.":774 3B cinit CODE
+"C:\Users\AMIEian\AppData\Local\Temp\s108.":775 3C cinit CODE
+"C:\Users\AMIEian\AppData\Local\Temp\s108.":776 3D cinit CODE
+"C:\Users\AMIEian\AppData\Local\Temp\s108.":777 3E cinit CODE
+"C:\Users\AMIEian\AppData\Local\Temp\s108.":781 3F cinit CODE
+"C:\Users\AMIEian\AppData\Local\Temp\s108.":782 40 cinit CODE
+"C:\Users\AMIEian\AppData\Local\Temp\s108.":788 41 cinit CODE
+"C:\Users\AMIEian\AppData\Local\Temp\s108.":789 41 cinit CODE
+"C:\Users\AMIEian\AppData\Local\Temp\s108.":790 42 cinit CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\lcd_hd44780_pic16.c":359 43 swtext1 CONST
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":367 1E5 text7 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":370 1E5 text7 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":371 1EA text7 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":372 1EF text7 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":374 1F1 text7 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":375 1F7 text7 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":377 1F9 text7 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":378 201 text7 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":381 203 text7 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":382 20B text7 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":384 20D text7 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":385 214 text7 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":386 214 text7 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":387 215 text7 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":388 222 text7 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":389 225 text7 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":384 232 text7 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":391 23C text7 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":393 23D text7 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":395 240 text7 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":397 24F text7 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":398 254 text7 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":400 256 text7 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":401 25C text7 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":403 25E text7 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":404 266 text7 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":407 268 text7 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":408 270 text7 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":410 272 text7 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":412 280 text7 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":414 285 text7 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":415 294 text7 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":169 295 text13 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":171 295 text13 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":174 296 text13 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":175 299 text13 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":177 29C text13 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":180 2A0 text13 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":182 2A4 text13 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":183 2AB text13 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":185 2AF text13 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":187 2B1 text13 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":190 2B2 text13 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":191 2B3 text13 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":194 2B3 text13 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":195 2B6 text13 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":197 2B9 text13 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":200 2BD text13 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":202 2C1 text13 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":203 2C8 text13 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":205 2CC text13 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":206 2CE text13 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":208 2D0 text13 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":212 2D1 text13 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":213 2D2 text13 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":216 2D2 text13 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":217 2D5 text13 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":219 2D8 text13 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":220 2DC text13 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":221 2DF text13 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":223 2E6 text13 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":225 2EA text13 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":226 2F1 text13 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":228 2F5 text13 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":230 2F7 text13 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":233 2F8 text13 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":234 2F9 text13 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":237 2F9 text13 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":238 2FC text13 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":240 2FF text13 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":241 303 text13 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":242 306 text13 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":244 30D text13 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":246 311 text13 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":247 318 text13 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":249 31C text13 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":251 31E text13 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":254 31F text13 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":255 320 text13 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":258 320 text13 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":259 323 text13 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":262 326 text13 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":263 327 text13 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":49 332 maintext CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":51 332 maintext CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":53 336 maintext CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":54 338 maintext CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":55 33A maintext CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":57 33B maintext CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":58 33E maintext CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":59 33F maintext CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":62 340 maintext CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":65 342 maintext CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":67 347 maintext CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":69 348 maintext CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":70 34C maintext CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":74 34E maintext CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":76 354 maintext CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":77 358 maintext CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":80 35C maintext CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":82 360 maintext CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":94 362 maintext CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":96 370 maintext CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":97 372 maintext CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":100 373 maintext CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":105 374 maintext CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":108 379 maintext CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":114 37C maintext CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":115 37F maintext CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":118 380 maintext CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":121 38E maintext CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":123 391 maintext CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":124 392 maintext CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":125 394 maintext CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":133 399 maintext CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":135 39D maintext CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":136 39E maintext CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":137 39F maintext CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":138 3A2 maintext CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":163 3A3 maintext CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":164 3A4 maintext CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":72 3B2 maintext CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\lcd_hd44780_pic16.c":194 3B3 text10 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\lcd_hd44780_pic16.c":210 3B6 text10 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\lcd_hd44780_pic16.c":213 3BE text10 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\lcd_hd44780_pic16.c":215 3C6 text10 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\lcd_hd44780_pic16.c":216 3C7 text10 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\lcd_hd44780_pic16.c":217 3C8 text10 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\lcd_hd44780_pic16.c":219 3C9 text10 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\lcd_hd44780_pic16.c":221 3CF text10 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\lcd_hd44780_pic16.c":222 3D0 text10 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\lcd_hd44780_pic16.c":223 3D1 text10 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\lcd_hd44780_pic16.c":228 3D2 text10 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\lcd_hd44780_pic16.c":229 3D5 text10 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\lcd_hd44780_pic16.c":230 3D6 text10 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\lcd_hd44780_pic16.c":231 3D7 text10 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\lcd_hd44780_pic16.c":232 3DA text10 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\lcd_hd44780_pic16.c":235 3DB text10 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\lcd_hd44780_pic16.c":240 3DC text10 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\lcd_hd44780_pic16.c":241 3E1 text10 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\lcd_hd44780_pic16.c":244 3E7 text10 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\lcd_hd44780_pic16.c":247 3EC text10 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\lcd_hd44780_pic16.c":248 3F3 text10 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\lcd_hd44780_pic16.c":247 3FB text10 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\lcd_hd44780_pic16.c":136 402 text12 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\lcd_hd44780_pic16.c":140 402 text12 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\lcd_hd44780_pic16.c":143 405 text12 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\lcd_hd44780_pic16.c":146 40B text12 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\lcd_hd44780_pic16.c":147 40E text12 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\lcd_hd44780_pic16.c":157 40F text12 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\lcd_hd44780_pic16.c":162 412 text12 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\lcd_hd44780_pic16.c":163 418 text12 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\lcd_hd44780_pic16.c":168 425 text12 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\lcd_hd44780_pic16.c":169 428 text12 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\lcd_hd44780_pic16.c":171 429 text12 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\lcd_hd44780_pic16.c":174 42C text12 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\lcd_hd44780_pic16.c":175 432 text12 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\lcd_hd44780_pic16.c":177 436 text12 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\lcd_hd44780_pic16.c":179 43B text12 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\lcd_hd44780_pic16.c":183 440 text12 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\lcd_hd44780_pic16.c":184 443 text12 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\lcd_hd44780_pic16.c":185 444 text12 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\lcd_hd44780_pic16.c":187 449 text12 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\lcd_hd44780_pic16.c":190 44A text12 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\lcd_hd44780_pic16.c":192 450 text12 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":333 451 text1 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":336 451 text1 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":338 456 text1 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":339 45B text1 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":340 45D text1 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":343 45E text1 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":344 464 text1 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":345 466 text1 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":348 467 text1 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":349 46F text1 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":350 471 text1 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":353 472 text1 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":354 47A text1 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":355 47C text1 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":356 480 text1 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":358 482 text1 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":360 484 text1 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":361 486 text1 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":362 48A text1 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":364 48D text1 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\lcd_hd44780_pic16.c":81 490 text11 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\lcd_hd44780_pic16.c":93 493 text11 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\lcd_hd44780_pic16.c":94 49F text11 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\lcd_hd44780_pic16.c":96 4A4 text11 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\lcd_hd44780_pic16.c":97 4A7 text11 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\lcd_hd44780_pic16.c":98 4A9 text11 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\lcd_hd44780_pic16.c":99 4A9 text11 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\lcd_hd44780_pic16.c":103 4AA text11 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\lcd_hd44780_pic16.c":107 4AD text11 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\lcd_hd44780_pic16.c":108 4B3 text11 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\lcd_hd44780_pic16.c":110 4B5 text11 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\lcd_hd44780_pic16.c":114 4B6 text11 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\lcd_hd44780_pic16.c":116 4B9 text11 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\lcd_hd44780_pic16.c":119 4BA text11 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\lcd_hd44780_pic16.c":121 4BD text11 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\lcd_hd44780_pic16.c":123 4C3 text11 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\lcd_hd44780_pic16.c":125 4C5 text11 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\lcd_hd44780_pic16.c":129 4C6 text11 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\lcd_hd44780_pic16.c":131 4C9 text11 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\lcd_hd44780_pic16.c":133 4CA text11 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\lcd_hd44780_pic16.c":134 4CB text11 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\lcd_hd44780_pic16.c":252 4CC text8 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\lcd_hd44780_pic16.c":282 4CF text8 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\lcd_hd44780_pic16.c":285 4D5 text8 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\lcd_hd44780_pic16.c":287 4DB text8 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\lcd_hd44780_pic16.c":288 4DF text8 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\lcd_hd44780_pic16.c":290 4E6 text8 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\lcd_hd44780_pic16.c":292 4ED text8 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\lcd_hd44780_pic16.c":296 4F1 text8 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\lcd_hd44780_pic16.c":302 4F7 text8 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\lcd_hd44780_pic16.c":304 4FF text8 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\lcd_hd44780_pic16.c":282 505 text8 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":277 506 text5 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":280 506 text5 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":282 509 text5 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":284 50E text5 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":282 51B text5 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":286 525 text5 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":287 526 text5 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":265 527 text6 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":268 527 text6 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":270 52A text6 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":272 52F text6 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":270 53C text6 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":274 546 text6 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":275 547 text6 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\lcd_hd44780_pic16.c":353 548 text9 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\lcd_hd44780_pic16.c":355 54B text9 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\lcd_hd44780_pic16.c":363 550 text9 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\lcd_hd44780_pic16.c":364 550 text9 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\lcd_hd44780_pic16.c":365 551 text9 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\lcd_hd44780_pic16.c":367 552 text9 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\lcd_hd44780_pic16.c":370 554 text9 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\lcd_hd44780_pic16.c":372 558 text9 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\lcd_hd44780_pic16.c":359 559 text9 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\lcd_hd44780_pic16.c":372 564 text9 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\lcd_hd44780_pic16.c":394 564 text9 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\lcd_hd44780_pic16.c":395 565 text9 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\lcd_hd44780_pic16.c":396 568 text9 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":317 569 text2 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":319 569 text2 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":320 56D text2 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":322 56F text2 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":323 571 text2 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":324 575 text2 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":326 577 text2 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":327 579 text2 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":328 57D text2 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":330 580 text2 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":303 583 text4 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":306 583 text4 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":307 589 text4 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":309 58B text4 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":311 58D text4 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":312 591 text4 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":314 594 text4 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":289 597 text3 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":292 597 text3 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":293 59B text3 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":295 59D text3 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":297 59F text3 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":298 5A3 text3 CODE
+"E:\Study Material\XC8 PROJECTS\New WLC3PH\WLC.C":300 5A6 text3 CODE
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+_LCDGotoXY A90 0 CODE 0 text9 WLC3PH.obj
+_ll 75 0 COMMON 1 bssCOMMON WLC3PH.obj
+_ul 77 0 COMMON 1 bssCOMMON WLC3PH.obj
+_lu 4C 0 BANK0 1 bssBANK0 WLC3PH.obj
+_uu 78 0 COMMON 1 bssCOMMON WLC3PH.obj
+_RA0 28 0 ABS 0 - WLC3PH.obj
+_RA1 29 0 ABS 0 - WLC3PH.obj
+_RA2 2A 0 ABS 0 - WLC3PH.obj
+_RA3 2B 0 ABS 0 - WLC3PH.obj
+_RB3 33 0 ABS 0 - WLC3PH.obj
+_RB4 34 0 ABS 0 - WLC3PH.obj
+_RC4 3C 0 ABS 0 - WLC3PH.obj
+_RB5 35 0 ABS 0 - WLC3PH.obj
+_RC5 3D 0 ABS 0 - WLC3PH.obj
+_RB6 36 0 ABS 0 - WLC3PH.obj
+_RC6 3E 0 ABS 0 - WLC3PH.obj
+_RB7 37 0 ABS 0 - WLC3PH.obj
+_RC7 3F 0 ABS 0 - WLC3PH.obj
+__S0 5BA 0 ABS 0 - -
+__S1 7A 0 ABS 0 - -
+__S2 0 0 ABS 0 - -
+__S3 0 0 ABS 0 - -
+__size_of_display_upper_tank 0 0 ABS 0 - WLC3PH.obj
+__size_of_display_lower_tank 0 0 ABS 0 - WLC3PH.obj
+__Hintentry 20 0 CODE 0 intentry -
+__Lintentry 8 0 CODE 0 intentry -
+__end_of_first_screen 52A 0 CODE 0 text7 WLC3PH.obj
+__pintentry 8 0 CODE 0 intentry WLC3PH.obj
+_INTF 59 0 ABS 0 - WLC3PH.obj
+_main 664 0 CODE 0 maintext WLC3PH.obj
+___sp 0 0 STACK 2 stack C:\Users\AMIEian\AppData\Local\Temp\s108.obj
+btemp 7E 0 ABS 0 - WLC3PH.obj
+ltemp 7E 0 ABS 0 - WLC3PH.obj
+ttemp 7E 0 ABS 0 - WLC3PH.obj
+wtemp 7E 0 ABS 0 - WLC3PH.obj
+start 20 0 CODE 0 init C:\Users\AMIEian\AppData\Local\Temp\s108.obj
+_update_display 8A2 0 CODE 0 text1 WLC3PH.obj
+_TRISA 85 0 ABS 0 - WLC3PH.obj
+_TRISB 86 0 ABS 0 - WLC3PH.obj
+_TRISC 87 0 ABS 0 - WLC3PH.obj
+_PORTA 5 0 ABS 0 - WLC3PH.obj
+reset_vec 0 0 CODE 0 reset_vec C:\Users\AMIEian\AppData\Local\Temp\s108.obj
+_PORTB 6 0 ABS 0 - WLC3PH.obj
+_PORTC 7 0 ABS 0 - WLC3PH.obj
+ltemp0 7E 0 ABS 0 - WLC3PH.obj
+ttemp0 7E 0 ABS 0 - WLC3PH.obj
+wtemp0 7E 0 ABS 0 - WLC3PH.obj
+ltemp1 82 0 ABS 0 - WLC3PH.obj
+ttemp1 81 0 ABS 0 - WLC3PH.obj
+wtemp1 80 0 ABS 0 - WLC3PH.obj
+ltemp2 86 0 ABS 0 - WLC3PH.obj
+ttemp2 84 0 ABS 0 - WLC3PH.obj
+wtemp2 82 0 ABS 0 - WLC3PH.obj
+ltemp3 80 0 ABS 0 - WLC3PH.obj
+ttemp3 87 0 ABS 0 - WLC3PH.obj
+wtemp3 84 0 ABS 0 - WLC3PH.obj
+ttemp4 7F 0 ABS 0 - WLC3PH.obj
+wtemp4 86 0 ABS 0 - WLC3PH.obj
+wtemp5 88 0 ABS 0 - WLC3PH.obj
+wtemp6 7F 0 ABS 0 - WLC3PH.obj
+interrupt_function 8 0 CODE 0 intentry WLC3PH.obj
+__Hconfig 0 0 CONFIG 0 config -
+__Lconfig 0 0 CONFIG 0 config -
+__end_of_LCDByte 998 0 CODE 0 text11 WLC3PH.obj
+__end_of__stringtab 20C 0 STRING 0 strings WLC3PH.obj
+__size_of_LCDInit 0 0 ABS 0 - WLC3PH.obj
+__Hram 0 0 ABS 0 ram -
+__Lram 0 0 ABS 0 ram -
+__end_of__stringdata 3CA 0 STRING 0 strings WLC3PH.obj
+_count 4A 0 BANK0 1 bssBANK0 WLC3PH.obj
+__Hfunctab 0 0 CODE 0 functab -
+__Lfunctab 0 0 CODE 0 functab -
+_ADCON1 9F 0 ABS 0 - WLC3PH.obj
+_OPTION_REG 81 0 ABS 0 - WLC3PH.obj
+__Hcommon 0 0 ABS 0 common -
+__Lcommon 0 0 ABS 0 common -
+__Heeprom_data 0 0 EEDATA 3 eeprom_data -
+__Leeprom_data 0 0 EEDATA 3 eeprom_data -
+___int_sp 0 0 STACK 2 stack C:\Users\AMIEian\AppData\Local\Temp\s108.obj
+LCDByte@hn 28 0 BANK0 1 cstackBANK0 WLC3PH.obj
+__Habs1 0 0 ABS 0 abs1 -
+__Labs1 0 0 ABS 0 abs1 -
+_INTCON B 0 ABS 0 - WLC3PH.obj
+__Hsfr0 0 0 ABS 0 sfr0 -
+__Lsfr0 0 0 ABS 0 sfr0 -
+__Hsfr1 0 0 ABS 0 sfr1 -
+__Lsfr1 0 0 ABS 0 sfr1 -
+__Hsfr2 0 0 ABS 0 sfr2 -
+__Lsfr2 0 0 ABS 0 sfr2 -
+LCDByte@ln 29 0 BANK0 1 cstackBANK0 WLC3PH.obj
+__Hsfr3 0 0 ABS 0 sfr3 -
+__Lsfr3 0 0 ABS 0 sfr3 -
+LCDByte@isdata 25 0 BANK0 1 cstackBANK0 WLC3PH.obj
+LCDInit@__i 2F 0 BANK0 1 cstackBANK0 WLC3PH.obj
+LCDInit@style 2E 0 BANK0 1 cstackBANK0 WLC3PH.obj
+__Hcode 0 0 ABS 0 code -
+__Lcode 0 0 ABS 0 code -
+LCDGotoXY@x 2E 0 BANK0 1 cstackBANK0 WLC3PH.obj
+stackhi 0 0 ABS 0 - C:\Users\AMIEian\AppData\Local\Temp\s108.obj
+__HcstackBANK0 0 0 ABS 0 cstackBANK0 -
+__size_of_LCDByte 0 0 ABS 0 - WLC3PH.obj
+__LcstackBANK0 0 0 ABS 0 cstackBANK0 -
+__pcstackBANK0 20 0 BANK0 1 cstackBANK0 WLC3PH.obj
+__size_of_LCDBusyLoop 0 0 ABS 0 - WLC3PH.obj
+stacklo 0 0 ABS 0 - C:\Users\AMIEian\AppData\Local\Temp\s108.obj
+saved_w 7E 0 ABS 0 - WLC3PH.obj
+LCDGotoXY@y 2C 0 BANK0 1 cstackBANK0 WLC3PH.obj
+__Hinit 20 0 CODE 0 init -
+__Linit 20 0 CODE 0 init -
+motor_stop@i 23 0 BANK0 1 cstackBANK0 WLC3PH.obj
+__end_of_main 766 0 CODE 0 maintext WLC3PH.obj
+__size_of_Tx_Received 0 0 ABS 0 - WLC3PH.obj
+__Htext 0 0 ABS 0 text -
+__Ltext 0 0 ABS 0 text -
+__HdataBANK0 0 0 ABS 0 dataBANK0 -
+__LdataBANK0 0 0 ABS 0 dataBANK0 -
+__pdataBANK0 35 0 BANK0 1 dataBANK0 WLC3PH.obj
+LCDByte@temp 2B 0 BANK0 1 cstackBANK0 WLC3PH.obj
+end_of_initialization 82 0 CODE 0 cinit WLC3PH.obj
+_first_screen 3CA 0 CODE 0 text7 WLC3PH.obj
+__stringtab 200 0 STRING 0 strings WLC3PH.obj
+LCDBusyLoop@temp 23 0 BANK0 1 cstackBANK0 WLC3PH.obj
+__end_of_LCDInit 804 0 CODE 0 text10 WLC3PH.obj
+_TRISCbits 87 0 ABS 0 - WLC3PH.obj
+__Hstrings 0 0 ABS 0 strings -
+__Lstrings 0 0 ABS 0 strings -
+__pstrings 200 0 STRING 0 strings WLC3PH.obj
+_display_upper_tank B2E 0 CODE 0 text3 WLC3PH.obj
+_motor_flag 4D 0 BANK0 1 bssBANK0 WLC3PH.obj
+_LCDBusyLoop 804 0 CODE 0 text12 WLC3PH.obj
+LCDWriteString@msg 2E 0 BANK0 1 cstackBANK0 WLC3PH.obj
+__Hbank0 0 0 ABS 0 bank0 -
+__Lbank0 0 0 ABS 0 bank0 -
+__Hbank1 0 0 ABS 0 bank1 -
+__Lbank1 0 0 ABS 0 bank1 -
+__Hbank2 0 0 BANK2 1 bank2 -
+__Lbank2 0 0 BANK2 1 bank2 -
+__Hbank3 0 0 BANK3 1 bank3 -
+__Lbank3 0 0 BANK3 1 bank3 -
+___latbits 0 0 ABS 0 - WLC3PH.obj
+__Hpowerup 0 0 CODE 0 powerup -
+__Lpowerup 0 0 CODE 0 powerup -
+__ptext1 8A2 0 CODE 0 text1 WLC3PH.obj
+__ptext2 AD2 0 CODE 0 text2 WLC3PH.obj
+__ptext3 B2E 0 CODE 0 text3 WLC3PH.obj
+__ptext4 B06 0 CODE 0 text4 WLC3PH.obj
+__ptext5 A0C 0 CODE 0 text5 WLC3PH.obj
+__ptext6 A4E 0 CODE 0 text6 WLC3PH.obj
+__ptext7 3CA 0 CODE 0 text7 WLC3PH.obj
+__ptext8 998 0 CODE 0 text8 WLC3PH.obj
+__ptext9 A90 0 CODE 0 text9 WLC3PH.obj
+__Hclrtext 0 0 ABS 0 clrtext -
+__Lclrtext 0 0 ABS 0 clrtext -
+__HdataCOMMON 0 0 ABS 0 dataCOMMON -
+__LdataCOMMON 0 0 ABS 0 dataCOMMON -
+__pdataCOMMON 79 0 COMMON 1 dataCOMMON WLC3PH.obj
+LCDBusyLoop@status 24 0 BANK0 1 cstackBANK0 WLC3PH.obj
+__size_of_LCDWriteString 0 0 ABS 0 - WLC3PH.obj
+__end_of__initialization 82 0 CODE 0 cinit WLC3PH.obj
+LCDWriteString@cc 2D 0 BANK0 1 cstackBANK0 WLC3PH.obj
+__size_of_phase_display 0 0 ABS 0 - WLC3PH.obj
+_phase_display AD2 0 CODE 0 text2 WLC3PH.obj
+__end_of_LCDWriteString A0C 0 CODE 0 text8 WLC3PH.obj
+_lp_flag 76 0 COMMON 1 bssCOMMON WLC3PH.obj
+__Hidloc 0 0 IDLOC 0 idloc -
+__Lidloc 0 0 IDLOC 0 idloc -
+_LCDByte 920 0 CODE 0 text11 WLC3PH.obj
+__Hstack 0 0 STACK 2 stack -
+__Lstack 0 0 STACK 2 stack -
+__end_of_phase_display B06 0 CODE 0 text2 WLC3PH.obj
+___cgram 35 0 BANK0 1 dataBANK0 WLC3PH.obj
+__Hspace_0 5BA 0 ABS 0 - -
+__Lspace_0 0 0 ABS 0 - -
+_display_lower_tank B06 0 CODE 0 text4 WLC3PH.obj
+_LCDInit 766 0 CODE 0 text10 WLC3PH.obj
+__Hspace_1 7A 0 ABS 0 - -
+__Lspace_1 0 0 ABS 0 - -
+__end_of_motor_stop A4E 0 CODE 0 text5 WLC3PH.obj
+__Hspace_2 0 0 ABS 0 - -
+__Lspace_2 0 0 ABS 0 - -
+__Hcinit 86 0 CODE 0 cinit -
+__Lcinit 22 0 CODE 0 cinit -
+_txr_not_received 79 0 COMMON 1 dataCOMMON WLC3PH.obj
+__end_of_motor_start A90 0 CODE 0 text6 WLC3PH.obj
+__Hspace_3 0 0 ABS 0 - -
+__Lspace_3 0 0 ABS 0 - -
+__size_of_main 0 0 ABS 0 - WLC3PH.obj
+motor_start@i 23 0 BANK0 1 cstackBANK0 WLC3PH.obj
+__HidataBANK0 0 0 ABS 0 idataBANK0 -
+__LidataBANK0 0 0 ABS 0 idataBANK0 -
+__end_of_Tx_Received 664 0 CODE 0 text13 WLC3PH.obj
+__pidataBANK0 B52 0 CODE 0 idataBANK0 WLC3PH.obj
+__HbssBANK0 0 0 ABS 0 bssBANK0 -
+__LbssBANK0 0 0 ABS 0 bssBANK0 -
+__pbssBANK0 45 0 BANK0 1 bssBANK0 WLC3PH.obj
+_motor_start A4E 0 CODE 0 text6 WLC3PH.obj
+__ptext10 766 0 CODE 0 text10 WLC3PH.obj
+__ptext11 920 0 CODE 0 text11 WLC3PH.obj
+__ptext12 804 0 CODE 0 text12 WLC3PH.obj
+__ptext13 52A 0 CODE 0 text13 WLC3PH.obj
+__size_of_LCDGotoXY 0 0 ABS 0 - WLC3PH.obj
+__end_of_LCDGotoXY AD2 0 CODE 0 text9 WLC3PH.obj
+__end_of_update_display 920 0 CODE 0 text1 WLC3PH.obj
+__HbssCOMMON 0 0 ABS 0 bssCOMMON -
+__LbssCOMMON 0 0 ABS 0 bssCOMMON -
+__size_of_update_display 0 0 ABS 0 - WLC3PH.obj
+__pbssCOMMON 75 0 COMMON 1 bssCOMMON WLC3PH.obj
+__end_of_display_upper_tank B52 0 CODE 0 text3 WLC3PH.obj
+__end_of_display_lower_tank B2E 0 CODE 0 text4 WLC3PH.obj
+__Hend_init 22 0 CODE 0 end_init -
+__Lend_init 20 0 CODE 0 end_init -
+__pswtext1 86 0 CONST 0 swtext1 WLC3PH.obj
+_LCDWriteString 998 0 CODE 0 text8 WLC3PH.obj
+__Hreset_vec 2 0 CODE 0 reset_vec -
+__Lreset_vec 0 0 CODE 0 reset_vec -
+_motor_stop A0C 0 CODE 0 text5 WLC3PH.obj
+LCDBusyLoop@busy 22 0 BANK0 1 cstackBANK0 WLC3PH.obj
+__stringdata 20C 0 STRING 0 strings WLC3PH.obj
+__size_of_first_screen 0 0 ABS 0 - WLC3PH.obj
+intlevel0 0 0 CODE 0 functab C:\Users\AMIEian\AppData\Local\Temp\s108.obj
+_Tx_Received 52A 0 CODE 0 text13 WLC3PH.obj
+intlevel1 0 0 CODE 0 functab C:\Users\AMIEian\AppData\Local\Temp\s108.obj
+intlevel2 0 0 CODE 0 functab C:\Users\AMIEian\AppData\Local\Temp\s108.obj
+intlevel3 0 0 CODE 0 functab C:\Users\AMIEian\AppData\Local\Temp\s108.obj
+intlevel4 0 0 CODE 0 functab C:\Users\AMIEian\AppData\Local\Temp\s108.obj
+intlevel5 0 0 CODE 0 functab C:\Users\AMIEian\AppData\Local\Temp\s108.obj
+__end_of_LCDBusyLoop 8A2 0 CODE 0 text12 WLC3PH.obj
+__HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+__LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+__pcstackCOMMON 70 0 COMMON 1 cstackCOMMON WLC3PH.obj
+start_initialization 22 0 CODE 0 cinit WLC3PH.obj
+LCDWriteInt@F784 45 0 BANK0 1 bssBANK0 WLC3PH.obj
+_level_check 4B 0 BANK0 1 bssBANK0 WLC3PH.obj
+_power_check 4E 0 BANK0 1 bssBANK0 WLC3PH.obj
+__Hmaintext 0 0 ABS 0 maintext -
+__Lmaintext 0 0 ABS 0 maintext -
+__pmaintext 664 0 CODE 0 maintext WLC3PH.obj
+__size_of_motor_stop 0 0 ABS 0 - WLC3PH.obj
+__HidataCOMMON 0 0 ABS 0 idataCOMMON -
+__LidataCOMMON 0 0 ABS 0 idataCOMMON -
+__pidataCOMMON B72 0 CODE 0 idataCOMMON WLC3PH.obj
+__initialization 22 0 CODE 0 cinit WLC3PH.obj
+__stringbase 20A 0 STRING 0 strings WLC3PH.obj
+__size_of_motor_start 0 0 ABS 0 - WLC3PH.obj
+LCDByte@c 2A 0 BANK0 1 cstackBANK0 WLC3PH.obj
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect in on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+- 1 7E 2
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+reset_vec 0 0 0 1 2
+intentry 0 4 8 3F 2
+cstackCOMMON 1 70 70 A 1
+cstackBANK0 1 20 20 2F 1
+strings 0 100 200 E5 2
+text7 0 1E5 3CA 3D5 2
+swtext1 0 43 86 4 2

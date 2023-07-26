@@ -1,0 +1,1 @@
+ lcd_hd44780_pic16.d  lcd_hd44780_pic16.p1:  E:/Study\ Material/XC8\ PROJECTS/RTC\ Library/lcd_hd44780_pic16.c E:/Study\ Material/XC8\ PROJECTS/RTC\ Library/custom_char.h E:/Study\ Material/XC8\ PROJECTS/RTC\ Library/myutils.h E:/Study\ Material/XC8\ PROJECTS/RTC\ Library/lcd_hd44780_pic16.h

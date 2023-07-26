@@ -1,0 +1,1 @@
+ motor.d  motor.p1:  E:/Study\ Material/XC8\ PROJECTS/DTMF/motor.c E:/Study\ Material/XC8\ PROJECTS/DTMF/motor.h E:/Study\ Material/XC8\ PROJECTS/DTMF/pins.h

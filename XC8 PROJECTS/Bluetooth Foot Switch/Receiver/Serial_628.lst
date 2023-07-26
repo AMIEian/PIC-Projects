@@ -1,0 +1,1401 @@
+
+
+Microchip Technology PIC LITE Macro Assembler V1.33 build 59893 
+                                                                                               Wed Feb 24 12:54:39 2016
+
+Microchip Technology Omniscient Code Generator (Lite mode) build 59893
+     1                           	processor	16F628A
+     2                           	opt	pw 120
+     3                           	opt	lm
+     4                           	psect	text0,local,class=CODE,merge=1,delta=2
+     5                           	psect	cinit,global,class=CODE,merge=1,delta=2
+     6                           	psect	bssCOMMON,global,class=COMMON,space=1,delta=1
+     7                           	psect	bssBANK0,global,class=BANK0,space=1,delta=1
+     8                           	psect	clrtext,global,class=CODE,delta=2
+     9                           	psect	cstackCOMMON,global,class=COMMON,space=1,delta=1
+    10                           	psect	cstackBANK0,global,class=BANK0,space=1,delta=1
+    11                           	psect	maintext,global,class=CODE,split=1,delta=2
+    12                           	psect	text1,local,class=CODE,merge=1,delta=2
+    13                           	psect	text2,local,class=CODE,merge=1,delta=2
+    14                           	psect	text3,local,class=CODE,merge=1,delta=2
+    15                           	psect	text4,local,class=CODE,merge=1,delta=2
+    16                           	psect	text5,local,class=CODE,merge=1,delta=2
+    17                           	psect	intentry,global,class=CODE,delta=2
+    18                           	psect	text6,local,class=CODE,merge=1,delta=2
+    19                           	dabs	1,0x7E,2
+    20  0000                     	;# 
+    21  0001                     	;# 
+    22  0002                     	;# 
+    23  0003                     	;# 
+    24  0004                     	;# 
+    25  0005                     	;# 
+    26  0006                     	;# 
+    27  000A                     	;# 
+    28  000B                     	;# 
+    29  000C                     	;# 
+    30  000E                     	;# 
+    31  000E                     	;# 
+    32  000F                     	;# 
+    33  0010                     	;# 
+    34  0011                     	;# 
+    35  0012                     	;# 
+    36  0015                     	;# 
+    37  0015                     	;# 
+    38  0016                     	;# 
+    39  0017                     	;# 
+    40  0018                     	;# 
+    41  0019                     	;# 
+    42  001A                     	;# 
+    43  001F                     	;# 
+    44  0081                     	;# 
+    45  0085                     	;# 
+    46  0086                     	;# 
+    47  008C                     	;# 
+    48  008E                     	;# 
+    49  0092                     	;# 
+    50  0098                     	;# 
+    51  0099                     	;# 
+    52  009A                     	;# 
+    53  009B                     	;# 
+    54  009C                     	;# 
+    55  009D                     	;# 
+    56  009F                     	;# 
+    57  0000                     	;# 
+    58  0001                     	;# 
+    59  0002                     	;# 
+    60  0003                     	;# 
+    61  0004                     	;# 
+    62  0005                     	;# 
+    63  0006                     	;# 
+    64  000A                     	;# 
+    65  000B                     	;# 
+    66  000C                     	;# 
+    67  000E                     	;# 
+    68  000E                     	;# 
+    69  000F                     	;# 
+    70  0010                     	;# 
+    71  0011                     	;# 
+    72  0012                     	;# 
+    73  0015                     	;# 
+    74  0015                     	;# 
+    75  0016                     	;# 
+    76  0017                     	;# 
+    77  0018                     	;# 
+    78  0019                     	;# 
+    79  001A                     	;# 
+    80  001F                     	;# 
+    81  0081                     	;# 
+    82  0085                     	;# 
+    83  0086                     	;# 
+    84  008C                     	;# 
+    85  008E                     	;# 
+    86  0092                     	;# 
+    87  0098                     	;# 
+    88  0099                     	;# 
+    89  009A                     	;# 
+    90  009B                     	;# 
+    91  009C                     	;# 
+    92  009D                     	;# 
+    93  009F                     	;# 
+    94  0000                     	;# 
+    95  0001                     	;# 
+    96  0002                     	;# 
+    97  0003                     	;# 
+    98  0004                     	;# 
+    99  0005                     	;# 
+   100  0006                     	;# 
+   101  000A                     	;# 
+   102  000B                     	;# 
+   103  000C                     	;# 
+   104  000E                     	;# 
+   105  000E                     	;# 
+   106  000F                     	;# 
+   107  0010                     	;# 
+   108  0011                     	;# 
+   109  0012                     	;# 
+   110  0015                     	;# 
+   111  0015                     	;# 
+   112  0016                     	;# 
+   113  0017                     	;# 
+   114  0018                     	;# 
+   115  0019                     	;# 
+   116  001A                     	;# 
+   117  001F                     	;# 
+   118  0081                     	;# 
+   119  0085                     	;# 
+   120  0086                     	;# 
+   121  008C                     	;# 
+   122  008E                     	;# 
+   123  0092                     	;# 
+   124  0098                     	;# 
+   125  0099                     	;# 
+   126  009A                     	;# 
+   127  009B                     	;# 
+   128  009C                     	;# 
+   129  009D                     	;# 
+   130  009F                     	;# 
+   131  001F                     _CMCON	set	31
+   132  000C                     _PIR1bits	set	12
+   133  001A                     _RCREG	set	26
+   134  0018                     _RCSTAbits	set	24
+   135  0019                     _TXREG	set	25
+   136  005F                     _GIE	set	95
+   137  005E                     _PEIE	set	94
+   138  0033                     _RB3	set	51
+   139  0034                     _RB4	set	52
+   140  0035                     _RB5	set	53
+   141  0036                     _RB6	set	54
+   142  0037                     _RB7	set	55
+   143  0065                     _RCIF	set	101
+   144  0099                     _SPBRG	set	153
+   145  0086                     _TRISB	set	134
+   146  0098                     _TXSTAbits	set	152
+   147  0465                     _RCIE	set	1125
+   148                           
+   149                           	psect	text0
+   150  0000                     __ptext0:	
+   151                           ; #config settings
+   152                           
+   153                           
+   154                           	psect	cinit
+   155  0011                     start_initialization:	
+   156                           ;psect for function _USARTHandleRxInt
+   157                           
+   158  0011                     __initialization:	
+   159                           
+   160                           ; Clear objects allocated to COMMON
+   161  0011  01F9               	clrf	__pbssCOMMON& (0+127)
+   162  0012  01FA               	clrf	(__pbssCOMMON+1)& (0+127)
+   163                           
+   164                           ; Clear objects allocated to BANK0
+   165  0013  1383               	bcf	3,7	;select IRP bank0
+   166  0014  3020               	movlw	low __pbssBANK0
+   167  0015  0084               	movwf	4
+   168  0016  3065               	movlw	low (__pbssBANK0+69)
+   169  0017  216B               	fcall	clear_ram0
+   170  0018                     end_of_initialization:	
+   171                           ;End of C runtime variable initialization code
+   172                           
+   173  0018                     __end_of__initialization:	
+   174  0018  0183               	clrf	3
+   175  0019  281A               	ljmp	_main	;jump to C main() function
+   176                           
+   177                           	psect	bssCOMMON
+   178  0079                     __pbssCOMMON:	
+   179  0079                     _UQEnd:	
+   180  0079                     	ds	1
+   181  007A                     _UQFront:	
+   182  007A                     	ds	1
+   183                           
+   184                           	psect	bssBANK0
+   185  0020                     __pbssBANK0:	
+   186  0020                     _URBuff:	
+   187  0020                     	ds	64
+   188  0060                     USARTWriteInt@F659:	
+   189  0060                     	ds	5
+   190                           
+   191                           	psect	clrtext
+   192  016B                     clear_ram0:	
+   193                           ;	Called with FSR containing the base address, and
+   194                           ;	W with the last address+1
+   195                           
+   196  016B  0064               	clrwdt	;clear the watchdog before getting into this loop
+   197  016C                     clrloop0:	
+   198  016C  0180               	clrf	0	;clear RAM location pointed to by FSR
+   199  016D  0A84               	incf	4,f	;increment pointer
+   200  016E  0604               	xorwf	4,w	;XOR with final address
+   201  016F  1903               	btfsc	3,2	;have we reached the end yet?
+   202  0170  3400               	retlw	0	;all done for this memory range, return
+   203  0171  0604               	xorwf	4,w	;XOR again to restore value
+   204  0172  296C               	goto	clrloop0	;do the next byte
+   205                           
+   206                           	psect	cstackCOMMON
+   207  0070                     __pcstackCOMMON:	
+   208  0070                     ?_USARTWriteChar:	
+   209  0070                     ?_USARTHandleRxInt:	
+   210                           ; 0 bytes @ 0x0
+   211                           
+   212  0070                     ??_USARTHandleRxInt:	
+   213                           ; 0 bytes @ 0x0
+   214                           
+   215  0070                     ?_ISR:	
+   216                           ; 0 bytes @ 0x0
+   217                           
+   218  0070                     ?_main:	
+   219                           ; 0 bytes @ 0x0
+   220                           
+   221  0070                     ?_USARTReadData:	
+   222                           ; 0 bytes @ 0x0
+   223                           
+   224  0070                     ?_USARTDataAvailable:	
+   225                           ; 1 bytes @ 0x0
+   226                           
+   227                           
+   228                           ; 1 bytes @ 0x0
+   229  0070                     	ds	4
+   230  0074                     USARTHandleRxInt@data:	
+   231                           
+   232                           ; 1 bytes @ 0x4
+   233  0074                     	ds	1
+   234  0075                     ??_ISR:	
+   235                           
+   236                           ; 0 bytes @ 0x5
+   237  0075                     	ds	4
+   238                           
+   239                           	psect	cstackBANK0
+   240  0065                     __pcstackBANK0:	
+   241  0065                     ?_USARTInit:	
+   242  0065                     ??_USARTWriteChar:	
+   243                           ; 0 bytes @ 0x0
+   244                           
+   245  0065                     ??_USARTReadData:	
+   246                           ; 0 bytes @ 0x0
+   247                           
+   248  0065                     ??_USARTDataAvailable:	
+   249                           ; 0 bytes @ 0x0
+   250                           
+   251  0065                     USARTWriteChar@ch:	
+   252                           ; 0 bytes @ 0x0
+   253                           
+   254  0065                     USARTInit@baud_rate:	
+   255                           ; 1 bytes @ 0x0
+   256                           
+   257                           
+   258                           ; 2 bytes @ 0x0
+   259  0065                     	ds	1
+   260  0066                     USARTReadData@data:	
+   261                           
+   262                           ; 1 bytes @ 0x1
+   263  0066                     	ds	1
+   264  0067                     ??_USARTInit:	
+   265                           
+   266                           ; 0 bytes @ 0x2
+   267  0067                     	ds	1
+   268  0068                     ??_main:	
+   269                           
+   270                           ; 0 bytes @ 0x3
+   271  0068                     	ds	3
+   272  006B                     main@n:	
+   273                           
+   274                           ; 1 bytes @ 0x6
+   275  006B                     	ds	1
+   276  006C                     main@count:	
+   277                           
+   278                           ; 1 bytes @ 0x7
+   279  006C                     	ds	1
+   280  006D                     main@data:	
+   281                           
+   282                           ; 1 bytes @ 0x8
+   283  006D                     	ds	1
+   284                           
+   285                           	psect	maintext
+   286  001A                     __pmaintext:	
+   287 ;;
+   288 ;;Main: autosize = 0, tempsize = 3, incstack = 0, save=0
+   289 ;;
+   290 ;; *************** function _main *****************
+   291 ;; Defined at:
+   292 ;;		line 15 in file "E:\Study Material\XC8 PROJECTS\Bluetooth Foot Switch\Receiver\SerTest.c"
+   293 ;; Parameters:    Size  Location     Type
+   294 ;;		None
+   295 ;; Auto vars:     Size  Location     Type
+   296 ;;  data            1    8[BANK0 ] unsigned char 
+   297 ;;  n               1    6[BANK0 ] unsigned char 
+   298 ;;  count           1    7[BANK0 ] unsigned char 
+   299 ;; Return value:  Size  Location     Type
+   300 ;;		None               void
+   301 ;; Registers used:
+   302 ;;		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
+   303 ;; Tracked objects:
+   304 ;;		On entry : 17F/0
+   305 ;;		On exit  : 0/0
+   306 ;;		Unchanged: 0/0
+   307 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2
+   308 ;;      Params:         0       0       0       0
+   309 ;;      Locals:         0       3       0       0
+   310 ;;      Temps:          0       3       0       0
+   311 ;;      Totals:         0       6       0       0
+   312 ;;Total ram usage:        6 bytes
+   313 ;; Hardware stack levels required when called:    3
+   314 ;; This function calls:
+   315 ;;		_USARTDataAvailable
+   316 ;;		_USARTInit
+   317 ;;		_USARTReadData
+   318 ;;		_USARTWriteChar
+   319 ;; This function is called by:
+   320 ;;		Startup code after reset
+   321 ;; This function uses a non-reentrant model
+   322 ;;
+   323                           
+   324                           
+   325                           ;psect for function _main
+   326  001A                     _main:	
+   327                           
+   328                           ;SerTest.c: 18: CMCON = 0x07;
+   329                           
+   330                           ;incstack = 0
+   331                           ; Regs used in _main: [wreg-fsr0h+status,2+status,0+pclath+cstack]
+   332  001A  3007               	movlw	7
+   333  001B  1283               	bcf	3,5	;RP0=0, select bank0
+   334  001C  1303               	bcf	3,6	;RP1=0, select bank0
+   335  001D  009F               	movwf	31	;volatile
+   336                           
+   337                           ;SerTest.c: 20: TRISB = 0x02;
+   338  001E  3002               	movlw	2
+   339  001F  1683               	bsf	3,5	;RP0=1, select bank1
+   340  0020  1303               	bcf	3,6	;RP1=0, select bank1
+   341  0021  0086               	movwf	6	;volatile
+   342                           
+   343                           ;SerTest.c: 21: char count;
+   344                           ;SerTest.c: 22: for(count = 0; count < 5; count++)
+   345  0022  1283               	bcf	3,5	;RP0=0, select bank0
+   346  0023  1303               	bcf	3,6	;RP1=0, select bank0
+   347  0024  01EC               	clrf	main@count
+   348  0025  3005               	movlw	5
+   349  0026  026C               	subwf	main@count,w
+   350  0027  1803               	btfsc	3,0
+   351  0028  2851               	goto	l1119
+   352  0029                     l157:	
+   353                           
+   354                           ;SerTest.c: 23: {
+   355                           ;SerTest.c: 24: RB3 = 1;
+   356  0029  1586               	bsf	6,3	;volatile
+   357                           
+   358                           ;SerTest.c: 25: _delay(1000000);
+   359  002A  3006               	movlw	6
+   360  002B  00EA               	movwf	??_main+2
+   361  002C  3013               	movlw	19
+   362  002D  00E9               	movwf	??_main+1
+   363  002E  30B1               	movlw	177
+   364  002F  00E8               	movwf	??_main
+   365  0030                     u817:	
+   366  0030  0BE8               	decfsz	??_main,f
+   367  0031  2830               	goto	u817
+   368  0032  0BE9               	decfsz	??_main+1,f
+   369  0033  2830               	goto	u817
+   370  0034  0BEA               	decfsz	??_main+2,f
+   371  0035  2830               	goto	u817
+   372  0036  2837               	nop2
+   373                           
+   374                           ;SerTest.c: 26: RB3 = 0;
+   375  0037  1283               	bcf	3,5	;RP0=0, select bank0
+   376  0038  1303               	bcf	3,6	;RP1=0, select bank0
+   377  0039  1186               	bcf	6,3	;volatile
+   378                           
+   379                           ;SerTest.c: 27: _delay(1000000);
+   380  003A  3006               	movlw	6
+   381  003B  00EA               	movwf	??_main+2
+   382  003C  3013               	movlw	19
+   383  003D  00E9               	movwf	??_main+1
+   384  003E  30B1               	movlw	177
+   385  003F  00E8               	movwf	??_main
+   386  0040                     u827:	
+   387  0040  0BE8               	decfsz	??_main,f
+   388  0041  2840               	goto	u827
+   389  0042  0BE9               	decfsz	??_main+1,f
+   390  0043  2840               	goto	u827
+   391  0044  0BEA               	decfsz	??_main+2,f
+   392  0045  2840               	goto	u827
+   393  0046  2847               	nop2
+   394  0047  3001               	movlw	1
+   395  0048  1283               	bcf	3,5	;RP0=0, select bank0
+   396  0049  1303               	bcf	3,6	;RP1=0, select bank0
+   397  004A  00E8               	movwf	??_main
+   398  004B  0868               	movf	??_main,w
+   399  004C  07EC               	addwf	main@count,f
+   400  004D  3005               	movlw	5
+   401  004E  026C               	subwf	main@count,w
+   402  004F  1C03               	skipc
+   403  0050  2829               	goto	l157
+   404  0051                     l1119:	
+   405                           
+   406                           ;SerTest.c: 28: }
+   407                           ;SerTest.c: 31: USARTInit(38400);
+   408  0051  3000               	movlw	0
+   409  0052  00E5               	movwf	USARTInit@baud_rate
+   410  0053  3096               	movlw	150
+   411  0054  00E6               	movwf	USARTInit@baud_rate+1
+   412  0055  2082               	fcall	_USARTInit
+   413  0056                     l1121:	
+   414                           ;SerTest.c: 33: while(1)
+   415                           
+   416                           
+   417                           ;SerTest.c: 34: {
+   418                           ;SerTest.c: 36: uint8_t n= USARTDataAvailable();
+   419  0056  2131               	fcall	_USARTDataAvailable
+   420  0057  1283               	bcf	3,5	;RP0=0, select bank0
+   421  0058  1303               	bcf	3,6	;RP1=0, select bank0
+   422  0059  00E8               	movwf	??_main
+   423  005A  0868               	movf	??_main,w
+   424  005B  00EB               	movwf	main@n
+   425                           
+   426                           ;SerTest.c: 39: if(n!=0)
+   427  005C  086B               	movf	main@n,w
+   428  005D  1903               	btfsc	3,2
+   429  005E  2856               	goto	l1121
+   430                           
+   431                           ;SerTest.c: 40: {
+   432                           ;SerTest.c: 42: char data=USARTReadData();
+   433  005F  210D               	fcall	_USARTReadData
+   434  0060  1283               	bcf	3,5	;RP0=0, select bank0
+   435  0061  1303               	bcf	3,6	;RP1=0, select bank0
+   436  0062  00E8               	movwf	??_main
+   437  0063  0868               	movf	??_main,w
+   438  0064  00ED               	movwf	main@data
+   439                           
+   440                           ;SerTest.c: 44: if(data == 'W')
+   441  0065  086D               	movf	main@data,w
+   442  0066  3A57               	xorlw	87
+   443  0067  1903               	btfsc	3,2
+   444                           
+   445                           ;SerTest.c: 45: RB7 = 1;
+   446  0068  1786               	bsf	6,7	;volatile
+   447                           
+   448                           ;SerTest.c: 47: if(data == 'X')
+   449  0069  086D               	movf	main@data,w
+   450  006A  3A58               	xorlw	88
+   451  006B  1903               	btfsc	3,2
+   452                           
+   453                           ;SerTest.c: 48: RB6 = 1;
+   454  006C  1706               	bsf	6,6	;volatile
+   455                           
+   456                           ;SerTest.c: 50: if(data == 'Y')
+   457  006D  086D               	movf	main@data,w
+   458  006E  3A59               	xorlw	89
+   459  006F  1903               	btfsc	3,2
+   460                           
+   461                           ;SerTest.c: 51: RB5 = 1;
+   462  0070  1686               	bsf	6,5	;volatile
+   463                           
+   464                           ;SerTest.c: 53: if(data == 'Z')
+   465  0071  086D               	movf	main@data,w
+   466  0072  3A5A               	xorlw	90
+   467  0073  1903               	btfsc	3,2
+   468                           
+   469                           ;SerTest.c: 54: RB4 = 1;
+   470  0074  1606               	bsf	6,4	;volatile
+   471                           
+   472                           ;SerTest.c: 56: if(data == 'R')
+   473  0075  086D               	movf	main@data,w
+   474  0076  3A52               	xorlw	82
+   475  0077  1D03               	skipz
+   476  0078  287D               	goto	l1147
+   477                           
+   478                           ;SerTest.c: 57: {
+   479                           ;SerTest.c: 58: RB7 = 0;
+   480  0079  1386               	bcf	6,7	;volatile
+   481                           
+   482                           ;SerTest.c: 59: RB6 = 0;
+   483  007A  1306               	bcf	6,6	;volatile
+   484                           
+   485                           ;SerTest.c: 60: RB5 = 0;
+   486  007B  1286               	bcf	6,5	;volatile
+   487                           
+   488                           ;SerTest.c: 61: RB4 = 0;
+   489  007C  1206               	bcf	6,4	;volatile
+   490  007D                     l1147:	
+   491                           
+   492                           ;SerTest.c: 62: }
+   493                           ;SerTest.c: 65: USARTWriteChar(data);
+   494  007D  086D               	movf	main@data,w
+   495  007E  2173               	fcall	_USARTWriteChar
+   496  007F  1283               	bcf	3,5	;RP0=0, select bank0
+   497  0080  1303               	bcf	3,6	;RP1=0, select bank0
+   498  0081  2856               	goto	l1121
+   499  0082                     __end_of_main:	
+   500                           
+   501                           	psect	text1
+   502  0173                     __ptext1:	
+   503 ;; *************** function _USARTWriteChar *****************
+   504 ;; Defined at:
+   505 ;;		line 77 in file "E:\Study Material\XC8 PROJECTS\Bluetooth Foot Switch\Receiver\usart_pic16.c"
+   506 ;; Parameters:    Size  Location     Type
+   507 ;;  ch              1    wreg     unsigned char 
+   508 ;; Auto vars:     Size  Location     Type
+   509 ;;  ch              1    0[BANK0 ] unsigned char 
+   510 ;; Return value:  Size  Location     Type
+   511 ;;		None               void
+   512 ;; Registers used:
+   513 ;;		wreg
+   514 ;; Tracked objects:
+   515 ;;		On entry : 0/0
+   516 ;;		On exit  : 0/0
+   517 ;;		Unchanged: 0/0
+   518 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2
+   519 ;;      Params:         0       0       0       0
+   520 ;;      Locals:         0       1       0       0
+   521 ;;      Temps:          0       0       0       0
+   522 ;;      Totals:         0       1       0       0
+   523 ;;Total ram usage:        1 bytes
+   524 ;; Hardware stack levels used:    1
+   525 ;; Hardware stack levels required when called:    2
+   526 ;; This function calls:
+   527 ;;		Nothing
+   528 ;; This function is called by:
+   529 ;;		_main
+   530 ;;		_USARTWriteString
+   531 ;;		_USARTWriteLine
+   532 ;;		_USARTWriteInt
+   533 ;;		_USARTGotoNewLine
+   534 ;; This function uses a non-reentrant model
+   535 ;;
+   536                           
+   537                           
+   538                           ;psect for function _USARTWriteChar
+   539  0173                     _USARTWriteChar:	
+   540                           
+   541                           ;incstack = 0
+   542                           ; Regs used in _USARTWriteChar: [wreg]
+   543                           ;USARTWriteChar@ch stored from wreg
+   544  0173  1283               	bcf	3,5	;RP0=0, select bank0
+   545  0174  1303               	bcf	3,6	;RP1=0, select bank0
+   546  0175  00E5               	movwf	USARTWriteChar@ch
+   547  0176                     l36:	
+   548                           ;usart_pic16.c: 79: while(!PIR1bits.TXIF);
+   549                           
+   550  0176  1E0C               	btfss	12,4	;volatile
+   551  0177  2976               	goto	l36
+   552                           
+   553                           ;usart_pic16.c: 81: TXREG=ch;
+   554  0178  0865               	movf	USARTWriteChar@ch,w
+   555  0179  0099               	movwf	25	;volatile
+   556  017A  0008               	return
+   557  017B                     __end_of_USARTWriteChar:	
+   558                           
+   559                           	psect	text2
+   560  010D                     __ptext2:	
+   561 ;; *************** function _USARTReadData *****************
+   562 ;; Defined at:
+   563 ;;		line 125 in file "E:\Study Material\XC8 PROJECTS\Bluetooth Foot Switch\Receiver\usart_pic16.c"
+   564 ;; Parameters:    Size  Location     Type
+   565 ;;		None
+   566 ;; Auto vars:     Size  Location     Type
+   567 ;;  data            1    1[BANK0 ] unsigned char 
+   568 ;; Return value:  Size  Location     Type
+   569 ;;                  1    wreg      unsigned char 
+   570 ;; Registers used:
+   571 ;;		wreg, fsr0l, fsr0h, status,2, status,0
+   572 ;; Tracked objects:
+   573 ;;		On entry : 0/0
+   574 ;;		On exit  : 0/0
+   575 ;;		Unchanged: 0/0
+   576 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2
+   577 ;;      Params:         0       0       0       0
+   578 ;;      Locals:         0       1       0       0
+   579 ;;      Temps:          0       1       0       0
+   580 ;;      Totals:         0       2       0       0
+   581 ;;Total ram usage:        2 bytes
+   582 ;; Hardware stack levels used:    1
+   583 ;; Hardware stack levels required when called:    2
+   584 ;; This function calls:
+   585 ;;		Nothing
+   586 ;; This function is called by:
+   587 ;;		_main
+   588 ;;		_USARTReadBuffer
+   589 ;;		_USARTFlushBuffer
+   590 ;; This function uses a non-reentrant model
+   591 ;;
+   592                           
+   593                           
+   594                           ;psect for function _USARTReadData
+   595  010D                     _USARTReadData:	
+   596                           
+   597                           ;usart_pic16.c: 127: char data;
+   598                           ;usart_pic16.c: 130: if(UQFront==-1)
+   599                           
+   600                           ;incstack = 0
+   601                           ; Regs used in _USARTReadData: [wreg-fsr0h+status,2+status,0]
+   602  010D  087A               	movf	_UQFront,w	;volatile
+   603  010E  3AFF               	xorlw	-1
+   604  010F  1D03               	skipz
+   605  0110  2913               	goto	l991
+   606                           
+   607                           ;usart_pic16.c: 131: return 0;
+   608  0111  3000               	movlw	0
+   609  0112  0008               	return
+   610  0113                     l991:	
+   611                           
+   612                           ;usart_pic16.c: 133: data=URBuff[UQFront];
+   613  0113  087A               	movf	_UQFront,w
+   614  0114  3E20               	addlw	_URBuff& (0+255)
+   615  0115  0084               	movwf	4
+   616  0116  1383               	bcf	3,7	;select IRP bank0
+   617  0117  0800               	movf	0,w
+   618  0118  1283               	bcf	3,5	;RP0=0, select bank0
+   619  0119  1303               	bcf	3,6	;RP1=0, select bank0
+   620  011A  00E5               	movwf	??_USARTReadData
+   621  011B  0865               	movf	??_USARTReadData,w
+   622  011C  00E6               	movwf	USARTReadData@data
+   623                           
+   624                           ;usart_pic16.c: 135: if(UQFront==UQEnd)
+   625  011D  087A               	movf	_UQFront,w	;volatile
+   626  011E  0679               	xorwf	_UQEnd,w	;volatile
+   627  011F  1D03               	skipz
+   628  0120  2927               	goto	l997
+   629                           
+   630                           ;usart_pic16.c: 136: {
+   631                           ;usart_pic16.c: 139: UQFront=UQEnd=-1;
+   632  0121  30FF               	movlw	-1
+   633  0122  00F9               	movwf	_UQEnd	;volatile
+   634  0123  00E5               	movwf	??_USARTReadData
+   635  0124  0865               	movf	??_USARTReadData,w
+   636  0125  00FA               	movwf	_UQFront	;volatile
+   637                           
+   638                           ;usart_pic16.c: 140: }
+   639  0126  292F               	goto	l1003
+   640  0127                     l997:	
+   641                           
+   642                           ;usart_pic16.c: 141: else
+   643                           ;usart_pic16.c: 142: {
+   644                           ;usart_pic16.c: 143: UQFront++;
+   645  0127  3001               	movlw	1
+   646  0128  00E5               	movwf	??_USARTReadData
+   647  0129  0865               	movf	??_USARTReadData,w
+   648  012A  07FA               	addwf	_UQFront,f	;volatile
+   649                           
+   650                           ;usart_pic16.c: 145: if(UQFront==64)
+   651  012B  087A               	movf	_UQFront,w	;volatile
+   652  012C  3A40               	xorlw	64
+   653  012D  1903               	btfsc	3,2
+   654                           
+   655                           ;usart_pic16.c: 146: UQFront=0;
+   656  012E  01FA               	clrf	_UQFront	;volatile
+   657  012F                     l1003:	
+   658                           
+   659                           ;usart_pic16.c: 147: }
+   660                           ;usart_pic16.c: 149: return data;
+   661  012F  0866               	movf	USARTReadData@data,w
+   662  0130  0008               	return
+   663  0131                     __end_of_USARTReadData:	
+   664                           
+   665                           	psect	text3
+   666  0082                     __ptext3:	
+   667 ;; *************** function _USARTInit *****************
+   668 ;; Defined at:
+   669 ;;		line 31 in file "E:\Study Material\XC8 PROJECTS\Bluetooth Foot Switch\Receiver\usart_pic16.c"
+   670 ;; Parameters:    Size  Location     Type
+   671 ;;  baud_rate       2    0[BANK0 ] unsigned int 
+   672 ;; Auto vars:     Size  Location     Type
+   673 ;;		None
+   674 ;; Return value:  Size  Location     Type
+   675 ;;		None               void
+   676 ;; Registers used:
+   677 ;;		wreg, fsr0l, fsr0h, status,2, status,0
+   678 ;; Tracked objects:
+   679 ;;		On entry : 0/0
+   680 ;;		On exit  : 0/0
+   681 ;;		Unchanged: 0/0
+   682 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2
+   683 ;;      Params:         0       2       0       0
+   684 ;;      Locals:         0       0       0       0
+   685 ;;      Temps:          0       1       0       0
+   686 ;;      Totals:         0       3       0       0
+   687 ;;Total ram usage:        3 bytes
+   688 ;; Hardware stack levels used:    1
+   689 ;; Hardware stack levels required when called:    2
+   690 ;; This function calls:
+   691 ;;		Nothing
+   692 ;; This function is called by:
+   693 ;;		_main
+   694 ;; This function uses a non-reentrant model
+   695 ;;
+   696                           
+   697                           
+   698                           ;psect for function _USARTInit
+   699  0082                     _USARTInit:	
+   700                           
+   701                           ;usart_pic16.c: 34: UQFront=UQEnd=-1;
+   702                           
+   703                           ;incstack = 0
+   704                           ; Regs used in _USARTInit: [wreg-fsr0h+status,2+status,0]
+   705  0082  30FF               	movlw	-1
+   706  0083  00F9               	movwf	_UQEnd	;volatile
+   707  0084  1283               	bcf	3,5	;RP0=0, select bank0
+   708  0085  1303               	bcf	3,6	;RP1=0, select bank0
+   709  0086  00E7               	movwf	??_USARTInit
+   710  0087  0867               	movf	??_USARTInit,w
+   711  0088  00FA               	movwf	_UQFront	;volatile
+   712                           
+   713                           ;usart_pic16.c: 38: switch(baud_rate)
+   714  0089  2895               	goto	l955
+   715  008A                     l945:	
+   716                           ;usart_pic16.c: 39: {
+   717                           ;usart_pic16.c: 40: case 9600:
+   718                           
+   719                           
+   720                           ;usart_pic16.c: 41: SPBRG=103;
+   721  008A  3067               	movlw	103
+   722  008B  2891               	goto	L3
+   723  008C                     l947:	
+   724                           ;usart_pic16.c: 43: case 19200:
+   725                           
+   726                           ;usart_pic16.c: 42: break;
+   727                           
+   728                           
+   729                           ;usart_pic16.c: 44: SPBRG=51;
+   730  008C  3033               	movlw	51
+   731  008D  2891               	goto	L3
+   732  008E                     l949:	
+   733                           ;usart_pic16.c: 46: case 38400:
+   734                           
+   735                           ;usart_pic16.c: 45: break;
+   736                           
+   737                           
+   738                           ;usart_pic16.c: 47: SPBRG=25;
+   739  008E  3019               	movlw	25
+   740  008F  2891               	goto	L3
+   741  0090                     l951:	
+   742                           ;usart_pic16.c: 49: case 57600:
+   743                           
+   744                           ;usart_pic16.c: 48: break;
+   745                           
+   746                           
+   747                           ;usart_pic16.c: 50: SPBRG=16;
+   748  0090  3010               	movlw	16
+   749  0091                     L3:	
+   750  0091  1683               	bsf	3,5	;RP0=1, select bank1
+   751  0092  1303               	bcf	3,6	;RP1=0, select bank1
+   752  0093  0099               	movwf	25	;volatile
+   753                           
+   754                           ;usart_pic16.c: 52: }
+   755                           
+   756                           ;usart_pic16.c: 51: break;
+   757  0094  28B8               	goto	l29
+   758  0095                     l955:	
+   759                           
+   760                           ; Switch on 2 bytes has been partitioned into a top level switch of size 1, and 4 sub-sw
+      +                          itches
+   761                           ; Switch size 1, requested type "space"
+   762                           ; Number of cases is 4, Range of values is 37 to 225
+   763                           ; switch strategies available:
+   764                           ; Name         Instructions Cycles
+   765                           ; simple_byte           13     7 (average)
+   766                           ; direct_byte          198     9 (fixed)
+   767                           ; jumptable            263     9 (fixed)
+   768                           ;	Chosen strategy is simple_byte
+   769  0095  1283               	bcf	3,5	;RP0=0, select bank0
+   770  0096  0866               	movf	USARTInit@baud_rate+1,w
+   771  0097  3A25               	xorlw	37	; case 37
+   772  0098  1903               	skipnz
+   773  0099  28A4               	goto	l1311
+   774  009A  3A6E               	xorlw	110	; case 75
+   775  009B  1903               	skipnz
+   776  009C  28A9               	goto	l1313
+   777  009D  3ADD               	xorlw	221	; case 150
+   778  009E  1903               	skipnz
+   779  009F  28AE               	goto	l1315
+   780  00A0  3A77               	xorlw	119	; case 225
+   781  00A1  1903               	skipnz
+   782  00A2  28B3               	goto	l1317
+   783  00A3  28B8               	goto	l29
+   784  00A4                     l1311:	
+   785                           
+   786                           ; Switch size 1, requested type "space"
+   787                           ; Number of cases is 1, Range of values is 128 to 128
+   788                           ; switch strategies available:
+   789                           ; Name         Instructions Cycles
+   790                           ; simple_byte            4     3 (average)
+   791                           ; direct_byte           10     9 (fixed)
+   792                           ; jumptable            263     9 (fixed)
+   793                           ;	Chosen strategy is simple_byte
+   794  00A4  0865               	movf	USARTInit@baud_rate,w
+   795  00A5  3A80               	xorlw	128	; case 128
+   796  00A6  1903               	skipnz
+   797  00A7  288A               	goto	l945
+   798  00A8  28B8               	goto	l29
+   799  00A9                     l1313:	
+   800                           
+   801                           ; Switch size 1, requested type "space"
+   802                           ; Number of cases is 1, Range of values is 0 to 0
+   803                           ; switch strategies available:
+   804                           ; Name         Instructions Cycles
+   805                           ; simple_byte            4     3 (average)
+   806                           ; direct_byte            7     6 (fixed)
+   807                           ; jumptable            260     6 (fixed)
+   808                           ;	Chosen strategy is simple_byte
+   809  00A9  0865               	movf	USARTInit@baud_rate,w
+   810  00AA  3A00               	xorlw	0	; case 0
+   811  00AB  1903               	skipnz
+   812  00AC  288C               	goto	l947
+   813  00AD  28B8               	goto	l29
+   814  00AE                     l1315:	
+   815                           
+   816                           ; Switch size 1, requested type "space"
+   817                           ; Number of cases is 1, Range of values is 0 to 0
+   818                           ; switch strategies available:
+   819                           ; Name         Instructions Cycles
+   820                           ; simple_byte            4     3 (average)
+   821                           ; direct_byte            7     6 (fixed)
+   822                           ; jumptable            260     6 (fixed)
+   823                           ;	Chosen strategy is simple_byte
+   824  00AE  0865               	movf	USARTInit@baud_rate,w
+   825  00AF  3A00               	xorlw	0	; case 0
+   826  00B0  1903               	skipnz
+   827  00B1  288E               	goto	l949
+   828  00B2  28B8               	goto	l29
+   829  00B3                     l1317:	
+   830                           
+   831                           ; Switch size 1, requested type "space"
+   832                           ; Number of cases is 1, Range of values is 0 to 0
+   833                           ; switch strategies available:
+   834                           ; Name         Instructions Cycles
+   835                           ; simple_byte            4     3 (average)
+   836                           ; direct_byte            7     6 (fixed)
+   837                           ; jumptable            260     6 (fixed)
+   838                           ;	Chosen strategy is simple_byte
+   839  00B3  0865               	movf	USARTInit@baud_rate,w
+   840  00B4  3A00               	xorlw	0	; case 0
+   841  00B5  1903               	skipnz
+   842  00B6  2890               	goto	l951
+   843  00B7  28B8               	goto	l29
+   844  00B8                     l29:	
+   845                           
+   846                           ;usart_pic16.c: 59: TXSTAbits.TX9=0;
+   847  00B8  1683               	bsf	3,5	;RP0=1, select bank1
+   848  00B9  1303               	bcf	3,6	;RP1=0, select bank1
+   849  00BA  1318               	bcf	24,6	;volatile
+   850                           
+   851                           ;usart_pic16.c: 60: TXSTAbits.TXEN=1;
+   852  00BB  1698               	bsf	24,5	;volatile
+   853                           
+   854                           ;usart_pic16.c: 61: TXSTAbits.SYNC=0;
+   855  00BC  1218               	bcf	24,4	;volatile
+   856                           
+   857                           ;usart_pic16.c: 62: TXSTAbits.BRGH=1;
+   858  00BD  1518               	bsf	24,2	;volatile
+   859                           
+   860                           ;usart_pic16.c: 65: RCSTAbits.SPEN=1;
+   861  00BE  1283               	bcf	3,5	;RP0=0, select bank0
+   862  00BF  1303               	bcf	3,6	;RP1=0, select bank0
+   863  00C0  1798               	bsf	24,7	;volatile
+   864                           
+   865                           ;usart_pic16.c: 66: RCSTAbits.RX9=0;
+   866  00C1  1318               	bcf	24,6	;volatile
+   867                           
+   868                           ;usart_pic16.c: 67: RCSTAbits.CREN=1;
+   869  00C2  1618               	bsf	24,4	;volatile
+   870                           
+   871                           ;usart_pic16.c: 68: RCSTAbits.ADDEN=0;
+   872  00C3  1198               	bcf	24,3	;volatile
+   873                           
+   874                           ;usart_pic16.c: 71: RCIE=1;
+   875  00C4  1683               	bsf	3,5	;RP0=1, select bank1
+   876  00C5  1303               	bcf	3,6	;RP1=0, select bank1
+   877  00C6  168C               	bsf	12,5	;volatile
+   878                           
+   879                           ;usart_pic16.c: 72: PEIE=1;
+   880  00C7  170B               	bsf	11,6	;volatile
+   881                           
+   882                           ;usart_pic16.c: 74: (GIE = 1);
+   883  00C8  178B               	bsf	11,7	;volatile
+   884  00C9  0008               	return
+   885  00CA                     __end_of_USARTInit:	
+   886                           
+   887                           	psect	text4
+   888  0131                     __ptext4:	
+   889 ;; *************** function _USARTDataAvailable *****************
+   890 ;; Defined at:
+   891 ;;		line 152 in file "E:\Study Material\XC8 PROJECTS\Bluetooth Foot Switch\Receiver\usart_pic16.c"
+   892 ;; Parameters:    Size  Location     Type
+   893 ;;		None
+   894 ;; Auto vars:     Size  Location     Type
+   895 ;;		None
+   896 ;; Return value:  Size  Location     Type
+   897 ;;                  1    wreg      unsigned char 
+   898 ;; Registers used:
+   899 ;;		wreg, status,2, status,0
+   900 ;; Tracked objects:
+   901 ;;		On entry : 0/0
+   902 ;;		On exit  : 0/0
+   903 ;;		Unchanged: 0/0
+   904 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2
+   905 ;;      Params:         0       0       0       0
+   906 ;;      Locals:         0       0       0       0
+   907 ;;      Temps:          0       1       0       0
+   908 ;;      Totals:         0       1       0       0
+   909 ;;Total ram usage:        1 bytes
+   910 ;; Hardware stack levels used:    1
+   911 ;; Hardware stack levels required when called:    2
+   912 ;; This function calls:
+   913 ;;		Nothing
+   914 ;; This function is called by:
+   915 ;;		_main
+   916 ;;		_USARTFlushBuffer
+   917 ;; This function uses a non-reentrant model
+   918 ;;
+   919                           
+   920                           
+   921                           ;psect for function _USARTDataAvailable
+   922  0131                     _USARTDataAvailable:	
+   923                           
+   924                           ;usart_pic16.c: 154: if(UQFront==-1) return 0;
+   925                           
+   926                           ;incstack = 0
+   927                           ; Regs used in _USARTDataAvailable: [wreg+status,2+status,0]
+   928  0131  087A               	movf	_UQFront,w	;volatile
+   929  0132  3AFF               	xorlw	-1
+   930  0133  1D03               	skipz
+   931  0134  2937               	goto	l1013
+   932  0135  3000               	movlw	0
+   933  0136  0008               	return
+   934  0137                     l1013:	
+   935                           
+   936                           ;usart_pic16.c: 155: if(UQFront<UQEnd)
+   937  0137  087A               	movf	_UQFront,w	;volatile
+   938  0138  3A80               	xorlw	128
+   939  0139  1283               	bcf	3,5	;RP0=0, select bank0
+   940  013A  1303               	bcf	3,6	;RP1=0, select bank0
+   941  013B  00E5               	movwf	??_USARTDataAvailable
+   942  013C  0879               	movf	_UQEnd,w	;volatile
+   943  013D  3A80               	xorlw	128
+   944  013E  02E5               	subwf	??_USARTDataAvailable,f
+   945  013F  1803               	skipnc
+   946  0140  2946               	goto	l1021
+   947                           
+   948                           ;usart_pic16.c: 156: return(UQEnd-UQFront+1);
+   949  0141  037A               	decf	_UQFront,w	;volatile
+   950  0142  3AFF               	xorlw	255
+   951  0143  0779               	addwf	_UQEnd,w	;volatile
+   952  0144  3E01               	addlw	1
+   953  0145  0008               	return
+   954  0146                     l1021:	
+   955                           
+   956                           ;usart_pic16.c: 157: else if(UQFront>UQEnd)
+   957  0146  0879               	movf	_UQEnd,w	;volatile
+   958  0147  3A80               	xorlw	128
+   959  0148  00E5               	movwf	??_USARTDataAvailable
+   960  0149  087A               	movf	_UQFront,w	;volatile
+   961  014A  3A80               	xorlw	128
+   962  014B  02E5               	subwf	??_USARTDataAvailable,f
+   963  014C  1803               	skipnc
+   964  014D  2953               	goto	l1029
+   965                           
+   966                           ;usart_pic16.c: 158: return (64-UQFront+UQEnd+1);
+   967  014E  037A               	decf	_UQFront,w	;volatile
+   968  014F  3AFF               	xorlw	255
+   969  0150  0779               	addwf	_UQEnd,w	;volatile
+   970  0151  3E41               	addlw	65
+   971  0152  0008               	return
+   972  0153                     l1029:	
+   973                           
+   974                           ;usart_pic16.c: 159: else
+   975                           ;usart_pic16.c: 160: return 1;
+   976  0153  3001               	movlw	1
+   977  0154  0008               	return
+   978  0155                     __end_of_USARTDataAvailable:	
+   979                           
+   980                           	psect	text5
+   981  0155                     __ptext5:	
+   982 ;; *************** function _ISR *****************
+   983 ;; Defined at:
+   984 ;;		line 6 in file "E:\Study Material\XC8 PROJECTS\Bluetooth Foot Switch\Receiver\isr.c"
+   985 ;; Parameters:    Size  Location     Type
+   986 ;;		None
+   987 ;; Auto vars:     Size  Location     Type
+   988 ;;		None
+   989 ;; Return value:  Size  Location     Type
+   990 ;;		None               void
+   991 ;; Registers used:
+   992 ;;		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
+   993 ;; Tracked objects:
+   994 ;;		On entry : 0/0
+   995 ;;		On exit  : 0/0
+   996 ;;		Unchanged: 0/0
+   997 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2
+   998 ;;      Params:         0       0       0       0
+   999 ;;      Locals:         0       0       0       0
+  1000 ;;      Temps:          4       0       0       0
+  1001 ;;      Totals:         4       0       0       0
+  1002 ;;Total ram usage:        4 bytes
+  1003 ;; Hardware stack levels used:    1
+  1004 ;; Hardware stack levels required when called:    1
+  1005 ;; This function calls:
+  1006 ;;		_USARTHandleRxInt
+  1007 ;; This function is called by:
+  1008 ;;		Interrupt level 1
+  1009 ;; This function uses a non-reentrant model
+  1010 ;;
+  1011                           
+  1012                           
+  1013                           ;psect for function _ISR
+  1014  0155                     _ISR:	
+  1015                           
+  1016                           ;isr.c: 8: if (RCIE && RCIF) {
+  1017  0155  1683               	bsf	3,5	;RP0=1, select bank1
+  1018  0156  1303               	bcf	3,6	;RP1=0, select bank1
+  1019  0157  1E8C               	btfss	12,5	;volatile
+  1020  0158  295E               	goto	i1l124
+  1021  0159  1283               	bcf	3,5	;RP0=0, select bank0
+  1022  015A  1303               	bcf	3,6	;RP1=0, select bank0
+  1023  015B  1E8C               	btfss	12,5	;volatile
+  1024  015C  295E               	goto	i1l124
+  1025                           
+  1026                           ;isr.c: 9: USARTHandleRxInt();
+  1027  015D  20CA               	fcall	_USARTHandleRxInt
+  1028  015E                     i1l124:	
+  1029                           ;isr.c: 10: return;
+  1030                           
+  1031  015E  0878               	movf	??_ISR+3,w
+  1032  015F  1283               	bcf	3,5	;RP0=0, select bank0
+  1033  0160  1303               	bcf	3,6	;RP1=0, select bank0
+  1034  0161  00FF               	movwf	127
+  1035  0162  0877               	movf	??_ISR+2,w
+  1036  0163  008A               	movwf	10
+  1037  0164  0876               	movf	??_ISR+1,w
+  1038  0165  0084               	movwf	4
+  1039  0166  0E75               	swapf	??_ISR^(0+-128),w
+  1040  0167  0083               	movwf	3
+  1041  0168  0EFE               	swapf	126,f
+  1042  0169  0E7E               	swapf	126,w
+  1043  016A  0009               	retfie
+  1044  016B                     __end_of_ISR:	
+  1045                           
+  1046                           	psect	intentry
+  1047  0004                     __pintentry:	
+  1048                           ;incstack = 0
+  1049                           ; Regs used in _ISR: [wreg-fsr0h+status,2+status,0+pclath+cstack]
+  1050                           
+  1051  0004                     interrupt_function:	
+  1052  007E                     saved_w	set	btemp
+  1053  0004  00FE               	movwf	btemp
+  1054  0005  0E03               	swapf	3,w
+  1055  0006  00F5               	movwf	??_ISR
+  1056  0007  0804               	movf	4,w
+  1057  0008  00F6               	movwf	??_ISR+1
+  1058  0009  080A               	movf	10,w
+  1059  000A  00F7               	movwf	??_ISR+2
+  1060  000B  1283               	bcf	3,5	;RP0=0, select bank0
+  1061  000C  1303               	bcf	3,6	;RP1=0, select bank0
+  1062  000D  087F               	movf	btemp+1,w
+  1063  000E  00F8               	movwf	??_ISR+3
+  1064  000F  2955               	ljmp	_ISR
+  1065                           
+  1066                           	psect	text6
+  1067  00CA                     __ptext6:	
+  1068 ;; *************** function _USARTHandleRxInt *****************
+  1069 ;; Defined at:
+  1070 ;;		line 101 in file "E:\Study Material\XC8 PROJECTS\Bluetooth Foot Switch\Receiver\usart_pic16.c"
+  1071 ;; Parameters:    Size  Location     Type
+  1072 ;;		None
+  1073 ;; Auto vars:     Size  Location     Type
+  1074 ;;  data            1    4[COMMON] unsigned char 
+  1075 ;; Return value:  Size  Location     Type
+  1076 ;;		None               void
+  1077 ;; Registers used:
+  1078 ;;		wreg, fsr0l, fsr0h, status,2, status,0
+  1079 ;; Tracked objects:
+  1080 ;;		On entry : 0/0
+  1081 ;;		On exit  : 0/0
+  1082 ;;		Unchanged: 0/0
+  1083 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2
+  1084 ;;      Params:         0       0       0       0
+  1085 ;;      Locals:         1       0       0       0
+  1086 ;;      Temps:          4       0       0       0
+  1087 ;;      Totals:         5       0       0       0
+  1088 ;;Total ram usage:        5 bytes
+  1089 ;; Hardware stack levels used:    1
+  1090 ;; This function calls:
+  1091 ;;		Nothing
+  1092 ;; This function is called by:
+  1093 ;;		_ISR
+  1094 ;; This function uses a non-reentrant model
+  1095 ;;
+  1096                           
+  1097                           
+  1098                           ;psect for function _USARTHandleRxInt
+  1099  00CA                     _USARTHandleRxInt:	
+  1100                           
+  1101                           ;usart_pic16.c: 104: char data=RCREG;
+  1102                           
+  1103                           ;incstack = 0
+  1104                           ; Regs used in _USARTHandleRxInt: [wreg-fsr0h+status,2+status,0]
+  1105  00CA  1283               	bcf	3,5	;RP0=0, select bank0
+  1106  00CB  1303               	bcf	3,6	;RP1=0, select bank0
+  1107  00CC  081A               	movf	26,w	;volatile
+  1108  00CD  00F0               	movwf	??_USARTHandleRxInt
+  1109  00CE  0870               	movf	??_USARTHandleRxInt,w
+  1110  00CF  00F4               	movwf	USARTHandleRxInt@data
+  1111                           
+  1112                           ;usart_pic16.c: 107: if(((UQEnd==64-1) && UQFront==0) || ((UQEnd+1)==UQFront))
+  1113  00D0  0879               	movf	_UQEnd,w	;volatile
+  1114  00D1  3A3F               	xorlw	63
+  1115  00D2  1903               	btfsc	3,2
+  1116  00D3  087A               	movf	_UQFront,w	;volatile
+  1117  00D4  1903               	btfsc	3,2
+  1118  00D5  28ED               	goto	i1l673
+  1119  00D6  087A               	movf	_UQFront,w	;volatile
+  1120  00D7  00F0               	movwf	??_USARTHandleRxInt
+  1121  00D8  01F1               	clrf	??_USARTHandleRxInt+1
+  1122  00D9  1BF0               	btfsc	??_USARTHandleRxInt,7
+  1123  00DA  03F1               	decf	??_USARTHandleRxInt+1,f
+  1124  00DB  3001               	movlw	1
+  1125  00DC  0779               	addwf	_UQEnd,w	;volatile
+  1126  00DD  00F2               	movwf	??_USARTHandleRxInt+2
+  1127  00DE  01F3               	clrf	??_USARTHandleRxInt+3
+  1128  00DF  1803               	skipnc
+  1129  00E0  0AF3               	incf	??_USARTHandleRxInt+3,f
+  1130  00E1  1BF9               	btfsc	_UQEnd,7	;volatile
+  1131  00E2  03F3               	decf	??_USARTHandleRxInt+3,f
+  1132  00E3  0871               	movf	??_USARTHandleRxInt+1,w
+  1133  00E4  0673               	xorwf	??_USARTHandleRxInt+3,w
+  1134  00E5  1D03               	skipz
+  1135  00E6  28E9               	goto	u6_25
+  1136  00E7  0870               	movf	??_USARTHandleRxInt,w
+  1137  00E8  0672               	xorwf	??_USARTHandleRxInt+2,w
+  1138  00E9                     u6_25:	
+  1139  00E9  1D03               	skipz
+  1140  00EA  28F5               	goto	i1l679
+  1141  00EB  1283               	bcf	3,5	;RP0=0, select bank0
+  1142  00EC  1303               	bcf	3,6	;RP1=0, select bank0
+  1143  00ED                     i1l673:	
+  1144                           
+  1145                           ;usart_pic16.c: 108: {
+  1146                           ;usart_pic16.c: 110: UQFront++;
+  1147  00ED  3001               	movlw	1
+  1148  00EE  00F0               	movwf	??_USARTHandleRxInt
+  1149  00EF  0870               	movf	??_USARTHandleRxInt,w
+  1150  00F0  07FA               	addwf	_UQFront,f	;volatile
+  1151                           
+  1152                           ;usart_pic16.c: 111: if(UQFront==64) UQFront=0;
+  1153  00F1  087A               	movf	_UQFront,w	;volatile
+  1154  00F2  3A40               	xorlw	64
+  1155  00F3  1903               	btfsc	3,2
+  1156  00F4  01FA               	clrf	_UQFront	;volatile
+  1157  00F5                     i1l679:	
+  1158                           
+  1159                           ;usart_pic16.c: 112: }
+  1160                           ;usart_pic16.c: 114: if(UQEnd==64-1)
+  1161  00F5  0879               	movf	_UQEnd,w	;volatile
+  1162  00F6  3A3F               	xorlw	63
+  1163  00F7  1D03               	skipz
+  1164  00F8  28FB               	goto	i1l683
+  1165                           
+  1166                           ;usart_pic16.c: 115: UQEnd=0;
+  1167  00F9  01F9               	clrf	_UQEnd	;volatile
+  1168  00FA  28FF               	goto	i1l685
+  1169  00FB                     i1l683:	
+  1170                           
+  1171                           ;usart_pic16.c: 116: else
+  1172                           ;usart_pic16.c: 117: UQEnd++;
+  1173  00FB  3001               	movlw	1
+  1174  00FC  00F0               	movwf	??_USARTHandleRxInt
+  1175  00FD  0870               	movf	??_USARTHandleRxInt,w
+  1176  00FE  07F9               	addwf	_UQEnd,f	;volatile
+  1177  00FF                     i1l685:	
+  1178                           
+  1179                           ;usart_pic16.c: 119: URBuff[UQEnd]=data;
+  1180  00FF  0874               	movf	USARTHandleRxInt@data,w
+  1181  0100  00F0               	movwf	??_USARTHandleRxInt
+  1182  0101  0879               	movf	_UQEnd,w
+  1183  0102  3E20               	addlw	_URBuff& (0+255)
+  1184  0103  0084               	movwf	4
+  1185  0104  0870               	movf	??_USARTHandleRxInt,w
+  1186  0105  1383               	bcf	3,7	;select IRP bank0
+  1187  0106  0080               	movwf	0
+  1188                           
+  1189                           ;usart_pic16.c: 121: if(UQFront==-1) UQFront=0;
+  1190  0107  087A               	movf	_UQFront,w	;volatile
+  1191  0108  3AFF               	xorlw	-1
+  1192  0109  1D03               	skipz
+  1193  010A  0008               	return
+  1194  010B  01FA               	clrf	_UQFront	;volatile
+  1195  010C  0008               	return
+  1196  010D                     __end_of_USARTHandleRxInt:	
+  1197  007E                     btemp	set	126	;btemp
+  1198  007E                     wtemp	set	126
+  1199  007E                     wtemp0	set	126
+  1200  0080                     wtemp1	set	128
+  1201  0082                     wtemp2	set	130
+  1202  0084                     wtemp3	set	132
+  1203  0086                     wtemp4	set	134
+  1204  0088                     wtemp5	set	136
+  1205  007F                     wtemp6	set	127
+  1206  007E                     ttemp	set	126
+  1207  007E                     ttemp0	set	126
+  1208  0081                     ttemp1	set	129
+  1209  0084                     ttemp2	set	132
+  1210  0087                     ttemp3	set	135
+  1211  007F                     ttemp4	set	127
+  1212  007E                     ltemp	set	126
+  1213  007E                     ltemp0	set	126
+  1214  0082                     ltemp1	set	130
+  1215  0086                     ltemp2	set	134
+  1216  0080                     ltemp3	set	128
+
+
+Data Sizes:
+    Strings     0
+    Constant    0
+    Data        0
+    BSS         71
+    Persistent  0
+    Stack       0
+
+Auto Spaces:
+    Space          Size  Autos    Used
+    COMMON           14      9      11
+    BANK0            80      9      78
+    BANK1            80      0       0
+    BANK2            48      0       0
+
+Pointer List with Targets:
+
+    None.
+
+Critical Paths under _main in COMMON
+
+    None.
+
+Critical Paths under _ISR in COMMON
+
+    _ISR->_USARTHandleRxInt
+
+Critical Paths under _main in BANK0
+
+    _main->_USARTInit
+
+Critical Paths under _ISR in BANK0
+
+    None.
+
+Critical Paths under _main in BANK1
+
+    None.
+
+Critical Paths under _ISR in BANK1
+
+    None.
+
+Critical Paths under _main in BANK2
+
+    None.
+
+Critical Paths under _ISR in BANK2
+
+    None.
+
+Call Graph Tables:
+
+ ---------------------------------------------------------------------------------
+ (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+ ---------------------------------------------------------------------------------
+ (0) _main                                                 6     6      0     322
+                                              3 BANK0      6     6      0
+                 _USARTDataAvailable
+                          _USARTInit
+                      _USARTReadData
+                     _USARTWriteChar
+ ---------------------------------------------------------------------------------
+ (1) _USARTWriteChar                                       1     1      0      22
+                                              0 BANK0      1     1      0
+ ---------------------------------------------------------------------------------
+ (1) _USARTReadData                                        2     2      0      23
+                                              0 BANK0      2     2      0
+ ---------------------------------------------------------------------------------
+ (1) _USARTInit                                            3     1      2      75
+                                              0 BANK0      3     1      2
+ ---------------------------------------------------------------------------------
+ (1) _USARTDataAvailable                                   1     1      0       0
+                                              0 BANK0      1     1      0
+ ---------------------------------------------------------------------------------
+ Estimated maximum stack depth 1
+ ---------------------------------------------------------------------------------
+ (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+ ---------------------------------------------------------------------------------
+ (2) _ISR                                                  4     4      0      15
+                                              5 COMMON     4     4      0
+                   _USARTHandleRxInt
+ ---------------------------------------------------------------------------------
+ (3) _USARTHandleRxInt                                     5     5      0      15
+                                              0 COMMON     5     5      0
+ ---------------------------------------------------------------------------------
+ Estimated maximum stack depth 3
+ ---------------------------------------------------------------------------------
+
+ Call Graph Graphs:
+
+ _main (ROOT)
+   _USARTDataAvailable
+   _USARTInit
+   _USARTReadData
+   _USARTWriteChar
+
+ _ISR (ROOT)
+   _USARTHandleRxInt
+
+ Address spaces:
+Name               Size   Autos  Total    Cost      Usage
+BITCOMMON            E      0       0       0        0.0%
+EEDATA              80      0       0       0        0.0%
+NULL                 0      0       0       0        0.0%
+CODE                 0      0       0       0        0.0%
+COMMON               E      9       B       1       78.6%
+BITSFR0              0      0       0       1        0.0%
+SFR0                 0      0       0       1        0.0%
+BITSFR1              0      0       0       2        0.0%
+SFR1                 0      0       0       2        0.0%
+STACK                0      0       0       2        0.0%
+BANK0               50      9      4E       3       97.5%
+BITSFR3              0      0       0       4        0.0%
+SFR3                 0      0       0       4        0.0%
+ABS                  0      0      59       4        0.0%
+BITBANK0            50      0       0       5        0.0%
+BITSFR2              0      0       0       5        0.0%
+SFR2                 0      0       0       5        0.0%
+BITBANK1            50      0       0       6        0.0%
+BANK1               50      0       0       7        0.0%
+BITBANK2            30      0       0       8        0.0%
+BANK2               30      0       0       9        0.0%
+DATA                 0      0      59      10        0.0%
+
+
+Microchip Technology PIC Macro Assembler V1.33 build 59893 
+Symbol Table                                                                                   Wed Feb 24 12:54:39 2016
+
+                         l36 0176                           l29 00B8                           fsr 0004  
+         USARTInit@baud_rate 0065                          l157 0029         ??_USARTDataAvailable 0065  
+                        l951 0090                          l945 008A                          l947 008C  
+                        l955 0095                          l949 008E                          l991 0113  
+                        _GIE 005F                          l997 0127                          _RB3 0033  
+                        _RB4 0034                          _RB5 0035                          _RB6 0036  
+                        _RB7 0037                          _ISR 0155                          u817 0030  
+                        u827 0040               ?_USARTReadData 0070                          fsr0 0004  
+                        indf 0000                         ?_ISR 0070                         l1003 012F  
+                       l1021 0146                         l1013 0137                         l1121 0056  
+                       l1029 0153                         l1311 00A4                         l1119 0051  
+                       l1313 00A9                         l1315 00AE                         l1147 007D  
+                       l1317 00B3                         _PEIE 005E                         _RCIE 0465  
+                       _RCIF 0065                         u6_25 00E9       __end_of_USARTWriteChar 017B  
+                       _main 001A                         btemp 007E            USARTReadData@data 0066  
+                       ltemp 007E                         start 0010                         ttemp 007E  
+                       wtemp 007E                        ??_ISR 0075            ?_USARTHandleRxInt 0070  
+                      ?_main 0070           ??_USARTHandleRxInt 0070                        _CMCON 001F  
+           USARTWriteChar@ch 0065                        i1l124 015E                        i1l673 00ED  
+                      i1l683 00FB                        i1l685 00FF                        i1l679 00F5  
+                      _RCREG 001A                        _SPBRG 0099                        _TRISB 0086  
+                      _TXREG 0019                        _UQEnd 0079                        main@n 006B  
+                      pclath 000A                        ltemp0 007E                        ltemp1 0082  
+                      ltemp2 0086                        ltemp3 0080           __size_of_USARTInit 0048  
+            ?_USARTWriteChar 0070                        ttemp0 007E                        ttemp1 0081  
+                      ttemp2 0084                        ttemp3 0087                        ttemp4 007F  
+                      status 0003                        wtemp0 007E                        wtemp1 0080  
+                      wtemp2 0082                        wtemp3 0084                        wtemp4 0086  
+                      wtemp5 0088                        wtemp6 007F              __initialization 0011  
+               __end_of_main 0082              ??_USARTReadData 0065                       ??_main 0068  
+          USARTWriteInt@F659 0060                       _URBuff 0020            __end_of_USARTInit 00CA  
+                     saved_w 007E      __end_of__initialization 0018               __pcstackCOMMON 0070  
+                 __pbssBANK0 0020                   __pmaintext 001A                   __pintentry 0004  
+__size_of_USARTDataAvailable 0024             ??_USARTWriteChar 0065    __size_of_USARTHandleRxInt 0043  
+                    _UQFront 007A                      __ptext0 0000                      __ptext1 0173  
+                    __ptext2 010D                      __ptext3 0082                      __ptext4 0131  
+                    __ptext5 0155                      __ptext6 00CA                 __size_of_ISR 0016  
+                    clrloop0 016C         end_of_initialization 0018                    _RCSTAbits 0018  
+      __end_of_USARTReadData 0131                    _USARTInit 0082                    _TXSTAbits 0098  
+        start_initialization 0011                   ?_USARTInit 0065                  __end_of_ISR 016B  
+           _USARTHandleRxInt 00CA                  __pbssCOMMON 0079                    ___latbits 0000  
+              __pcstackBANK0 0065   __end_of_USARTDataAvailable 0155                  ??_USARTInit 0067  
+          interrupt_function 0004                    clear_ram0 016B                     _PIR1bits 000C  
+                  main@count 006C      __size_of_USARTWriteChar 0008     __end_of_USARTHandleRxInt 010D  
+              __size_of_main 0068       __size_of_USARTReadData 0024                     main@data 006D  
+                   intlevel1 0000                _USARTReadData 010D         USARTHandleRxInt@data 0074  
+         _USARTDataAvailable 0131          ?_USARTDataAvailable 0070               _USARTWriteChar 0173  

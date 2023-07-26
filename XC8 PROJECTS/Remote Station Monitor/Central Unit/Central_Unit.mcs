@@ -1,0 +1,302 @@
+[Header]
+MagicCookie={0b13fe8c-dfe0-40eb-8900-6712719559a7}
+Version=1.0
+[File000]
+Location=E:\Study Material\XC8 PROJECTS\Remote Station Monitor\Central Unit\communication.p1
+Folder=Intermediary
+DeviceName=PIC18F452
+LanguageToolSuiteID={38171385-97B2-4EC5-BF2C-C2C027BA5B04}
+LanguageToolID={B6D1F1C2-3E8A-49F6-9C0A-75F5EBE32222}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\xc8\v1.33\bin\xc8.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|communication.c|isr.c|lcd_hd44780_pic18.c|myeeprom.c|myrtc.C|packet.c|rtu.c|Test1.c|usart_pic18.c|hsm20g.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=C9=2
+TraceCmdString=
+DebugOptions=
+[File001]
+Location=E:\Study Material\XC8 PROJECTS\Remote Station Monitor\Central Unit\isr.p1
+Folder=Intermediary
+DeviceName=PIC18F452
+LanguageToolSuiteID={38171385-97B2-4EC5-BF2C-C2C027BA5B04}
+LanguageToolID={B6D1F1C2-3E8A-49F6-9C0A-75F5EBE32222}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\xc8\v1.33\bin\xc8.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|communication.c|isr.c|lcd_hd44780_pic18.c|myeeprom.c|myrtc.C|packet.c|rtu.c|Test1.c|usart_pic18.c|hsm20g.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=C9=2
+TraceCmdString=
+DebugOptions=
+[File002]
+Location=E:\Study Material\XC8 PROJECTS\Remote Station Monitor\Central Unit\lcd_hd44780_pic18.p1
+Folder=Intermediary
+DeviceName=PIC18F452
+LanguageToolSuiteID={38171385-97B2-4EC5-BF2C-C2C027BA5B04}
+LanguageToolID={B6D1F1C2-3E8A-49F6-9C0A-75F5EBE32222}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\xc8\v1.33\bin\xc8.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|communication.c|isr.c|lcd_hd44780_pic18.c|myeeprom.c|myrtc.C|packet.c|rtu.c|Test1.c|usart_pic18.c|hsm20g.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=C9=2
+TraceCmdString=
+DebugOptions=
+[File003]
+Location=E:\Study Material\XC8 PROJECTS\Remote Station Monitor\Central Unit\myeeprom.p1
+Folder=Intermediary
+DeviceName=PIC18F452
+LanguageToolSuiteID={38171385-97B2-4EC5-BF2C-C2C027BA5B04}
+LanguageToolID={B6D1F1C2-3E8A-49F6-9C0A-75F5EBE32222}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\xc8\v1.33\bin\xc8.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|communication.c|isr.c|lcd_hd44780_pic18.c|myeeprom.c|myrtc.C|packet.c|rtu.c|Test1.c|usart_pic18.c|hsm20g.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=C9=2
+TraceCmdString=
+DebugOptions=
+[File004]
+Location=E:\Study Material\XC8 PROJECTS\Remote Station Monitor\Central Unit\myrtc.p1
+Folder=Intermediary
+DeviceName=PIC18F452
+LanguageToolSuiteID={38171385-97B2-4EC5-BF2C-C2C027BA5B04}
+LanguageToolID={B6D1F1C2-3E8A-49F6-9C0A-75F5EBE32222}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\xc8\v1.33\bin\xc8.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|communication.c|isr.c|lcd_hd44780_pic18.c|myeeprom.c|myrtc.C|packet.c|rtu.c|Test1.c|usart_pic18.c|hsm20g.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=C9=2
+TraceCmdString=
+DebugOptions=
+[File005]
+Location=E:\Study Material\XC8 PROJECTS\Remote Station Monitor\Central Unit\packet.p1
+Folder=Intermediary
+DeviceName=PIC18F452
+LanguageToolSuiteID={38171385-97B2-4EC5-BF2C-C2C027BA5B04}
+LanguageToolID={B6D1F1C2-3E8A-49F6-9C0A-75F5EBE32222}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\xc8\v1.33\bin\xc8.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|communication.c|isr.c|lcd_hd44780_pic18.c|myeeprom.c|myrtc.C|packet.c|rtu.c|Test1.c|usart_pic18.c|hsm20g.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=C9=2
+TraceCmdString=
+DebugOptions=
+[File006]
+Location=E:\Study Material\XC8 PROJECTS\Remote Station Monitor\Central Unit\rtu.p1
+Folder=Intermediary
+DeviceName=PIC18F452
+LanguageToolSuiteID={38171385-97B2-4EC5-BF2C-C2C027BA5B04}
+LanguageToolID={B6D1F1C2-3E8A-49F6-9C0A-75F5EBE32222}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\xc8\v1.33\bin\xc8.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|communication.c|isr.c|lcd_hd44780_pic18.c|myeeprom.c|myrtc.C|packet.c|rtu.c|Test1.c|usart_pic18.c|hsm20g.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=C9=2
+TraceCmdString=
+DebugOptions=
+[File007]
+Location=E:\Study Material\XC8 PROJECTS\Remote Station Monitor\Central Unit\Test1.p1
+Folder=Intermediary
+DeviceName=PIC18F452
+LanguageToolSuiteID={38171385-97B2-4EC5-BF2C-C2C027BA5B04}
+LanguageToolID={B6D1F1C2-3E8A-49F6-9C0A-75F5EBE32222}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\xc8\v1.33\bin\xc8.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|communication.c|isr.c|lcd_hd44780_pic18.c|myeeprom.c|myrtc.C|packet.c|rtu.c|Test1.c|usart_pic18.c|hsm20g.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=C9=2
+TraceCmdString=
+DebugOptions=
+[File008]
+Location=E:\Study Material\XC8 PROJECTS\Remote Station Monitor\Central Unit\usart_pic18.p1
+Folder=Intermediary
+DeviceName=PIC18F452
+LanguageToolSuiteID={38171385-97B2-4EC5-BF2C-C2C027BA5B04}
+LanguageToolID={B6D1F1C2-3E8A-49F6-9C0A-75F5EBE32222}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\xc8\v1.33\bin\xc8.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|communication.c|isr.c|lcd_hd44780_pic18.c|myeeprom.c|myrtc.C|packet.c|rtu.c|Test1.c|usart_pic18.c|hsm20g.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=C9=2
+TraceCmdString=
+DebugOptions=
+[File009]
+Location=E:\Study Material\XC8 PROJECTS\Remote Station Monitor\Central Unit\hsm20g.p1
+Folder=Intermediary
+DeviceName=PIC18F452
+LanguageToolSuiteID={38171385-97B2-4EC5-BF2C-C2C027BA5B04}
+LanguageToolID={B6D1F1C2-3E8A-49F6-9C0A-75F5EBE32222}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\xc8\v1.33\bin\xc8.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|communication.c|isr.c|lcd_hd44780_pic18.c|myeeprom.c|myrtc.C|packet.c|rtu.c|Test1.c|usart_pic18.c|hsm20g.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=C9=2
+TraceCmdString=
+DebugOptions=
+[File010]
+Location=E:\Study Material\XC8 PROJECTS\Remote Station Monitor\Central Unit\Central_Unit.cof
+Folder=Output
+DeviceName=PIC18F452
+LanguageToolSuiteID={38171385-97B2-4EC5-BF2C-C2C027BA5B04}
+LanguageToolID={B6D1F1C2-3E8A-49F6-9C0A-75F5EBE32222}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\xc8\v1.33\bin\xc8.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|communication.c|isr.c|lcd_hd44780_pic18.c|myeeprom.c|myrtc.C|packet.c|rtu.c|Test1.c|usart_pic18.c|hsm20g.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=C9=2
+TraceCmdString=
+DebugOptions=
+[File011]
+Location=E:\Study Material\XC8 PROJECTS\Remote Station Monitor\Central Unit\Central_Unit.hex
+Folder=Output
+DeviceName=PIC18F452
+LanguageToolSuiteID={38171385-97B2-4EC5-BF2C-C2C027BA5B04}
+LanguageToolID={B6D1F1C2-3E8A-49F6-9C0A-75F5EBE32222}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\xc8\v1.33\bin\xc8.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|communication.c|isr.c|lcd_hd44780_pic18.c|myeeprom.c|myrtc.C|packet.c|rtu.c|Test1.c|usart_pic18.c|hsm20g.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=C9=2
+TraceCmdString=
+DebugOptions=
+[File012]
+Location=E:\Study Material\XC8 PROJECTS\Remote Station Monitor\Central Unit\Central_Unit.sym
+Folder=Output
+DeviceName=PIC18F452
+LanguageToolSuiteID={38171385-97B2-4EC5-BF2C-C2C027BA5B04}
+LanguageToolID={B6D1F1C2-3E8A-49F6-9C0A-75F5EBE32222}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\xc8\v1.33\bin\xc8.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|communication.c|isr.c|lcd_hd44780_pic18.c|myeeprom.c|myrtc.C|packet.c|rtu.c|Test1.c|usart_pic18.c|hsm20g.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=C9=2
+TraceCmdString=
+DebugOptions=
+[File013]
+Location=E:\Study Material\XC8 PROJECTS\Remote Station Monitor\Central Unit\Central_Unit.map
+Folder=Output
+DeviceName=PIC18F452
+LanguageToolSuiteID={38171385-97B2-4EC5-BF2C-C2C027BA5B04}
+LanguageToolID={B6D1F1C2-3E8A-49F6-9C0A-75F5EBE32222}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\xc8\v1.33\bin\xc8.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|communication.c|isr.c|lcd_hd44780_pic18.c|myeeprom.c|myrtc.C|packet.c|rtu.c|Test1.c|usart_pic18.c|hsm20g.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=C9=2
+TraceCmdString=
+DebugOptions=
+[File014]
+Location=E:\Study Material\XC8 PROJECTS\Remote Station Monitor\Central Unit\Central_Unit.hxl
+Folder=Output
+DeviceName=PIC18F452
+LanguageToolSuiteID={38171385-97B2-4EC5-BF2C-C2C027BA5B04}
+LanguageToolID={B6D1F1C2-3E8A-49F6-9C0A-75F5EBE32222}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\xc8\v1.33\bin\xc8.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|communication.c|isr.c|lcd_hd44780_pic18.c|myeeprom.c|myrtc.C|packet.c|rtu.c|Test1.c|usart_pic18.c|hsm20g.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=C9=2
+TraceCmdString=
+DebugOptions=
+[File015]
+Location=E:\Study Material\XC8 PROJECTS\Remote Station Monitor\Central Unit\startup.lst
+Folder=Output
+DeviceName=PIC18F452
+LanguageToolSuiteID={38171385-97B2-4EC5-BF2C-C2C027BA5B04}
+LanguageToolID={B6D1F1C2-3E8A-49F6-9C0A-75F5EBE32222}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\xc8\v1.33\bin\xc8.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|communication.c|isr.c|lcd_hd44780_pic18.c|myeeprom.c|myrtc.C|packet.c|rtu.c|Test1.c|usart_pic18.c|hsm20g.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=C9=2
+TraceCmdString=
+DebugOptions=
+[File016]
+Location=E:\Study Material\XC8 PROJECTS\Remote Station Monitor\Central Unit\startup.rlf
+Folder=Output
+DeviceName=PIC18F452
+LanguageToolSuiteID={38171385-97B2-4EC5-BF2C-C2C027BA5B04}
+LanguageToolID={B6D1F1C2-3E8A-49F6-9C0A-75F5EBE32222}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\xc8\v1.33\bin\xc8.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|communication.c|isr.c|lcd_hd44780_pic18.c|myeeprom.c|myrtc.C|packet.c|rtu.c|Test1.c|usart_pic18.c|hsm20g.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=C9=2
+TraceCmdString=
+DebugOptions=
+[File017]
+Location=E:\Study Material\XC8 PROJECTS\Remote Station Monitor\Central Unit\doprnt.p1
+Folder=Output
+DeviceName=PIC18F452
+LanguageToolSuiteID={38171385-97B2-4EC5-BF2C-C2C027BA5B04}
+LanguageToolID={B6D1F1C2-3E8A-49F6-9C0A-75F5EBE32222}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\xc8\v1.33\bin\xc8.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|communication.c|isr.c|lcd_hd44780_pic18.c|myeeprom.c|myrtc.C|packet.c|rtu.c|Test1.c|usart_pic18.c|hsm20g.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=C9=2
+TraceCmdString=
+DebugOptions=
+[File018]
+Location=E:\Study Material\XC8 PROJECTS\Remote Station Monitor\Central Unit\doprnt.pre
+Folder=Output
+DeviceName=PIC18F452
+LanguageToolSuiteID={38171385-97B2-4EC5-BF2C-C2C027BA5B04}
+LanguageToolID={B6D1F1C2-3E8A-49F6-9C0A-75F5EBE32222}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\xc8\v1.33\bin\xc8.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|communication.c|isr.c|lcd_hd44780_pic18.c|myeeprom.c|myrtc.C|packet.c|rtu.c|Test1.c|usart_pic18.c|hsm20g.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=C9=2
+TraceCmdString=
+DebugOptions=
+[File019]
+Location=E:\Study Material\XC8 PROJECTS\Remote Station Monitor\Central Unit\Central_Unit.obj
+Folder=Output
+DeviceName=PIC18F452
+LanguageToolSuiteID={38171385-97B2-4EC5-BF2C-C2C027BA5B04}
+LanguageToolID={B6D1F1C2-3E8A-49F6-9C0A-75F5EBE32222}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\xc8\v1.33\bin\xc8.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|communication.c|isr.c|lcd_hd44780_pic18.c|myeeprom.c|myrtc.C|packet.c|rtu.c|Test1.c|usart_pic18.c|hsm20g.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=C9=2
+TraceCmdString=
+DebugOptions=
+[File020]
+Location=E:\Study Material\XC8 PROJECTS\Remote Station Monitor\Central Unit\Central_Unit.lst
+Folder=Output
+DeviceName=PIC18F452
+LanguageToolSuiteID={38171385-97B2-4EC5-BF2C-C2C027BA5B04}
+LanguageToolID={B6D1F1C2-3E8A-49F6-9C0A-75F5EBE32222}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\xc8\v1.33\bin\xc8.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|communication.c|isr.c|lcd_hd44780_pic18.c|myeeprom.c|myrtc.C|packet.c|rtu.c|Test1.c|usart_pic18.c|hsm20g.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=C9=2
+TraceCmdString=
+DebugOptions=
+[File021]
+Location=E:\Study Material\XC8 PROJECTS\Remote Station Monitor\Central Unit\Central_Unit.rlf
+Folder=Output
+DeviceName=PIC18F452
+LanguageToolSuiteID={38171385-97B2-4EC5-BF2C-C2C027BA5B04}
+LanguageToolID={B6D1F1C2-3E8A-49F6-9C0A-75F5EBE32222}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\xc8\v1.33\bin\xc8.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|communication.c|isr.c|lcd_hd44780_pic18.c|myeeprom.c|myrtc.C|packet.c|rtu.c|Test1.c|usart_pic18.c|hsm20g.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=C9=2
+TraceCmdString=
+DebugOptions=
+[File022]
+Location=E:\Study Material\XC8 PROJECTS\Remote Station Monitor\Central Unit\Central_Unit.sdb
+Folder=Output
+DeviceName=PIC18F452
+LanguageToolSuiteID={38171385-97B2-4EC5-BF2C-C2C027BA5B04}
+LanguageToolID={B6D1F1C2-3E8A-49F6-9C0A-75F5EBE32222}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\xc8\v1.33\bin\xc8.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|communication.c|isr.c|lcd_hd44780_pic18.c|myeeprom.c|myrtc.C|packet.c|rtu.c|Test1.c|usart_pic18.c|hsm20g.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=C9=2
+TraceCmdString=
+DebugOptions=

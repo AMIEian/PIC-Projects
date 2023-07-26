@@ -1,0 +1,405 @@
+Version 3.2 HI-TECH Software Intermediate Code
+"14 E:\Study Material\XC8 PROJECTS\Wall Clock\timekeeper.h
+[v _update_date `(v ~T0 @X0 0 ef ]
+"15
+[v _check_alarm `(v ~T0 @X0 0 ef ]
+"6 E:\Study Material\XC8 PROJECTS\Wall Clock\timekeeper.h
+[v _Twenty_Four_Hrs `uc ~T0 @X0 1 e ]
+[i _Twenty_Four_Hrs
+-> -> 0 `i `uc
+]
+[; ;timekeeper.h: 6: unsigned char Twenty_Four_Hrs = 0;
+"7
+[v _secs `uc ~T0 @X0 1 e ]
+[i _secs
+-> -> 0 `i `uc
+]
+[v _mins `uc ~T0 @X0 1 e ]
+[i _mins
+-> -> 0 `i `uc
+]
+[v _hrs `uc ~T0 @X0 1 e ]
+[i _hrs
+-> -> 12 `i `uc
+]
+[v _day `uc ~T0 @X0 1 e ]
+[i _day
+-> -> 1 `i `uc
+]
+[v _month `uc ~T0 @X0 1 e ]
+[i _month
+-> -> 1 `i `uc
+]
+[v _year `uc ~T0 @X0 1 e ]
+[i _year
+-> -> 15 `i `uc
+]
+[; ;timekeeper.h: 7: unsigned char secs = 00, mins = 00, hrs = 12, day = 1, month = 1, year = 15;
+"8
+[v _alarm_mins `uc ~T0 @X0 1 e ]
+[i _alarm_mins
+-> -> 0 `i `uc
+]
+[v _alarm_hrs `uc ~T0 @X0 1 e ]
+[i _alarm_hrs
+-> -> 12 `i `uc
+]
+[; ;timekeeper.h: 8: unsigned char alarm_mins = 00, alarm_hrs = 12;
+"9
+[v _sec_flag `uc ~T0 @X0 1 e ]
+[i _sec_flag
+-> -> 0 `i `uc
+]
+[v _min_flag `uc ~T0 @X0 1 e ]
+[i _min_flag
+-> -> 1 `i `uc
+]
+[v _hrs_flag `uc ~T0 @X0 1 e ]
+[i _hrs_flag
+-> -> 0 `i `uc
+]
+[v _date_flag `uc ~T0 @X0 1 e ]
+[i _date_flag
+-> -> 1 `i `uc
+]
+[v _alarm_flag `uc ~T0 @X0 1 e ]
+[i _alarm_flag
+-> -> 0 `i `uc
+]
+[v _alarm_auto_repeat `uc ~T0 @X0 1 e ]
+[i _alarm_auto_repeat
+-> -> 0 `i `uc
+]
+[v _alarm_bell `uc ~T0 @X0 1 e ]
+[i _alarm_bell
+-> -> 0 `i `uc
+]
+[; ;timekeeper.h: 9: char sec_flag = 0, min_flag = 1, hrs_flag = 0, date_flag = 1, alarm_flag = 0, alarm_auto_repeat = 0, alarm_bell = 0;
+"10
+[v _adjustment `uc ~T0 @X0 1 e ]
+[i _adjustment
+-> -> 0 `i `uc
+]
+[; ;timekeeper.h: 10: char adjustment = 0;
+"11
+[v _beeps `uc ~T0 @X0 1 e ]
+[i _beeps
+-> -> 0 `i `uc
+]
+[; ;timekeeper.h: 11: char beeps = 0;
+[; ;timekeeper.h: 13: void update_time();
+[; ;timekeeper.h: 14: void update_date();
+[; ;timekeeper.h: 15: void check_alarm();
+"3 E:\Study Material\XC8 PROJECTS\Wall Clock\timekeeper.C
+[v _update_time `(v ~T0 @X0 1 ef ]
+"4
+{
+[; ;timekeeper.C: 3: void update_time()
+[; ;timekeeper.C: 4: {
+[e :U _update_time ]
+[f ]
+[; ;timekeeper.C: 6: if(secs == 60)
+"6
+[e $ ! == -> _secs `i -> 60 `i 2  ]
+[; ;timekeeper.C: 7: {
+"7
+{
+[; ;timekeeper.C: 8: secs = 0;
+"8
+[e = _secs -> -> 0 `i `uc ]
+[; ;timekeeper.C: 9: mins++;
+"9
+[e ++ _mins -> -> 1 `i `uc ]
+[; ;timekeeper.C: 10: if(mins == 60)
+"10
+[e $ ! == -> _mins `i -> 60 `i 3  ]
+[; ;timekeeper.C: 11: {
+"11
+{
+[; ;timekeeper.C: 12: mins = 0;
+"12
+[e = _mins -> -> 0 `i `uc ]
+[; ;timekeeper.C: 13: hrs++;
+"13
+[e ++ _hrs -> -> 1 `i `uc ]
+[; ;timekeeper.C: 14: if(hrs == 24)
+"14
+[e $ ! == -> _hrs `i -> 24 `i 4  ]
+[; ;timekeeper.C: 15: {
+"15
+{
+[; ;timekeeper.C: 16: hrs = 0;
+"16
+[e = _hrs -> -> 0 `i `uc ]
+[; ;timekeeper.C: 17: update_date();
+"17
+[e ( _update_date ..  ]
+[; ;timekeeper.C: 18: date_flag = 1;
+"18
+[e = _date_flag -> -> 1 `i `uc ]
+"19
+}
+[e :U 4 ]
+[; ;timekeeper.C: 19: }
+[; ;timekeeper.C: 20: hrs_flag = 1;
+"20
+[e = _hrs_flag -> -> 1 `i `uc ]
+"21
+}
+[e :U 3 ]
+[; ;timekeeper.C: 21: }
+[; ;timekeeper.C: 22: min_flag = 1;
+"22
+[e = _min_flag -> -> 1 `i `uc ]
+[; ;timekeeper.C: 23: if(alarm_flag == 1)
+"23
+[e $ ! == -> _alarm_flag `i -> 1 `i 5  ]
+[; ;timekeeper.C: 24: check_alarm();
+"24
+[e ( _check_alarm ..  ]
+[e :U 5 ]
+"25
+}
+[e :U 2 ]
+[; ;timekeeper.C: 25: }
+[; ;timekeeper.C: 26: return;
+"26
+[e $UE 1  ]
+[; ;timekeeper.C: 27: }
+"27
+[e :UE 1 ]
+}
+"29
+[v _update_date `(v ~T0 @X0 1 ef ]
+"30
+{
+[; ;timekeeper.C: 29: void update_date()
+[; ;timekeeper.C: 30: {
+[e :U _update_date ]
+[f ]
+"31
+[v _temp `uc ~T0 @X0 1 a ]
+[; ;timekeeper.C: 31: unsigned char temp;
+[; ;timekeeper.C: 32: switch(day)
+"32
+[e $U 8  ]
+[; ;timekeeper.C: 33: {
+"33
+{
+[; ;timekeeper.C: 34: case 28:
+"34
+[e :U 9 ]
+[; ;timekeeper.C: 35: if(month == 2)
+"35
+[e $ ! == -> _month `i -> 2 `i 10  ]
+[; ;timekeeper.C: 36: {
+"36
+{
+[; ;timekeeper.C: 38: temp = year % 4;
+"38
+[e = _temp -> % -> _year `i -> 4 `i `uc ]
+[; ;timekeeper.C: 39: if(temp == 0)
+"39
+[e $ ! == -> _temp `i -> 0 `i 11  ]
+[; ;timekeeper.C: 40: day++;
+"40
+[e ++ _day -> -> 1 `i `uc ]
+[e $U 12  ]
+"41
+[e :U 11 ]
+[; ;timekeeper.C: 41: else
+[; ;timekeeper.C: 42: {
+"42
+{
+[; ;timekeeper.C: 43: month++;
+"43
+[e ++ _month -> -> 1 `i `uc ]
+[; ;timekeeper.C: 44: day = 1;
+"44
+[e = _day -> -> 1 `i `uc ]
+"45
+}
+[e :U 12 ]
+"46
+}
+[; ;timekeeper.C: 45: }
+[; ;timekeeper.C: 46: }
+[e $U 13  ]
+"47
+[e :U 10 ]
+[; ;timekeeper.C: 47: else
+[; ;timekeeper.C: 48: day++;
+"48
+[e ++ _day -> -> 1 `i `uc ]
+[e :U 13 ]
+[; ;timekeeper.C: 49: break;
+"49
+[e $U 7  ]
+[; ;timekeeper.C: 50: case 29:
+"50
+[e :U 14 ]
+[; ;timekeeper.C: 52: if(month == 2)
+"52
+[e $ ! == -> _month `i -> 2 `i 15  ]
+[; ;timekeeper.C: 53: {
+"53
+{
+[; ;timekeeper.C: 54: month++;
+"54
+[e ++ _month -> -> 1 `i `uc ]
+[; ;timekeeper.C: 55: day = 1;
+"55
+[e = _day -> -> 1 `i `uc ]
+"56
+}
+[; ;timekeeper.C: 56: }
+[e $U 16  ]
+"57
+[e :U 15 ]
+[; ;timekeeper.C: 57: else
+[; ;timekeeper.C: 58: day++;
+"58
+[e ++ _day -> -> 1 `i `uc ]
+[e :U 16 ]
+[; ;timekeeper.C: 59: break;
+"59
+[e $U 7  ]
+[; ;timekeeper.C: 60: case 30:
+"60
+[e :U 17 ]
+[; ;timekeeper.C: 61: if(month == 4 || month == 6 || month == 9 || month == 11)
+"61
+[e $ ! || || || == -> _month `i -> 4 `i == -> _month `i -> 6 `i == -> _month `i -> 9 `i == -> _month `i -> 11 `i 18  ]
+[; ;timekeeper.C: 62: {
+"62
+{
+[; ;timekeeper.C: 63: day = 1;
+"63
+[e = _day -> -> 1 `i `uc ]
+[; ;timekeeper.C: 64: month++;
+"64
+[e ++ _month -> -> 1 `i `uc ]
+"65
+}
+[; ;timekeeper.C: 65: }
+[e $U 19  ]
+"66
+[e :U 18 ]
+[; ;timekeeper.C: 66: else
+[; ;timekeeper.C: 67: day++;
+"67
+[e ++ _day -> -> 1 `i `uc ]
+[e :U 19 ]
+[; ;timekeeper.C: 68: break;
+"68
+[e $U 7  ]
+[; ;timekeeper.C: 69: default :
+"69
+[e :U 20 ]
+[; ;timekeeper.C: 70: if(day == 31)
+"70
+[e $ ! == -> _day `i -> 31 `i 21  ]
+[; ;timekeeper.C: 71: {
+"71
+{
+[; ;timekeeper.C: 72: day = 1;
+"72
+[e = _day -> -> 1 `i `uc ]
+[; ;timekeeper.C: 73: month++;
+"73
+[e ++ _month -> -> 1 `i `uc ]
+[; ;timekeeper.C: 74: if(month == 13)
+"74
+[e $ ! == -> _month `i -> 13 `i 22  ]
+[; ;timekeeper.C: 75: {
+"75
+{
+[; ;timekeeper.C: 76: month = 1;
+"76
+[e = _month -> -> 1 `i `uc ]
+[; ;timekeeper.C: 77: year++;
+"77
+[e ++ _year -> -> 1 `i `uc ]
+[; ;timekeeper.C: 78: if(year == 100)
+"78
+[e $ ! == -> _year `i -> 100 `i 23  ]
+[; ;timekeeper.C: 79: year = 0;
+"79
+[e = _year -> -> 0 `i `uc ]
+[e :U 23 ]
+"80
+}
+[e :U 22 ]
+"81
+}
+[; ;timekeeper.C: 80: }
+[; ;timekeeper.C: 81: }
+[e $U 24  ]
+"82
+[e :U 21 ]
+[; ;timekeeper.C: 82: else
+[; ;timekeeper.C: 83: day++;
+"83
+[e ++ _day -> -> 1 `i `uc ]
+[e :U 24 ]
+[; ;timekeeper.C: 84: break;
+"84
+[e $U 7  ]
+"85
+}
+[; ;timekeeper.C: 85: }
+[e $U 7  ]
+"32
+[e :U 8 ]
+[e [\ _day , $ -> -> 28 `i `uc 9
+ , $ -> -> 29 `i `uc 14
+ , $ -> -> 30 `i `uc 17
+ 20 ]
+"85
+[e :U 7 ]
+[; ;timekeeper.C: 86: }
+"86
+[e :UE 6 ]
+}
+"88
+[v _check_alarm `(v ~T0 @X0 1 ef ]
+"89
+{
+[; ;timekeeper.C: 88: void check_alarm()
+[; ;timekeeper.C: 89: {
+[e :U _check_alarm ]
+[f ]
+[; ;timekeeper.C: 90: if(alarm_hrs == hrs && alarm_mins == mins)
+"90
+[e $ ! && == -> _alarm_hrs `i -> _hrs `i == -> _alarm_mins `i -> _mins `i 26  ]
+[; ;timekeeper.C: 91: {
+"91
+{
+[; ;timekeeper.C: 92: alarm_bell = 1;
+"92
+[e = _alarm_bell -> -> 1 `i `uc ]
+[; ;timekeeper.C: 93: if(alarm_auto_repeat == 0)
+"93
+[e $ ! == -> _alarm_auto_repeat `i -> 0 `i 27  ]
+[; ;timekeeper.C: 94: alarm_flag = 0;
+"94
+[e = _alarm_flag -> -> 0 `i `uc ]
+[e :U 27 ]
+"95
+}
+[; ;timekeeper.C: 95: }
+[e $U 28  ]
+"96
+[e :U 26 ]
+[; ;timekeeper.C: 96: else
+[; ;timekeeper.C: 97: alarm_bell = 0;
+"97
+[e = _alarm_bell -> -> 0 `i `uc ]
+[e :U 28 ]
+[; ;timekeeper.C: 98: return;
+"98
+[e $UE 25  ]
+[; ;timekeeper.C: 99: }
+"99
+[e :UE 25 ]
+}

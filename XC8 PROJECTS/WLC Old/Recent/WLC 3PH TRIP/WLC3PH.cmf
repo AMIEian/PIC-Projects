@@ -1,0 +1,465 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$startup.obj
+end_init CODE 0 10 10 1 2
+reset_vec CODE 0 0 0 1 2
+$WLC3PH.obj
+cinit CODE 0 11 11 F 2
+intentry CODE 0 4 4 C 2
+text3 CODE 0 103 103 B9 2
+text2 CODE 0 1DE 1DE 22 2
+text1 CODE 0 1BC 1BC 22 2
+maintext CODE 0 20 20 E3 2
+cstackBANK0 BANK0 1 20 20 7 1
+cstackCOMMON COMMON 1 75 75 5 1
+dataBANK0 BANK0 1 2D 2D 1 1
+bssBANK0 BANK0 1 27 27 6 1
+bssCOMMON COMMON 1 70 70 5 1
+idataBANK0 CODE 0 200 200 1 2
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+BANK0 02E-06F 1
+BANK1 0A0-0BF 1
+CODE 001-003 2
+CODE 201-7FF 2
+COMMON 07A-07D 1
+CONFIG 2007-2007 2
+CONST 001-003 2
+CONST 201-7FF 2
+EEDATA 2100-213F 2
+ENTRY 001-003 2
+ENTRY 201-7FF 2
+IDLOC 2000-2003 2
+RAM 02E-06F 1
+RAM 0A0-0BF 1
+SFR0 000-01F 1
+SFR1 080-09F 1
+SFR2 100-16F 1
+SFR3 180-1EF 1
+STACK 02E-06F 1
+STRCODE 001-003 2
+STRCODE 201-7FF 2
+STRING 001-003 2
+STRING 201-7FF 2
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <file name>:<line number> <address> <psect name> <class name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$WLC3PH.obj
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":158 4 intentry CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH.as":215 11 cinit CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH.as":218 11 cinit CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH.as":270 11 cinit CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH.as":271 12 cinit CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH.as":272 13 cinit CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH.as":273 14 cinit CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH.as":274 15 cinit CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH.as":277 16 cinit CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH.as":278 17 cinit CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH.as":279 18 cinit CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH.as":280 19 cinit CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH.as":281 1A cinit CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH.as":282 1B cinit CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH.as":287 1C cinit CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH.as":288 1D cinit CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH.as":294 1E cinit CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH.as":295 1E cinit CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH.as":296 1F cinit CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":38 20 maintext CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":40 20 maintext CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":41 24 maintext CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":42 25 maintext CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":43 27 maintext CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":45 29 maintext CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":46 2B maintext CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":48 2D maintext CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":49 30 maintext CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":50 31 maintext CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":52 32 maintext CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":54 37 maintext CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":55 39 maintext CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":56 46 maintext CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":57 49 maintext CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":52 56 maintext CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":59 60 maintext CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":64 61 maintext CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":66 65 maintext CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":68 6B maintext CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":70 72 maintext CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":80 73 maintext CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":82 83 maintext CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":83 85 maintext CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":86 86 maintext CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":91 89 maintext CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":94 8E maintext CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":95 90 maintext CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":99 91 maintext CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":102 92 maintext CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":105 9E maintext CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":107 A1 maintext CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":108 A2 maintext CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":109 A4 maintext CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":111 A6 maintext CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":116 A7 maintext CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":118 AB maintext CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":119 AC maintext CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":120 AD maintext CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":125 AE maintext CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":127 B9 maintext CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":128 BD maintext CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":131 C1 maintext CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":132 C2 maintext CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":133 C3 maintext CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":137 C4 maintext CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":138 C7 maintext CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":139 D4 maintext CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":140 D7 maintext CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":134 E4 maintext CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":146 E5 maintext CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":147 E8 maintext CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":150 E8 maintext CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":152 ED maintext CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":150 FC maintext CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":158 103 text3 CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":160 103 text3 CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":163 104 text3 CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":164 107 text3 CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":166 10A text3 CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":169 10E text3 CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":171 112 text3 CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":172 119 text3 CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":174 11D text3 CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":176 11F text3 CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":179 120 text3 CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":180 121 text3 CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":183 121 text3 CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":184 124 text3 CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":186 127 text3 CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":189 12B text3 CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":191 12F text3 CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":192 136 text3 CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":194 13A text3 CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":195 13C text3 CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":197 13E text3 CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":201 13F text3 CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":205 140 text3 CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":207 144 text3 CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":208 145 text3 CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":209 146 text3 CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":211 146 text3 CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":214 147 text3 CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":216 14B text3 CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":217 14C text3 CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":218 14D text3 CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":220 14D text3 CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":224 14E text3 CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":225 151 text3 CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":227 154 text3 CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":228 158 text3 CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":229 15B text3 CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":231 162 text3 CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":233 166 text3 CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":234 16D text3 CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":236 171 text3 CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":238 173 text3 CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":241 174 text3 CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":242 175 text3 CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":245 175 text3 CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":246 178 text3 CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":248 17B text3 CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":249 17F text3 CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":250 182 text3 CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":252 189 text3 CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":254 18D text3 CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":255 194 text3 CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":257 198 text3 CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":259 19A text3 CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":262 19B text3 CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":263 19C text3 CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":266 19C text3 CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":267 19F text3 CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":270 1A2 text3 CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":272 1A6 text3 CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":273 1A7 text3 CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":274 1A8 text3 CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":276 1A8 text3 CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":279 1A9 text3 CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":281 1AD text3 CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":282 1AE text3 CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":283 1AF text3 CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":285 1AF text3 CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":286 1B0 text3 CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":288 1B0 text3 CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":289 1B1 text3 CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":305 1BC text1 CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":308 1BC text1 CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":310 1BF text1 CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":312 1C4 text1 CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":310 1D1 text1 CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":314 1DB text1 CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":316 1DC text1 CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":317 1DD text1 CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":291 1DE text2 CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":294 1DE text2 CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":296 1E1 text2 CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":298 1E6 text2 CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":296 1F3 text2 CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":300 1FD text2 CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":302 1FE text2 CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\WLC3PH_NEW.C":303 1FF text2 CODE
+$startup.obj
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\startup.as":39 0 functab CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\startup.as":40 0 functab CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\startup.as":41 0 functab CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\startup.as":42 0 functab CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\startup.as":43 0 functab CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\startup.as":44 0 functab CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\startup.as":63 0 reset_vec CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\startup.as":68 0 reset_vec CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\startup.as":73 10 init CODE
+"E:\Study Material\XC8 PROJECTS\WLC 3PH TRIP\startup.as":76 10 end_init CODE
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+_ll 71 0 COMMON 1 bssCOMMON WLC3PH.obj
+_ul 2C 0 BANK0 1 bssBANK0 WLC3PH.obj
+_lu 29 0 BANK0 1 bssBANK0 WLC3PH.obj
+_uu 74 0 COMMON 1 bssCOMMON WLC3PH.obj
+_RA1 29 0 ABS 0 - WLC3PH.obj
+_RC0 38 0 ABS 0 - WLC3PH.obj
+_RB1 31 0 ABS 0 - WLC3PH.obj
+_RA2 2A 0 ABS 0 - WLC3PH.obj
+_RC1 39 0 ABS 0 - WLC3PH.obj
+_RB2 32 0 ABS 0 - WLC3PH.obj
+_RA3 2B 0 ABS 0 - WLC3PH.obj
+_RC2 3A 0 ABS 0 - WLC3PH.obj
+_RB3 33 0 ABS 0 - WLC3PH.obj
+_RC3 3B 0 ABS 0 - WLC3PH.obj
+_RB4 34 0 ABS 0 - WLC3PH.obj
+_RA5 2D 0 ABS 0 - WLC3PH.obj
+_RC4 3C 0 ABS 0 - WLC3PH.obj
+_RC5 3D 0 ABS 0 - WLC3PH.obj
+_RB6 36 0 ABS 0 - WLC3PH.obj
+_RB7 37 0 ABS 0 - WLC3PH.obj
+__S0 201 0 ABS 0 - -
+__S1 7A 0 ABS 0 - -
+__S2 0 0 ABS 0 - -
+__S3 0 0 ABS 0 - -
+__Hintentry 20 0 CODE 0 intentry -
+__Lintentry 8 0 CODE 0 intentry -
+__pintentry 8 0 CODE 0 intentry WLC3PH.obj
+_INTF 59 0 ABS 0 - WLC3PH.obj
+_main 40 0 CODE 0 maintext WLC3PH.obj
+___sp 0 0 STACK 2 stack startup.obj
+btemp 7E 0 ABS 0 - WLC3PH.obj
+ltemp 7E 0 ABS 0 - WLC3PH.obj
+ttemp 7E 0 ABS 0 - WLC3PH.obj
+wtemp 7E 0 ABS 0 - WLC3PH.obj
+start 20 0 CODE 0 init startup.obj
+_TRISA 85 0 ABS 0 - WLC3PH.obj
+_TRISB 86 0 ABS 0 - WLC3PH.obj
+_TRISC 87 0 ABS 0 - WLC3PH.obj
+_PORTA 5 0 ABS 0 - WLC3PH.obj
+reset_vec 0 0 CODE 0 reset_vec startup.obj
+_PORTB 6 0 ABS 0 - WLC3PH.obj
+_PORTC 7 0 ABS 0 - WLC3PH.obj
+ltemp0 7E 0 ABS 0 - WLC3PH.obj
+ttemp0 7E 0 ABS 0 - WLC3PH.obj
+wtemp0 7E 0 ABS 0 - WLC3PH.obj
+ltemp1 82 0 ABS 0 - WLC3PH.obj
+ttemp1 81 0 ABS 0 - WLC3PH.obj
+wtemp1 80 0 ABS 0 - WLC3PH.obj
+ltemp2 86 0 ABS 0 - WLC3PH.obj
+ttemp2 84 0 ABS 0 - WLC3PH.obj
+wtemp2 82 0 ABS 0 - WLC3PH.obj
+ltemp3 80 0 ABS 0 - WLC3PH.obj
+ttemp3 87 0 ABS 0 - WLC3PH.obj
+wtemp3 84 0 ABS 0 - WLC3PH.obj
+ttemp4 7F 0 ABS 0 - WLC3PH.obj
+wtemp4 86 0 ABS 0 - WLC3PH.obj
+wtemp5 88 0 ABS 0 - WLC3PH.obj
+wtemp6 7F 0 ABS 0 - WLC3PH.obj
+interrupt_function 8 0 CODE 0 intentry WLC3PH.obj
+__Hconfig 0 0 CONFIG 0 config -
+__Lconfig 0 0 CONFIG 0 config -
+__Hram 0 0 ABS 0 ram -
+__Lram 0 0 ABS 0 ram -
+_count 70 0 COMMON 1 bssCOMMON WLC3PH.obj
+__Hfunctab 0 0 CODE 0 functab -
+__Lfunctab 0 0 CODE 0 functab -
+_ADCON1 9F 0 ABS 0 - WLC3PH.obj
+_OPTION_REG 81 0 ABS 0 - WLC3PH.obj
+__Hcommon 0 0 ABS 0 common -
+__Lcommon 0 0 ABS 0 common -
+__Heeprom_data 0 0 EEDATA 3 eeprom_data -
+__Leeprom_data 0 0 EEDATA 3 eeprom_data -
+___int_sp 0 0 STACK 2 stack startup.obj
+__Habs1 0 0 ABS 0 abs1 -
+__Labs1 0 0 ABS 0 abs1 -
+_INTCON B 0 ABS 0 - WLC3PH.obj
+__Hsfr0 0 0 ABS 0 sfr0 -
+__Lsfr0 0 0 ABS 0 sfr0 -
+__Hsfr1 0 0 ABS 0 sfr1 -
+__Lsfr1 0 0 ABS 0 sfr1 -
+__Hsfr2 0 0 ABS 0 sfr2 -
+__Lsfr2 0 0 ABS 0 sfr2 -
+__Hsfr3 0 0 ABS 0 sfr3 -
+__Lsfr3 0 0 ABS 0 sfr3 -
+_Dry_Run_Timer 27 0 BANK0 1 bssBANK0 WLC3PH.obj
+__Hcode 0 0 ABS 0 code -
+__Lcode 0 0 ABS 0 code -
+stackhi 0 0 ABS 0 - startup.obj
+__HcstackBANK0 0 0 ABS 0 cstackBANK0 -
+__LcstackBANK0 0 0 ABS 0 cstackBANK0 -
+__pcstackBANK0 20 0 BANK0 1 cstackBANK0 WLC3PH.obj
+stacklo 0 0 ABS 0 - startup.obj
+saved_w 7E 0 ABS 0 - WLC3PH.obj
+__Hinit 20 0 CODE 0 init -
+__Linit 20 0 CODE 0 init -
+motor_stop@i 23 0 BANK0 1 cstackBANK0 WLC3PH.obj
+__end_of_main 206 0 CODE 0 maintext WLC3PH.obj
+__size_of_Tx_Received 0 0 ABS 0 - WLC3PH.obj
+__Htext 0 0 ABS 0 text -
+__Ltext 0 0 ABS 0 text -
+__HdataBANK0 0 0 ABS 0 dataBANK0 -
+__LdataBANK0 0 0 ABS 0 dataBANK0 -
+__pdataBANK0 2D 0 BANK0 1 dataBANK0 WLC3PH.obj
+end_of_initialization 3C 0 CODE 0 cinit WLC3PH.obj
+_DRY_RUN_NEEDED 2D 0 BANK0 1 dataBANK0 WLC3PH.obj
+__Hstrings 0 0 ABS 0 strings -
+__Lstrings 0 0 ABS 0 strings -
+_motor_flag 73 0 COMMON 1 bssCOMMON WLC3PH.obj
+__Hbank0 0 0 ABS 0 bank0 -
+__Lbank0 0 0 ABS 0 bank0 -
+__Hbank1 0 0 ABS 0 bank1 -
+__Lbank1 0 0 ABS 0 bank1 -
+__Hbank2 0 0 BANK2 1 bank2 -
+__Lbank2 0 0 BANK2 1 bank2 -
+__Hbank3 0 0 BANK3 1 bank3 -
+__Lbank3 0 0 BANK3 1 bank3 -
+___latbits 0 0 ABS 0 - WLC3PH.obj
+__Hpowerup 0 0 CODE 0 powerup -
+__Lpowerup 0 0 CODE 0 powerup -
+__ptext1 378 0 CODE 0 text1 WLC3PH.obj
+__ptext2 3BC 0 CODE 0 text2 WLC3PH.obj
+__ptext3 206 0 CODE 0 text3 WLC3PH.obj
+__Hclrtext 0 0 ABS 0 clrtext -
+__Lclrtext 0 0 ABS 0 clrtext -
+__end_of__initialization 3C 0 CODE 0 cinit WLC3PH.obj
+_lp_flag 72 0 COMMON 1 bssCOMMON WLC3PH.obj
+__Hidloc 0 0 IDLOC 0 idloc -
+__Lidloc 0 0 IDLOC 0 idloc -
+__Hstack 0 0 STACK 2 stack -
+__Lstack 0 0 STACK 2 stack -
+__Hspace_0 201 0 ABS 0 - -
+__Lspace_0 0 0 ABS 0 - -
+__Hspace_1 7A 0 ABS 0 - -
+__Lspace_1 0 0 ABS 0 - -
+__end_of_motor_stop 3BC 0 CODE 0 text1 WLC3PH.obj
+__Hspace_2 0 0 ABS 0 - -
+__Lspace_2 0 0 ABS 0 - -
+__Hcinit 40 0 CODE 0 cinit -
+__Lcinit 22 0 CODE 0 cinit -
+_txr_not_received 2B 0 BANK0 1 bssBANK0 WLC3PH.obj
+__end_of_motor_start 400 0 CODE 0 text2 WLC3PH.obj
+__Hspace_3 0 0 ABS 0 - -
+__Lspace_3 0 0 ABS 0 - -
+__size_of_main 0 0 ABS 0 - WLC3PH.obj
+motor_start@i 23 0 BANK0 1 cstackBANK0 WLC3PH.obj
+__HidataBANK0 0 0 ABS 0 idataBANK0 -
+__LidataBANK0 0 0 ABS 0 idataBANK0 -
+__end_of_Tx_Received 378 0 CODE 0 text3 WLC3PH.obj
+__pidataBANK0 400 0 CODE 0 idataBANK0 WLC3PH.obj
+__HbssBANK0 0 0 ABS 0 bssBANK0 -
+__LbssBANK0 0 0 ABS 0 bssBANK0 -
+__pbssBANK0 27 0 BANK0 1 bssBANK0 WLC3PH.obj
+_motor_start 3BC 0 CODE 0 text2 WLC3PH.obj
+__HbssCOMMON 0 0 ABS 0 bssCOMMON -
+__LbssCOMMON 0 0 ABS 0 bssCOMMON -
+__pbssCOMMON 70 0 COMMON 1 bssCOMMON WLC3PH.obj
+__Hend_init 22 0 CODE 0 end_init -
+__Lend_init 20 0 CODE 0 end_init -
+__Hreset_vec 2 0 CODE 0 reset_vec -
+__Lreset_vec 0 0 CODE 0 reset_vec -
+_motor_stop 378 0 CODE 0 text1 WLC3PH.obj
+intlevel0 0 0 CODE 0 functab startup.obj
+_Tx_Received 206 0 CODE 0 text3 WLC3PH.obj
+intlevel1 0 0 CODE 0 functab startup.obj
+intlevel2 0 0 CODE 0 functab startup.obj
+intlevel3 0 0 CODE 0 functab startup.obj
+intlevel4 0 0 CODE 0 functab startup.obj
+intlevel5 0 0 CODE 0 functab startup.obj
+__HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+__LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+__pcstackCOMMON 75 0 COMMON 1 cstackCOMMON WLC3PH.obj
+start_initialization 22 0 CODE 0 cinit WLC3PH.obj
+_level_check 28 0 BANK0 1 bssBANK0 WLC3PH.obj
+_power_check 2A 0 BANK0 1 bssBANK0 WLC3PH.obj
+__Hmaintext 0 0 ABS 0 maintext -
+__Lmaintext 0 0 ABS 0 maintext -
+__pmaintext 40 0 CODE 0 maintext WLC3PH.obj
+__size_of_motor_stop 0 0 ABS 0 - WLC3PH.obj
+__initialization 22 0 CODE 0 cinit WLC3PH.obj
+__size_of_motor_start 0 0 ABS 0 - WLC3PH.obj
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect in on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+- 1 7E 2
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+reset_vec 0 0 0 1 2
+intentry 0 4 8 1FD 2
+bssCOMMON 1 70 70 A 1
+cstackBANK0 1 20 20 E 1

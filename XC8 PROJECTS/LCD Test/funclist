@@ -1,0 +1,9 @@
+_LCDByte: CODE, 1690 0 73
+__stringtab: STRING, 3 0 6
+__stringdata: STRING, 9 0 18
+_main: CODE, 1606 0 20
+_LCDInit: CODE, 1929 0 98
+__initialization: CODE, 2027 0 17
+_LCDWriteString: CODE, 1763 0 80
+_LCDBusyLoop: CODE, 1843 0 86
+Total: 398

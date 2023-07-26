@@ -1,0 +1,23 @@
+___awdiv: CODE, 4804 0 168
+___ftpack: CODE, 4632 0 172
+___awmod: CODE, 5120 0 148
+_main: CODE, 232 0 3302
+_BusyADC: CODE, 5764 0 16
+_Read_b_eep: CODE, 5726 0 22
+___ftadd: CODE, 3534 0 432
+_tmr_int: CODE, 8 0 218
+_Write_b_eep: CODE, 5500 0 60
+_ConvertADC: CODE, 5794 0 8
+__initialization: CODE, 5560 0 44
+___lwdiv: CODE, 5268 0 86
+___lbtoft: CODE, 5662 0 40
+_ReadADC: CODE, 5780 0 14
+___lwmod: CODE, 5430 0 70
+___ftmul: CODE, 3966 0 232
+_OpenADC: CODE, 5614 0 48
+_SetChanADC: CODE, 5702 0 24
+___awtoft: CODE, 5354 0 76
+___fttol: CODE, 4416 0 216
+___ftge: CODE, 4972 0 148
+___ftdiv: CODE, 4198 0 218
+Total: 5762

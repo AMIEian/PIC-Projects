@@ -1,0 +1,22 @@
+_ISR: CODE, 879 0 37
+_welcome_message: CODE, 916 0 30
+_main: CODE, 32 0 332
+_play_message_group: CODE, 463 0 96
+_change_password: CODE, 654 0 90
+_phone_received: CODE, 1082 0 18
+__initialization: CODE, 17 0 13
+_play_message: CODE, 794 0 43
+_init_DTMF: CODE, 1119 0 7
+_motor_stop: CODE, 1058 0 24
+_motor_start: CODE, 1033 0 25
+_check_password: CODE, 364 0 99
+_phase_check: CODE, 1100 0 11
+_thanks_message: CODE, 946 0 30
+_welcome_user: CODE, 744 0 50
+_power_message: CODE, 976 0 30
+_press_button: CODE, 1131 0 1
+_audio_stoped: CODE, 1111 0 8
+_eeprom_read: CODE, 1006 0 27
+_eeprom_write: CODE, 837 0 42
+_get_user_input: CODE, 559 0 95
+Total: 1108

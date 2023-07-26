@@ -1,0 +1,21 @@
+___awdiv: CODE, 2148 0 168
+_LCDByte: CODE, 3400 0 96
+__stringdata: SMALLCONST, 1537 0 14
+_rom_page_read: CODE, 2316 0 164
+_IdleI2C: CODE, 3852 0 20
+___awmod: CODE, 2644 0 148
+_LCDWriteInt: CODE, 1874 0 274
+_main: CODE, 1552 0 322
+_rom_page_write: CODE, 2792 0 134
+_LCDInit: CODE, 2926 0 132
+_MY_DELAY: CODE, 3724 0 50
+__initialization: CODE, 3580 0 66
+_LCDWriteString: CODE, 2480 0 164
+_LCDGotoXY: CODE, 3656 0 68
+_ReadI2C: CODE, 3774 0 44
+_WriteI2C: CODE, 3296 0 104
+_clear_rom: CODE, 3058 0 126
+_LCDBusyLoop: CODE, 3496 0 84
+_rom_byte_read: CODE, 3184 0 112
+_OpenI2C: CODE, 3818 0 34
+Total: 2324

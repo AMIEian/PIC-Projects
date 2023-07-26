@@ -1,0 +1,1 @@
+                                        Remote.d  Remote.p1:  E:/Study\ Material/XC8\ PROJECTS/New\ Remote/Remote2/Remote.c E:/Study\ Material/XC8\ PROJECTS/New\ Remote/Remote2/pins.h E:/Study\ Material/XC8\ PROJECTS/New\ Remote/Remote2/keypad.h

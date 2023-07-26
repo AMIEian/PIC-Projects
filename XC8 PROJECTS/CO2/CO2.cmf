@@ -1,0 +1,1013 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$startup.obj
+end_init CODE 0 C C 2 2
+$CO2.obj
+cinit CODE 0 7F5 7F5 B 2
+intentry CODE 0 0 0 C 2
+text5 CODE 0 748 748 50 2
+text4 CODE 0 798 798 5D 2
+text3 CODE 0 6F9 6F9 4F 2
+text2 CODE 0 6A6 6A6 13 2
+text1 CODE 0 6B9 6B9 40 2
+maintext CODE 0 0 0 BA4 2
+cstackBANK0 BANK0 1 20 20 1E 1
+cstackCOMMON COMMON 1 70 70 5 1
+clrtext CODE 0 69E 69E 8 2
+bssBANK0 BANK0 1 3E 3E F 1
+bssCOMMON COMMON 1 75 75 4 1
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+BANK0 004D-006F 1
+BANK1 00A0-00EF 1
+BANK2 0120-014F 1
+COMMON 0079-007D 1
+CONFIG 2007-2007 2
+EEDATA 2100-217F 2
+IDLOC 2000-2003 2
+RAM 004D-006F 1
+RAM 00A0-00EF 1
+RAM 0120-014F 1
+SFR0 0000-001F 1
+SFR1 0080-009F 1
+SFR2 0100-011F 1
+SFR3 0180-01EF 1
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <file name>:<line number> <address> <psect name> <class name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$CO2.obj
+"C:\Program Files\Microchip\xc8\v1.12\include\pic18f452.h":1538 0 text0 CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":13 0 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":14 0 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":900 0 intentry CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":15 15 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":18 17 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":19 1D maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":20 20 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":21 23 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":22 2B maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":24 33 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":25 3B maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":26 43 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":27 4B maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":28 53 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":29 59 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":30 5C maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":31 5D maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":51 5E maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":52 61 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":55 64 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":56 67 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":57 6A maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":58 6D maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":59 70 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":64 73 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":66 77 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":67 7A maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":68 7A maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":70 82 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":71 85 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":72 85 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":73 88 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":76 8C maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":78 90 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":79 93 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":80 99 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":85 9A maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":86 A7 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":87 AB maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":88 AE maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":89 B4 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":90 B7 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":92 BC maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":93 C2 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":95 C6 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":96 C9 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":97 CA maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":99 CA maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":100 CD maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":101 CD maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":102 D0 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":103 D3 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":104 D6 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":90 D9 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":106 E3 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":107 E4 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":109 E9 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":110 EF maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":112 F3 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":113 F6 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":114 F7 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":116 F7 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":117 FA maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":118 FA maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":119 FD maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":120 100 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":121 103 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":107 106 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":124 110 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":125 113 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":127 119 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":129 124 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":132 125 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":134 12B maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":135 12E maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":136 131 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":137 138 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":132 13B maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":139 13C maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":140 141 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":130 144 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":144 148 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":148 14E maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":151 151 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":156 157 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":158 15A maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":162 160 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":165 163 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":166 163 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":168 167 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":171 16B maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":172 16E maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":173 16F maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":175 16F maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":176 172 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":179 178 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":180 17B maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":181 181 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":182 184 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":184 189 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":185 18F maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":187 193 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":188 196 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":189 197 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":191 197 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":192 19A maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":193 19A maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":194 19D maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":195 1A0 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":196 1A3 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":182 1A6 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":198 1B0 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":199 1B1 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":200 1B5 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":202 1BA maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":203 1C0 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":205 1C4 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":206 1C7 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":207 1C8 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":209 1C8 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":210 1CB maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":211 1CB maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":212 1CE maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":213 1D1 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":214 1D4 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":200 1D7 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":217 1E1 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":218 1E4 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":219 1EA maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":221 1ED maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":224 1EE maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":226 1F3 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":227 1F6 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":228 1F9 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":229 200 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":224 203 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":231 204 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":232 209 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":222 20C maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":236 210 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":238 216 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":241 217 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":243 21D maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":244 220 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":245 223 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":246 22A maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":241 22D maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":248 22E maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":249 233 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":239 236 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":253 23A maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":255 240 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":258 241 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":260 247 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":261 24A maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":262 24D maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":263 254 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":258 257 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":265 258 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":266 25C maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":256 25F maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":271 263 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":272 263 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":274 267 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":276 26D maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":277 26E maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":278 26F maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":280 26F maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":281 272 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":282 278 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":283 27B maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":285 281 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":287 287 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":288 288 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":290 28D maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":291 293 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":293 297 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":294 29A maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":295 29B maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":297 29B maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":298 29E maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":299 29E maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":300 2A1 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":301 2A4 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":302 2A7 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":288 2AA maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":304 2B4 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":305 2B5 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":306 2B9 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":308 2BE maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":309 2C4 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":311 2C8 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":312 2CB maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":313 2CC maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":315 2CC maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":316 2CF maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":317 2CF maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":318 2D2 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":319 2D5 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":320 2D8 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":306 2DB maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":322 2E5 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":323 2E8 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":325 2EE maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":327 2F1 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":330 2F2 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":332 2F7 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":333 2FA maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":334 2FD maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":335 304 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":330 307 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":337 308 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":338 30D maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":328 310 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":342 314 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":344 31A maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":347 31B maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":349 321 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":350 324 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":351 327 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":352 32E maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":347 331 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":354 332 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":355 337 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":345 33A maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":360 33E maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":361 33E maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":363 342 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":365 348 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":366 34B maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":367 351 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":368 357 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":369 35A maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":371 360 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":372 363 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":374 368 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":375 36E maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":377 372 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":378 375 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":379 376 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":381 376 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":382 379 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":383 379 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":384 37C maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":385 37F maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":372 382 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":388 38C maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":389 38D maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":390 391 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":392 396 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":393 39C maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":395 3A0 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":396 3A3 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":397 3A4 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":399 3A4 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":400 3A7 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":401 3A7 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":402 3AA maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":403 3AD maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":390 3B0 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":406 3BA maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":407 3BD maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":408 3C0 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":409 3C6 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":413 3CD maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":415 3D3 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":416 3D6 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":417 3D9 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":418 3E0 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":413 3E3 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":420 3E4 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":421 3E9 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":411 3EC maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":428 3F0 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":429 3FB maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":431 406 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":434 412 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":437 415 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":439 41E maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":441 423 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":439 427 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":443 431 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":444 431 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":446 435 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":448 43B maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":449 440 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":450 452 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":451 45F maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":452 463 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":453 475 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":454 482 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":456 486 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":458 489 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":460 48E maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":458 497 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":462 4A1 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":463 4A6 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":466 4A7 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":468 4AC maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":466 4B5 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":474 4BF maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":475 4BF maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":478 4C8 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":480 4CD maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":478 4D1 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":482 4DB maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":483 4DB maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":485 4DF maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":487 4E4 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":488 4E9 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":489 4FB maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":490 508 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":491 50C maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":492 51E maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":493 52B maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":495 52F maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":497 532 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":499 537 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":497 540 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":501 54A maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":502 54F maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":506 550 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":508 555 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":506 55E maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":512 568 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":513 568 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":515 571 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":517 576 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":515 57A maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":520 584 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":522 584 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":525 588 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":527 591 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":528 599 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":529 5AA maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":530 5B8 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":531 5CA maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":532 5D7 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":533 5DB maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":534 5ED maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":535 5FA maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":536 5FE maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":537 60B maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":538 60F maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":539 60F maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":541 612 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":543 617 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":541 620 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":545 62A maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":546 62F maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":550 630 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":552 635 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":550 63E maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":558 648 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":559 648 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":562 651 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":564 656 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":562 65A maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":566 664 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":567 664 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":569 668 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":571 66E maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":572 676 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":573 687 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":575 695 maintext CODE
+"E:\Study Material\XC8 PROJECTS\CO2\CO2.as":435 69E clrtext CODE
+"E:\Study Material\XC8 PROJECTS\CO2\CO2.as":436 69E clrtext CODE
+"E:\Study Material\XC8 PROJECTS\CO2\CO2.as":437 69F clrtext CODE
+"E:\Study Material\XC8 PROJECTS\CO2\CO2.as":438 69F clrtext CODE
+"E:\Study Material\XC8 PROJECTS\CO2\CO2.as":439 6A0 clrtext CODE
+"E:\Study Material\XC8 PROJECTS\CO2\CO2.as":440 6A1 clrtext CODE
+"E:\Study Material\XC8 PROJECTS\CO2\CO2.as":441 6A2 clrtext CODE
+"E:\Study Material\XC8 PROJECTS\CO2\CO2.as":442 6A3 clrtext CODE
+"E:\Study Material\XC8 PROJECTS\CO2\CO2.as":443 6A4 clrtext CODE
+"E:\Study Material\XC8 PROJECTS\CO2\CO2.as":444 6A5 clrtext CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\Umul8.c":4 6A6 text2 CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":576 6A7 maintext CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\Umul8.c":6 6A9 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\Umul8.c":43 6AA text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\Umul8.c":44 6AC text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\Umul8.c":45 6B0 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\Umul8.c":46 6B2 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\Umul8.c":47 6B4 text2 CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":577 6B4 maintext CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\Umul8.c":50 6B7 text2 CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":578 6B8 maintext CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\lwdiv.c":6 6B9 text1 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\lwdiv.c":14 6B9 text1 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\lwdiv.c":15 6BD text1 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\lwdiv.c":16 6C1 text1 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\lwdiv.c":17 6C3 text1 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\lwdiv.c":18 6C5 text1 CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":579 6CA maintext CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\lwdiv.c":19 6CC text1 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\lwdiv.c":17 6D0 text1 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\lwdiv.c":22 6D1 text1 CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":580 6D7 maintext CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\lwdiv.c":23 6D8 text1 CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":581 6DB maintext CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\lwdiv.c":24 6E0 text1 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\lwdiv.c":25 6E6 text1 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\lwdiv.c":27 6E7 text1 CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":582 6E8 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":585 6EC maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":586 6EC maintext CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\lwdiv.c":28 6EE text1 CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":588 6EF maintext CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\lwdiv.c":30 6F2 text1 CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":590 6F4 maintext CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\awmod.c":6 6F9 text3 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\awmod.c":13 6F9 text3 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\awmod.c":14 6FC text3 CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":588 6FD maintext CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\awmod.c":15 6FE text3 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\awmod.c":16 703 text3 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\awmod.c":18 705 text3 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\awmod.c":19 707 text3 CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":592 707 maintext CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\awmod.c":20 70C text3 CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":593 70C maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":597 70D maintext CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\awmod.c":21 710 text3 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\awmod.c":22 712 text3 CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":599 712 maintext CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\awmod.c":23 714 text3 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\awmod.c":24 71B text3 CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":597 71B maintext CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\awmod.c":22 71F text3 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\awmod.c":27 720 text3 CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":606 725 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":607 725 maintext CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\awmod.c":28 728 text3 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\awmod.c":29 72E text3 CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":610 72E maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":612 733 maintext CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\awmod.c":30 735 text3 CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":610 737 maintext CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\awmod.c":32 739 text3 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\awmod.c":33 73C text3 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\awmod.c":34 741 text3 CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":614 741 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":615 741 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":617 745 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":900 748 text5 CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":901 748 text5 CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":618 74C maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":903 74C text5 CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":620 74F maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":904 750 text5 CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":906 751 text5 CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":621 753 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":907 757 text5 CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":622 75C maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":623 75C maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":908 760 text5 CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":626 762 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":627 766 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":909 76D text5 CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":628 76F maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":629 76F maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":910 772 text5 CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":631 775 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":911 777 text5 CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":632 779 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":913 77A text5 CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":915 77B text5 CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":633 782 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":635 782 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":917 782 text5 CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":918 785 text5 CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":637 788 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":920 78B text5 CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":638 78C maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":639 795 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":640 795 maintext CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\awdiv.c":6 798 text4 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\awdiv.c":14 798 text4 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\awdiv.c":15 79B text4 CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":642 79B maintext CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\awdiv.c":16 79D text4 CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":643 79F maintext CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\awdiv.c":17 7A2 text4 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\awdiv.c":19 7A4 text4 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\awdiv.c":20 7A6 text4 CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":646 7A8 maintext CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\awdiv.c":21 7AB text4 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\awdiv.c":23 7AF text4 CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":648 7AF maintext CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\awdiv.c":24 7B1 text4 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\awdiv.c":25 7B5 text4 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\awdiv.c":26 7B7 text4 CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":646 7B8 maintext CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\awdiv.c":27 7B9 text4 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\awdiv.c":28 7C0 text4 CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":652 7C2 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":653 7C2 maintext CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\awdiv.c":26 7C4 text4 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\awdiv.c":31 7C5 text4 CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":655 7C6 maintext CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\awdiv.c":32 7CC text4 CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":658 7CC maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":659 7D1 maintext CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\awdiv.c":33 7D4 text4 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\awdiv.c":34 7DA text4 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\awdiv.c":36 7DB text4 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\awdiv.c":37 7E2 text4 CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":660 7E3 maintext CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\awdiv.c":39 7E6 text4 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\awdiv.c":40 7E9 text4 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\awdiv.c":41 7EE text4 CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":661 7F1 maintext CODE
+"E:\Study Material\XC8 PROJECTS\CO2\CO2.as":402 7F5 cinit CODE
+"E:\Study Material\XC8 PROJECTS\CO2\CO2.as":405 7F5 cinit CODE
+"E:\Study Material\XC8 PROJECTS\CO2\CO2.as":448 7F5 cinit CODE
+"E:\Study Material\XC8 PROJECTS\CO2\CO2.as":449 7F6 cinit CODE
+"E:\Study Material\XC8 PROJECTS\CO2\CO2.as":450 7F7 cinit CODE
+"E:\Study Material\XC8 PROJECTS\CO2\CO2.as":451 7F8 cinit CODE
+"E:\Study Material\XC8 PROJECTS\CO2\CO2.as":454 7F9 cinit CODE
+"E:\Study Material\XC8 PROJECTS\CO2\CO2.as":455 7FA cinit CODE
+"E:\Study Material\XC8 PROJECTS\CO2\CO2.as":456 7FB cinit CODE
+"E:\Study Material\XC8 PROJECTS\CO2\CO2.as":457 7FC cinit CODE
+"E:\Study Material\XC8 PROJECTS\CO2\CO2.as":458 7FD cinit CODE
+"E:\Study Material\XC8 PROJECTS\CO2\CO2.as":464 7FE cinit CODE
+"E:\Study Material\XC8 PROJECTS\CO2\CO2.as":465 7FE cinit CODE
+"E:\Study Material\XC8 PROJECTS\CO2\CO2.as":466 7FF cinit CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":662 803 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":663 810 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":664 814 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":665 826 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":666 833 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":667 837 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":668 844 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":669 848 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":670 848 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":672 84B maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":674 850 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":672 859 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":676 863 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":677 868 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":681 869 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":683 86E maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":681 877 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":689 881 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":691 881 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":693 88A maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":695 88F maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":693 893 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":697 89D maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":698 89D maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":700 8A1 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":702 8A6 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":703 8AB maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":704 8BD maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":705 8CA maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":706 8CE maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":707 8DC maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":708 8EE maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":709 8FB maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":710 8FF maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":711 911 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":712 91E maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":714 922 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":718 924 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":716 92D maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":720 937 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":721 93C maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":725 93D maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":727 942 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":725 94B maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":730 955 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":734 955 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":737 95E maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":739 963 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":737 96C maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":741 976 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":742 976 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":744 97A maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":746 981 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":748 984 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":749 988 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":750 991 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":751 991 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":753 997 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":754 99B maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":755 9A4 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":756 9A4 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":758 9AA maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":759 9AE maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":760 9B7 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":762 9B7 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":764 9BD maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":765 9C1 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":770 9CA maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":773 9D3 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":775 9D8 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":773 9DC maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":777 9E6 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":778 9E6 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":780 9EA maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":782 9F0 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":783 9F5 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":784 A07 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":785 A14 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":786 A18 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":787 A2A maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":788 A37 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":790 A3B maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":792 A3E maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":794 A43 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":792 A4C maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":796 A56 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":797 A5B maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":801 A5C maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":803 A61 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":801 A6A maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":809 A74 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":810 A74 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":813 A7D maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":815 A82 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":813 A86 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":817 A90 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":818 A90 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":820 A94 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":822 A99 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":823 A9E maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":824 AB0 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":825 ABD maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":826 AC1 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":827 AD3 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":828 AE0 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":830 AE4 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":832 AE7 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":834 AEC maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":832 AF5 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":836 AFF maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":837 B04 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":841 B05 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":843 B0A maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":841 B13 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":851 B1D maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":852 B1D maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":855 B26 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":857 B2B maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":855 B2F maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":859 B39 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":860 B39 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":862 B3D maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":865 B44 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":867 B47 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":868 B4B maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":869 B54 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":870 B54 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":872 B5A maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":873 B5E maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":874 B67 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":875 B67 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":877 B6D maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":878 B71 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":879 B7A maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":881 B7A maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":883 B80 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":884 B84 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":886 B8D maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":888 B94 maintext CODE
+"C:\XC8 PROJECTS\CO2\CO2.c":886 B9D maintext CODE
+$startup.obj
+"E:\Study Material\XC8 PROJECTS\CO2\startup.as":39 0 functab CODE
+"E:\Study Material\XC8 PROJECTS\CO2\startup.as":40 0 functab CODE
+"E:\Study Material\XC8 PROJECTS\CO2\startup.as":41 0 functab CODE
+"E:\Study Material\XC8 PROJECTS\CO2\startup.as":42 0 functab CODE
+"E:\Study Material\XC8 PROJECTS\CO2\startup.as":43 0 functab CODE
+"E:\Study Material\XC8 PROJECTS\CO2\startup.as":44 0 functab CODE
+"E:\Study Material\XC8 PROJECTS\CO2\startup.as":63 0 reset_vec CODE
+"E:\Study Material\XC8 PROJECTS\CO2\startup.as":69 C init CODE
+"E:\Study Material\XC8 PROJECTS\CO2\startup.as":71 C end_init CODE
+"E:\Study Material\XC8 PROJECTS\CO2\startup.as":73 D end_init CODE
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+___lwdiv@dividend 22 0 BANK0 1 cstackBANK0 CO2.obj
+___awdiv@counter 25 0 BANK0 1 cstackBANK0 CO2.obj
+___lwdiv@counter 25 0 BANK0 1 cstackBANK0 CO2.obj
+_RA0 7C00 0 ABS 0 - CO2.obj
+_RB0 7C08 0 ABS 0 - CO2.obj
+_RA1 7C01 0 ABS 0 - CO2.obj
+_RC0 7C10 0 ABS 0 - CO2.obj
+_RB1 7C09 0 ABS 0 - CO2.obj
+_RD0 7C18 0 ABS 0 - CO2.obj
+_RA2 7C02 0 ABS 0 - CO2.obj
+_RC1 7C11 0 ABS 0 - CO2.obj
+_RB2 7C0A 0 ABS 0 - CO2.obj
+_RD1 7C19 0 ABS 0 - CO2.obj
+_RA3 7C03 0 ABS 0 - CO2.obj
+_RC2 7C12 0 ABS 0 - CO2.obj
+_RB3 7C0B 0 ABS 0 - CO2.obj
+_RD2 7C1A 0 ABS 0 - CO2.obj
+_RA4 7C04 0 ABS 0 - CO2.obj
+_RC3 7C13 0 ABS 0 - CO2.obj
+_RD3 7C1B 0 ABS 0 - CO2.obj
+_RC4 7C14 0 ABS 0 - CO2.obj
+_RD4 7C1C 0 ABS 0 - CO2.obj
+_RC5 7C15 0 ABS 0 - CO2.obj
+_RD5 7C1D 0 ABS 0 - CO2.obj
+_RC6 7C16 0 ABS 0 - CO2.obj
+_RD6 7C1E 0 ABS 0 - CO2.obj
+_RC7 7C17 0 ABS 0 - CO2.obj
+_RD7 7C1F 0 ABS 0 - CO2.obj
+__S0 800 0 ABS 0 - -
+__S1 79 0 ABS 0 - -
+__S3 0 0 ABS 0 - -
+__Hintentry 18 0 CODE 0 intentry -
+__Lintentry 0 0 CODE 0 intentry -
+__pintentry 0 0 CODE 0 intentry CO2.obj
+__end_of___awdiv FEA 0 CODE 0 text4 CO2.obj
+_adr 76 0 COMMON 1 bssCOMMON CO2.obj
+_TMR0 FD6 0 ABS 0 - CO2.obj
+_T0IF 7F92 0 ABS 0 - CO2.obj
+_RCON FD0 0 ABS 0 - CO2.obj
+_hold 4C 0 BANK0 1 bssBANK0 CO2.obj
+_main 0 0 CODE 0 maintext CO2.obj
+___sp 0 0 STACK 2 stack startup.obj
+btemp 7E 0 ABS 0 - CO2.obj
+ltemp 7E 0 ABS 0 - CO2.obj
+ttemp 7E 0 ABS 0 - CO2.obj
+wtemp 7E 0 ABS 0 - CO2.obj
+start 18 0 CODE 0 init startup.obj
+main@coagpower 31 0 BANK0 1 cstackBANK0 CO2.obj
+main@cutpower 32 0 BANK0 1 cstackBANK0 CO2.obj
+_TRISA F92 0 ABS 0 - CO2.obj
+_TRISB F93 0 ABS 0 - CO2.obj
+_TRISC F94 0 ABS 0 - CO2.obj
+reset_vec 0 0 CODE 0 reset_vec startup.obj
+_TRISD F95 0 ABS 0 - CO2.obj
+_PORTB F81 0 ABS 0 - CO2.obj
+_TRISE F96 0 ABS 0 - CO2.obj
+_PORTC F82 0 ABS 0 - CO2.obj
+_PORTD F83 0 ABS 0 - CO2.obj
+_T0CON FD5 0 ABS 0 - CO2.obj
+_PORTE F84 0 ABS 0 - CO2.obj
+ltemp0 7E 0 ABS 0 - CO2.obj
+ttemp0 7E 0 ABS 0 - CO2.obj
+wtemp0 7E 0 ABS 0 - CO2.obj
+ltemp1 82 0 ABS 0 - CO2.obj
+ttemp1 81 0 ABS 0 - CO2.obj
+wtemp1 80 0 ABS 0 - CO2.obj
+ltemp2 86 0 ABS 0 - CO2.obj
+ttemp2 84 0 ABS 0 - CO2.obj
+wtemp2 82 0 ABS 0 - CO2.obj
+ltemp3 80 0 ABS 0 - CO2.obj
+ttemp3 87 0 ABS 0 - CO2.obj
+wtemp3 84 0 ABS 0 - CO2.obj
+ttemp4 7F 0 ABS 0 - CO2.obj
+wtemp4 86 0 ABS 0 - CO2.obj
+wtemp5 88 0 ABS 0 - CO2.obj
+wtemp6 7F 0 ABS 0 - CO2.obj
+interrupt_function 0 0 CODE 0 intentry CO2.obj
+_CARRY 7EC0 0 ABS 0 - CO2.obj
+__Hconfig 0 0 CONFIG 0 config -
+__Lconfig 0 0 CONFIG 0 config -
+__on_time 75 0 COMMON 1 bssCOMMON CO2.obj
+?___awmod 20 0 BANK0 1 cstackBANK0 CO2.obj
+main@i 3C 0 BANK0 1 cstackBANK0 CO2.obj
+main@j 35 0 BANK0 1 cstackBANK0 CO2.obj
+__Hram 0 0 ABS 0 ram -
+__Lram 0 0 ABS 0 ram -
+_count 77 0 COMMON 1 bssCOMMON CO2.obj
+main@bipopower 37 0 BANK0 1 cstackBANK0 CO2.obj
+__Hfunctab 0 0 CODE 0 functab -
+__Lfunctab 0 0 CODE 0 functab -
+main@temp 34 0 BANK0 1 cstackBANK0 CO2.obj
+_ADCON1 FC1 0 ABS 0 - CO2.obj
+__Hcommon 0 0 ABS 0 common -
+__Lcommon 0 0 ABS 0 common -
+main@R1 2D 0 BANK0 1 cstackBANK0 CO2.obj
+__Heeprom_data 0 0 EEDATA 3 eeprom_data -
+__Leeprom_data 0 0 EEDATA 3 eeprom_data -
+main@R2 2C 0 BANK0 1 cstackBANK0 CO2.obj
+main@tens 3A 0 BANK0 1 cstackBANK0 CO2.obj
+___int_sp 0 0 STACK 2 stack startup.obj
+?___awdiv 20 0 BANK0 1 cstackBANK0 CO2.obj
+?___lwdiv 20 0 BANK0 1 cstackBANK0 CO2.obj
+__Habs1 0 0 ABS 0 abs1 -
+__Labs1 0 0 ABS 0 abs1 -
+_INTCON FF2 0 ABS 0 - CO2.obj
+__Hsfr0 0 0 ABS 0 sfr0 -
+__Lsfr0 0 0 ABS 0 sfr0 -
+__Hsfr1 0 0 ABS 0 sfr1 -
+__Lsfr1 0 0 ABS 0 sfr1 -
+__Hsfr2 0 0 ABS 0 sfr2 -
+__Lsfr2 0 0 ABS 0 sfr2 -
+__Hsfr3 0 0 ABS 0 sfr3 -
+__Lsfr3 0 0 ABS 0 sfr3 -
+__size_of_tmr_int 0 0 ABS 0 - CO2.obj
+__end_of___awmod E90 0 CODE 0 text3 CO2.obj
+__Hcode 0 0 ABS 0 code -
+__Lcode 0 0 ABS 0 code -
+stackhi 0 0 ABS 0 - startup.obj
+__HcstackBANK0 1748 0 ABS 0 cstackBANK0 -
+__LcstackBANK0 1748 0 ABS 0 cstackBANK0 -
+__pcstackBANK0 20 0 BANK0 1 cstackBANK0 CO2.obj
+___awmod@sign 26 0 BANK0 1 cstackBANK0 CO2.obj
+stacklo 0 0 ABS 0 - startup.obj
+saved_w 7E 0 ABS 0 - CO2.obj
+___bmul D4C 0 CODE 0 text2 CO2.obj
+__Hinit 18 0 CODE 0 init -
+__Linit 18 0 CODE 0 init -
+_values 3E 0 BANK0 1 bssBANK0 CO2.obj
+__end_of_main 1748 0 CODE 0 maintext CO2.obj
+__Htext 0 0 ABS 0 text -
+__Ltext 0 0 ABS 0 text -
+___bmul@multiplier 23 0 BANK0 1 cstackBANK0 CO2.obj
+end_of_initialization FFC 0 CODE 0 cinit CO2.obj
+___awdiv@sign 26 0 BANK0 1 cstackBANK0 CO2.obj
+___bmul@multiplicand 20 0 BANK0 1 cstackBANK0 CO2.obj
+__Hstrings 0 0 ABS 0 strings -
+__Lstrings 0 0 ABS 0 strings -
+__Hbank0 0 0 ABS 0 bank0 -
+__Lbank0 0 0 ABS 0 bank0 -
+__Hbank1 0 0 ABS 0 bank1 -
+__Lbank1 0 0 ABS 0 bank1 -
+__Hbank2 0 0 ABS 0 bank2 -
+__Lbank2 0 0 ABS 0 bank2 -
+__Hbank3 0 0 BANK3 1 bank3 -
+__Lbank3 0 0 BANK3 1 bank3 -
+___latbits 0 0 ABS 0 - CO2.obj
+__Hpowerup 0 0 CODE 0 powerup -
+__Lpowerup 0 0 CODE 0 powerup -
+main@units 39 0 BANK0 1 cstackBANK0 CO2.obj
+__end_of_tmr_int F30 0 CODE 0 text5 CO2.obj
+__ptext0 0 0 CODE 0 text0 CO2.obj
+__ptext1 D72 0 CODE 0 text1 CO2.obj
+__ptext2 D4C 0 CODE 0 text2 CO2.obj
+__ptext3 DF2 0 CODE 0 text3 CO2.obj
+__ptext4 F30 0 CODE 0 text4 CO2.obj
+__ptext5 E90 0 CODE 0 text5 CO2.obj
+__Hclrtext 0 0 ABS 0 clrtext -
+__Lclrtext 0 0 ABS 0 clrtext -
+__end_of__initialization FFC 0 CODE 0 cinit CO2.obj
+__end_of___lwdiv DF2 0 CODE 0 text1 CO2.obj
+__Hidloc 0 0 IDLOC 0 idloc -
+__Lidloc 0 0 IDLOC 0 idloc -
+__Hstack 0 0 STACK 2 stack -
+__Lstack 0 0 STACK 2 stack -
+_on_time 78 0 COMMON 1 bssCOMMON CO2.obj
+___awmod DF2 0 CODE 0 text3 CO2.obj
+__Hspace_0 1748 0 ABS 0 - -
+__Lspace_0 0 0 ABS 0 - -
+__Hspace_1 79 0 ABS 0 - -
+__Lspace_1 0 0 ABS 0 - -
+main@cnt 3B 0 BANK0 1 cstackBANK0 CO2.obj
+__Hspace_2 0 0 ABS 0 - -
+__Lspace_2 0 0 ABS 0 - -
+__Hcinit 1000 0 CODE 0 cinit -
+__Lcinit FEA 0 CODE 0 cinit -
+___awdiv F30 0 CODE 0 text4 CO2.obj
+_tmr_int E90 0 CODE 0 text5 CO2.obj
+__Hspace_3 0 0 ABS 0 - -
+___lwdiv D72 0 CODE 0 text1 CO2.obj
+__Lspace_3 0 0 ABS 0 - -
+__size_of_main 0 0 ABS 0 - CO2.obj
+main@coagmode 2F 0 BANK0 1 cstackBANK0 CO2.obj
+clear_ram0 D3C 0 CODE 0 clrtext CO2.obj
+__size_of___lwdiv 0 0 ABS 0 - CO2.obj
+__HbssBANK0 1748 0 ABS 0 bssBANK0 -
+__LbssBANK0 1748 0 ABS 0 bssBANK0 -
+__pbssBANK0 3E 0 BANK0 1 bssBANK0 CO2.obj
+main@debounce 3D 0 BANK0 1 cstackBANK0 CO2.obj
+main@hundreds 38 0 BANK0 1 cstackBANK0 CO2.obj
+main@bipomode 30 0 BANK0 1 cstackBANK0 CO2.obj
+main@progno 2E 0 BANK0 1 cstackBANK0 CO2.obj
+__size_of___awdiv 0 0 ABS 0 - CO2.obj
+___awmod@divisor 20 0 BANK0 1 cstackBANK0 CO2.obj
+__HbssCOMMON 1748 0 ABS 0 bssCOMMON -
+__LbssCOMMON 1748 0 ABS 0 bssCOMMON -
+__pbssCOMMON 75 0 COMMON 1 bssCOMMON CO2.obj
+__Hend_init 1C 0 CODE 0 end_init -
+__Lend_init 18 0 CODE 0 end_init -
+___awdiv@divisor 20 0 BANK0 1 cstackBANK0 CO2.obj
+___lwdiv@divisor 20 0 BANK0 1 cstackBANK0 CO2.obj
+__Hreset_vec 0 0 CODE 0 reset_vec -
+__Lreset_vec 0 0 CODE 0 reset_vec -
+intlevel0 0 0 CODE 0 functab startup.obj
+intlevel1 0 0 CODE 0 functab startup.obj
+intlevel2 0 0 CODE 0 functab startup.obj
+intlevel3 0 0 CODE 0 functab startup.obj
+intlevel4 0 0 CODE 0 functab startup.obj
+intlevel5 0 0 CODE 0 functab startup.obj
+main@cutmode 36 0 BANK0 1 cstackBANK0 CO2.obj
+__HcstackCOMMON 1748 0 ABS 0 cstackCOMMON -
+__LcstackCOMMON 1748 0 ABS 0 cstackCOMMON -
+__pcstackCOMMON 70 0 COMMON 1 cstackCOMMON CO2.obj
+start_initialization FEA 0 CODE 0 cinit CO2.obj
+___awdiv@quotient 27 0 BANK0 1 cstackBANK0 CO2.obj
+___lwdiv@quotient 26 0 BANK0 1 cstackBANK0 CO2.obj
+__Hmaintext 0 0 ABS 0 maintext -
+__Lmaintext 0 0 ABS 0 maintext -
+__pmaintext 0 0 CODE 0 maintext CO2.obj
+__size_of___awmod 0 0 ABS 0 - CO2.obj
+__initialization FEA 0 CODE 0 cinit CO2.obj
+___awmod@dividend 22 0 BANK0 1 cstackBANK0 CO2.obj
+___bmul@product 22 0 BANK0 1 cstackBANK0 CO2.obj
+___awmod@counter 25 0 BANK0 1 cstackBANK0 CO2.obj
+__size_of___bmul 0 0 ABS 0 - CO2.obj
+__end_of___bmul D72 0 CODE 0 text2 CO2.obj
+___awdiv@dividend 22 0 BANK0 1 cstackBANK0 CO2.obj
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect in on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+- 1 7E 2
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+reset_vec 0 0 0 E 2
+cinit 0 7F5 FEA B 2
+cstackCOMMON 1 70 70 9 1
+cstackBANK0 1 20 20 2D 1
+text4 0 798 F30 5D 2
+text5 0 748 E90 50 2
+text3 0 6F9 DF2 4F 2
+text1 0 6B9 D72 40 2
+text2 0 6A6 D4C 13 2
+clrtext 0 69E D3C 8 2

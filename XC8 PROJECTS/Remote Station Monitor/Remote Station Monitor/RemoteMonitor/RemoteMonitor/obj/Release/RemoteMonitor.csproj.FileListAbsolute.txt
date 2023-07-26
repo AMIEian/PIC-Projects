@@ -1,0 +1,11 @@
+G:\Remote Station Monitor\RemoteMonitor\RemoteMonitor\bin\Release\RemoteMonitor.exe.config
+G:\Remote Station Monitor\RemoteMonitor\RemoteMonitor\bin\Release\goras.mdb
+G:\Remote Station Monitor\RemoteMonitor\RemoteMonitor\bin\Release\RemoteMonitor.exe
+G:\Remote Station Monitor\RemoteMonitor\RemoteMonitor\bin\Release\RemoteMonitor.pdb
+G:\Remote Station Monitor\RemoteMonitor\RemoteMonitor\obj\Release\RemoteMonitor.Login_Form.resources
+G:\Remote Station Monitor\RemoteMonitor\RemoteMonitor\obj\Release\RemoteMonitor.main_window.resources
+G:\Remote Station Monitor\RemoteMonitor\RemoteMonitor\obj\Release\RemoteMonitor.PORTSettings.resources
+G:\Remote Station Monitor\RemoteMonitor\RemoteMonitor\obj\Release\RemoteMonitor.Properties.Resources.resources
+G:\Remote Station Monitor\RemoteMonitor\RemoteMonitor\obj\Release\RemoteMonitor.csproj.GenerateResource.Cache
+G:\Remote Station Monitor\RemoteMonitor\RemoteMonitor\obj\Release\RemoteMonitor.exe
+G:\Remote Station Monitor\RemoteMonitor\RemoteMonitor\obj\Release\RemoteMonitor.pdb

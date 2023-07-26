@@ -1,0 +1,1 @@
+ test1.d  test1.p1:  E:/Study\ Material/XC8\ PROJECTS/Cautry/test1.c

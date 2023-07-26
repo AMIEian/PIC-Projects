@@ -1,0 +1,1 @@
+ adc_pic16.d  adc_pic16.p1:  E:/Study\ Material/XC8\ PROJECTS/Motion\ Detector/adc_pic16.c E:/Study\ Material/XC8\ PROJECTS/Motion\ Detector/adc_pic16.h

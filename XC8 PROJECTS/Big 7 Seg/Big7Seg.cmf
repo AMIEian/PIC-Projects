@@ -1,0 +1,320 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$startup.obj
+end_init CODE 0 0 0 1 2
+$Big7Seg.obj
+cinit CODE 0 7EA 7EA 16 2
+text1 CODE 0 722 722 4E 2
+maintext CODE 0 770 770 7A 2
+cstackCOMMON COMMON 1 70 70 D 1
+dataBANK0 BANK0 1 20 20 A 1
+idataBANK0 CODE 0 718 718 A 2
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+BANK0 002A-006F 1
+BANK1 00A0-00BF 1
+CODE 0001-0717 2
+COMMON 007D-007D 1
+CONFIG 2007-2007 2
+CONST 0001-0717 2
+EEDATA 2100-213F 2
+ENTRY 0001-0717 2
+IDLOC 2000-2003 2
+RAM 002A-006F 1
+RAM 00A0-00BF 1
+SFR0 0000-001F 1
+SFR1 0080-009F 1
+SFR2 0100-016F 1
+SFR3 0180-01EF 1
+STACK 002A-006F 1
+STRCODE 0001-0717 2
+STRING 0001-0717 2
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <file name>:<line number> <address> <psect name> <class name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$Big7Seg.obj
+"E:\Study Material\XC8 PROJECTS\Big 7 Seg\Test.c":48 722 text1 CODE
+"E:\Study Material\XC8 PROJECTS\Big 7 Seg\Test.c":51 722 text1 CODE
+"E:\Study Material\XC8 PROJECTS\Big 7 Seg\Test.c":53 725 text1 CODE
+"E:\Study Material\XC8 PROJECTS\Big 7 Seg\Test.c":54 729 text1 CODE
+"E:\Study Material\XC8 PROJECTS\Big 7 Seg\Test.c":56 732 text1 CODE
+"E:\Study Material\XC8 PROJECTS\Big 7 Seg\Test.c":57 738 text1 CODE
+"E:\Study Material\XC8 PROJECTS\Big 7 Seg\Test.c":59 73C text1 CODE
+"E:\Study Material\XC8 PROJECTS\Big 7 Seg\Test.c":60 73F text1 CODE
+"E:\Study Material\XC8 PROJECTS\Big 7 Seg\Test.c":61 740 text1 CODE
+"E:\Study Material\XC8 PROJECTS\Big 7 Seg\Test.c":62 743 text1 CODE
+"E:\Study Material\XC8 PROJECTS\Big 7 Seg\Test.c":63 744 text1 CODE
+"E:\Study Material\XC8 PROJECTS\Big 7 Seg\Test.c":65 747 text1 CODE
+"E:\Study Material\XC8 PROJECTS\Big 7 Seg\Test.c":67 74B text1 CODE
+"E:\Study Material\XC8 PROJECTS\Big 7 Seg\Test.c":68 74E text1 CODE
+"E:\Study Material\XC8 PROJECTS\Big 7 Seg\Test.c":69 74F text1 CODE
+"E:\Study Material\XC8 PROJECTS\Big 7 Seg\Test.c":70 752 text1 CODE
+"E:\Study Material\XC8 PROJECTS\Big 7 Seg\Test.c":71 753 text1 CODE
+"E:\Study Material\XC8 PROJECTS\Big 7 Seg\Test.c":73 756 text1 CODE
+"E:\Study Material\XC8 PROJECTS\Big 7 Seg\Test.c":54 75B text1 CODE
+"E:\Study Material\XC8 PROJECTS\Big 7 Seg\Test.c":76 768 text1 CODE
+"E:\Study Material\XC8 PROJECTS\Big 7 Seg\Test.c":77 76B text1 CODE
+"E:\Study Material\XC8 PROJECTS\Big 7 Seg\Test.c":78 76C text1 CODE
+"E:\Study Material\XC8 PROJECTS\Big 7 Seg\Test.c":79 76F text1 CODE
+"E:\Study Material\XC8 PROJECTS\Big 7 Seg\Test.c":17 770 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Big 7 Seg\Test.c":19 770 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Big 7 Seg\Test.c":20 773 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Big 7 Seg\Test.c":21 774 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Big 7 Seg\Test.c":22 775 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Big 7 Seg\Test.c":24 777 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Big 7 Seg\Test.c":25 77B maintext CODE
+"E:\Study Material\XC8 PROJECTS\Big 7 Seg\Test.c":26 77D maintext CODE
+"E:\Study Material\XC8 PROJECTS\Big 7 Seg\Test.c":30 77F maintext CODE
+"E:\Study Material\XC8 PROJECTS\Big 7 Seg\Test.c":31 78C maintext CODE
+"E:\Study Material\XC8 PROJECTS\Big 7 Seg\Test.c":32 78C maintext CODE
+"E:\Study Material\XC8 PROJECTS\Big 7 Seg\Test.c":33 78F maintext CODE
+"E:\Study Material\XC8 PROJECTS\Big 7 Seg\Test.c":34 79C maintext CODE
+"E:\Study Material\XC8 PROJECTS\Big 7 Seg\Test.c":35 79F maintext CODE
+"E:\Study Material\XC8 PROJECTS\Big 7 Seg\Test.c":30 7AC maintext CODE
+"E:\Study Material\XC8 PROJECTS\Big 7 Seg\Test.c":37 7BD maintext CODE
+"E:\Study Material\XC8 PROJECTS\Big 7 Seg\Test.c":40 7BF maintext CODE
+"E:\Study Material\XC8 PROJECTS\Big 7 Seg\Test.c":41 7CB maintext CODE
+"E:\Study Material\XC8 PROJECTS\Big 7 Seg\Test.c":42 7D8 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Big 7 Seg\Test.c":43 7DE maintext CODE
+"E:\Study Material\XC8 PROJECTS\Big 7 Seg\Test.c":44 7E9 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Big 7 Seg\Big7Seg.as":179 7EA cinit CODE
+"E:\Study Material\XC8 PROJECTS\Big 7 Seg\Big7Seg.as":182 7EA cinit CODE
+"E:\Study Material\XC8 PROJECTS\Big 7 Seg\Big7Seg.as":196 7EA cinit CODE
+"E:\Study Material\XC8 PROJECTS\Big 7 Seg\Big7Seg.as":197 7EB cinit CODE
+"E:\Study Material\XC8 PROJECTS\Big 7 Seg\Big7Seg.as":198 7EC cinit CODE
+"E:\Study Material\XC8 PROJECTS\Big 7 Seg\Big7Seg.as":199 7ED cinit CODE
+"E:\Study Material\XC8 PROJECTS\Big 7 Seg\Big7Seg.as":200 7EE cinit CODE
+"E:\Study Material\XC8 PROJECTS\Big 7 Seg\Big7Seg.as":201 7EF cinit CODE
+"E:\Study Material\XC8 PROJECTS\Big 7 Seg\Big7Seg.as":202 7F0 cinit CODE
+"E:\Study Material\XC8 PROJECTS\Big 7 Seg\Big7Seg.as":203 7F1 cinit CODE
+"E:\Study Material\XC8 PROJECTS\Big 7 Seg\Big7Seg.as":204 7F2 cinit CODE
+"E:\Study Material\XC8 PROJECTS\Big 7 Seg\Big7Seg.as":205 7F3 cinit CODE
+"E:\Study Material\XC8 PROJECTS\Big 7 Seg\Big7Seg.as":206 7F4 cinit CODE
+"E:\Study Material\XC8 PROJECTS\Big 7 Seg\Big7Seg.as":207 7F5 cinit CODE
+"E:\Study Material\XC8 PROJECTS\Big 7 Seg\Big7Seg.as":208 7F6 cinit CODE
+"E:\Study Material\XC8 PROJECTS\Big 7 Seg\Big7Seg.as":209 7F7 cinit CODE
+"E:\Study Material\XC8 PROJECTS\Big 7 Seg\Big7Seg.as":210 7F8 cinit CODE
+"E:\Study Material\XC8 PROJECTS\Big 7 Seg\Big7Seg.as":211 7F9 cinit CODE
+"E:\Study Material\XC8 PROJECTS\Big 7 Seg\Big7Seg.as":212 7FA cinit CODE
+"E:\Study Material\XC8 PROJECTS\Big 7 Seg\Big7Seg.as":213 7FB cinit CODE
+"E:\Study Material\XC8 PROJECTS\Big 7 Seg\Big7Seg.as":214 7FC cinit CODE
+"E:\Study Material\XC8 PROJECTS\Big 7 Seg\Big7Seg.as":215 7FD cinit CODE
+"E:\Study Material\XC8 PROJECTS\Big 7 Seg\Big7Seg.as":221 7FE cinit CODE
+"E:\Study Material\XC8 PROJECTS\Big 7 Seg\Big7Seg.as":222 7FE cinit CODE
+"E:\Study Material\XC8 PROJECTS\Big 7 Seg\Big7Seg.as":223 7FF cinit CODE
+$startup.obj
+"E:\Study Material\XC8 PROJECTS\Big 7 Seg\startup.as":39 0 functab CODE
+"E:\Study Material\XC8 PROJECTS\Big 7 Seg\startup.as":40 0 functab CODE
+"E:\Study Material\XC8 PROJECTS\Big 7 Seg\startup.as":41 0 functab CODE
+"E:\Study Material\XC8 PROJECTS\Big 7 Seg\startup.as":42 0 functab CODE
+"E:\Study Material\XC8 PROJECTS\Big 7 Seg\startup.as":43 0 functab CODE
+"E:\Study Material\XC8 PROJECTS\Big 7 Seg\startup.as":44 0 functab CODE
+"E:\Study Material\XC8 PROJECTS\Big 7 Seg\startup.as":63 0 reset_vec CODE
+"E:\Study Material\XC8 PROJECTS\Big 7 Seg\startup.as":69 0 init CODE
+"E:\Study Material\XC8 PROJECTS\Big 7 Seg\startup.as":72 0 end_init CODE
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+_RC0 38 0 ABS 0 - Big7Seg.obj
+_RC1 39 0 ABS 0 - Big7Seg.obj
+_RC2 3A 0 ABS 0 - Big7Seg.obj
+_RC3 3B 0 ABS 0 - Big7Seg.obj
+__S0 800 0 ABS 0 - -
+__S1 7D 0 ABS 0 - -
+__S2 0 0 ABS 0 - -
+__S3 0 0 ABS 0 - -
+__Hintentry 0 0 CODE 0 intentry -
+__Lintentry 0 0 CODE 0 intentry -
+_main EE0 0 CODE 0 maintext Big7Seg.obj
+___sp 0 0 STACK 2 stack startup.obj
+btemp 7E 0 ABS 0 - Big7Seg.obj
+ltemp 7E 0 ABS 0 - Big7Seg.obj
+ttemp 7E 0 ABS 0 - Big7Seg.obj
+wtemp 7E 0 ABS 0 - Big7Seg.obj
+start 0 0 CODE 0 init startup.obj
+_TRISA 85 0 ABS 0 - Big7Seg.obj
+_TRISB 86 0 ABS 0 - Big7Seg.obj
+_TRISC 87 0 ABS 0 - Big7Seg.obj
+_PORTA 5 0 ABS 0 - Big7Seg.obj
+reset_vec 0 0 CODE 0 reset_vec startup.obj
+_PORTB 6 0 ABS 0 - Big7Seg.obj
+_PORTC 7 0 ABS 0 - Big7Seg.obj
+ltemp0 7E 0 ABS 0 - Big7Seg.obj
+ttemp0 7E 0 ABS 0 - Big7Seg.obj
+wtemp0 7E 0 ABS 0 - Big7Seg.obj
+ltemp1 82 0 ABS 0 - Big7Seg.obj
+ttemp1 81 0 ABS 0 - Big7Seg.obj
+wtemp1 80 0 ABS 0 - Big7Seg.obj
+ltemp2 86 0 ABS 0 - Big7Seg.obj
+ttemp2 84 0 ABS 0 - Big7Seg.obj
+wtemp2 82 0 ABS 0 - Big7Seg.obj
+ltemp3 80 0 ABS 0 - Big7Seg.obj
+ttemp3 87 0 ABS 0 - Big7Seg.obj
+wtemp3 84 0 ABS 0 - Big7Seg.obj
+ttemp4 7F 0 ABS 0 - Big7Seg.obj
+wtemp4 86 0 ABS 0 - Big7Seg.obj
+wtemp5 88 0 ABS 0 - Big7Seg.obj
+wtemp6 7F 0 ABS 0 - Big7Seg.obj
+__Hconfig 0 0 CONFIG 0 config -
+__Lconfig 0 0 CONFIG 0 config -
+__Hram 0 0 ABS 0 ram -
+__Lram 0 0 ABS 0 ram -
+Send_Data@bits 76 0 COMMON 1 cstackCOMMON Big7Seg.obj
+_Send_Data E44 0 CODE 0 text1 Big7Seg.obj
+__Hfunctab 0 0 CODE 0 functab -
+__Lfunctab 0 0 CODE 0 functab -
+_ADCON1 9F 0 ABS 0 - Big7Seg.obj
+__Hcommon 0 0 ABS 0 common -
+__Lcommon 0 0 ABS 0 common -
+__Heeprom_data 0 0 EEDATA 3 eeprom_data -
+__Leeprom_data 0 0 EEDATA 3 eeprom_data -
+___int_sp 0 0 STACK 2 stack startup.obj
+__Habs1 0 0 ABS 0 abs1 -
+__Labs1 0 0 ABS 0 abs1 -
+__Hsfr0 0 0 ABS 0 sfr0 -
+__Lsfr0 0 0 ABS 0 sfr0 -
+__Hsfr1 0 0 ABS 0 sfr1 -
+__Lsfr1 0 0 ABS 0 sfr1 -
+__Hsfr2 0 0 ABS 0 sfr2 -
+__Lsfr2 0 0 ABS 0 sfr2 -
+__Hsfr3 0 0 ABS 0 sfr3 -
+__Lsfr3 0 0 ABS 0 sfr3 -
+__Hcode 0 0 ABS 0 code -
+__Lcode 0 0 ABS 0 code -
+stackhi 0 0 ABS 0 - startup.obj
+stacklo 0 0 ABS 0 - startup.obj
+__Hinit 0 0 CODE 0 init -
+__Linit 0 0 CODE 0 init -
+__end_of_main FD4 0 CODE 0 maintext Big7Seg.obj
+__Htext 0 0 ABS 0 text -
+__Ltext 0 0 ABS 0 text -
+__HdataBANK0 0 0 ABS 0 dataBANK0 -
+__LdataBANK0 0 0 ABS 0 dataBANK0 -
+__pdataBANK0 20 0 BANK0 1 dataBANK0 Big7Seg.obj
+end_of_initialization FFC 0 CODE 0 cinit Big7Seg.obj
+__Hstrings 0 0 ABS 0 strings -
+__Lstrings 0 0 ABS 0 strings -
+__size_of_Send_Data 0 0 ABS 0 - Big7Seg.obj
+__Hbank0 0 0 ABS 0 bank0 -
+__Lbank0 0 0 ABS 0 bank0 -
+__Hbank1 0 0 ABS 0 bank1 -
+__Lbank1 0 0 ABS 0 bank1 -
+__Hbank2 0 0 BANK2 1 bank2 -
+__Lbank2 0 0 BANK2 1 bank2 -
+__Hbank3 0 0 BANK3 1 bank3 -
+__Lbank3 0 0 BANK3 1 bank3 -
+___latbits 0 0 ABS 0 - Big7Seg.obj
+__Hpowerup 0 0 CODE 0 powerup -
+__Lpowerup 0 0 CODE 0 powerup -
+main@count 7B 0 COMMON 1 cstackCOMMON Big7Seg.obj
+__ptext1 E44 0 CODE 0 text1 Big7Seg.obj
+__Hclrtext 0 0 ABS 0 clrtext -
+__Lclrtext 0 0 ABS 0 clrtext -
+__end_of__initialization FFC 0 CODE 0 cinit Big7Seg.obj
+__Hidloc 0 0 IDLOC 0 idloc -
+__Lidloc 0 0 IDLOC 0 idloc -
+__Hstack 0 0 STACK 2 stack -
+__Lstack 0 0 STACK 2 stack -
+Send_Data@number 70 0 COMMON 1 cstackCOMMON Big7Seg.obj
+__Hspace_0 800 0 ABS 0 - -
+__Lspace_0 0 0 ABS 0 - -
+__Hspace_1 7D 0 ABS 0 - -
+__Lspace_1 0 0 ABS 0 - -
+__Hspace_2 0 0 ABS 0 - -
+__Lspace_2 0 0 ABS 0 - -
+__Hcinit 1000 0 CODE 0 cinit -
+__Lcinit FD4 0 CODE 0 cinit -
+__Hspace_3 0 0 ABS 0 - -
+__Lspace_3 0 0 ABS 0 - -
+_display 20 0 BANK0 1 dataBANK0 Big7Seg.obj
+__size_of_main 0 0 ABS 0 - Big7Seg.obj
+__HidataBANK0 0 0 ABS 0 idataBANK0 -
+__LidataBANK0 0 0 ABS 0 idataBANK0 -
+__pidataBANK0 E30 0 CODE 0 idataBANK0 Big7Seg.obj
+__Hend_init 2 0 CODE 0 end_init -
+__Lend_init 0 0 CODE 0 end_init -
+__Hreset_vec 0 0 CODE 0 reset_vec -
+__Lreset_vec 0 0 CODE 0 reset_vec -
+intlevel0 0 0 CODE 0 functab startup.obj
+intlevel1 0 0 CODE 0 functab startup.obj
+intlevel2 0 0 CODE 0 functab startup.obj
+intlevel3 0 0 CODE 0 functab startup.obj
+intlevel4 0 0 CODE 0 functab startup.obj
+intlevel5 0 0 CODE 0 functab startup.obj
+Send_Data@Mask 74 0 COMMON 1 cstackCOMMON Big7Seg.obj
+__HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+__LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+__pcstackCOMMON 70 0 COMMON 1 cstackCOMMON Big7Seg.obj
+start_initialization FD4 0 CODE 0 cinit Big7Seg.obj
+__Hmaintext 0 0 ABS 0 maintext -
+__Lmaintext 0 0 ABS 0 maintext -
+__pmaintext EE0 0 CODE 0 maintext Big7Seg.obj
+__end_of_Send_Data EE0 0 CODE 0 text1 Big7Seg.obj
+__initialization FD4 0 CODE 0 cinit Big7Seg.obj
+Send_Data@Flag 72 0 COMMON 1 cstackCOMMON Big7Seg.obj
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect in on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+- 1 7E 2
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+reset_vec 0 0 0 1 2
+cinit 0 7EA FD4 16 2
+cstackCOMMON 1 70 70 D 1
+dataBANK0 1 20 20 A 1
+maintext 0 770 EE0 7A 2
+text1 0 722 E44 4E 2
+idataBANK0 0 718 E30 A 2

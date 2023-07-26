@@ -1,0 +1,1296 @@
+
+
+Microchip Technology PIC LITE Macro Assembler V1.33 build 59893 
+                                                                                               Tue Sep 15 14:53:56 2015
+
+Microchip Technology Omniscient Code Generator (Lite mode) build 59893
+     1                           	processor	16F870
+     2                           	opt	pw 120
+     3                           	opt	lm
+     4                           	psect	idataCOMMON,global,class=CODE,delta=2
+     5                           	psect	idataBANK0,global,class=CODE,delta=2
+     6                           	psect	cinit,global,class=CODE,merge=1,delta=2
+     7                           	psect	bssCOMMON,global,class=COMMON,space=1,delta=1
+     8                           	psect	dataCOMMON,global,class=COMMON,space=1,delta=1
+     9                           	psect	bssBANK0,global,class=BANK0,space=1,delta=1
+    10                           	psect	dataBANK0,global,class=BANK0,space=1,delta=1
+    11                           	psect	cstackCOMMON,global,class=COMMON,space=1,delta=1
+    12                           	psect	cstackBANK0,global,class=BANK0,space=1,delta=1
+    13                           	psect	maintext,global,class=CODE,split=1,delta=2
+    14                           	psect	text1,local,class=CODE,merge=1,delta=2
+    15                           	psect	text2,local,class=CODE,merge=1,delta=2
+    16                           	psect	intentry,global,class=CODE,delta=2
+    17                           	dabs	1,0x7E,2
+    18  0000                     	;# 
+    19  0001                     	;# 
+    20  0002                     	;# 
+    21  0003                     	;# 
+    22  0004                     	;# 
+    23  0005                     	;# 
+    24  0006                     	;# 
+    25  0007                     	;# 
+    26  000A                     	;# 
+    27  000B                     	;# 
+    28  000C                     	;# 
+    29  000D                     	;# 
+    30  000E                     	;# 
+    31  000E                     	;# 
+    32  000F                     	;# 
+    33  0010                     	;# 
+    34  0011                     	;# 
+    35  0012                     	;# 
+    36  0015                     	;# 
+    37  0015                     	;# 
+    38  0016                     	;# 
+    39  0017                     	;# 
+    40  0018                     	;# 
+    41  0019                     	;# 
+    42  001A                     	;# 
+    43  001E                     	;# 
+    44  001F                     	;# 
+    45  0081                     	;# 
+    46  0085                     	;# 
+    47  0086                     	;# 
+    48  0087                     	;# 
+    49  008C                     	;# 
+    50  008D                     	;# 
+    51  008E                     	;# 
+    52  0092                     	;# 
+    53  0098                     	;# 
+    54  0099                     	;# 
+    55  009E                     	;# 
+    56  009F                     	;# 
+    57  010C                     	;# 
+    58  010D                     	;# 
+    59  010E                     	;# 
+    60  010F                     	;# 
+    61  018C                     	;# 
+    62  018D                     	;# 
+    63  0000                     	;# 
+    64  0001                     	;# 
+    65  0002                     	;# 
+    66  0003                     	;# 
+    67  0004                     	;# 
+    68  0005                     	;# 
+    69  0006                     	;# 
+    70  0007                     	;# 
+    71  000A                     	;# 
+    72  000B                     	;# 
+    73  000C                     	;# 
+    74  000D                     	;# 
+    75  000E                     	;# 
+    76  000E                     	;# 
+    77  000F                     	;# 
+    78  0010                     	;# 
+    79  0011                     	;# 
+    80  0012                     	;# 
+    81  0015                     	;# 
+    82  0015                     	;# 
+    83  0016                     	;# 
+    84  0017                     	;# 
+    85  0018                     	;# 
+    86  0019                     	;# 
+    87  001A                     	;# 
+    88  001E                     	;# 
+    89  001F                     	;# 
+    90  0081                     	;# 
+    91  0085                     	;# 
+    92  0086                     	;# 
+    93  0087                     	;# 
+    94  008C                     	;# 
+    95  008D                     	;# 
+    96  008E                     	;# 
+    97  0092                     	;# 
+    98  0098                     	;# 
+    99  0099                     	;# 
+   100  009E                     	;# 
+   101  009F                     	;# 
+   102  010C                     	;# 
+   103  010D                     	;# 
+   104  010E                     	;# 
+   105  010F                     	;# 
+   106  018C                     	;# 
+   107  018D                     	;# 
+   108                           
+   109                           	psect	idataCOMMON
+   110  01DE                     __pidataCOMMON:	
+   111                           
+   112                           ;initializer for _digits
+   113  01DE  3401               	retlw	1
+   114  01DF  3402               	retlw	2
+   115  01E0  3403               	retlw	3
+   116                           
+   117                           	psect	idataBANK0
+   118  01D3                     __pidataBANK0:	
+   119                           
+   120                           ;initializer for _display
+   121  01D3  343F               	retlw	63
+   122  01D4  3406               	retlw	6
+   123  01D5  345B               	retlw	91
+   124  01D6  344F               	retlw	79
+   125  01D7  3466               	retlw	102
+   126  01D8  346D               	retlw	109
+   127  01D9  347D               	retlw	125
+   128  01DA  3407               	retlw	7
+   129  01DB  347F               	retlw	127
+   130  01DC  346F               	retlw	111
+   131                           
+   132                           ;initializer for _address
+   133  01DD  3401               	retlw	1
+   134  000B                     _INTCON	set	11
+   135  0005                     _PORTA	set	5
+   136  0007                     _PORTC	set	7
+   137  0001                     _TMR0	set	1
+   138  005C                     _INTE	set	92
+   139  0059                     _INTF	set	89
+   140  0034                     _RB4	set	52
+   141  0035                     _RB5	set	53
+   142  0036                     _RB6	set	54
+   143  0037                     _RB7	set	55
+   144  003C                     _RC4	set	60
+   145  003D                     _RC5	set	61
+   146  005D                     _T0IE	set	93
+   147  005A                     _T0IF	set	90
+   148  009F                     _ADCON1	set	159
+   149  0081                     _OPTION_REG	set	129
+   150  0085                     _TRISA	set	133
+   151  0086                     _TRISB	set	134
+   152  0087                     _TRISC	set	135
+   153                           
+   154                           	psect	cinit
+   155  0011                     start_initialization:	
+   156                           ; #config settings
+   157                           
+   158  0011                     __initialization:	
+   159                           
+   160                           ; Clear objects allocated to COMMON
+   161  0011  01F6               	clrf	__pbssCOMMON& (0+127)
+   162  0012  01F7               	clrf	(__pbssCOMMON+1)& (0+127)
+   163  0013  01F8               	clrf	(__pbssCOMMON+2)& (0+127)
+   164                           
+   165                           ; Clear objects allocated to BANK0
+   166  0014  01BA               	clrf	__pbssBANK0& (0+127)
+   167  0015  01BB               	clrf	(__pbssBANK0+1)& (0+127)
+   168  0016  01BC               	clrf	(__pbssBANK0+2)& (0+127)
+   169                           
+   170                           ; Initialize objects allocated to BANK0
+   171  0017  21D3               	fcall	__pidataBANK0	;fetch initializer
+   172  0018  00AF               	movwf	__pdataBANK0& (0+127)
+   173  0019  21D4               	fcall	__pidataBANK0+1	;fetch initializer
+   174  001A  00B0               	movwf	(__pdataBANK0+1)& (0+127)
+   175  001B  21D5               	fcall	__pidataBANK0+2	;fetch initializer
+   176  001C  00B1               	movwf	(__pdataBANK0+2)& (0+127)
+   177  001D  21D6               	fcall	__pidataBANK0+3	;fetch initializer
+   178  001E  00B2               	movwf	(__pdataBANK0+3)& (0+127)
+   179  001F  21D7               	fcall	__pidataBANK0+4	;fetch initializer
+   180  0020  00B3               	movwf	(__pdataBANK0+4)& (0+127)
+   181  0021  21D8               	fcall	__pidataBANK0+5	;fetch initializer
+   182  0022  00B4               	movwf	(__pdataBANK0+5)& (0+127)
+   183  0023  21D9               	fcall	__pidataBANK0+6	;fetch initializer
+   184  0024  00B5               	movwf	(__pdataBANK0+6)& (0+127)
+   185  0025  21DA               	fcall	__pidataBANK0+7	;fetch initializer
+   186  0026  00B6               	movwf	(__pdataBANK0+7)& (0+127)
+   187  0027  21DB               	fcall	__pidataBANK0+8	;fetch initializer
+   188  0028  00B7               	movwf	(__pdataBANK0+8)& (0+127)
+   189  0029  21DC               	fcall	__pidataBANK0+9	;fetch initializer
+   190  002A  00B8               	movwf	(__pdataBANK0+9)& (0+127)
+   191  002B  21DD               	fcall	__pidataBANK0+10	;fetch initializer
+   192  002C  00B9               	movwf	(__pdataBANK0+10)& (0+127)
+   193                           
+   194                           ; Initialize objects allocated to COMMON
+   195  002D  21DE               	fcall	__pidataCOMMON	;fetch initializer
+   196  002E  00F9               	movwf	__pdataCOMMON& (0+127)
+   197  002F  21DF               	fcall	__pidataCOMMON+1	;fetch initializer
+   198  0030  00FA               	movwf	(__pdataCOMMON+1)& (0+127)
+   199  0031  21E0               	fcall	__pidataCOMMON+2	;fetch initializer
+   200  0032  00FB               	movwf	(__pdataCOMMON+2)& (0+127)
+   201  0033                     end_of_initialization:	
+   202                           ;End of C runtime variable initialization code
+   203                           
+   204  0033                     __end_of__initialization:	
+   205  0033  0183               	clrf	3
+   206  0034  2983               	ljmp	_main	;jump to C main() function
+   207                           
+   208                           	psect	bssCOMMON
+   209  0076                     __pbssCOMMON:	
+   210  0076                     _data_timer:	
+   211  0076                     	ds	2
+   212  0078                     _data_received:	
+   213  0078                     	ds	1
+   214                           
+   215                           	psect	dataCOMMON
+   216  0079                     __pdataCOMMON:	
+   217  0079                     _digits:	
+   218  0079                     	ds	3
+   219                           
+   220                           	psect	bssBANK0
+   221  003A                     __pbssBANK0:	
+   222  003A                     _count:	
+   223  003A                     	ds	1
+   224  003B                     _digit_received:	
+   225  003B                     	ds	1
+   226  003C                     _index:	
+   227  003C                     	ds	1
+   228                           
+   229                           	psect	dataBANK0
+   230  002F                     __pdataBANK0:	
+   231  002F                     _display:	
+   232  002F                     	ds	10
+   233  0039                     _address:	
+   234  0039                     	ds	1
+   235                           
+   236                           	psect	cstackCOMMON
+   237  0070                     __pcstackCOMMON:	
+   238  0070                     ?_Send_Data:	
+   239  0070                     ?_main:	
+   240                           ; 0 bytes @ 0x0
+   241                           
+   242  0070                     ?_ISR:	
+   243                           ; 0 bytes @ 0x0
+   244                           
+   245  0070                     ??_ISR:	
+   246                           ; 0 bytes @ 0x0
+   247                           
+   248                           
+   249                           ; 0 bytes @ 0x0
+   250  0070                     	ds	5
+   251  0075                     ISR@digit:	
+   252                           
+   253                           ; 1 bytes @ 0x5
+   254  0075                     	ds	1
+   255                           
+   256                           	psect	cstackBANK0
+   257  0020                     __pcstackBANK0:	
+   258  0020                     ??_Send_Data:	
+   259                           
+   260                           ; 0 bytes @ 0x0
+   261  0020                     	ds	2
+   262  0022                     Send_Data@number:	
+   263                           
+   264                           ; 2 bytes @ 0x2
+   265  0022                     	ds	2
+   266  0024                     Send_Data@Flag:	
+   267                           
+   268                           ; 2 bytes @ 0x4
+   269  0024                     	ds	2
+   270  0026                     Send_Data@Mask:	
+   271                           
+   272                           ; 2 bytes @ 0x6
+   273  0026                     	ds	2
+   274  0028                     Send_Data@bits:	
+   275                           
+   276                           ; 2 bytes @ 0x8
+   277  0028                     	ds	2
+   278  002A                     Send_Data@byte:	
+   279                           
+   280                           ; 2 bytes @ 0xA
+   281  002A                     	ds	2
+   282  002C                     ??_main:	
+   283                           
+   284                           ; 0 bytes @ 0xC
+   285  002C                     	ds	3
+   286                           
+   287                           	psect	maintext
+   288  0183                     __pmaintext:	
+   289 ;;
+   290 ;;Main: autosize = 0, tempsize = 3, incstack = 0, save=0
+   291 ;;
+   292 ;; *************** function _main *****************
+   293 ;; Defined at:
+   294 ;;		line 17 in file "E:\Study Material\XC8 PROJECTS\Token Display\Big_Token.C"
+   295 ;; Parameters:    Size  Location     Type
+   296 ;;		None
+   297 ;; Auto vars:     Size  Location     Type
+   298 ;;		None
+   299 ;; Return value:  Size  Location     Type
+   300 ;;		None               void
+   301 ;; Registers used:
+   302 ;;		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
+   303 ;; Tracked objects:
+   304 ;;		On entry : 17F/0
+   305 ;;		On exit  : 0/0
+   306 ;;		Unchanged: 0/0
+   307 ;; Data sizes:     COMMON   BANK0   BANK1
+   308 ;;      Params:         0       0       0
+   309 ;;      Locals:         0       0       0
+   310 ;;      Temps:          0       3       0
+   311 ;;      Totals:         0       3       0
+   312 ;;Total ram usage:        3 bytes
+   313 ;; Hardware stack levels required when called:    2
+   314 ;; This function calls:
+   315 ;;		_Send_Data
+   316 ;; This function is called by:
+   317 ;;		Startup code after reset
+   318 ;; This function uses a non-reentrant model
+   319 ;;
+   320                           
+   321                           
+   322                           ;psect for function _main
+   323  0183                     _main:	
+   324                           
+   325                           ;Big_Token.C: 19: TRISA = 0xFF;
+   326                           
+   327                           ;incstack = 0
+   328                           ; Regs used in _main: [wreg-fsr0h+status,2+status,0+pclath+cstack]
+   329  0183  30FF               	movlw	255
+   330  0184  1683               	bsf	3,5	;RP0=1, select bank1
+   331  0185  1303               	bcf	3,6	;RP1=0, select bank1
+   332  0186  0085               	movwf	5	;volatile
+   333                           
+   334                           ;Big_Token.C: 20: TRISB = 0x0F;
+   335  0187  300F               	movlw	15
+   336  0188  0086               	movwf	6	;volatile
+   337                           
+   338                           ;Big_Token.C: 21: TRISC = 0xE0;
+   339  0189  30E0               	movlw	224
+   340  018A  0087               	movwf	7	;volatile
+   341                           
+   342                           ;Big_Token.C: 22: ADCON1 = 0x06;
+   343  018B  3006               	movlw	6
+   344  018C  009F               	movwf	31	;volatile
+   345                           
+   346                           ;Big_Token.C: 24: RB4 = 0;
+   347  018D  1283               	bcf	3,5	;RP0=0, select bank0
+   348  018E  1303               	bcf	3,6	;RP1=0, select bank0
+   349  018F  1206               	bcf	6,4	;volatile
+   350                           
+   351                           ;Big_Token.C: 25: RB5 = 0;
+   352  0190  1286               	bcf	6,5	;volatile
+   353                           
+   354                           ;Big_Token.C: 26: RB6 = 0;
+   355  0191  1306               	bcf	6,6	;volatile
+   356                           
+   357                           ;Big_Token.C: 27: RB7 = 0;
+   358  0192  1386               	bcf	6,7	;volatile
+   359                           
+   360                           ;Big_Token.C: 29: PORTC = 0;
+   361  0193  0187               	clrf	7	;volatile
+   362                           
+   363                           ;Big_Token.C: 30: RC4 = 0;
+   364  0194  1207               	bcf	7,4	;volatile
+   365                           
+   366                           ;Big_Token.C: 32: for(count = 0; count <= 4; count++)
+   367  0195  01BA               	clrf	_count
+   368  0196  3005               	movlw	5
+   369  0197  023A               	subwf	_count,w
+   370  0198  1803               	btfsc	3,0
+   371  0199  29C2               	goto	l1012
+   372  019A                     l81:	
+   373                           
+   374                           ;Big_Token.C: 33: {
+   375                           ;Big_Token.C: 34: RB4 = 1;
+   376  019A  1606               	bsf	6,4	;volatile
+   377                           
+   378                           ;Big_Token.C: 35: _delay(1000000);
+   379  019B  3006               	movlw	6
+   380  019C  00AE               	movwf	??_main+2
+   381  019D  3013               	movlw	19
+   382  019E  00AD               	movwf	??_main+1
+   383  019F  30B1               	movlw	177
+   384  01A0  00AC               	movwf	??_main
+   385  01A1                     u617:	
+   386  01A1  0BAC               	decfsz	??_main,f
+   387  01A2  29A1               	goto	u617
+   388  01A3  0BAD               	decfsz	??_main+1,f
+   389  01A4  29A1               	goto	u617
+   390  01A5  0BAE               	decfsz	??_main+2,f
+   391  01A6  29A1               	goto	u617
+   392  01A7  29A8               	nop2
+   393                           
+   394                           ;Big_Token.C: 36: RB4 = 0;
+   395  01A8  1283               	bcf	3,5	;RP0=0, select bank0
+   396  01A9  1303               	bcf	3,6	;RP1=0, select bank0
+   397  01AA  1206               	bcf	6,4	;volatile
+   398                           
+   399                           ;Big_Token.C: 37: _delay(1000000);
+   400  01AB  3006               	movlw	6
+   401  01AC  00AE               	movwf	??_main+2
+   402  01AD  3013               	movlw	19
+   403  01AE  00AD               	movwf	??_main+1
+   404  01AF  30B1               	movlw	177
+   405  01B0  00AC               	movwf	??_main
+   406  01B1                     u627:	
+   407  01B1  0BAC               	decfsz	??_main,f
+   408  01B2  29B1               	goto	u627
+   409  01B3  0BAD               	decfsz	??_main+1,f
+   410  01B4  29B1               	goto	u627
+   411  01B5  0BAE               	decfsz	??_main+2,f
+   412  01B6  29B1               	goto	u627
+   413  01B7  29B8               	nop2
+   414  01B8  3001               	movlw	1
+   415  01B9  1283               	bcf	3,5	;RP0=0, select bank0
+   416  01BA  1303               	bcf	3,6	;RP1=0, select bank0
+   417  01BB  00AC               	movwf	??_main
+   418  01BC  082C               	movf	??_main,w
+   419  01BD  07BA               	addwf	_count,f
+   420  01BE  3005               	movlw	5
+   421  01BF  023A               	subwf	_count,w
+   422  01C0  1C03               	skipc
+   423  01C1  299A               	goto	l81
+   424  01C2                     l1012:	
+   425                           
+   426                           ;Big_Token.C: 38: }
+   427                           ;Big_Token.C: 39: count = 0;
+   428  01C2  01BA               	clrf	_count
+   429                           
+   430                           ;Big_Token.C: 42: OPTION_REG = 0xC3;
+   431  01C3  30C3               	movlw	195
+   432  01C4  1683               	bsf	3,5	;RP0=1, select bank1
+   433  01C5  1303               	bcf	3,6	;RP1=0, select bank1
+   434  01C6  0081               	movwf	1	;volatile
+   435                           
+   436                           ;Big_Token.C: 43: INTCON = 0xB0;
+   437  01C7  30B0               	movlw	176
+   438  01C8  008B               	movwf	11	;volatile
+   439  01C9                     l1018:	
+   440                           ;Big_Token.C: 45: while(1)
+   441                           
+   442                           
+   443                           ;Big_Token.C: 46: {
+   444                           ;Big_Token.C: 47: if(digit_received == 1)
+   445  01C9  1283               	bcf	3,5	;RP0=0, select bank0
+   446  01CA  083B               	movf	_digit_received,w
+   447  01CB  3A01               	xorlw	1
+   448  01CC  1D03               	skipz
+   449  01CD  29C9               	goto	l1018
+   450                           
+   451                           ;Big_Token.C: 48: {
+   452                           ;Big_Token.C: 49: Send_Data();
+   453  01CE  2113               	fcall	_Send_Data
+   454                           
+   455                           ;Big_Token.C: 50: digit_received = 0;
+   456  01CF  1283               	bcf	3,5	;RP0=0, select bank0
+   457  01D0  1303               	bcf	3,6	;RP1=0, select bank0
+   458  01D1  01BB               	clrf	_digit_received
+   459  01D2  29C9               	goto	l1018
+   460  01D3                     __end_of_main:	
+   461                           
+   462                           	psect	text1
+   463  0113                     __ptext1:	
+   464 ;; *************** function _Send_Data *****************
+   465 ;; Defined at:
+   466 ;;		line 199 in file "E:\Study Material\XC8 PROJECTS\Token Display\Big_Token.C"
+   467 ;; Parameters:    Size  Location     Type
+   468 ;;		None
+   469 ;; Auto vars:     Size  Location     Type
+   470 ;;  byte            2   10[BANK0 ] unsigned short 
+   471 ;;  bits            2    8[BANK0 ] unsigned short 
+   472 ;;  Mask            2    6[BANK0 ] unsigned short 
+   473 ;;  Flag            2    4[BANK0 ] unsigned short 
+   474 ;;  number          2    2[BANK0 ] unsigned short 
+   475 ;; Return value:  Size  Location     Type
+   476 ;;		None               void
+   477 ;; Registers used:
+   478 ;;		wreg, fsr0l, fsr0h, status,2, status,0
+   479 ;; Tracked objects:
+   480 ;;		On entry : 0/0
+   481 ;;		On exit  : 0/0
+   482 ;;		Unchanged: 0/0
+   483 ;; Data sizes:     COMMON   BANK0   BANK1
+   484 ;;      Params:         0       0       0
+   485 ;;      Locals:         0      10       0
+   486 ;;      Temps:          0       2       0
+   487 ;;      Totals:         0      12       0
+   488 ;;Total ram usage:       12 bytes
+   489 ;; Hardware stack levels used:    1
+   490 ;; Hardware stack levels required when called:    1
+   491 ;; This function calls:
+   492 ;;		Nothing
+   493 ;; This function is called by:
+   494 ;;		_main
+   495 ;; This function uses a non-reentrant model
+   496 ;;
+   497                           
+   498                           
+   499                           ;psect for function _Send_Data
+   500  0113                     _Send_Data:	
+   501                           
+   502                           ;Big_Token.C: 201: unsigned short Mask, byte, bits, Flag, number;
+   503                           ;Big_Token.C: 204: RB5 = 0;
+   504                           
+   505                           ;incstack = 0
+   506                           ; Regs used in _Send_Data: [wreg-fsr0h+status,2+status,0]
+   507  0113  1283               	bcf	3,5	;RP0=0, select bank0
+   508  0114  1303               	bcf	3,6	;RP1=0, select bank0
+   509  0115  1286               	bcf	6,5	;volatile
+   510                           
+   511                           ;Big_Token.C: 205: RB6 = 0;
+   512  0116  1306               	bcf	6,6	;volatile
+   513                           
+   514                           ;Big_Token.C: 206: RB7 = 0;
+   515  0117  1386               	bcf	6,7	;volatile
+   516                           
+   517                           ;Big_Token.C: 209: for(byte = 0; byte < 3; byte++)
+   518  0118  01AA               	clrf	Send_Data@byte
+   519  0119  01AB               	clrf	Send_Data@byte+1
+   520  011A  3000               	movlw	0
+   521  011B  022B               	subwf	Send_Data@byte+1,w
+   522  011C  3003               	movlw	3
+   523  011D  1903               	skipnz
+   524  011E  022A               	subwf	Send_Data@byte,w
+   525  011F  1803               	btfsc	3,0
+   526  0120  297D               	goto	l110
+   527  0121                     l962:	
+   528                           
+   529                           ;Big_Token.C: 210: {
+   530                           ;Big_Token.C: 211: number = digits[byte];
+   531  0121  082A               	movf	Send_Data@byte,w
+   532  0122  3E79               	addlw	_digits& (0+255)
+   533  0123  0084               	movwf	4
+   534  0124  0800               	movf	0,w
+   535  0125  00A0               	movwf	??_Send_Data
+   536  0126  01A1               	clrf	??_Send_Data+1
+   537  0127  0820               	movf	??_Send_Data,w
+   538  0128  00A2               	movwf	Send_Data@number
+   539  0129  0821               	movf	??_Send_Data+1,w
+   540  012A  00A3               	movwf	Send_Data@number+1
+   541                           
+   542                           ;Big_Token.C: 213: Mask = 0x01;
+   543  012B  3001               	movlw	1
+   544  012C  00A6               	movwf	Send_Data@Mask
+   545  012D  3000               	movlw	0
+   546  012E  00A7               	movwf	Send_Data@Mask+1
+   547                           
+   548                           ;Big_Token.C: 214: for (bits=0; bits<8; bits++)
+   549  012F  01A8               	clrf	Send_Data@bits
+   550  0130  01A9               	clrf	Send_Data@bits+1
+   551  0131  3000               	movlw	0
+   552  0132  0229               	subwf	Send_Data@bits+1,w
+   553  0133  3008               	movlw	8
+   554  0134  1903               	skipnz
+   555  0135  0228               	subwf	Send_Data@bits,w
+   556  0136  1803               	btfsc	3,0
+   557  0137  2970               	goto	l984
+   558  0138                     l972:	
+   559                           
+   560                           ;Big_Token.C: 215: {
+   561                           ;Big_Token.C: 216: Flag = display[number] & Mask;
+   562  0138  0822               	movf	Send_Data@number,w
+   563  0139  3E2F               	addlw	_display& (0+255)
+   564  013A  0084               	movwf	4
+   565  013B  1383               	bcf	3,7	;select IRP bank0
+   566  013C  0800               	movf	0,w
+   567  013D  0526               	andwf	Send_Data@Mask,w
+   568  013E  00A0               	movwf	??_Send_Data
+   569  013F  01A1               	clrf	??_Send_Data+1
+   570  0140  0820               	movf	??_Send_Data,w
+   571  0141  00A4               	movwf	Send_Data@Flag
+   572  0142  0821               	movf	??_Send_Data+1,w
+   573  0143  00A5               	movwf	Send_Data@Flag+1
+   574                           
+   575                           ;Big_Token.C: 217: if(Flag == 0)
+   576  0144  0825               	movf	Send_Data@Flag+1,w
+   577  0145  0424               	iorwf	Send_Data@Flag,w
+   578  0146  1D03               	skipz
+   579  0147  2951               	goto	l978
+   580                           
+   581                           ;Big_Token.C: 218: {
+   582                           ;Big_Token.C: 219: RB5 = 0;
+   583  0148  1286               	bcf	6,5	;volatile
+   584                           
+   585                           ;Big_Token.C: 220: _delay(1);
+   586  0149  0000               	nop
+   587                           
+   588                           ;Big_Token.C: 221: RB6 = 1;
+   589  014A  1283               	bcf	3,5	;RP0=0, select bank0
+   590  014B  1303               	bcf	3,6	;RP1=0, select bank0
+   591  014C  1706               	bsf	6,6	;volatile
+   592                           
+   593                           ;Big_Token.C: 222: _delay(1);
+   594  014D  0000               	nop
+   595                           
+   596                           ;Big_Token.C: 223: RB6 = 0;
+   597  014E  1283               	bcf	3,5	;RP0=0, select bank0
+   598  014F  1303               	bcf	3,6	;RP1=0, select bank0
+   599  0150  1306               	bcf	6,6	;volatile
+   600  0151                     l978:	
+   601                           
+   602                           ;Big_Token.C: 224: }
+   603                           ;Big_Token.C: 225: if(Flag > 0)
+   604  0151  0825               	movf	Send_Data@Flag+1,w
+   605  0152  0424               	iorwf	Send_Data@Flag,w
+   606  0153  1903               	skipnz
+   607  0154  295E               	goto	l982
+   608                           
+   609                           ;Big_Token.C: 226: {
+   610                           ;Big_Token.C: 227: RB5 = 1;
+   611  0155  1686               	bsf	6,5	;volatile
+   612                           
+   613                           ;Big_Token.C: 228: _delay(1);
+   614  0156  0000               	nop
+   615                           
+   616                           ;Big_Token.C: 229: RB6 = 1;
+   617  0157  1283               	bcf	3,5	;RP0=0, select bank0
+   618  0158  1303               	bcf	3,6	;RP1=0, select bank0
+   619  0159  1706               	bsf	6,6	;volatile
+   620                           
+   621                           ;Big_Token.C: 230: _delay(1);
+   622  015A  0000               	nop
+   623                           
+   624                           ;Big_Token.C: 231: RB6 = 0;
+   625  015B  1283               	bcf	3,5	;RP0=0, select bank0
+   626  015C  1303               	bcf	3,6	;RP1=0, select bank0
+   627  015D  1306               	bcf	6,6	;volatile
+   628  015E                     l982:	
+   629                           
+   630                           ;Big_Token.C: 232: }
+   631                           ;Big_Token.C: 233: Mask = Mask << 1;
+   632  015E  1003               	clrc
+   633  015F  0D26               	rlf	Send_Data@Mask,w
+   634  0160  00A6               	movwf	Send_Data@Mask
+   635  0161  0D27               	rlf	Send_Data@Mask+1,w
+   636  0162  00A7               	movwf	Send_Data@Mask+1
+   637  0163  3001               	movlw	1
+   638  0164  07A8               	addwf	Send_Data@bits,f
+   639  0165  1803               	skipnc
+   640  0166  0AA9               	incf	Send_Data@bits+1,f
+   641  0167  3000               	movlw	0
+   642  0168  07A9               	addwf	Send_Data@bits+1,f
+   643  0169  3000               	movlw	0
+   644  016A  0229               	subwf	Send_Data@bits+1,w
+   645  016B  3008               	movlw	8
+   646  016C  1903               	skipnz
+   647  016D  0228               	subwf	Send_Data@bits,w
+   648  016E  1C03               	skipc
+   649  016F  2938               	goto	l972
+   650  0170                     l984:	
+   651  0170  3001               	movlw	1
+   652  0171  07AA               	addwf	Send_Data@byte,f
+   653  0172  1803               	skipnc
+   654  0173  0AAB               	incf	Send_Data@byte+1,f
+   655  0174  3000               	movlw	0
+   656  0175  07AB               	addwf	Send_Data@byte+1,f
+   657  0176  3000               	movlw	0
+   658  0177  022B               	subwf	Send_Data@byte+1,w
+   659  0178  3003               	movlw	3
+   660  0179  1903               	skipnz
+   661  017A  022A               	subwf	Send_Data@byte,w
+   662  017B  1C03               	skipc
+   663  017C  2921               	goto	l962
+   664  017D                     l110:	
+   665                           
+   666                           ;Big_Token.C: 234: }
+   667                           ;Big_Token.C: 235: }
+   668                           ;Big_Token.C: 238: RB7 = 1;
+   669  017D  1786               	bsf	6,7	;volatile
+   670                           
+   671                           ;Big_Token.C: 239: _delay(1);
+   672  017E  0000               	nop
+   673                           
+   674                           ;Big_Token.C: 240: RB7 = 0;
+   675  017F  1283               	bcf	3,5	;RP0=0, select bank0
+   676  0180  1303               	bcf	3,6	;RP1=0, select bank0
+   677  0181  1386               	bcf	6,7	;volatile
+   678  0182  0008               	return
+   679  0183                     __end_of_Send_Data:	
+   680                           
+   681                           	psect	text2
+   682  0035                     __ptext2:	
+   683 ;; *************** function _ISR *****************
+   684 ;; Defined at:
+   685 ;;		line 88 in file "E:\Study Material\XC8 PROJECTS\Token Display\Big_Token.C"
+   686 ;; Parameters:    Size  Location     Type
+   687 ;;		None
+   688 ;; Auto vars:     Size  Location     Type
+   689 ;;  digit           1    5[COMMON] unsigned char 
+   690 ;; Return value:  Size  Location     Type
+   691 ;;		None               void
+   692 ;; Registers used:
+   693 ;;		wreg, fsr0l, fsr0h, status,2, status,0, btemp+1
+   694 ;; Tracked objects:
+   695 ;;		On entry : 0/0
+   696 ;;		On exit  : 0/0
+   697 ;;		Unchanged: 0/0
+   698 ;; Data sizes:     COMMON   BANK0   BANK1
+   699 ;;      Params:         0       0       0
+   700 ;;      Locals:         1       0       0
+   701 ;;      Temps:          5       0       0
+   702 ;;      Totals:         6       0       0
+   703 ;;Total ram usage:        6 bytes
+   704 ;; Hardware stack levels used:    1
+   705 ;; This function calls:
+   706 ;;		Nothing
+   707 ;; This function is called by:
+   708 ;;		Interrupt level 1
+   709 ;; This function uses a non-reentrant model
+   710 ;;
+   711                           
+   712                           
+   713                           ;psect for function _ISR
+   714  0035                     _ISR:	
+   715                           
+   716                           ;Big_Token.C: 91: if(INTE && INTF)
+   717  0035  1A0B               	btfsc	11,4	;volatile
+   718  0036  1C8B               	btfss	11,1	;volatile
+   719  0037  28DC               	goto	i1l90
+   720                           
+   721                           ;Big_Token.C: 92: {
+   722                           ;Big_Token.C: 93: char digit = 0x00;
+   723  0038  01F5               	clrf	ISR@digit
+   724                           
+   725                           ;Big_Token.C: 94: digit = PORTA;
+   726  0039  0805               	movf	5,w	;volatile
+   727  003A  00F0               	movwf	??_ISR
+   728  003B  0870               	movf	??_ISR,w
+   729  003C  00F5               	movwf	ISR@digit
+   730                           
+   731                           ;Big_Token.C: 95: digit = digit & 0x0F;
+   732  003D  0875               	movf	ISR@digit,w
+   733  003E  390F               	andlw	15
+   734  003F  00F0               	movwf	??_ISR
+   735  0040  0870               	movf	??_ISR,w
+   736  0041  00F5               	movwf	ISR@digit
+   737                           
+   738                           ;Big_Token.C: 96: digit_received = 1;
+   739  0042  01BB               	clrf	_digit_received
+   740  0043  0ABB               	incf	_digit_received,f
+   741                           
+   742                           ;Big_Token.C: 98: if(digit == 0x0B)
+   743  0044  0875               	movf	ISR@digit,w
+   744  0045  3A0B               	xorlw	11
+   745  0046  1D03               	skipz
+   746  0047  286F               	goto	i1l880
+   747                           
+   748                           ;Big_Token.C: 99: {
+   749                           ;Big_Token.C: 101: digits[0] = digits[0] + 1;
+   750  0048  0879               	movf	_digits,w
+   751  0049  3E01               	addlw	1
+   752  004A  00F0               	movwf	??_ISR
+   753  004B  0870               	movf	??_ISR,w
+   754  004C  00F9               	movwf	_digits
+   755                           
+   756                           ;Big_Token.C: 102: if(digits[0] > 9)
+   757  004D  300A               	movlw	10
+   758  004E  0279               	subwf	_digits,w
+   759  004F  1C03               	skipc
+   760  0050  2908               	goto	i1l95
+   761                           
+   762                           ;Big_Token.C: 103: {
+   763                           ;Big_Token.C: 104: digits[0] = 0;
+   764  0051  01F9               	clrf	_digits
+   765                           
+   766                           ;Big_Token.C: 105: digits[1] = digits[1] + 1;
+   767  0052  087A               	movf	_digits+1,w
+   768  0053  3E01               	addlw	1
+   769  0054  00F0               	movwf	??_ISR
+   770  0055  0870               	movf	??_ISR,w
+   771  0056  00FA               	movwf	_digits+1
+   772                           
+   773                           ;Big_Token.C: 106: if(digits[1] > 9)
+   774  0057  300A               	movlw	10
+   775  0058  027A               	subwf	_digits+1,w
+   776  0059  1C03               	skipc
+   777  005A  2908               	goto	i1l95
+   778                           
+   779                           ;Big_Token.C: 107: {
+   780                           ;Big_Token.C: 108: digits[1] = 0;
+   781  005B  01FA               	clrf	_digits+1
+   782                           
+   783                           ;Big_Token.C: 109: digits[2] = digits[2] + 1;
+   784  005C  087B               	movf	_digits+2,w
+   785  005D  3E01               	addlw	1
+   786  005E  00F0               	movwf	??_ISR
+   787  005F  0870               	movf	??_ISR,w
+   788  0060  00FB               	movwf	_digits+2
+   789                           
+   790                           ;Big_Token.C: 110: if(digits[2] > 9)
+   791  0061  300A               	movlw	10
+   792  0062  027B               	subwf	_digits+2,w
+   793  0063  1C03               	skipc
+   794  0064  2908               	goto	i1l95
+   795                           
+   796                           ;Big_Token.C: 111: {
+   797                           ;Big_Token.C: 112: digits[2] = 9;
+   798  0065  3009               	movlw	9
+   799  0066  00F0               	movwf	??_ISR
+   800  0067  0870               	movf	??_ISR,w
+   801  0068  00FB               	movwf	_digits+2
+   802                           
+   803                           ;Big_Token.C: 113: digits[1] = 9;
+   804  0069  3009               	movlw	9
+   805  006A  00F0               	movwf	??_ISR
+   806  006B  0870               	movf	??_ISR,w
+   807  006C  00FA               	movwf	_digits+1
+   808                           
+   809                           ;Big_Token.C: 114: digits[0] = 9;
+   810  006D  3009               	movlw	9
+   811  006E  2875               	goto	L1
+   812  006F                     i1l880:	
+   813                           ;Big_Token.C: 115: }
+   814                           ;Big_Token.C: 116: }
+   815                           ;Big_Token.C: 117: }
+   816                           ;Big_Token.C: 118: return;
+   817                           
+   818                           
+   819                           ;Big_Token.C: 119: }
+   820                           ;Big_Token.C: 121: if(digit == 0x0C)
+   821  006F  0875               	movf	ISR@digit,w
+   822  0070  3A0C               	xorlw	12
+   823  0071  1D03               	skipz
+   824  0072  2879               	goto	i1l896
+   825                           
+   826                           ;Big_Token.C: 122: {
+   827                           ;Big_Token.C: 124: digits[0] = digits[0] - 1;
+   828  0073  0879               	movf	_digits,w
+   829  0074  3EFF               	addlw	255
+   830  0075                     L1:	
+   831  0075  00F0               	movwf	??_ISR
+   832  0076  0870               	movf	??_ISR,w
+   833  0077  00F9               	movwf	_digits
+   834                           
+   835                           ;Big_Token.C: 125: if(digits[0] < 0)
+   836  0078  2908               	goto	i1l95
+   837  0079                     i1l896:	
+   838                           ;Big_Token.C: 138: }
+   839                           ;Big_Token.C: 139: }
+   840                           ;Big_Token.C: 140: }
+   841                           ;Big_Token.C: 141: return;
+   842                           
+   843                           ;Big_Token.C: 137: digits[0] = 0;
+   844                           
+   845                           ;Big_Token.C: 136: digits[1] = 0;
+   846                           
+   847                           ;Big_Token.C: 134: {
+   848                           ;Big_Token.C: 135: digits[2] = 0;
+   849                           
+   850                           ;Big_Token.C: 133: if(digits[2] < 0)
+   851                           
+   852                           ;Big_Token.C: 132: digits[2] = digits[2] - 1;
+   853                           
+   854                           ;Big_Token.C: 130: {
+   855                           ;Big_Token.C: 131: digits[1] = 9;
+   856                           
+   857                           ;Big_Token.C: 129: if(digits[1] < 0)
+   858                           
+   859                           ;Big_Token.C: 128: digits[1] = digits[1] - 1;
+   860                           
+   861                           ;Big_Token.C: 126: {
+   862                           ;Big_Token.C: 127: digits[0] = 9;
+   863                           
+   864                           
+   865                           ;Big_Token.C: 142: }
+   866                           ;Big_Token.C: 145: if(digit == 0x0A)
+   867  0079  0875               	movf	ISR@digit,w
+   868  007A  3A0A               	xorlw	10
+   869  007B  1903               	btfsc	3,2
+   870                           
+   871                           ;Big_Token.C: 146: digit = 0x00;
+   872  007C  01F5               	clrf	ISR@digit
+   873                           
+   874                           ;Big_Token.C: 147: if(count == 0)
+   875  007D  08BA               	movf	_count,f
+   876  007E  1D03               	skipz
+   877  007F  2892               	goto	i1l912
+   878                           
+   879                           ;Big_Token.C: 148: {
+   880                           ;Big_Token.C: 149: digits[count] = digit;
+   881  0080  0875               	movf	ISR@digit,w
+   882  0081  00F0               	movwf	??_ISR
+   883  0082  083A               	movf	_count,w
+   884  0083  3E79               	addlw	_digits& (0+255)
+   885  0084  0084               	movwf	4
+   886  0085  0870               	movf	??_ISR,w
+   887  0086  0080               	movwf	0
+   888                           
+   889                           ;Big_Token.C: 150: digits[count+1] = 0x00;
+   890  0087  083A               	movf	_count,w
+   891  0088  3E01               	addlw	1
+   892  0089  3E79               	addlw	_digits& (0+255)
+   893  008A  0084               	movwf	4
+   894  008B  0180               	clrf	0
+   895                           
+   896                           ;Big_Token.C: 151: digits[count+2] = 0x00;
+   897  008C  083A               	movf	_count,w
+   898  008D  3E02               	addlw	2
+   899  008E  3E79               	addlw	_digits& (0+255)
+   900  008F  0084               	movwf	4
+   901  0090  0180               	clrf	0
+   902  0091  28A9               	goto	L2
+   903  0092                     i1l912:	
+   904                           ;Big_Token.C: 155: return;
+   905                           
+   906                           ;Big_Token.C: 154: INTF = 0;
+   907                           
+   908                           ;Big_Token.C: 153: count ++;
+   909                           
+   910                           ;Big_Token.C: 152: data_timer = 1;
+   911                           
+   912                           
+   913                           ;Big_Token.C: 156: }
+   914                           ;Big_Token.C: 157: if(count == 1)
+   915  0092  083A               	movf	_count,w
+   916  0093  3A01               	xorlw	1
+   917  0094  1D03               	skipz
+   918  0095  28B2               	goto	i1l924
+   919                           
+   920                           ;Big_Token.C: 158: {
+   921                           ;Big_Token.C: 159: digits[count] = digits[count-1];
+   922  0096  083A               	movf	_count,w
+   923  0097  3EFF               	addlw	255
+   924  0098  3E79               	addlw	_digits& (0+255)
+   925  0099  0084               	movwf	4
+   926  009A  0800               	movf	0,w
+   927  009B  00F0               	movwf	??_ISR
+   928  009C  083A               	movf	_count,w
+   929  009D  3E79               	addlw	_digits& (0+255)
+   930  009E  0084               	movwf	4
+   931  009F  0870               	movf	??_ISR,w
+   932  00A0  0080               	movwf	0
+   933                           
+   934                           ;Big_Token.C: 160: digits[count-1] = digit;
+   935  00A1  0875               	movf	ISR@digit,w
+   936  00A2  00F0               	movwf	??_ISR
+   937  00A3  083A               	movf	_count,w
+   938  00A4  3EFF               	addlw	255
+   939  00A5  3E79               	addlw	_digits& (0+255)
+   940  00A6  0084               	movwf	4
+   941  00A7  0870               	movf	??_ISR,w
+   942  00A8  0080               	movwf	0
+   943  00A9                     L2:	
+   944                           
+   945                           ;Big_Token.C: 161: data_timer = 1;
+   946  00A9  3001               	movlw	1
+   947  00AA  00F6               	movwf	_data_timer
+   948  00AB  3000               	movlw	0
+   949  00AC  00F7               	movwf	_data_timer+1
+   950                           
+   951                           ;Big_Token.C: 162: count ++;
+   952  00AD  3001               	movlw	1
+   953  00AE  00F0               	movwf	??_ISR
+   954  00AF  0870               	movf	??_ISR,w
+   955  00B0  07BA               	addwf	_count,f
+   956  00B1  28DA               	goto	i1l934
+   957  00B2                     i1l924:	
+   958                           ;Big_Token.C: 164: return;
+   959                           
+   960                           ;Big_Token.C: 163: INTF = 0;
+   961                           
+   962                           
+   963                           ;Big_Token.C: 165: }
+   964                           ;Big_Token.C: 166: if(count == 2)
+   965  00B2  083A               	movf	_count,w
+   966  00B3  3A02               	xorlw	2
+   967  00B4  1D03               	skipz
+   968  00B5  28DC               	goto	i1l90
+   969                           
+   970                           ;Big_Token.C: 167: {
+   971                           ;Big_Token.C: 168: digits[count] = digits[count-1];
+   972  00B6  083A               	movf	_count,w
+   973  00B7  3EFF               	addlw	255
+   974  00B8  3E79               	addlw	_digits& (0+255)
+   975  00B9  0084               	movwf	4
+   976  00BA  0800               	movf	0,w
+   977  00BB  00F0               	movwf	??_ISR
+   978  00BC  083A               	movf	_count,w
+   979  00BD  3E79               	addlw	_digits& (0+255)
+   980  00BE  0084               	movwf	4
+   981  00BF  0870               	movf	??_ISR,w
+   982  00C0  0080               	movwf	0
+   983                           
+   984                           ;Big_Token.C: 169: digits[count-1] = digits[count-2];
+   985  00C1  083A               	movf	_count,w
+   986  00C2  3EFE               	addlw	254
+   987  00C3  3E79               	addlw	_digits& (0+255)
+   988  00C4  0084               	movwf	4
+   989  00C5  0800               	movf	0,w
+   990  00C6  00F0               	movwf	??_ISR
+   991  00C7  083A               	movf	_count,w
+   992  00C8  3EFF               	addlw	255
+   993  00C9  3E79               	addlw	_digits& (0+255)
+   994  00CA  0084               	movwf	4
+   995  00CB  0870               	movf	??_ISR,w
+   996  00CC  0080               	movwf	0
+   997                           
+   998                           ;Big_Token.C: 170: digits[count-2] = digit;
+   999  00CD  0875               	movf	ISR@digit,w
+  1000  00CE  00F0               	movwf	??_ISR
+  1001  00CF  083A               	movf	_count,w
+  1002  00D0  3EFE               	addlw	254
+  1003  00D1  3E79               	addlw	_digits& (0+255)
+  1004  00D2  0084               	movwf	4
+  1005  00D3  0870               	movf	??_ISR,w
+  1006  00D4  0080               	movwf	0
+  1007                           
+  1008                           ;Big_Token.C: 171: data_timer = 0;
+  1009  00D5  01F6               	clrf	_data_timer
+  1010  00D6  01F7               	clrf	_data_timer+1
+  1011                           
+  1012                           ;Big_Token.C: 172: count = 0;
+  1013  00D7  01BA               	clrf	_count
+  1014                           
+  1015                           ;Big_Token.C: 173: data_received = 1;
+  1016  00D8  01F8               	clrf	_data_received
+  1017  00D9  0AF8               	incf	_data_received,f
+  1018  00DA                     i1l934:	
+  1019                           
+  1020                           ;Big_Token.C: 174: INTF = 0;
+  1021  00DA  108B               	bcf	11,1	;volatile
+  1022                           
+  1023                           ;Big_Token.C: 175: return;
+  1024  00DB  2908               	goto	i1l95
+  1025  00DC                     i1l90:	
+  1026                           
+  1027                           ;Big_Token.C: 176: }
+  1028                           ;Big_Token.C: 177: }
+  1029                           ;Big_Token.C: 180: if(T0IE && T0IF)
+  1030  00DC  1A8B               	btfsc	11,5	;volatile
+  1031  00DD  1D0B               	btfss	11,2	;volatile
+  1032  00DE  2908               	goto	i1l95
+  1033                           
+  1034                           ;Big_Token.C: 181: {
+  1035                           ;Big_Token.C: 182: if(data_timer >= 1)
+  1036  00DF  0877               	movf	_data_timer+1,w
+  1037  00E0  3A80               	xorlw	128
+  1038  00E1  00FF               	movwf	127
+  1039  00E2  3080               	movlw	128
+  1040  00E3  027F               	subwf	127,w
+  1041  00E4  1D03               	skipz
+  1042  00E5  28E8               	goto	u50_25
+  1043  00E6  3001               	movlw	1
+  1044  00E7  0276               	subwf	_data_timer,w
+  1045  00E8                     u50_25:	
+  1046  00E8  1C03               	skipc
+  1047  00E9  2904               	goto	i1l105
+  1048                           
+  1049                           ;Big_Token.C: 183: {
+  1050                           ;Big_Token.C: 184: data_timer = data_timer + 1;
+  1051  00EA  0876               	movf	_data_timer,w
+  1052  00EB  3E01               	addlw	1
+  1053  00EC  00F6               	movwf	_data_timer
+  1054  00ED  0877               	movf	_data_timer+1,w
+  1055  00EE  1803               	skipnc
+  1056  00EF  3E01               	addlw	1
+  1057  00F0  3E00               	addlw	0
+  1058  00F1  00F7               	movwf	_data_timer+1
+  1059                           
+  1060                           ;Big_Token.C: 185: if(data_timer >= 750)
+  1061  00F2  0877               	movf	_data_timer+1,w
+  1062  00F3  3A80               	xorlw	128
+  1063  00F4  00FF               	movwf	127
+  1064  00F5  3082               	movlw	130
+  1065  00F6  027F               	subwf	127,w
+  1066  00F7  1D03               	skipz
+  1067  00F8  28FB               	goto	u51_25
+  1068  00F9  30EE               	movlw	238
+  1069  00FA  0276               	subwf	_data_timer,w
+  1070  00FB                     u51_25:	
+  1071  00FB  1C03               	skipc
+  1072  00FC  2904               	goto	i1l105
+  1073                           
+  1074                           ;Big_Token.C: 186: {
+  1075                           ;Big_Token.C: 188: data_timer = 0;
+  1076  00FD  01F6               	clrf	_data_timer
+  1077  00FE  01F7               	clrf	_data_timer+1
+  1078                           
+  1079                           ;Big_Token.C: 189: count = 0;
+  1080  00FF  1283               	bcf	3,5	;RP0=0, select bank0
+  1081  0100  1303               	bcf	3,6	;RP1=0, select bank0
+  1082  0101  01BA               	clrf	_count
+  1083                           
+  1084                           ;Big_Token.C: 190: data_received = 1;
+  1085  0102  01F8               	clrf	_data_received
+  1086  0103  0AF8               	incf	_data_received,f
+  1087  0104                     i1l105:	
+  1088                           
+  1089                           ;Big_Token.C: 191: }
+  1090                           ;Big_Token.C: 192: }
+  1091                           ;Big_Token.C: 193: TMR0 = 0;
+  1092  0104  1283               	bcf	3,5	;RP0=0, select bank0
+  1093  0105  1303               	bcf	3,6	;RP1=0, select bank0
+  1094  0106  0181               	clrf	1	;volatile
+  1095                           
+  1096                           ;Big_Token.C: 194: T0IF = 0;
+  1097  0107  110B               	bcf	11,2	;volatile
+  1098  0108                     i1l95:	
+  1099                           ;Big_Token.C: 195: return;
+  1100                           
+  1101  0108  0874               	movf	??_ISR+4,w
+  1102  0109  00FF               	movwf	127
+  1103  010A  0873               	movf	??_ISR+3,w
+  1104  010B  008A               	movwf	10
+  1105  010C  0872               	movf	??_ISR+2,w
+  1106  010D  0084               	movwf	4
+  1107  010E  0E71               	swapf	(??_ISR+1)^(0+-128),w
+  1108  010F  0083               	movwf	3
+  1109  0110  0EFE               	swapf	126,f
+  1110  0111  0E7E               	swapf	126,w
+  1111  0112  0009               	retfie
+  1112  0113                     __end_of_ISR:	
+  1113  007E                     btemp	set	126	;btemp
+  1114  007E                     wtemp	set	126
+  1115  007E                     wtemp0	set	126
+  1116  0080                     wtemp1	set	128
+  1117  0082                     wtemp2	set	130
+  1118  0084                     wtemp3	set	132
+  1119  0086                     wtemp4	set	134
+  1120  0088                     wtemp5	set	136
+  1121  007F                     wtemp6	set	127
+  1122  007E                     ttemp	set	126
+  1123  007E                     ttemp0	set	126
+  1124  0081                     ttemp1	set	129
+  1125  0084                     ttemp2	set	132
+  1126  0087                     ttemp3	set	135
+  1127  007F                     ttemp4	set	127
+  1128  007E                     ltemp	set	126
+  1129  007E                     ltemp0	set	126
+  1130  0082                     ltemp1	set	130
+  1131  0086                     ltemp2	set	134
+  1132  0080                     ltemp3	set	128
+  1133                           
+  1134                           	psect	intentry
+  1135  0004                     __pintentry:	
+  1136                           ;incstack = 0
+  1137                           ; Regs used in _ISR: [wreg-fsr0h+status,2+status,0+btemp+1]
+  1138                           
+  1139  0004                     interrupt_function:	
+  1140  007E                     saved_w	set	btemp
+  1141  0004  00FE               	movwf	btemp
+  1142  0005  0E03               	swapf	3,w
+  1143  0006  00F1               	movwf	??_ISR+1
+  1144  0007  0804               	movf	4,w
+  1145  0008  00F2               	movwf	??_ISR+2
+  1146  0009  080A               	movf	10,w
+  1147  000A  00F3               	movwf	??_ISR+3
+  1148  000B  1283               	bcf	3,5	;RP0=0, select bank0
+  1149  000C  1303               	bcf	3,6	;RP1=0, select bank0
+  1150  000D  087F               	movf	btemp+1,w
+  1151  000E  00F4               	movwf	??_ISR+4
+  1152  000F  2835               	ljmp	_ISR
+
+
+Data Sizes:
+    Strings     0
+    Constant    0
+    Data        14
+    BSS         6
+    Persistent  0
+    Stack       0
+
+Auto Spaces:
+    Space          Size  Autos    Used
+    COMMON           14      6      12
+    BANK0            80     15      29
+    BANK1            32      0       0
+
+Pointer List with Targets:
+
+    None.
+
+Critical Paths under _main in COMMON
+
+    None.
+
+Critical Paths under _ISR in COMMON
+
+    None.
+
+Critical Paths under _main in BANK0
+
+    _main->_Send_Data
+
+Critical Paths under _ISR in BANK0
+
+    None.
+
+Critical Paths under _main in BANK1
+
+    None.
+
+Critical Paths under _ISR in BANK1
+
+    None.
+
+Call Graph Tables:
+
+ ---------------------------------------------------------------------------------
+ (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+ ---------------------------------------------------------------------------------
+ (0) _main                                                 3     3      0     334
+                                             12 BANK0      3     3      0
+                          _Send_Data
+ ---------------------------------------------------------------------------------
+ (1) _Send_Data                                           12    12      0     334
+                                              0 BANK0     12    12      0
+ ---------------------------------------------------------------------------------
+ Estimated maximum stack depth 1
+ ---------------------------------------------------------------------------------
+ (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+ ---------------------------------------------------------------------------------
+ (2) _ISR                                                  6     6      0     158
+                                              0 COMMON     6     6      0
+ ---------------------------------------------------------------------------------
+ Estimated maximum stack depth 2
+ ---------------------------------------------------------------------------------
+
+ Call Graph Graphs:
+
+ _main (ROOT)
+   _Send_Data
+
+ _ISR (ROOT)
+
+ Address spaces:
+Name               Size   Autos  Total    Cost      Usage
+SFR3                 0      0       0       4        0.0%
+BITSFR3              0      0       0       4        0.0%
+SFR2                 0      0       0       5        0.0%
+BITSFR2              0      0       0       5        0.0%
+BANK1               20      0       0       7        0.0%
+BITBANK1            20      0       0       6        0.0%
+SFR1                 0      0       0       2        0.0%
+BITSFR1              0      0       0       2        0.0%
+BANK0               50      F      1D       5       36.3%
+BITBANK0            50      0       0       4        0.0%
+SFR0                 0      0       0       1        0.0%
+BITSFR0              0      0       0       1        0.0%
+COMMON               E      6       C       1       85.7%
+BITCOMMON            E      0       0       0        0.0%
+CODE                 0      0       0       0        0.0%
+DATA                 0      0      29       8        0.0%
+ABS                  0      0      29       3        0.0%
+NULL                 0      0       0       0        0.0%
+STACK                0      0       0       2        0.0%
+EEDATA              40      0       0       0        0.0%
+
+
+Microchip Technology PIC Macro Assembler V1.33 build 59893 
+Symbol Table                                                                                   Tue Sep 15 14:53:56 2015
+
+          Send_Data@Flag 0024            Send_Data@Mask 0026            Send_Data@bits 0028  
+                     l81 019A            Send_Data@byte 002A                      l110 017D  
+                    l962 0121                      l972 0138                      l982 015E  
+                    l984 0170                      l978 0151                      _RB4 0034  
+                    _RB5 0035                      _RC4 003C                      _RB6 0036  
+                    _RC5 003D                      _RB7 0037                      _ISR 0035  
+                    u617 01A1                      u627 01B1                      fsr0 0004  
+                    indf 0000                     ?_ISR 0070                     l1012 01C2  
+                   l1018 01C9                     _T0IE 005D                     _T0IF 005A  
+                   _INTE 005C                     _INTF 0059                     i1l90 00DC  
+                   i1l95 0108                     _TMR0 0001          Send_Data@number 0022  
+                   _main 0183                     btemp 007E                     ltemp 007E  
+                   start 0010                     ttemp 007E                     wtemp 007E  
+                  ??_ISR 0070                    ?_main 0070                    i1l105 0104  
+                  i1l912 0092                    i1l924 00B2                    i1l934 00DA  
+                  i1l880 006F                    i1l896 0079                    u50_25 00E8  
+                  _PORTA 0005                    _PORTC 0007                    u51_25 00FB  
+                  _TRISA 0085                    _TRISB 0086                    _TRISC 0087  
+                  _count 003A                    _index 003C                    pclath 000A  
+                  ltemp0 007E                    ltemp1 0082                    ltemp2 0086  
+                  ltemp3 0080                    ttemp0 007E                    ttemp1 0081  
+                  ttemp2 0084                    ttemp3 0087                    ttemp4 007F  
+                  status 0003                    wtemp0 007E                    wtemp1 0080  
+                  wtemp2 0082                    wtemp3 0084                    wtemp4 0086  
+                  wtemp5 0088                    wtemp6 007F          __initialization 0011  
+           __end_of_main 01D3                   ??_main 002C                   _ADCON1 009F  
+                 _INTCON 000B       __size_of_Send_Data 0070                   _digits 0079  
+           __pdataCOMMON 0079                   saved_w 007E  __end_of__initialization 0033  
+         __pcstackCOMMON 0070             __pidataBANK0 01D3        __end_of_Send_Data 0183  
+             __pbssBANK0 003A               _data_timer 0076               __pmaintext 0183  
+             __pintentry 0004                  _address 0039                  __ptext1 0113  
+                __ptext2 0035                  _display 002F             __size_of_ISR 00DE  
+   end_of_initialization 0033           _digit_received 003B            __pidataCOMMON 01DE  
+          _data_received 0078      start_initialization 0011              __end_of_ISR 0113  
+              _Send_Data 0113              __pdataBANK0 002F              __pbssCOMMON 0076  
+              ___latbits 0000            __pcstackBANK0 0020               ?_Send_Data 0070  
+               ISR@digit 0075        interrupt_function 0004              ??_Send_Data 0020  
+          __size_of_main 0050                 intlevel1 0000               _OPTION_REG 0081  

@@ -1,0 +1,1 @@
+ WLC.d  WLC.obj:  E:/Study\ Material/XC8\ PROJECTS/New\ WLC\ 1PH/WLC.C E:/Study\ Material/XC8\ PROJECTS/New\ WLC\ 1PH/lcd_hd44780_pic16.h

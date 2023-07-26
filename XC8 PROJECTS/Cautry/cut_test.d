@@ -1,0 +1,1 @@
+ cut_test.d  cut_test.p1:  E:/Study\ Material/XC8\ PROJECTS/Cautry/cut_test.c E:/Study\ Material/XC8\ PROJECTS/Cautry/pins.h

@@ -1,0 +1,715 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$startup.obj
+end_init CODE 0 0 0 2 2
+$Motion_Detector.obj
+cinit CODE 0 7F0 7F0 10 2
+text18 CODE 0 0 0 D 2
+text17 CODE 0 D D 26 2
+text16 CODE 0 84 84 68 2
+text15 CODE 0 2D3 2D3 B6 2
+text14 CODE 0 389 389 D1 2
+text13 CODE 0 33 33 3E 2
+text12 CODE 0 71 71 12 2
+text11 CODE 0 EC EC 73 2
+text10 CODE 0 15F 15F 73 2
+text9 CODE 0 1D2 1D2 73 2
+text8 CODE 0 45A 45A 107 2
+text7 CODE 0 25 25 5F 2
+text6 CODE 0 3 3 8 2
+text5 CODE 0 675 675 17B 2
+text4 CODE 0 83 83 11 2
+text3 CODE 0 245 245 8E 2
+text2 CODE 0 B B 1A 2
+text1 CODE 0 561 561 114 2
+maintext CODE 0 94 94 5D 2
+cstackBANK0 BANK0 1 20 20 50 1
+cstackCOMMON COMMON 1 70 70 E 1
+dataBANK1 BANK1 1 A0 A0 6 1
+idataBANK1 CODE 0 F1 F1 6 2
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+BANK1 00A6-00BF 1
+CONFIG 2007-2007 2
+EEDATA 2100-213F 2
+IDLOC 2000-2003 2
+RAM 00A6-00BF 1
+SFR0 0000-001F 1
+SFR1 0080-009F 1
+SFR2 0100-016F 1
+SFR3 0180-01EF 1
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <file name>:<line number> <address> <psect name> <class name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$Motion_Detector.obj
+"E:\Study Material\XC8 PROJECTS\Motion Detector\adc_pic16.c":8 0 text18 CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\adc_pic16.c":10 0 text18 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftneg.c":15 3 text6 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftneg.c":17 3 text6 CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\adc_pic16.c":15 3 text18 CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\adc_pic16.c":18 5 text18 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftneg.c":18 8 text6 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftneg.c":20 A text6 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lbtoft.c":27 B text2 CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\adc_pic16.c":22 B text18 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lbtoft.c":29 C text2 CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\adc_pic16.c":24 C text18 CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\adc_pic16.c":25 D text17 CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\adc_pic16.c":27 E text17 CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\adc_pic16.c":29 15 text17 CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\adc_pic16.c":32 21 text17 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftge.c":4 25 text7 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftge.c":6 25 text7 CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\adc_pic16.c":35 25 text17 CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\adc_pic16.c":38 28 text17 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftge.c":7 29 text7 CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\adc_pic16.c":40 2A text17 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c":6 33 text13 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c":14 33 text13 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c":15 35 text13 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c":16 39 text13 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c":17 3B text13 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c":18 3D text13 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c":19 44 text13 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c":17 48 text13 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c":22 49 text13 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftge.c":8 4E text7 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftge.c":9 50 text7 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c":23 50 text13 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c":24 58 text13 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c":25 5E text13 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c":27 5F text13 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c":28 66 text13 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c":30 6A text13 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwtoft.c":28 71 text12 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwtoft.c":30 71 text12 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftge.c":10 75 text7 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftge.c":11 77 text7 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftge.c":12 79 text7 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul8.c":4 83 text4 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul8.c":6 84 text4 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\float.c":62 84 text16 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\float.c":64 84 text16 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul8.c":43 85 text4 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul8.c":44 87 text4 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul8.c":45 8B text4 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\float.c":65 8C text16 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul8.c":46 8D text4 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul8.c":47 8F text4 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul8.c":50 92 text4 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\float.c":67 93 text16 CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\motion_det.c":12 94 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\motion_det.c":15 94 maintext CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\float.c":68 97 text16 CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\motion_det.c":18 98 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\motion_det.c":19 9D maintext CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\motion_det.c":20 9D maintext CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\float.c":66 9F text16 CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\motion_det.c":21 9F maintext CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\float.c":71 A4 text16 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\float.c":72 A8 text16 CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\motion_det.c":22 AC maintext CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\motion_det.c":23 AF maintext CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\float.c":73 B2 text16 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\float.c":70 BA text16 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\float.c":74 BA text16 CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\motion_det.c":18 BC maintext CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\float.c":76 BF text16 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\float.c":77 C1 text16 CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\motion_det.c":26 C6 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\motion_det.c":28 C7 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\motion_det.c":30 C7 maintext CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\float.c":75 C9 text16 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\float.c":79 CB text16 CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\motion_det.c":32 CB maintext CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\float.c":80 CD text16 CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\motion_det.c":34 CE maintext CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\motion_det.c":36 D2 maintext CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\float.c":81 D3 text16 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\float.c":82 D5 text16 CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\motion_det.c":34 D6 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\motion_det.c":38 D7 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\motion_det.c":40 D8 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\motion_det.c":41 DC maintext CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\motion_det.c":42 DF maintext CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\motion_det.c":44 E3 maintext CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\float.c":83 E7 text16 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\float.c":84 EA text16 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\float.c":86 EB text16 CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\motion_det.c":45 EB maintext CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\adxl335.c":9 EC text11 CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\adxl335.c":15 EC text11 CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\motion_det.c":46 EF maintext CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\motion_det.c":28 F0 maintext CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\adxl335.c":16 F6 text11 CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\adxl335.c":18 FA text11 CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\adxl335.c":19 104 text11 CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\adxl335.c":21 108 text11 CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\adxl335.c":22 112 text11 CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\adxl335.c":24 116 text11 CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\adxl335.c":27 12B text11 CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\adxl335.c":29 158 text11 CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\adxl335.c":32 15F text10 CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\adxl335.c":38 15F text10 CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\adxl335.c":39 169 text10 CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\adxl335.c":41 16D text10 CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\adxl335.c":42 177 text10 CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\adxl335.c":44 17B text10 CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\adxl335.c":45 185 text10 CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\adxl335.c":47 189 text10 CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\adxl335.c":50 19E text10 CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\adxl335.c":52 1CB text10 CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\adxl335.c":55 1D2 text9 CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\adxl335.c":61 1D2 text9 CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\adxl335.c":62 1DC text9 CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\adxl335.c":64 1E0 text9 CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\adxl335.c":65 1EA text9 CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\adxl335.c":67 1EE text9 CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\adxl335.c":68 1F8 text9 CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\adxl335.c":70 1FC text9 CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\adxl335.c":73 211 text9 CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\adxl335.c":75 23E text9 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fttol.c":44 245 text3 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fttol.c":49 245 text3 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fttol.c":50 256 text3 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fttol.c":51 25F text3 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fttol.c":52 271 text3 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fttol.c":53 272 text3 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fttol.c":54 278 text3 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fttol.c":55 27F text3 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fttol.c":56 281 text3 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fttol.c":57 283 text3 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fttol.c":58 288 text3 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fttol.c":60 291 text3 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fttol.c":61 29A text3 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fttol.c":63 2A1 text3 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fttol.c":64 2A5 text3 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fttol.c":66 2AE text3 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fttol.c":67 2B7 text3 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fttol.c":65 2B9 text3 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fttol.c":70 2BC text3 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fttol.c":71 2BF text3 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fttol.c":72 2CA text3 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic\ftdiv.c":49 2D3 text15 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic\ftdiv.c":55 2D3 text15 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic\ftdiv.c":56 2E4 text15 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic\ftdiv.c":57 2EB text15 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic\ftdiv.c":58 2FA text15 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic\ftdiv.c":59 301 text15 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic\ftdiv.c":60 307 text15 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic\ftdiv.c":61 30C text15 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic\ftdiv.c":62 31E text15 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic\ftdiv.c":63 330 text15 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic\ftdiv.c":64 334 text15 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic\ftdiv.c":65 335 text15 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic\ftdiv.c":66 33B text15 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic\ftdiv.c":67 33C text15 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic\ftdiv.c":68 342 text15 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic\ftdiv.c":70 346 text15 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic\ftdiv.c":71 34E text15 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic\ftdiv.c":72 35A text15 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic\ftdiv.c":73 364 text15 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic\ftdiv.c":75 365 text15 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic\ftdiv.c":76 36D text15 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic\ftdiv.c":77 371 text15 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftmul.c":62 389 text14 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftmul.c":67 389 text14 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftmul.c":68 39A text14 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftmul.c":69 3A1 text14 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftmul.c":70 3B0 text14 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftmul.c":71 3B7 text14 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftmul.c":72 3BC text14 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftmul.c":73 3CE text14 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftmul.c":74 3E0 text14 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftmul.c":75 3E4 text14 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftmul.c":77 3E5 text14 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftmul.c":78 3E6 text14 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftmul.c":79 3EC text14 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftmul.c":134 3F2 text14 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftmul.c":136 3F6 text14 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftmul.c":137 3F8 text14 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftmul.c":138 406 text14 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftmul.c":139 40E text14 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftmul.c":140 416 text14 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftmul.c":143 41A text14 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftmul.c":145 41E text14 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftmul.c":146 420 text14 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftmul.c":147 42E text14 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftmul.c":148 436 text14 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftmul.c":149 43E text14 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftmul.c":156 442 text14 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftadd.c":86 45A text8 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftadd.c":90 45A text8 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftadd.c":91 468 text8 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftadd.c":92 474 text8 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftadd.c":93 483 text8 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftadd.c":94 48A text8 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftadd.c":96 499 text8 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftadd.c":97 49D text8 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftadd.c":98 49E text8 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftadd.c":99 49F text8 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftadd.c":100 4A0 text8 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftadd.c":101 4A1 text8 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftadd.c":102 4A2 text8 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftadd.c":103 4A8 text8 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftadd.c":104 4A9 text8 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftadd.c":106 4AF text8 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftadd.c":110 4B3 text8 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftadd.c":111 4BB text8 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftadd.c":112 4BD text8 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftadd.c":114 4C8 text8 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftadd.c":115 4D0 text8 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftadd.c":113 4D4 text8 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftadd.c":117 4D9 text8 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftadd.c":121 4DD text8 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftadd.c":122 4E5 text8 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftadd.c":123 4E7 text8 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftadd.c":125 4F2 text8 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftadd.c":126 4FA text8 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftadd.c":124 4FE text8 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftadd.c":129 502 text8 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftadd.c":131 504 text8 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftadd.c":132 50A text8 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftadd.c":134 514 text8 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftadd.c":136 516 text8 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftadd.c":137 51C text8 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftadd.c":139 526 text8 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftadd.c":140 527 text8 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftadd.c":141 535 text8 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftadd.c":142 537 text8 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftadd.c":143 53D text8 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftadd.c":144 547 text8 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftadd.c":146 549 text8 CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\motion_det.c":74 561 text1 CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\motion_det.c":76 561 text1 CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\motion_det.c":77 564 text1 CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\motion_det.c":78 565 text1 CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\motion_det.c":79 566 text1 CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\motion_det.c":80 568 text1 CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\motion_det.c":81 56A text1 CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\motion_det.c":82 56C text1 CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\motion_det.c":83 56D text1 CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\motion_det.c":84 56E text1 CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\motion_det.c":85 570 text1 CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\motion_det.c":88 571 text1 CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\motion_det.c":91 576 text1 CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\motion_det.c":92 588 text1 CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\motion_det.c":93 59A text1 CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\motion_det.c":95 5AC text1 CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\motion_det.c":96 5B1 text1 CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\motion_det.c":97 5C6 text1 CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\motion_det.c":98 5DB text1 CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\motion_det.c":105 5ED text1 CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\motion_det.c":88 5F0 text1 CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\motion_det.c":107 5F8 text1 CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\motion_det.c":109 659 text1 CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\motion_det.c":110 65E text1 CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\motion_det.c":111 664 text1 CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\motion_det.c":112 665 text1 CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\motion_det.c":113 666 text1 CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\motion_det.c":114 667 text1 CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\motion_det.c":116 668 text1 CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\motion_det.c":85 66B text1 CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\motion_det.c":118 673 text1 CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\motion_det.c":51 675 text5 CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\motion_det.c":53 675 text5 CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\motion_det.c":54 67D text5 CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\motion_det.c":56 683 text5 CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\motion_det.c":57 6B9 text5 CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\motion_det.c":58 6EF text5 CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\motion_det.c":61 725 text5 CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\motion_det.c":62 734 text5 CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\motion_det.c":63 74B text5 CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\motion_det.c":64 75C text5 CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\motion_det.c":65 773 text5 CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\motion_det.c":66 784 text5 CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\motion_det.c":68 79B text5 CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\motion_det.c":69 7EC text5 CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\motion_det.c":71 7EE text5 CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\Motion_Detector.as":395 7F0 cinit CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\Motion_Detector.as":398 7F0 cinit CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\Motion_Detector.as":418 7F0 cinit CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\Motion_Detector.as":419 7F1 cinit CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\Motion_Detector.as":420 7F2 cinit CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\Motion_Detector.as":421 7F3 cinit CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\Motion_Detector.as":422 7F4 cinit CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\Motion_Detector.as":423 7F5 cinit CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\Motion_Detector.as":424 7F6 cinit CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\Motion_Detector.as":425 7F7 cinit CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\Motion_Detector.as":426 7F8 cinit CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\Motion_Detector.as":427 7F9 cinit CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\Motion_Detector.as":428 7FA cinit CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\Motion_Detector.as":429 7FB cinit CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\Motion_Detector.as":430 7FC cinit CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\Motion_Detector.as":431 7FD cinit CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\Motion_Detector.as":437 7FE cinit CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\Motion_Detector.as":438 7FE cinit CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\Motion_Detector.as":439 7FF cinit CODE
+$startup.obj
+"E:\Study Material\XC8 PROJECTS\Motion Detector\startup.as":40 0 functab CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\startup.as":41 0 functab CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\startup.as":42 0 functab CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\startup.as":43 0 functab CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\startup.as":44 0 functab CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\startup.as":45 0 functab CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\startup.as":64 0 reset_vec CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\startup.as":70 0 init CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\startup.as":72 0 end_init CODE
+"E:\Study Material\XC8 PROJECTS\Motion Detector\startup.as":74 1 end_init CODE
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+Vib_Detect@looper 5F 0 BANK0 1 cstackBANK0 Motion_Detector.obj
+___lwdiv@dividend 72 0 COMMON 1 cstackCOMMON Motion_Detector.obj
+___lbtoft@c 7B 0 COMMON 1 cstackCOMMON Motion_Detector.obj
+___lwdiv@counter 77 0 COMMON 1 cstackCOMMON Motion_Detector.obj
+ReadADC@ch 73 0 COMMON 1 cstackCOMMON Motion_Detector.obj
+___lwtoft@c 78 0 COMMON 1 cstackCOMMON Motion_Detector.obj
+__end_of___ftneg 16 0 CODE 0 text6 Motion_Detector.obj
+_RB0 30 0 ABS 0 - Motion_Detector.obj
+_RB1 31 0 ABS 0 - Motion_Detector.obj
+_RB2 32 0 ABS 0 - Motion_Detector.obj
+_RB4 34 0 ABS 0 - Motion_Detector.obj
+__S0 800 0 ABS 0 - -
+__S1 A6 0 ABS 0 - -
+__S3 0 0 ABS 0 - -
+__Hintentry 0 0 CODE 0 intentry -
+__Lintentry 0 0 CODE 0 intentry -
+___ftadd@f1 48 0 BANK0 1 cstackBANK0 Motion_Detector.obj
+___ftneg@f1 70 0 COMMON 1 cstackCOMMON Motion_Detector.obj
+___ftadd@f2 4B 0 BANK0 1 cstackBANK0 Motion_Detector.obj
+_main 128 0 CODE 0 maintext Motion_Detector.obj
+___sp 0 0 STACK 2 stack startup.obj
+btemp 7E 0 ABS 0 - Motion_Detector.obj
+ltemp 7E 0 ABS 0 - Motion_Detector.obj
+ttemp 7E 0 ABS 0 - Motion_Detector.obj
+wtemp 7E 0 ABS 0 - Motion_Detector.obj
+start 0 0 CODE 0 init startup.obj
+__end_of_GetZAccl 48A 0 CODE 0 text9 Motion_Detector.obj
+?___ftadd 48 0 BANK0 1 cstackBANK0 Motion_Detector.obj
+___fttol@f1 48 0 BANK0 1 cstackBANK0 Motion_Detector.obj
+___ftmul@f1 30 0 BANK0 1 cstackBANK0 Motion_Detector.obj
+_GetXAccl 1D8 0 CODE 0 text11 Motion_Detector.obj
+_GetYAccl 2BE 0 CODE 0 text10 Motion_Detector.obj
+_GetZAccl 3A4 0 CODE 0 text9 Motion_Detector.obj
+___fttol@lval 51 0 BANK0 1 cstackBANK0 Motion_Detector.obj
+___ftdiv@f1 23 0 BANK0 1 cstackBANK0 Motion_Detector.obj
+_TRISB 86 0 ABS 0 - Motion_Detector.obj
+reset_vec 0 0 CODE 0 reset_vec startup.obj
+ltemp0 7E 0 ABS 0 - Motion_Detector.obj
+ttemp0 7E 0 ABS 0 - Motion_Detector.obj
+wtemp0 7E 0 ABS 0 - Motion_Detector.obj
+ltemp1 82 0 ABS 0 - Motion_Detector.obj
+ttemp1 81 0 ABS 0 - Motion_Detector.obj
+wtemp1 80 0 ABS 0 - Motion_Detector.obj
+ltemp2 86 0 ABS 0 - Motion_Detector.obj
+ttemp2 84 0 ABS 0 - Motion_Detector.obj
+wtemp2 82 0 ABS 0 - Motion_Detector.obj
+ltemp3 80 0 ABS 0 - Motion_Detector.obj
+ttemp3 87 0 ABS 0 - Motion_Detector.obj
+wtemp3 84 0 ABS 0 - Motion_Detector.obj
+___ftmul@f2 33 0 BANK0 1 cstackBANK0 Motion_Detector.obj
+ttemp4 7F 0 ABS 0 - Motion_Detector.obj
+wtemp4 86 0 ABS 0 - Motion_Detector.obj
+wtemp5 88 0 ABS 0 - Motion_Detector.obj
+wtemp6 7F 0 ABS 0 - Motion_Detector.obj
+___ftdiv@f2 20 0 BANK0 1 cstackBANK0 Motion_Detector.obj
+__Hconfig 0 0 CONFIG 0 config -
+__Lconfig 0 0 CONFIG 0 config -
+?___ftneg 70 0 COMMON 1 cstackCOMMON Motion_Detector.obj
+___ftpack 108 0 CODE 0 text16 Motion_Detector.obj
+___ftdiv@f3 2B 0 BANK0 1 cstackBANK0 Motion_Detector.obj
+GetXAccl@t 43 0 BANK0 1 cstackBANK0 Motion_Detector.obj
+GetYAccl@t 43 0 BANK0 1 cstackBANK0 Motion_Detector.obj
+GetZAccl@t 43 0 BANK0 1 cstackBANK0 Motion_Detector.obj
+__Hram 0 0 ABS 0 ram -
+__Lram 0 0 ABS 0 ram -
+___ftge@ff1 24 0 BANK0 1 cstackBANK0 Motion_Detector.obj
+_delay 0 0 ABS 0 - Motion_Detector.obj
+___ftmul@cntr 3E 0 BANK0 1 cstackBANK0 Motion_Detector.obj
+__size_of___ftadd 0 0 ABS 0 - Motion_Detector.obj
+___ftdiv@cntr 2A 0 BANK0 1 cstackBANK0 Motion_Detector.obj
+__Hfunctab 0 0 CODE 0 functab -
+__Lfunctab 0 0 CODE 0 functab -
+___ftge@ff2 27 0 BANK0 1 cstackBANK0 Motion_Detector.obj
+?_GetXAccl 40 0 BANK0 1 cstackBANK0 Motion_Detector.obj
+?_GetYAccl 40 0 BANK0 1 cstackBANK0 Motion_Detector.obj
+?_GetZAccl 40 0 BANK0 1 cstackBANK0 Motion_Detector.obj
+__Hcommon 0 0 ABS 0 common -
+__Lcommon 0 0 ABS 0 common -
+?___fttol 48 0 BANK0 1 cstackBANK0 Motion_Detector.obj
+__Heeprom_data 0 0 EEDATA 3 eeprom_data -
+__Leeprom_data 0 0 EEDATA 3 eeprom_data -
+__size_of_Vib_Detect 0 0 ABS 0 - Motion_Detector.obj
+?___ftmul 30 0 BANK0 1 cstackBANK0 Motion_Detector.obj
+___int_sp 0 0 STACK 2 stack startup.obj
+___lbtoft 16 0 CODE 0 text2 Motion_Detector.obj
+?___ftdiv 20 0 BANK0 1 cstackBANK0 Motion_Detector.obj
+?___lwdiv 70 0 COMMON 1 cstackCOMMON Motion_Detector.obj
+___lwtoft E2 0 CODE 0 text12 Motion_Detector.obj
+_ADRESH 1E 0 ABS 0 - Motion_Detector.obj
+__Habs1 0 0 ABS 0 abs1 -
+__Labs1 0 0 ABS 0 abs1 -
+_ADRESL 9E 0 ABS 0 - Motion_Detector.obj
+__Hsfr0 0 0 ABS 0 sfr0 -
+__Lsfr0 0 0 ABS 0 sfr0 -
+__Hsfr1 0 0 ABS 0 sfr1 -
+__Lsfr1 0 0 ABS 0 sfr1 -
+__Hsfr2 0 0 ABS 0 sfr2 -
+__Lsfr2 0 0 ABS 0 sfr2 -
+__Hsfr3 0 0 ABS 0 sfr3 -
+__Lsfr3 0 0 ABS 0 sfr3 -
+___ftmul@f3_as_product 3B 0 BANK0 1 cstackBANK0 Motion_Detector.obj
+_Accident_Detect CEA 0 CODE 0 text5 Motion_Detector.obj
+__end_of_ADCInit 1A 0 CODE 0 text18 Motion_Detector.obj
+__end_of___ftpack 1D8 0 CODE 0 text16 Motion_Detector.obj
+?___ftpack 70 0 COMMON 1 cstackCOMMON Motion_Detector.obj
+_Accident_Detect$563 55 0 BANK0 1 cstackBANK0 Motion_Detector.obj
+_Accident_Detect$564 58 0 BANK0 1 cstackBANK0 Motion_Detector.obj
+_Accident_Detect$565 5B 0 BANK0 1 cstackBANK0 Motion_Detector.obj
+__size_of___ftpack 0 0 ABS 0 - Motion_Detector.obj
+__size_of___fttol 0 0 ABS 0 - Motion_Detector.obj
+___ftadd@sign 52 0 BANK0 1 cstackBANK0 Motion_Detector.obj
+__Hcode 0 0 ABS 0 code -
+__Lcode 0 0 ABS 0 code -
+___ftge 4A 0 CODE 0 text7 Motion_Detector.obj
+stackhi 0 0 ABS 0 - startup.obj
+Vib_Detect@counter 5E 0 BANK0 1 cstackBANK0 Motion_Detector.obj
+__HcstackBANK0 1E2 0 ABS 0 cstackBANK0 -
+__LcstackBANK0 1E2 0 ABS 0 cstackBANK0 -
+__pcstackBANK0 20 0 BANK0 1 cstackBANK0 Motion_Detector.obj
+stacklo 0 0 ABS 0 - startup.obj
+___bmul 106 0 CODE 0 text4 Motion_Detector.obj
+__Hinit 0 0 CODE 0 init -
+__Linit 0 0 CODE 0 init -
+?_delay 70 0 COMMON 1 cstackCOMMON Motion_Detector.obj
+__end_of_main 1E2 0 CODE 0 maintext Motion_Detector.obj
+__size_of___lwtoft 0 0 ABS 0 - Motion_Detector.obj
+__Htext 0 0 ABS 0 text -
+__Ltext 0 0 ABS 0 text -
+___bmul@multiplier 73 0 COMMON 1 cstackCOMMON Motion_Detector.obj
+__size_of___ftneg 0 0 ABS 0 - Motion_Detector.obj
+__end_of___lwtoft 106 0 CODE 0 text12 Motion_Detector.obj
+___ftmul@sign 3F 0 BANK0 1 cstackBANK0 Motion_Detector.obj
+end_of_initialization FFC 0 CODE 0 cinit Motion_Detector.obj
+___ftdiv@sign 2F 0 BANK0 1 cstackBANK0 Motion_Detector.obj
+___bmul@multiplicand 70 0 COMMON 1 cstackCOMMON Motion_Detector.obj
+__HdataBANK1 1E2 0 ABS 0 dataBANK1 -
+__LdataBANK1 1E2 0 ABS 0 dataBANK1 -
+__pdataBANK1 A0 0 BANK1 1 dataBANK1 Motion_Detector.obj
+__end_of___ftadd AC2 0 CODE 0 text8 Motion_Detector.obj
+__Hstrings 0 0 ABS 0 strings -
+__Lstrings 0 0 ABS 0 strings -
+_ReadADC 1A 0 CODE 0 text17 Motion_Detector.obj
+__end_of_Accident_Detect FE0 0 CODE 0 text5 Motion_Detector.obj
+?___lbtoft 78 0 COMMON 1 cstackCOMMON Motion_Detector.obj
+?___lwtoft 78 0 COMMON 1 cstackCOMMON Motion_Detector.obj
+__Hbank0 0 0 ABS 0 bank0 -
+__Lbank0 0 0 ABS 0 bank0 -
+__Hbank1 0 0 ABS 0 bank1 -
+__Lbank1 0 0 ABS 0 bank1 -
+__Hbank2 0 0 BANK2 1 bank2 -
+__Lbank2 0 0 BANK2 1 bank2 -
+__size_of_Accident_Detect 0 0 ABS 0 - Motion_Detector.obj
+__Hbank3 0 0 BANK3 1 bank3 -
+__Lbank3 0 0 BANK3 1 bank3 -
+___latbits 0 0 ABS 0 - Motion_Detector.obj
+___ftmul@exp 3A 0 BANK0 1 cstackBANK0 Motion_Detector.obj
+___ftdiv@exp 2E 0 BANK0 1 cstackBANK0 Motion_Detector.obj
+__Hpowerup 0 0 CODE 0 powerup -
+__Lpowerup 0 0 CODE 0 powerup -
+main@count 7D 0 COMMON 1 cstackCOMMON Motion_Detector.obj
+__ptext1 AC2 0 CODE 0 text1 Motion_Detector.obj
+__ptext2 16 0 CODE 0 text2 Motion_Detector.obj
+__ptext3 48A 0 CODE 0 text3 Motion_Detector.obj
+__ptext4 106 0 CODE 0 text4 Motion_Detector.obj
+__ptext5 CEA 0 CODE 0 text5 Motion_Detector.obj
+__ptext6 6 0 CODE 0 text6 Motion_Detector.obj
+__ptext7 4A 0 CODE 0 text7 Motion_Detector.obj
+__ptext8 8B4 0 CODE 0 text8 Motion_Detector.obj
+__ptext9 3A4 0 CODE 0 text9 Motion_Detector.obj
+__Hclrtext 0 0 ABS 0 clrtext -
+__Lclrtext 0 0 ABS 0 clrtext -
+GetXAccl@adc_value 46 0 BANK0 1 cstackBANK0 Motion_Detector.obj
+GetYAccl@adc_value 46 0 BANK0 1 cstackBANK0 Motion_Detector.obj
+GetZAccl@adc_value 46 0 BANK0 1 cstackBANK0 Motion_Detector.obj
+Vib_Detect@X 58 0 BANK0 1 cstackBANK0 Motion_Detector.obj
+__end_of__initialization FFC 0 CODE 0 cinit Motion_Detector.obj
+__end_of___lwdiv E2 0 CODE 0 text13 Motion_Detector.obj
+__end_of___lbtoft 4A 0 CODE 0 text2 Motion_Detector.obj
+Vib_Detect@Y 5A 0 BANK0 1 cstackBANK0 Motion_Detector.obj
+___ftadd 8B4 0 CODE 0 text8 Motion_Detector.obj
+__Hidloc 0 0 IDLOC 0 idloc -
+__Lidloc 0 0 IDLOC 0 idloc -
+__end_of_ReadADC 66 0 CODE 0 text17 Motion_Detector.obj
+__Hstack 0 0 STACK 2 stack -
+__Lstack 0 0 STACK 2 stack -
+___ftneg 6 0 CODE 0 text6 Motion_Detector.obj
+__Hspace_0 800 0 ABS 0 - -
+__Lspace_0 0 0 ABS 0 - -
+___ftpack@sign 74 0 COMMON 1 cstackCOMMON Motion_Detector.obj
+_ADCInit 0 0 CODE 0 text18 Motion_Detector.obj
+Vib_Detect@Z 5C 0 BANK0 1 cstackBANK0 Motion_Detector.obj
+__Hspace_1 A6 0 ABS 0 - -
+__Lspace_1 0 0 ABS 0 - -
+___ftadd@exp1 54 0 BANK0 1 cstackBANK0 Motion_Detector.obj
+__Hspace_2 0 0 ABS 0 - -
+__Lspace_2 0 0 ABS 0 - -
+___fttol 48A 0 CODE 0 text3 Motion_Detector.obj
+__Hcinit 1000 0 CODE 0 cinit -
+___ftmul 712 0 CODE 0 text14 Motion_Detector.obj
+__Lcinit FE0 0 CODE 0 cinit -
+__size_of_GetXAccl 0 0 ABS 0 - Motion_Detector.obj
+___ftdiv 5A6 0 CODE 0 text15 Motion_Detector.obj
+__Hspace_3 0 0 ABS 0 - -
+___lwdiv 66 0 CODE 0 text13 Motion_Detector.obj
+__Lspace_3 0 0 ABS 0 - -
+__size_of_main 0 0 ABS 0 - Motion_Detector.obj
+___fttol@exp1 55 0 BANK0 1 cstackBANK0 Motion_Detector.obj
+__size_of___ftdiv 0 0 ABS 0 - Motion_Detector.obj
+Vib_Detect@readings 60 0 BANK0 1 cstackBANK0 Motion_Detector.obj
+Vib_Detect@X_Diff 61 0 BANK0 1 cstackBANK0 Motion_Detector.obj
+___ftpack@arg 70 0 COMMON 1 cstackCOMMON Motion_Detector.obj
+Accident_Detect@x_G 64 0 BANK0 1 cstackBANK0 Motion_Detector.obj
+Accident_Detect@y_G 67 0 BANK0 1 cstackBANK0 Motion_Detector.obj
+Accident_Detect@z_G 6A 0 BANK0 1 cstackBANK0 Motion_Detector.obj
+_Vib_Detect AC2 0 CODE 0 text1 Motion_Detector.obj
+__size_of___lwdiv 0 0 ABS 0 - Motion_Detector.obj
+_Vib_Sensitivity A3 0 BANK1 1 dataBANK1 Motion_Detector.obj
+___ftadd@exp2 53 0 BANK0 1 cstackBANK0 Motion_Detector.obj
+__size_of___lbtoft 0 0 ABS 0 - Motion_Detector.obj
+Vib_Detect@Y_Diff 62 0 BANK0 1 cstackBANK0 Motion_Detector.obj
+__ptext10 2BE 0 CODE 0 text10 Motion_Detector.obj
+__ptext11 1D8 0 CODE 0 text11 Motion_Detector.obj
+__ptext12 E2 0 CODE 0 text12 Motion_Detector.obj
+Accident_Detect@scale 61 0 BANK0 1 cstackBANK0 Motion_Detector.obj
+__ptext13 66 0 CODE 0 text13 Motion_Detector.obj
+_ADCON0bits 1F 0 ABS 0 - Motion_Detector.obj
+_ADCON1bits 9F 0 ABS 0 - Motion_Detector.obj
+__HidataBANK1 1E2 0 ABS 0 idataBANK1 -
+__LidataBANK1 1E2 0 ABS 0 idataBANK1 -
+__ptext14 712 0 CODE 0 text14 Motion_Detector.obj
+__pidataBANK1 1E2 0 CODE 0 idataBANK1 Motion_Detector.obj
+__ptext15 5A6 0 CODE 0 text15 Motion_Detector.obj
+__ptext16 108 0 CODE 0 text16 Motion_Detector.obj
+__ptext17 1A 0 CODE 0 text17 Motion_Detector.obj
+Vib_Detect@Z_Diff 63 0 BANK0 1 cstackBANK0 Motion_Detector.obj
+__ptext18 0 0 CODE 0 text18 Motion_Detector.obj
+___fttol@sign1 50 0 BANK0 1 cstackBANK0 Motion_Detector.obj
+Accident_Detect@zero_G 5E 0 BANK0 1 cstackBANK0 Motion_Detector.obj
+__Hend_init 4 0 CODE 0 end_init -
+__Lend_init 0 0 CODE 0 end_init -
+?_ReadADC 70 0 COMMON 1 cstackCOMMON Motion_Detector.obj
+__size_of_GetYAccl 0 0 ABS 0 - Motion_Detector.obj
+___ftpack@exp 73 0 COMMON 1 cstackCOMMON Motion_Detector.obj
+___lwdiv@divisor 70 0 COMMON 1 cstackCOMMON Motion_Detector.obj
+__end_of___ftmul 8B4 0 CODE 0 text14 Motion_Detector.obj
+__Hreset_vec 0 0 CODE 0 reset_vec -
+__Lreset_vec 0 0 CODE 0 reset_vec -
+intlevel0 0 0 CODE 0 functab startup.obj
+intlevel1 0 0 CODE 0 functab startup.obj
+intlevel2 0 0 CODE 0 functab startup.obj
+intlevel3 0 0 CODE 0 functab startup.obj
+intlevel4 0 0 CODE 0 functab startup.obj
+__size_of_ADCInit 0 0 ABS 0 - Motion_Detector.obj
+intlevel5 0 0 CODE 0 functab startup.obj
+__HcstackCOMMON 1E2 0 ABS 0 cstackCOMMON -
+__LcstackCOMMON 1E2 0 ABS 0 cstackCOMMON -
+__pcstackCOMMON 70 0 COMMON 1 cstackCOMMON Motion_Detector.obj
+__end_of_Vib_Detect CEA 0 CODE 0 text1 Motion_Detector.obj
+start_initialization FE0 0 CODE 0 cinit Motion_Detector.obj
+__end_of_GetXAccl 2BE 0 CODE 0 text11 Motion_Detector.obj
+___lwdiv@quotient 75 0 COMMON 1 cstackCOMMON Motion_Detector.obj
+__size_of___ftge 0 0 ABS 0 - Motion_Detector.obj
+__Hmaintext 0 0 ABS 0 maintext -
+__Lmaintext 0 0 ABS 0 maintext -
+__pmaintext 128 0 CODE 0 maintext Motion_Detector.obj
+__end_of___fttol 5A6 0 CODE 0 text3 Motion_Detector.obj
+__size_of_ReadADC 0 0 ABS 0 - Motion_Detector.obj
+__size_of_GetZAccl 0 0 ABS 0 - Motion_Detector.obj
+__initialization FE0 0 CODE 0 cinit Motion_Detector.obj
+__end_of___ftge 108 0 CODE 0 text7 Motion_Detector.obj
+_AccidentG A0 0 BANK1 1 dataBANK1 Motion_Detector.obj
+___bmul@product 72 0 COMMON 1 cstackCOMMON Motion_Detector.obj
+__size_of___ftmul 0 0 ABS 0 - Motion_Detector.obj
+__end_of_GetYAccl 3A4 0 CODE 0 text10 Motion_Detector.obj
+__size_of___bmul 0 0 ABS 0 - Motion_Detector.obj
+__end_of___bmul 128 0 CODE 0 text4 Motion_Detector.obj
+__end_of___ftdiv 712 0 CODE 0 text15 Motion_Detector.obj
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect in on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+- 1 7E 2
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+reset_vec 0 0 0 2 2
+cinit 0 7F0 FE0 10 2
+cstackCOMMON 1 70 70 E 1
+dataBANK1 1 A0 A0 6 1
+cstackBANK0 1 20 20 50 1
+text5 0 675 CEA 17B 2
+text1 0 561 AC2 114 2
+text8 0 45A 8B4 107 2
+text14 0 389 712 D1 2
+text15 0 2D3 5A6 B6 2
+text3 0 245 48A 8E 2
+text9 0 1D2 3A4 73 2
+text10 0 15F 2BE 73 2
+text11 0 EC 1D8 73 2
+text16 0 84 108 68 2
+text7 0 25 4A 5F 2
+text2 0 B 16 1A 2
+text6 0 3 6 8 2

@@ -1,0 +1,21 @@
+___awdiv: CODE, 895 0 91
+_LCDByte: CODE, 598 0 63
+__stringtab: STRING, 1 0 6
+__stringdata: STRING, 7 0 84
+___ftpack: CODE, 986 0 104
+___awmod: CODE, 736 0 77
+_HCSR04Init: CODE, 400 0 7
+_LCDWriteInt: CODE, 1406 0 187
+_main: CODE, 1232 0 174
+_LCDInit: CODE, 661 0 75
+___lltoft: CODE, 501 0 41
+_GetPulseWidth: CODE, 1593 0 207
+__initialization: CODE, 2009 0 37
+_LCDWriteString: CODE, 542 0 56
+_LCDGotoXY: CODE, 468 0 33
+___ftmul: CODE, 1800 0 209
+___awtoft: CODE, 437 0 31
+_LCDBusyLoop: CODE, 813 0 82
+___fttol: CODE, 1090 0 142
+_HCSR04Trigger: CODE, 407 0 14
+Total: 1720

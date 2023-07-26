@@ -1,0 +1,1 @@
+ Serial_Test.d  Serial_Test.p1:  E:/Study\ Material/XC8\ PROJECTS/Android\ Cautery/Serial_Test.c E:/Study\ Material/XC8\ PROJECTS/Android\ Cautery/usart_pic16.h

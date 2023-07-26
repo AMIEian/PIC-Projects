@@ -1,0 +1,1 @@
+ adxl335.d  adxl335.p1:  E:/Study\ Material/XC8\ PROJECTS/Motion\ Detector/adxl335.c E:/Study\ Material/XC8\ PROJECTS/Motion\ Detector/adxl335.h E:/Study\ Material/XC8\ PROJECTS/Motion\ Detector/adc_pic16.h

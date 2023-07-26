@@ -1,0 +1,1 @@
+ blink_n_scroll.d  blink_n_scroll.p1:  E:/Study\ Material/XC8\ PROJECTS/Scrolling\ Message/blink_n_scroll.c E:/Study\ Material/XC8\ PROJECTS/Scrolling\ Message/pins.h

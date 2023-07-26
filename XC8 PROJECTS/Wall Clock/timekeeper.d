@@ -1,0 +1,1 @@
+ timekeeper.d  timekeeper.obj:  E:/Study\ Material/XC8\ PROJECTS/Wall\ Clock/timekeeper.C E:/Study\ Material/XC8\ PROJECTS/Wall\ Clock/timekeeper.h

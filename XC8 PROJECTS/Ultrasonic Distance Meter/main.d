@@ -1,0 +1,1 @@
+ main.d  main.p1:  E:/Study\ Material/XC8\ PROJECTS/Ultrasonic\ Distance\ Meter/main.c E:/Study\ Material/XC8\ PROJECTS/Ultrasonic\ Distance\ Meter/lcd_hd44780_pic16.h

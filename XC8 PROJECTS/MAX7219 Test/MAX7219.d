@@ -1,0 +1,1 @@
+ MAX7219.d  MAX7219.obj:  E:/Study\ Material/XC8\ PROJECTS/MAX7219\ Test/MAX7219.C E:/Study\ Material/XC8\ PROJECTS/MAX7219\ Test/myutils.h E:/Study\ Material/XC8\ PROJECTS/MAX7219\ Test/max7219.h

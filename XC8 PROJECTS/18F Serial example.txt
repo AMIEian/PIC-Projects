@@ -1,0 +1,57 @@
+#define _XTAL_FREQ 8000000 //The speed of your internal(or)external oscillator
+#define USE_AND_MASKS
+#include <xc.h>
+#include "config.h"
+#include <plib/usart.h>
+
+
+unsigned char UART1Config = 0, baud = 0;
+unsigned char MsgFromPIC[] = "\r\nYou typed :";
+char rx;
+void SetupClock(void);
+void Delay1Second(void);
+
+void main(int argc, char** argv) {
+
+    SetupClock(); // Internal Clock to 8MHz
+
+    TRISCbits.RC6 = 0; //TX pin set as output
+    TRISCbits.RC7 = 1; //RX pin set as input
+
+    UART1Config = USART_TX_INT_OFF & USART_RX_INT_ON & USART_ASYNCH_MODE & USART_EIGHT_BIT & USART_BRGH_HIGH ;
+    baud = 51;
+    OpenUSART(UART1Config,baud);
+    
+    //compare with the table above
+    RCIF = 0; //reset RX pin flag
+    RCIP = 0; //Not high priority
+    RCIE = 1; //Enable RX interrupt
+    PEIE = 1; //Enable pheripheral interrupt (serial port is a pheripheral)
+
+    ei();       //remember the master switch for interrupt?
+
+    while(1) //infinite loop
+    {
+
+    }
+}
+
+void SetupClock()
+{
+    OSCCONbits.IRCF0 = 1;
+    OSCCONbits.IRCF1 = 1;
+    OSCCONbits.IRCF2 = 1;
+}
+
+void interrupt SerialRxPinInterrupt()
+{
+    //check if the interrupt is caused by RX pin
+    if(PIR1bits.RCIF == 1)
+    {
+        rx = ReadUSART(); //read the byte from rx register
+        putsUSART(MsgFromPIC);
+        WriteUSART(rx);
+        PIR1bits.RCIF = 0; // clear rx flag
+    }
+
+}

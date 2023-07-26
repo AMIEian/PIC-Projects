@@ -1,0 +1,1 @@
+        testmc.d  testmc.p1:  E:/Study\ Material/XC8\ PROJECTS/Cautry/testmc.c

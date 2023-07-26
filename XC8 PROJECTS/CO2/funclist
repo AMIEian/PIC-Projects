@@ -1,0 +1,7 @@
+___awdiv: CODE, 5118 0 192
+___awmod: CODE, 5310 0 172
+_main: CODE, 224 0 4894
+_tmr_int: CODE, 8 0 212
+__initialization: CODE, 5594 0 12
+___lwdiv: CODE, 5482 0 112
+Total: 5594

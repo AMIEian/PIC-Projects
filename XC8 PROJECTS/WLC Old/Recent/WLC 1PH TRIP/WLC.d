@@ -1,0 +1,1 @@
+ WLC.d  WLC.obj:  E:/Study\ Material/XC8\ PROJECTS/WLC\ 1PH\ TRIP/WLC.C

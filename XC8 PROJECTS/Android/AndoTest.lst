@@ -1,0 +1,1568 @@
+
+
+Microchip Technology PIC LITE Macro Assembler V1.33 build 59893 
+                                                                                               Tue Jul 07 14:38:38 2015
+
+Microchip Technology Omniscient Code Generator (Lite mode) build 59893
+     1                           	processor	16F870
+     2                           	opt	pw 120
+     3                           	opt	lm
+     4                           	psect	idataBANK0,global,class=CODE,delta=2
+     5                           	psect	cinit,global,class=CODE,merge=1,delta=2
+     6                           	psect	bssCOMMON,global,class=COMMON,space=1,delta=1
+     7                           	psect	dataBANK0,global,class=BANK0,space=1,delta=1
+     8                           	psect	cstackCOMMON,global,class=COMMON,space=1,delta=1
+     9                           	psect	cstackBANK0,global,class=BANK0,space=1,delta=1
+    10                           	psect	maintext,global,class=CODE,split=1,delta=2
+    11                           	psect	swtext1,local,class=CONST,delta=2
+    12                           	psect	text1,local,class=CODE,merge=1,delta=2
+    13                           	psect	text2,local,class=CODE,merge=1,delta=2
+    14                           	psect	intentry,global,class=CODE,delta=2
+    15                           	psect	swtext2,local,class=CONST,delta=2
+    16                           	dabs	1,0x7E,2
+    17  0000                     	;# 
+    18  0001                     	;# 
+    19  0002                     	;# 
+    20  0003                     	;# 
+    21  0004                     	;# 
+    22  0005                     	;# 
+    23  0006                     	;# 
+    24  0007                     	;# 
+    25  000A                     	;# 
+    26  000B                     	;# 
+    27  000C                     	;# 
+    28  000D                     	;# 
+    29  000E                     	;# 
+    30  000E                     	;# 
+    31  000F                     	;# 
+    32  0010                     	;# 
+    33  0011                     	;# 
+    34  0012                     	;# 
+    35  0015                     	;# 
+    36  0015                     	;# 
+    37  0016                     	;# 
+    38  0017                     	;# 
+    39  0018                     	;# 
+    40  0019                     	;# 
+    41  001A                     	;# 
+    42  001E                     	;# 
+    43  001F                     	;# 
+    44  0081                     	;# 
+    45  0085                     	;# 
+    46  0086                     	;# 
+    47  0087                     	;# 
+    48  008C                     	;# 
+    49  008D                     	;# 
+    50  008E                     	;# 
+    51  0092                     	;# 
+    52  0098                     	;# 
+    53  0099                     	;# 
+    54  009E                     	;# 
+    55  009F                     	;# 
+    56  010C                     	;# 
+    57  010D                     	;# 
+    58  010E                     	;# 
+    59  010F                     	;# 
+    60  018C                     	;# 
+    61  018D                     	;# 
+    62                           
+    63                           	psect	idataBANK0
+    64  027C                     __pidataBANK0:	
+    65                           
+    66                           ;initializer for _display
+    67  027C  343F               	retlw	63
+    68  027D  3406               	retlw	6
+    69  027E  345B               	retlw	91
+    70  027F  344F               	retlw	79
+    71  0280  3466               	retlw	102
+    72  0281  346D               	retlw	109
+    73  0282  347D               	retlw	125
+    74  0283  3407               	retlw	7
+    75  0284  347F               	retlw	127
+    76  0285  3467               	retlw	103
+    77                           
+    78                           ;initializer for _digits
+    79  0286  3401               	retlw	1
+    80  0287  3402               	retlw	2
+    81  0288  3403               	retlw	3
+    82                           
+    83                           ;initializer for _Command
+    84  0289  3402               	retlw	2
+    85                           
+    86                           ;initializer for _foot
+    87  028A  3401               	retlw	1
+    88  000C                     _PIR1bits	set	12
+    89  0005                     _PORTA	set	5
+    90  0006                     _PORTB	set	6
+    91  0007                     _PORTC	set	7
+    92  001A                     _RCREG	set	26
+    93  0018                     _RCSTAbits	set	24
+    94  0019                     _TXREG	set	25
+    95  005F                     _GIE	set	95
+    96  005E                     _PEIE	set	94
+    97  003C                     _RC4	set	60
+    98  0065                     _RCIF	set	101
+    99  009F                     _ADCON1	set	159
+   100  0099                     _SPBRG	set	153
+   101  0085                     _TRISA	set	133
+   102  0086                     _TRISB	set	134
+   103  0087                     _TRISC	set	135
+   104  0098                     _TXSTAbits	set	152
+   105  0465                     _RCIE	set	1125
+   106                           
+   107                           	psect	cinit
+   108  0011                     start_initialization:	
+   109                           ; #config settings
+   110                           
+   111  0011                     __initialization:	
+   112                           
+   113                           ; Clear objects allocated to COMMON
+   114  0011  01F6               	clrf	__pbssCOMMON& (0+127)
+   115                           
+   116                           ; Initialize objects allocated to BANK0
+   117  0012  227C               	fcall	__pidataBANK0	;fetch initializer
+   118  0013  00A0               	movwf	__pdataBANK0& (0+127)
+   119  0014  227D               	fcall	__pidataBANK0+1	;fetch initializer
+   120  0015  00A1               	movwf	(__pdataBANK0+1)& (0+127)
+   121  0016  227E               	fcall	__pidataBANK0+2	;fetch initializer
+   122  0017  00A2               	movwf	(__pdataBANK0+2)& (0+127)
+   123  0018  227F               	fcall	__pidataBANK0+3	;fetch initializer
+   124  0019  00A3               	movwf	(__pdataBANK0+3)& (0+127)
+   125  001A  2280               	fcall	__pidataBANK0+4	;fetch initializer
+   126  001B  00A4               	movwf	(__pdataBANK0+4)& (0+127)
+   127  001C  2281               	fcall	__pidataBANK0+5	;fetch initializer
+   128  001D  00A5               	movwf	(__pdataBANK0+5)& (0+127)
+   129  001E  2282               	fcall	__pidataBANK0+6	;fetch initializer
+   130  001F  00A6               	movwf	(__pdataBANK0+6)& (0+127)
+   131  0020  2283               	fcall	__pidataBANK0+7	;fetch initializer
+   132  0021  00A7               	movwf	(__pdataBANK0+7)& (0+127)
+   133  0022  2284               	fcall	__pidataBANK0+8	;fetch initializer
+   134  0023  00A8               	movwf	(__pdataBANK0+8)& (0+127)
+   135  0024  2285               	fcall	__pidataBANK0+9	;fetch initializer
+   136  0025  00A9               	movwf	(__pdataBANK0+9)& (0+127)
+   137  0026  2286               	fcall	__pidataBANK0+10	;fetch initializer
+   138  0027  00AA               	movwf	(__pdataBANK0+10)& (0+127)
+   139  0028  2287               	fcall	__pidataBANK0+11	;fetch initializer
+   140  0029  00AB               	movwf	(__pdataBANK0+11)& (0+127)
+   141  002A  2288               	fcall	__pidataBANK0+12	;fetch initializer
+   142  002B  00AC               	movwf	(__pdataBANK0+12)& (0+127)
+   143  002C  2289               	fcall	__pidataBANK0+13	;fetch initializer
+   144  002D  00AD               	movwf	(__pdataBANK0+13)& (0+127)
+   145  002E  228A               	fcall	__pidataBANK0+14	;fetch initializer
+   146  002F  00AE               	movwf	(__pdataBANK0+14)& (0+127)
+   147  0030                     end_of_initialization:	
+   148                           ;End of C runtime variable initialization code
+   149                           
+   150  0030                     __end_of__initialization:	
+   151  0030  0183               	clrf	3
+   152  0031  2832               	ljmp	_main	;jump to C main() function
+   153                           
+   154                           	psect	bssCOMMON
+   155  0076                     __pbssCOMMON:	
+   156  0076                     _ch:	
+   157  0076                     	ds	1
+   158                           
+   159                           	psect	dataBANK0
+   160  0020                     __pdataBANK0:	
+   161  0020                     _display:	
+   162  0020                     	ds	10
+   163  002A                     _digits:	
+   164  002A                     	ds	3
+   165  002D                     _Command:	
+   166  002D                     	ds	1
+   167  002E                     _foot:	
+   168  002E                     	ds	1
+   169                           
+   170                           	psect	cstackCOMMON
+   171  0070                     __pcstackCOMMON:	
+   172  0070                     ?_USARTWriteChar:	
+   173  0070                     ?_main:	
+   174                           ; 0 bytes @ 0x0
+   175                           
+   176  0070                     ?_ISR:	
+   177                           ; 0 bytes @ 0x0
+   178                           
+   179  0070                     ??_ISR:	
+   180                           ; 0 bytes @ 0x0
+   181                           
+   182                           
+   183                           ; 0 bytes @ 0x0
+   184  0070                     	ds	5
+   185  0075                     ??_USARTWriteChar:	
+   186  0075                     USARTWriteChar@ch:	
+   187                           ; 0 bytes @ 0x5
+   188                           
+   189                           
+   190                           ; 1 bytes @ 0x5
+   191  0075                     	ds	1
+   192                           
+   193                           	psect	cstackBANK0
+   194  002F                     __pcstackBANK0:	
+   195  002F                     ??_main:	
+   196                           
+   197                           ; 0 bytes @ 0x0
+   198  002F                     	ds	3
+   199  0032                     main@count:	
+   200                           
+   201                           ; 2 bytes @ 0x3
+   202  0032                     	ds	2
+   203  0034                     main@data:	
+   204                           
+   205                           ; 1 bytes @ 0x5
+   206  0034                     	ds	1
+   207                           
+   208                           	psect	maintext
+   209  0032                     __pmaintext:	
+   210 ;;
+   211 ;;Main: autosize = 0, tempsize = 3, incstack = 0, save=0
+   212 ;;
+   213 ;; *************** function _main *****************
+   214 ;; Defined at:
+   215 ;;		line 27 in file "E:\Study Material\XC8 PROJECTS\Android\AndoTest.c"
+   216 ;; Parameters:    Size  Location     Type
+   217 ;;		None
+   218 ;; Auto vars:     Size  Location     Type
+   219 ;;  count           2    3[BANK0 ] int 
+   220 ;;  data            1    5[BANK0 ] unsigned char 
+   221 ;; Return value:  Size  Location     Type
+   222 ;;		None               void
+   223 ;; Registers used:
+   224 ;;		wreg, fsr0l, fsr0h, status,2, status,0, btemp+1, pclath, cstack
+   225 ;; Tracked objects:
+   226 ;;		On entry : 17F/0
+   227 ;;		On exit  : 0/0
+   228 ;;		Unchanged: 0/0
+   229 ;; Data sizes:     COMMON   BANK0   BANK1
+   230 ;;      Params:         0       0       0
+   231 ;;      Locals:         0       3       0
+   232 ;;      Temps:          0       3       0
+   233 ;;      Totals:         0       6       0
+   234 ;;Total ram usage:        6 bytes
+   235 ;; Hardware stack levels required when called:    2
+   236 ;; This function calls:
+   237 ;;		_USARTWriteChar
+   238 ;; This function is called by:
+   239 ;;		Startup code after reset
+   240 ;; This function uses a non-reentrant model
+   241 ;;
+   242                           
+   243                           
+   244                           ;psect for function _main
+   245  0032                     _main:	
+   246                           
+   247                           ;AndoTest.c: 29: TRISA = 0x00;
+   248                           
+   249                           ;incstack = 0
+   250                           ; Regs used in _main: [wreg-fsr0h+status,2+status,0+btemp+1+pclath+cstack]
+   251  0032  1683               	bsf	3,5	;RP0=1, select bank1
+   252  0033  1303               	bcf	3,6	;RP1=0, select bank1
+   253  0034  0185               	clrf	5	;volatile
+   254                           
+   255                           ;AndoTest.c: 30: TRISB = 0x00;
+   256  0035  0186               	clrf	6	;volatile
+   257                           
+   258                           ;AndoTest.c: 31: TRISC = 0xC0;
+   259  0036  30C0               	movlw	192
+   260  0037  0087               	movwf	7	;volatile
+   261                           
+   262                           ;AndoTest.c: 32: ADCON1 = 0x06;
+   263  0038  3006               	movlw	6
+   264  0039  009F               	movwf	31	;volatile
+   265                           
+   266                           ;AndoTest.c: 34: PORTB = 0xFF;
+   267  003A  30FF               	movlw	255
+   268  003B  1283               	bcf	3,5	;RP0=0, select bank0
+   269  003C  1303               	bcf	3,6	;RP1=0, select bank0
+   270  003D  0086               	movwf	6	;volatile
+   271                           
+   272                           ;AndoTest.c: 35: PORTA = 0xFF;
+   273  003E  30FF               	movlw	255
+   274  003F  0085               	movwf	5	;volatile
+   275                           
+   276                           ;AndoTest.c: 36: PORTC = 0xFF;
+   277  0040  30FF               	movlw	255
+   278  0041  0087               	movwf	7	;volatile
+   279                           
+   280                           ;AndoTest.c: 38: int count;
+   281                           ;AndoTest.c: 39: for(count = 0; count <= 4; count++)
+   282  0042  01B2               	clrf	main@count
+   283  0043  01B3               	clrf	main@count+1
+   284  0044  0833               	movf	main@count+1,w
+   285  0045  3A80               	xorlw	128
+   286  0046  00FF               	movwf	127
+   287  0047  3080               	movlw	128
+   288  0048  027F               	subwf	127,w
+   289  0049  1D03               	skipz
+   290  004A  284D               	goto	u455
+   291  004B  3005               	movlw	5
+   292  004C  0232               	subwf	main@count,w
+   293  004D                     u455:	
+   294  004D  1803               	btfsc	3,0
+   295  004E  2882               	goto	l1232
+   296  004F                     l53:	
+   297                           
+   298                           ;AndoTest.c: 40: {
+   299                           ;AndoTest.c: 41: RC4 = 1;
+   300  004F  1283               	bcf	3,5	;RP0=0, select bank0
+   301  0050  1303               	bcf	3,6	;RP1=0, select bank0
+   302  0051  1607               	bsf	7,4	;volatile
+   303                           
+   304                           ;AndoTest.c: 42: _delay(1000000);
+   305  0052  3006               	movlw	6
+   306  0053  00B1               	movwf	??_main+2
+   307  0054  3013               	movlw	19
+   308  0055  00B0               	movwf	??_main+1
+   309  0056  30B1               	movlw	177
+   310  0057  00AF               	movwf	??_main
+   311  0058                     u647:	
+   312  0058  0BAF               	decfsz	??_main,f
+   313  0059  2858               	goto	u647
+   314  005A  0BB0               	decfsz	??_main+1,f
+   315  005B  2858               	goto	u647
+   316  005C  0BB1               	decfsz	??_main+2,f
+   317  005D  2858               	goto	u647
+   318  005E  285F               	nop2
+   319                           
+   320                           ;AndoTest.c: 43: RC4 = 0;
+   321  005F  1283               	bcf	3,5	;RP0=0, select bank0
+   322  0060  1303               	bcf	3,6	;RP1=0, select bank0
+   323  0061  1207               	bcf	7,4	;volatile
+   324                           
+   325                           ;AndoTest.c: 44: _delay(1000000);
+   326  0062  3006               	movlw	6
+   327  0063  00B1               	movwf	??_main+2
+   328  0064  3013               	movlw	19
+   329  0065  00B0               	movwf	??_main+1
+   330  0066  30B1               	movlw	177
+   331  0067  00AF               	movwf	??_main
+   332  0068                     u657:	
+   333  0068  0BAF               	decfsz	??_main,f
+   334  0069  2868               	goto	u657
+   335  006A  0BB0               	decfsz	??_main+1,f
+   336  006B  2868               	goto	u657
+   337  006C  0BB1               	decfsz	??_main+2,f
+   338  006D  2868               	goto	u657
+   339  006E  286F               	nop2
+   340  006F  3001               	movlw	1
+   341  0070  1283               	bcf	3,5	;RP0=0, select bank0
+   342  0071  1303               	bcf	3,6	;RP1=0, select bank0
+   343  0072  07B2               	addwf	main@count,f
+   344  0073  1803               	skipnc
+   345  0074  0AB3               	incf	main@count+1,f
+   346  0075  3000               	movlw	0
+   347  0076  07B3               	addwf	main@count+1,f
+   348  0077  0833               	movf	main@count+1,w
+   349  0078  3A80               	xorlw	128
+   350  0079  00FF               	movwf	127
+   351  007A  3080               	movlw	128
+   352  007B  027F               	subwf	127,w
+   353  007C  1D03               	skipz
+   354  007D  2880               	goto	u465
+   355  007E  3005               	movlw	5
+   356  007F  0232               	subwf	main@count,w
+   357  0080                     u465:	
+   358  0080  1C03               	skipc
+   359  0081  284F               	goto	l53
+   360  0082                     l1232:	
+   361                           
+   362                           ;AndoTest.c: 45: }
+   363                           ;AndoTest.c: 46: count = 0;
+   364  0082  1283               	bcf	3,5	;RP0=0, select bank0
+   365  0083  1303               	bcf	3,6	;RP1=0, select bank0
+   366  0084  01B2               	clrf	main@count
+   367  0085  01B3               	clrf	main@count+1
+   368                           
+   369                           ;AndoTest.c: 49: SPBRG=25;
+   370  0086  3019               	movlw	25
+   371  0087  1683               	bsf	3,5	;RP0=1, select bank1
+   372  0088  1303               	bcf	3,6	;RP1=0, select bank1
+   373  0089  0099               	movwf	25	;volatile
+   374                           
+   375                           ;AndoTest.c: 52: TXSTAbits.TX9=0;
+   376  008A  1318               	bcf	24,6	;volatile
+   377                           
+   378                           ;AndoTest.c: 53: TXSTAbits.TXEN=1;
+   379  008B  1698               	bsf	24,5	;volatile
+   380                           
+   381                           ;AndoTest.c: 54: TXSTAbits.SYNC=0;
+   382  008C  1218               	bcf	24,4	;volatile
+   383                           
+   384                           ;AndoTest.c: 55: TXSTAbits.BRGH=1;
+   385  008D  1518               	bsf	24,2	;volatile
+   386                           
+   387                           ;AndoTest.c: 58: RCSTAbits.SPEN=1;
+   388  008E  1283               	bcf	3,5	;RP0=0, select bank0
+   389  008F  1303               	bcf	3,6	;RP1=0, select bank0
+   390  0090  1798               	bsf	24,7	;volatile
+   391                           
+   392                           ;AndoTest.c: 59: RCSTAbits.RX9=0;
+   393  0091  1318               	bcf	24,6	;volatile
+   394                           
+   395                           ;AndoTest.c: 60: RCSTAbits.CREN=1;
+   396  0092  1618               	bsf	24,4	;volatile
+   397                           
+   398                           ;AndoTest.c: 61: RCSTAbits.ADDEN=0;
+   399  0093  1198               	bcf	24,3	;volatile
+   400                           
+   401                           ;AndoTest.c: 64: RCIE=1;
+   402  0094  1683               	bsf	3,5	;RP0=1, select bank1
+   403  0095  1303               	bcf	3,6	;RP1=0, select bank1
+   404  0096  168C               	bsf	12,5	;volatile
+   405                           
+   406                           ;AndoTest.c: 65: PEIE=1;
+   407  0097  170B               	bsf	11,6	;volatile
+   408                           
+   409                           ;AndoTest.c: 68: (GIE = 1);
+   410  0098  178B               	bsf	11,7	;volatile
+   411  0099  2A1A               	goto	l1258
+   412  009A                     l1264:	
+   413                           
+   414                           ;AndoTest.c: 76: {
+   415                           ;AndoTest.c: 77: if(foot == 1)
+   416  009A  1283               	bcf	3,5	;RP0=0, select bank0
+   417  009B  1303               	bcf	3,6	;RP1=0, select bank0
+   418  009C  082E               	movf	_foot,w
+   419  009D  3A01               	xorlw	1
+   420  009E  1903               	btfsc	3,2
+   421                           
+   422                           ;AndoTest.c: 78: {
+   423                           ;AndoTest.c: 79: RC4 = 1;
+   424  009F  1607               	bsf	7,4	;volatile
+   425                           
+   426                           ;AndoTest.c: 80: }
+   427                           ;AndoTest.c: 81: if(foot == 0)
+   428  00A0  08AE               	movf	_foot,f
+   429  00A1  1903               	btfsc	3,2
+   430                           
+   431                           ;AndoTest.c: 82: {
+   432                           ;AndoTest.c: 83: RC4 = 0;
+   433  00A2  1207               	bcf	7,4	;volatile
+   434                           
+   435                           ;AndoTest.c: 84: }
+   436                           ;AndoTest.c: 85: foot = foot ^ 0x01;
+   437  00A3  082E               	movf	_foot,w
+   438  00A4  3A01               	xorlw	1
+   439  00A5  00AF               	movwf	??_main
+   440  00A6  082F               	movf	??_main,w
+   441  00A7  00AE               	movwf	_foot
+   442                           
+   443                           ;AndoTest.c: 86: count = 0;
+   444  00A8  01B2               	clrf	main@count
+   445  00A9  01B3               	clrf	main@count+1
+   446                           
+   447                           ;AndoTest.c: 87: }
+   448                           ;AndoTest.c: 88: switch(Command)
+   449  00AA  2A36               	goto	l1444
+   450  00AB                     l1276:	
+   451                           ;AndoTest.c: 89: {
+   452                           ;AndoTest.c: 90: case Increase:
+   453                           
+   454                           
+   455                           ;AndoTest.c: 91: digits[0] = digits[0] + 1;
+   456  00AB  082A               	movf	_digits,w
+   457  00AC  3E01               	addlw	1
+   458  00AD  00AF               	movwf	??_main
+   459  00AE  082F               	movf	??_main,w
+   460  00AF  00AA               	movwf	_digits
+   461                           
+   462                           ;AndoTest.c: 92: if(digits[0] > 9)
+   463  00B0  082A               	movf	_digits,w
+   464  00B1  3A80               	xorlw	128
+   465  00B2  3E76               	addlw	-138
+   466  00B3  1C03               	skipc
+   467  00B4  28D7               	goto	l1294
+   468                           
+   469                           ;AndoTest.c: 93: {
+   470                           ;AndoTest.c: 94: digits[0] = 0;
+   471  00B5  01AA               	clrf	_digits
+   472                           
+   473                           ;AndoTest.c: 95: digits[1] = digits[1] + 1;
+   474  00B6  082B               	movf	_digits+1,w
+   475  00B7  3E01               	addlw	1
+   476  00B8  00AF               	movwf	??_main
+   477  00B9  082F               	movf	??_main,w
+   478  00BA  00AB               	movwf	_digits+1
+   479                           
+   480                           ;AndoTest.c: 96: if(digits[1] > 9)
+   481  00BB  082B               	movf	_digits+1,w
+   482  00BC  3A80               	xorlw	128
+   483  00BD  3E76               	addlw	-138
+   484  00BE  1C03               	skipc
+   485  00BF  28D7               	goto	l1294
+   486                           
+   487                           ;AndoTest.c: 97: {
+   488                           ;AndoTest.c: 98: digits[1] = 0;
+   489  00C0  01AB               	clrf	_digits+1
+   490                           
+   491                           ;AndoTest.c: 99: digits[2] = digits[2] + 1;
+   492  00C1  082C               	movf	_digits+2,w
+   493  00C2  3E01               	addlw	1
+   494  00C3  00AF               	movwf	??_main
+   495  00C4  082F               	movf	??_main,w
+   496  00C5  00AC               	movwf	_digits+2
+   497                           
+   498                           ;AndoTest.c: 100: if(digits[2] > 9)
+   499  00C6  082C               	movf	_digits+2,w
+   500  00C7  3A80               	xorlw	128
+   501  00C8  3E76               	addlw	-138
+   502  00C9  1C03               	skipc
+   503  00CA  28D7               	goto	l1294
+   504                           
+   505                           ;AndoTest.c: 101: {
+   506                           ;AndoTest.c: 102: digits[2] = 9;
+   507  00CB  3009               	movlw	9
+   508  00CC  00AF               	movwf	??_main
+   509  00CD  082F               	movf	??_main,w
+   510  00CE  00AC               	movwf	_digits+2
+   511                           
+   512                           ;AndoTest.c: 103: digits[1] = 9;
+   513  00CF  3009               	movlw	9
+   514  00D0  00AF               	movwf	??_main
+   515  00D1  082F               	movf	??_main,w
+   516  00D2  00AB               	movwf	_digits+1
+   517                           
+   518                           ;AndoTest.c: 104: digits[0] = 9;
+   519  00D3  3009               	movlw	9
+   520  00D4  00AF               	movwf	??_main
+   521  00D5  082F               	movf	??_main,w
+   522  00D6  00AA               	movwf	_digits
+   523  00D7                     l1294:	
+   524                           
+   525                           ;AndoTest.c: 105: }
+   526                           ;AndoTest.c: 106: }
+   527                           ;AndoTest.c: 107: }
+   528                           ;AndoTest.c: 109: USARTWriteChar('A');
+   529  00D7  3041               	movlw	65
+   530  00D8  228B               	fcall	_USARTWriteChar
+   531                           
+   532                           ;AndoTest.c: 111: data = digits[0] + 48;
+   533  00D9  1283               	bcf	3,5	;RP0=0, select bank0
+   534  00DA  1303               	bcf	3,6	;RP1=0, select bank0
+   535  00DB  082A               	movf	_digits,w
+   536  00DC  3E30               	addlw	48
+   537  00DD  00AF               	movwf	??_main
+   538  00DE  082F               	movf	??_main,w
+   539  00DF  00B4               	movwf	main@data
+   540                           
+   541                           ;AndoTest.c: 112: USARTWriteChar(data);
+   542  00E0  0834               	movf	main@data,w
+   543  00E1  228B               	fcall	_USARTWriteChar
+   544                           
+   545                           ;AndoTest.c: 113: USARTWriteChar('B');
+   546  00E2  3042               	movlw	66
+   547  00E3  228B               	fcall	_USARTWriteChar
+   548                           
+   549                           ;AndoTest.c: 115: data = digits[1] + 48;
+   550  00E4  1283               	bcf	3,5	;RP0=0, select bank0
+   551  00E5  1303               	bcf	3,6	;RP1=0, select bank0
+   552  00E6  082B               	movf	_digits+1,w
+   553  00E7  3E30               	addlw	48
+   554  00E8  00AF               	movwf	??_main
+   555  00E9  082F               	movf	??_main,w
+   556  00EA  00B4               	movwf	main@data
+   557                           
+   558                           ;AndoTest.c: 116: USARTWriteChar(data);
+   559  00EB  0834               	movf	main@data,w
+   560  00EC  228B               	fcall	_USARTWriteChar
+   561                           
+   562                           ;AndoTest.c: 117: USARTWriteChar('C');
+   563  00ED  3043               	movlw	67
+   564  00EE  228B               	fcall	_USARTWriteChar
+   565                           
+   566                           ;AndoTest.c: 119: data = digits[2] + 48;
+   567  00EF  1283               	bcf	3,5	;RP0=0, select bank0
+   568  00F0  1303               	bcf	3,6	;RP1=0, select bank0
+   569  00F1  082C               	movf	_digits+2,w
+   570  00F2  3E30               	addlw	48
+   571  00F3  00AF               	movwf	??_main
+   572  00F4  082F               	movf	??_main,w
+   573  00F5  00B4               	movwf	main@data
+   574                           
+   575                           ;AndoTest.c: 120: USARTWriteChar(data);
+   576  00F6  0834               	movf	main@data,w
+   577  00F7  228B               	fcall	_USARTWriteChar
+   578                           
+   579                           ;AndoTest.c: 121: _delay(10000);
+   580  00F8  300D               	movlw	13
+   581  00F9  1283               	bcf	3,5	;RP0=0, select bank0
+   582  00FA  1303               	bcf	3,6	;RP1=0, select bank0
+   583  00FB  00B0               	movwf	??_main+1
+   584  00FC  30FB               	movlw	251
+   585  00FD  00AF               	movwf	??_main
+   586  00FE                     u677:	
+   587  00FE  0BAF               	decfsz	??_main,f
+   588  00FF  28FE               	goto	u677
+   589  0100  0BB0               	decfsz	??_main+1,f
+   590  0101  28FE               	goto	u677
+   591  0102  2903               	nop2
+   592  0103  2A14               	goto	l1440
+   593  0104                     l1316:	
+   594                           ;AndoTest.c: 125: case Decrease:
+   595                           
+   596                           ;AndoTest.c: 123: break;
+   597                           
+   598                           ;AndoTest.c: 122: Command = Stop;
+   599                           
+   600                           
+   601                           ;AndoTest.c: 126: digits[0] = digits[0] - 1;
+   602  0104  082A               	movf	_digits,w
+   603  0105  3EFF               	addlw	-1
+   604  0106  00AF               	movwf	??_main
+   605  0107  082F               	movf	??_main,w
+   606  0108  00AA               	movwf	_digits
+   607                           
+   608                           ;AndoTest.c: 127: if(digits[0] < 0)
+   609  0109  1FAA               	btfss	_digits,7
+   610  010A  2924               	goto	l1334
+   611                           
+   612                           ;AndoTest.c: 128: {
+   613                           ;AndoTest.c: 129: digits[0] = 9;
+   614  010B  3009               	movlw	9
+   615  010C  00AF               	movwf	??_main
+   616  010D  082F               	movf	??_main,w
+   617  010E  00AA               	movwf	_digits
+   618                           
+   619                           ;AndoTest.c: 130: digits[1] = digits[1] - 1;
+   620  010F  082B               	movf	_digits+1,w
+   621  0110  3EFF               	addlw	-1
+   622  0111  00AF               	movwf	??_main
+   623  0112  082F               	movf	??_main,w
+   624  0113  00AB               	movwf	_digits+1
+   625                           
+   626                           ;AndoTest.c: 131: if(digits[1] < 0)
+   627  0114  1FAB               	btfss	_digits+1,7
+   628  0115  2924               	goto	l1334
+   629                           
+   630                           ;AndoTest.c: 132: {
+   631                           ;AndoTest.c: 133: digits[1] = 9;
+   632  0116  3009               	movlw	9
+   633  0117  00AF               	movwf	??_main
+   634  0118  082F               	movf	??_main,w
+   635  0119  00AB               	movwf	_digits+1
+   636                           
+   637                           ;AndoTest.c: 134: digits[2] = digits[2] - 1;
+   638  011A  082C               	movf	_digits+2,w
+   639  011B  3EFF               	addlw	-1
+   640  011C  00AF               	movwf	??_main
+   641  011D  082F               	movf	??_main,w
+   642  011E  00AC               	movwf	_digits+2
+   643                           
+   644                           ;AndoTest.c: 135: if(digits[2] < 0)
+   645  011F  1FAC               	btfss	_digits+2,7
+   646  0120  2924               	goto	l1334
+   647                           
+   648                           ;AndoTest.c: 136: {
+   649                           ;AndoTest.c: 137: digits[2] = 0;
+   650  0121  01AC               	clrf	_digits+2
+   651                           
+   652                           ;AndoTest.c: 138: digits[1] = 0;
+   653  0122  01AB               	clrf	_digits+1
+   654                           
+   655                           ;AndoTest.c: 139: digits[0] = 0;
+   656  0123  01AA               	clrf	_digits
+   657  0124                     l1334:	
+   658                           
+   659                           ;AndoTest.c: 140: }
+   660                           ;AndoTest.c: 141: }
+   661                           ;AndoTest.c: 142: }
+   662                           ;AndoTest.c: 144: USARTWriteChar('A');
+   663  0124  3041               	movlw	65
+   664  0125  228B               	fcall	_USARTWriteChar
+   665                           
+   666                           ;AndoTest.c: 146: data = digits[0] + 48;
+   667  0126  1283               	bcf	3,5	;RP0=0, select bank0
+   668  0127  1303               	bcf	3,6	;RP1=0, select bank0
+   669  0128  082A               	movf	_digits,w
+   670  0129  3E30               	addlw	48
+   671  012A  00AF               	movwf	??_main
+   672  012B  082F               	movf	??_main,w
+   673  012C  00B4               	movwf	main@data
+   674                           
+   675                           ;AndoTest.c: 147: USARTWriteChar(data);
+   676  012D  0834               	movf	main@data,w
+   677  012E  228B               	fcall	_USARTWriteChar
+   678                           
+   679                           ;AndoTest.c: 148: USARTWriteChar('B');
+   680  012F  3042               	movlw	66
+   681  0130  228B               	fcall	_USARTWriteChar
+   682                           
+   683                           ;AndoTest.c: 150: data = digits[1] + 48;
+   684  0131  1283               	bcf	3,5	;RP0=0, select bank0
+   685  0132  1303               	bcf	3,6	;RP1=0, select bank0
+   686  0133  082B               	movf	_digits+1,w
+   687  0134  3E30               	addlw	48
+   688  0135  00AF               	movwf	??_main
+   689  0136  082F               	movf	??_main,w
+   690  0137  00B4               	movwf	main@data
+   691                           
+   692                           ;AndoTest.c: 151: USARTWriteChar(data);
+   693  0138  0834               	movf	main@data,w
+   694  0139  228B               	fcall	_USARTWriteChar
+   695                           
+   696                           ;AndoTest.c: 152: USARTWriteChar('C');
+   697  013A  3043               	movlw	67
+   698  013B  228B               	fcall	_USARTWriteChar
+   699                           
+   700                           ;AndoTest.c: 154: data = digits[2] + 48;
+   701  013C  1283               	bcf	3,5	;RP0=0, select bank0
+   702  013D  1303               	bcf	3,6	;RP1=0, select bank0
+   703  013E  082C               	movf	_digits+2,w
+   704  013F  3E30               	addlw	48
+   705  0140  00AF               	movwf	??_main
+   706  0141  082F               	movf	??_main,w
+   707  0142  00B4               	movwf	main@data
+   708                           
+   709                           ;AndoTest.c: 155: USARTWriteChar(data);
+   710  0143  0834               	movf	main@data,w
+   711  0144  228B               	fcall	_USARTWriteChar
+   712                           
+   713                           ;AndoTest.c: 156: _delay(10000);
+   714  0145  300D               	movlw	13
+   715  0146  1283               	bcf	3,5	;RP0=0, select bank0
+   716  0147  1303               	bcf	3,6	;RP1=0, select bank0
+   717  0148  00B0               	movwf	??_main+1
+   718  0149  30FB               	movlw	251
+   719  014A  00AF               	movwf	??_main
+   720  014B                     u687:	
+   721  014B  0BAF               	decfsz	??_main,f
+   722  014C  294B               	goto	u687
+   723  014D  0BB0               	decfsz	??_main+1,f
+   724  014E  294B               	goto	u687
+   725  014F  2950               	nop2
+   726  0150  2A14               	goto	l1440
+   727  0151                     l1356:	
+   728                           ;AndoTest.c: 160: case FastIncrease:
+   729                           
+   730                           ;AndoTest.c: 158: break;
+   731                           
+   732                           ;AndoTest.c: 157: Command = Stop;
+   733                           
+   734                           
+   735                           ;AndoTest.c: 161: digits[0] = digits[0] + 1;
+   736  0151  082A               	movf	_digits,w
+   737  0152  3E01               	addlw	1
+   738  0153  00AF               	movwf	??_main
+   739  0154  082F               	movf	??_main,w
+   740  0155  00AA               	movwf	_digits
+   741                           
+   742                           ;AndoTest.c: 162: if(digits[0] > 9)
+   743  0156  082A               	movf	_digits,w
+   744  0157  3A80               	xorlw	128
+   745  0158  3E76               	addlw	-138
+   746  0159  1C03               	skipc
+   747  015A  297D               	goto	l1374
+   748                           
+   749                           ;AndoTest.c: 163: {
+   750                           ;AndoTest.c: 164: digits[0] = 0;
+   751  015B  01AA               	clrf	_digits
+   752                           
+   753                           ;AndoTest.c: 165: digits[1] = digits[1] + 1;
+   754  015C  082B               	movf	_digits+1,w
+   755  015D  3E01               	addlw	1
+   756  015E  00AF               	movwf	??_main
+   757  015F  082F               	movf	??_main,w
+   758  0160  00AB               	movwf	_digits+1
+   759                           
+   760                           ;AndoTest.c: 166: if(digits[1] > 9)
+   761  0161  082B               	movf	_digits+1,w
+   762  0162  3A80               	xorlw	128
+   763  0163  3E76               	addlw	-138
+   764  0164  1C03               	skipc
+   765  0165  297D               	goto	l1374
+   766                           
+   767                           ;AndoTest.c: 167: {
+   768                           ;AndoTest.c: 168: digits[1] = 0;
+   769  0166  01AB               	clrf	_digits+1
+   770                           
+   771                           ;AndoTest.c: 169: digits[2] = digits[2] + 1;
+   772  0167  082C               	movf	_digits+2,w
+   773  0168  3E01               	addlw	1
+   774  0169  00AF               	movwf	??_main
+   775  016A  082F               	movf	??_main,w
+   776  016B  00AC               	movwf	_digits+2
+   777                           
+   778                           ;AndoTest.c: 170: if(digits[2] > 9)
+   779  016C  082C               	movf	_digits+2,w
+   780  016D  3A80               	xorlw	128
+   781  016E  3E76               	addlw	-138
+   782  016F  1C03               	skipc
+   783  0170  297D               	goto	l1374
+   784                           
+   785                           ;AndoTest.c: 171: {
+   786                           ;AndoTest.c: 172: digits[2] = 9;
+   787  0171  3009               	movlw	9
+   788  0172  00AF               	movwf	??_main
+   789  0173  082F               	movf	??_main,w
+   790  0174  00AC               	movwf	_digits+2
+   791                           
+   792                           ;AndoTest.c: 173: digits[1] = 9;
+   793  0175  3009               	movlw	9
+   794  0176  00AF               	movwf	??_main
+   795  0177  082F               	movf	??_main,w
+   796  0178  00AB               	movwf	_digits+1
+   797                           
+   798                           ;AndoTest.c: 174: digits[0] = 9;
+   799  0179  3009               	movlw	9
+   800  017A  00AF               	movwf	??_main
+   801  017B  082F               	movf	??_main,w
+   802  017C  00AA               	movwf	_digits
+   803  017D                     l1374:	
+   804                           
+   805                           ;AndoTest.c: 175: }
+   806                           ;AndoTest.c: 176: }
+   807                           ;AndoTest.c: 177: }
+   808                           ;AndoTest.c: 179: USARTWriteChar('A');
+   809  017D  3041               	movlw	65
+   810  017E  228B               	fcall	_USARTWriteChar
+   811                           
+   812                           ;AndoTest.c: 181: data = digits[0] + 48;
+   813  017F  1283               	bcf	3,5	;RP0=0, select bank0
+   814  0180  1303               	bcf	3,6	;RP1=0, select bank0
+   815  0181  082A               	movf	_digits,w
+   816  0182  3E30               	addlw	48
+   817  0183  00AF               	movwf	??_main
+   818  0184  082F               	movf	??_main,w
+   819  0185  00B4               	movwf	main@data
+   820                           
+   821                           ;AndoTest.c: 182: USARTWriteChar(data);
+   822  0186  0834               	movf	main@data,w
+   823  0187  228B               	fcall	_USARTWriteChar
+   824                           
+   825                           ;AndoTest.c: 183: USARTWriteChar('B');
+   826  0188  3042               	movlw	66
+   827  0189  228B               	fcall	_USARTWriteChar
+   828                           
+   829                           ;AndoTest.c: 185: data = digits[1] + 48;
+   830  018A  1283               	bcf	3,5	;RP0=0, select bank0
+   831  018B  1303               	bcf	3,6	;RP1=0, select bank0
+   832  018C  082B               	movf	_digits+1,w
+   833  018D  3E30               	addlw	48
+   834  018E  00AF               	movwf	??_main
+   835  018F  082F               	movf	??_main,w
+   836  0190  00B4               	movwf	main@data
+   837                           
+   838                           ;AndoTest.c: 186: USARTWriteChar(data);
+   839  0191  0834               	movf	main@data,w
+   840  0192  228B               	fcall	_USARTWriteChar
+   841                           
+   842                           ;AndoTest.c: 187: USARTWriteChar('C');
+   843  0193  3043               	movlw	67
+   844  0194  228B               	fcall	_USARTWriteChar
+   845                           
+   846                           ;AndoTest.c: 189: data = digits[2] + 48;
+   847  0195  1283               	bcf	3,5	;RP0=0, select bank0
+   848  0196  1303               	bcf	3,6	;RP1=0, select bank0
+   849  0197  082C               	movf	_digits+2,w
+   850  0198  3E30               	addlw	48
+   851  0199  00AF               	movwf	??_main
+   852  019A  082F               	movf	??_main,w
+   853  019B  00B4               	movwf	main@data
+   854                           
+   855                           ;AndoTest.c: 190: USARTWriteChar(data);
+   856  019C  0834               	movf	main@data,w
+   857  019D  228B               	fcall	_USARTWriteChar
+   858                           
+   859                           ;AndoTest.c: 191: _delay(500000);
+   860  019E  3003               	movlw	3
+   861  019F  1283               	bcf	3,5	;RP0=0, select bank0
+   862  01A0  1303               	bcf	3,6	;RP1=0, select bank0
+   863  01A1  00B1               	movwf	??_main+2
+   864  01A2  308A               	movlw	138
+   865  01A3  00B0               	movwf	??_main+1
+   866  01A4  3056               	movlw	86
+   867  01A5  00AF               	movwf	??_main
+   868  01A6                     u697:	
+   869  01A6  0BAF               	decfsz	??_main,f
+   870  01A7  29A6               	goto	u697
+   871  01A8  0BB0               	decfsz	??_main+1,f
+   872  01A9  29A6               	goto	u697
+   873  01AA  0BB1               	decfsz	??_main+2,f
+   874  01AB  29A6               	goto	u697
+   875  01AC  29AD               	nop2
+   876                           
+   877                           ;AndoTest.c: 192: break;
+   878  01AD  2A1A               	goto	l1258
+   879  01AE                     l1394:	
+   880                           ;AndoTest.c: 194: case FastDecrease:
+   881                           
+   882                           
+   883                           ;AndoTest.c: 195: digits[0] = digits[0] - 1;
+   884  01AE  1283               	bcf	3,5	;RP0=0, select bank0
+   885  01AF  1303               	bcf	3,6	;RP1=0, select bank0
+   886  01B0  082A               	movf	_digits,w
+   887  01B1  3EFF               	addlw	-1
+   888  01B2  00AF               	movwf	??_main
+   889  01B3  082F               	movf	??_main,w
+   890  01B4  00AA               	movwf	_digits
+   891                           
+   892                           ;AndoTest.c: 196: if(digits[0] < 0)
+   893  01B5  1FAA               	btfss	_digits,7
+   894  01B6  29D0               	goto	l1412
+   895                           
+   896                           ;AndoTest.c: 197: {
+   897                           ;AndoTest.c: 198: digits[0] = 9;
+   898  01B7  3009               	movlw	9
+   899  01B8  00AF               	movwf	??_main
+   900  01B9  082F               	movf	??_main,w
+   901  01BA  00AA               	movwf	_digits
+   902                           
+   903                           ;AndoTest.c: 199: digits[1] = digits[1] - 1;
+   904  01BB  082B               	movf	_digits+1,w
+   905  01BC  3EFF               	addlw	-1
+   906  01BD  00AF               	movwf	??_main
+   907  01BE  082F               	movf	??_main,w
+   908  01BF  00AB               	movwf	_digits+1
+   909                           
+   910                           ;AndoTest.c: 200: if(digits[1] < 0)
+   911  01C0  1FAB               	btfss	_digits+1,7
+   912  01C1  29D0               	goto	l1412
+   913                           
+   914                           ;AndoTest.c: 201: {
+   915                           ;AndoTest.c: 202: digits[1] = 9;
+   916  01C2  3009               	movlw	9
+   917  01C3  00AF               	movwf	??_main
+   918  01C4  082F               	movf	??_main,w
+   919  01C5  00AB               	movwf	_digits+1
+   920                           
+   921                           ;AndoTest.c: 203: digits[2] = digits[2] - 1;
+   922  01C6  082C               	movf	_digits+2,w
+   923  01C7  3EFF               	addlw	-1
+   924  01C8  00AF               	movwf	??_main
+   925  01C9  082F               	movf	??_main,w
+   926  01CA  00AC               	movwf	_digits+2
+   927                           
+   928                           ;AndoTest.c: 204: if(digits[2] < 0)
+   929  01CB  1FAC               	btfss	_digits+2,7
+   930  01CC  29D0               	goto	l1412
+   931                           
+   932                           ;AndoTest.c: 205: {
+   933                           ;AndoTest.c: 206: digits[2] = 0;
+   934  01CD  01AC               	clrf	_digits+2
+   935                           
+   936                           ;AndoTest.c: 207: digits[1] = 0;
+   937  01CE  01AB               	clrf	_digits+1
+   938                           
+   939                           ;AndoTest.c: 208: digits[0] = 0;
+   940  01CF  01AA               	clrf	_digits
+   941  01D0                     l1412:	
+   942                           
+   943                           ;AndoTest.c: 209: }
+   944                           ;AndoTest.c: 210: }
+   945                           ;AndoTest.c: 211: }
+   946                           ;AndoTest.c: 213: USARTWriteChar('A');
+   947  01D0  3041               	movlw	65
+   948  01D1  228B               	fcall	_USARTWriteChar
+   949                           
+   950                           ;AndoTest.c: 215: data = digits[0] + 48;
+   951  01D2  1283               	bcf	3,5	;RP0=0, select bank0
+   952  01D3  1303               	bcf	3,6	;RP1=0, select bank0
+   953  01D4  082A               	movf	_digits,w
+   954  01D5  3E30               	addlw	48
+   955  01D6  00AF               	movwf	??_main
+   956  01D7  082F               	movf	??_main,w
+   957  01D8  00B4               	movwf	main@data
+   958                           
+   959                           ;AndoTest.c: 216: USARTWriteChar(data);
+   960  01D9  0834               	movf	main@data,w
+   961  01DA  228B               	fcall	_USARTWriteChar
+   962                           
+   963                           ;AndoTest.c: 217: USARTWriteChar('B');
+   964  01DB  3042               	movlw	66
+   965  01DC  228B               	fcall	_USARTWriteChar
+   966                           
+   967                           ;AndoTest.c: 219: data = digits[1] + 48;
+   968  01DD  1283               	bcf	3,5	;RP0=0, select bank0
+   969  01DE  1303               	bcf	3,6	;RP1=0, select bank0
+   970  01DF  082B               	movf	_digits+1,w
+   971  01E0  3E30               	addlw	48
+   972  01E1  00AF               	movwf	??_main
+   973  01E2  082F               	movf	??_main,w
+   974  01E3  00B4               	movwf	main@data
+   975                           
+   976                           ;AndoTest.c: 220: USARTWriteChar(data);
+   977  01E4  0834               	movf	main@data,w
+   978  01E5  228B               	fcall	_USARTWriteChar
+   979                           
+   980                           ;AndoTest.c: 221: USARTWriteChar('C');
+   981  01E6  3043               	movlw	67
+   982  01E7  228B               	fcall	_USARTWriteChar
+   983                           
+   984                           ;AndoTest.c: 223: data = digits[2] + 48;
+   985  01E8  1283               	bcf	3,5	;RP0=0, select bank0
+   986  01E9  1303               	bcf	3,6	;RP1=0, select bank0
+   987  01EA  082C               	movf	_digits+2,w
+   988  01EB  3E30               	addlw	48
+   989  01EC  00AF               	movwf	??_main
+   990  01ED  082F               	movf	??_main,w
+   991  01EE  00B4               	movwf	main@data
+   992                           
+   993                           ;AndoTest.c: 224: USARTWriteChar(data);
+   994  01EF  0834               	movf	main@data,w
+   995  01F0  228B               	fcall	_USARTWriteChar
+   996                           
+   997                           ;AndoTest.c: 225: _delay(500000);
+   998  01F1  3003               	movlw	3
+   999  01F2  1283               	bcf	3,5	;RP0=0, select bank0
+  1000  01F3  1303               	bcf	3,6	;RP1=0, select bank0
+  1001  01F4  00B1               	movwf	??_main+2
+  1002  01F5  308A               	movlw	138
+  1003  01F6  00B0               	movwf	??_main+1
+  1004  01F7  3056               	movlw	86
+  1005  01F8  00AF               	movwf	??_main
+  1006  01F9                     u707:	
+  1007  01F9  0BAF               	decfsz	??_main,f
+  1008  01FA  29F9               	goto	u707
+  1009  01FB  0BB0               	decfsz	??_main+1,f
+  1010  01FC  29F9               	goto	u707
+  1011  01FD  0BB1               	decfsz	??_main+2,f
+  1012  01FE  29F9               	goto	u707
+  1013  01FF  2A00               	nop2
+  1014                           
+  1015                           ;AndoTest.c: 226: break;
+  1016  0200  2A1A               	goto	l1258
+  1017  0201                     l1432:	
+  1018                           ;AndoTest.c: 228: case Switch_Value:
+  1019                           
+  1020                           
+  1021                           ;AndoTest.c: 229: if(foot == 1)
+  1022  0201  1283               	bcf	3,5	;RP0=0, select bank0
+  1023  0202  1303               	bcf	3,6	;RP1=0, select bank0
+  1024  0203  082E               	movf	_foot,w
+  1025  0204  3A01               	xorlw	1
+  1026  0205  1D03               	skipz
+  1027  0206  2A0B               	goto	l1436
+  1028                           
+  1029                           ;AndoTest.c: 230: {
+  1030                           ;AndoTest.c: 231: USARTWriteChar('R');
+  1031  0207  3052               	movlw	82
+  1032  0208  228B               	fcall	_USARTWriteChar
+  1033                           
+  1034                           ;AndoTest.c: 232: USARTWriteChar('1');
+  1035  0209  3031               	movlw	49
+  1036  020A  228B               	fcall	_USARTWriteChar
+  1037  020B                     l1436:	
+  1038                           
+  1039                           ;AndoTest.c: 233: }
+  1040                           ;AndoTest.c: 234: if(foot == 0)
+  1041  020B  1283               	bcf	3,5	;RP0=0, select bank0
+  1042  020C  1303               	bcf	3,6	;RP1=0, select bank0
+  1043  020D  08AE               	movf	_foot,f
+  1044  020E  1D03               	skipz
+  1045  020F  2A14               	goto	l1440
+  1046                           
+  1047                           ;AndoTest.c: 235: {
+  1048                           ;AndoTest.c: 236: USARTWriteChar('F');
+  1049  0210  3046               	movlw	70
+  1050  0211  228B               	fcall	_USARTWriteChar
+  1051                           
+  1052                           ;AndoTest.c: 237: USARTWriteChar('1');
+  1053  0212  3031               	movlw	49
+  1054  0213  228B               	fcall	_USARTWriteChar
+  1055  0214                     l1440:	
+  1056                           
+  1057                           ;AndoTest.c: 238: }
+  1058                           ;AndoTest.c: 239: Command = Stop;
+  1059  0214  3002               	movlw	2
+  1060  0215  1283               	bcf	3,5	;RP0=0, select bank0
+  1061  0216  1303               	bcf	3,6	;RP1=0, select bank0
+  1062  0217  00AF               	movwf	??_main
+  1063  0218  082F               	movf	??_main,w
+  1064  0219  00AD               	movwf	_Command
+  1065  021A                     l1258:	
+  1066                           ;AndoTest.c: 69: char data;
+  1067                           ;AndoTest.c: 71: while(1)
+  1068                           
+  1069                           ;AndoTest.c: 247: }
+  1070                           
+  1071                           ;AndoTest.c: 246: break;
+  1072                           
+  1073                           ;AndoTest.c: 245: default:
+  1074                           
+  1075                           ;AndoTest.c: 243: break;
+  1076                           
+  1077                           ;AndoTest.c: 242: case Stop:
+  1078                           
+  1079                           ;AndoTest.c: 240: break;
+  1080                           
+  1081                           
+  1082                           ;AndoTest.c: 72: {
+  1083                           ;AndoTest.c: 73: _delay(1000);
+  1084  021A  30F9               	movlw	249
+  1085  021B  1283               	bcf	3,5	;RP0=0, select bank0
+  1086  021C  1303               	bcf	3,6	;RP1=0, select bank0
+  1087  021D  00AF               	movwf	??_main
+  1088  021E                     u667:	
+  1089  021E  0000               	nop
+  1090  021F  0BAF               	decfsz	??_main,f
+  1091  0220  2A1E               	goto	u667
+  1092  0221  2A22               	nop2	;nop
+  1093  0222  0000               	nop
+  1094                           
+  1095                           ;AndoTest.c: 74: count++;
+  1096  0223  3001               	movlw	1
+  1097  0224  1283               	bcf	3,5	;RP0=0, select bank0
+  1098  0225  1303               	bcf	3,6	;RP1=0, select bank0
+  1099  0226  07B2               	addwf	main@count,f
+  1100  0227  1803               	skipnc
+  1101  0228  0AB3               	incf	main@count+1,f
+  1102  0229  3000               	movlw	0
+  1103  022A  07B3               	addwf	main@count+1,f
+  1104                           
+  1105                           ;AndoTest.c: 75: if(count > 10000)
+  1106  022B  0833               	movf	main@count+1,w
+  1107  022C  3A80               	xorlw	128
+  1108  022D  00FF               	movwf	127
+  1109  022E  30A7               	movlw	167
+  1110  022F  027F               	subwf	127,w
+  1111  0230  1D03               	skipz
+  1112  0231  2A34               	goto	u475
+  1113  0232  3011               	movlw	17
+  1114  0233  0232               	subwf	main@count,w
+  1115  0234                     u475:	
+  1116  0234  1803               	btfsc	3,0
+  1117  0235  289A               	goto	l1264
+  1118  0236                     l1444:	
+  1119  0236  1283               	bcf	3,5	;RP0=0, select bank0
+  1120  0237  1303               	bcf	3,6	;RP1=0, select bank0
+  1121  0238  082D               	movf	_Command,w
+  1122                           
+  1123                           ; Switch size 1, requested type "space"
+  1124                           ; Number of cases is 6, Range of values is 0 to 5
+  1125                           ; switch strategies available:
+  1126                           ; Name         Instructions Cycles
+  1127                           ; direct_byte           12     6 (fixed)
+  1128                           ; simple_byte           19    10 (average)
+  1129                           ; jumptable            260     6 (fixed)
+  1130                           ;	Chosen strategy is direct_byte
+  1131  0239  0084               	movwf	4
+  1132  023A  3006               	movlw	6
+  1133  023B  0204               	subwf	4,w
+  1134  023C  1803               	skipnc
+  1135  023D  2A1A               	goto	l1258
+  1136  023E  3002               	movlw	high S1502
+  1137  023F  008A               	movwf	10
+  1138  0240  3093               	movlw	low S1502
+  1139  0241  0704               	addwf	4,w
+  1140  0242  0082               	movwf	2
+  1141  0243  2A1A               	goto	l1258
+  1142  0244                     __end_of_main:	
+  1143                           
+  1144                           	psect	swtext1
+  1145  0293                     __pswtext1:	
+  1146  0293                     S1502:	
+  1147  0293  28AB               	ljmp	l1276
+  1148  0294  2951               	ljmp	l1356
+  1149  0295  2A1A               	ljmp	l1258
+  1150  0296  2904               	ljmp	l1316
+  1151  0297  29AE               	ljmp	l1394
+  1152  0298  2A01               	ljmp	l1432
+  1153                           
+  1154                           	psect	text1
+  1155  028B                     __ptext1:	
+  1156 ;; *************** function _USARTWriteChar *****************
+  1157 ;; Defined at:
+  1158 ;;		line 285 in file "E:\Study Material\XC8 PROJECTS\Android\AndoTest.c"
+  1159 ;; Parameters:    Size  Location     Type
+  1160 ;;  ch              1    wreg     unsigned char 
+  1161 ;; Auto vars:     Size  Location     Type
+  1162 ;;  ch              1    5[COMMON] unsigned char 
+  1163 ;; Return value:  Size  Location     Type
+  1164 ;;		None               void
+  1165 ;; Registers used:
+  1166 ;;		wreg
+  1167 ;; Tracked objects:
+  1168 ;;		On entry : 0/0
+  1169 ;;		On exit  : 0/0
+  1170 ;;		Unchanged: 0/0
+  1171 ;; Data sizes:     COMMON   BANK0   BANK1
+  1172 ;;      Params:         0       0       0
+  1173 ;;      Locals:         1       0       0
+  1174 ;;      Temps:          0       0       0
+  1175 ;;      Totals:         1       0       0
+  1176 ;;Total ram usage:        1 bytes
+  1177 ;; Hardware stack levels used:    1
+  1178 ;; Hardware stack levels required when called:    1
+  1179 ;; This function calls:
+  1180 ;;		Nothing
+  1181 ;; This function is called by:
+  1182 ;;		_main
+  1183 ;; This function uses a non-reentrant model
+  1184 ;;
+  1185                           
+  1186                           
+  1187                           ;psect for function _USARTWriteChar
+  1188  028B                     _USARTWriteChar:	
+  1189                           
+  1190                           ;incstack = 0
+  1191                           ; Regs used in _USARTWriteChar: [wreg]
+  1192                           ;USARTWriteChar@ch stored from wreg
+  1193  028B  00F5               	movwf	USARTWriteChar@ch
+  1194  028C                     l100:	
+  1195                           ;AndoTest.c: 287: while(!PIR1bits.TXIF);
+  1196                           
+  1197  028C  1283               	bcf	3,5	;RP0=0, select bank0
+  1198  028D  1303               	bcf	3,6	;RP1=0, select bank0
+  1199  028E  1E0C               	btfss	12,4	;volatile
+  1200  028F  2A8C               	goto	l100
+  1201                           
+  1202                           ;AndoTest.c: 288: TXREG=ch;
+  1203  0290  0875               	movf	USARTWriteChar@ch,w
+  1204  0291  0099               	movwf	25	;volatile
+  1205  0292  0008               	return
+  1206  0293                     __end_of_USARTWriteChar:	
+  1207                           
+  1208                           	psect	text2
+  1209  0244                     __ptext2:	
+  1210 ;; *************** function _ISR *****************
+  1211 ;; Defined at:
+  1212 ;;		line 251 in file "E:\Study Material\XC8 PROJECTS\Android\AndoTest.c"
+  1213 ;; Parameters:    Size  Location     Type
+  1214 ;;		None
+  1215 ;; Auto vars:     Size  Location     Type
+  1216 ;;		None
+  1217 ;; Return value:  Size  Location     Type
+  1218 ;;		None               void
+  1219 ;; Registers used:
+  1220 ;;		wreg, fsr0l, fsr0h, status,2, status,0
+  1221 ;; Tracked objects:
+  1222 ;;		On entry : 0/0
+  1223 ;;		On exit  : 0/0
+  1224 ;;		Unchanged: 0/0
+  1225 ;; Data sizes:     COMMON   BANK0   BANK1
+  1226 ;;      Params:         0       0       0
+  1227 ;;      Locals:         0       0       0
+  1228 ;;      Temps:          5       0       0
+  1229 ;;      Totals:         5       0       0
+  1230 ;;Total ram usage:        5 bytes
+  1231 ;; Hardware stack levels used:    1
+  1232 ;; This function calls:
+  1233 ;;		Nothing
+  1234 ;; This function is called by:
+  1235 ;;		Interrupt level 1
+  1236 ;; This function uses a non-reentrant model
+  1237 ;;
+  1238                           
+  1239                           
+  1240                           ;psect for function _ISR
+  1241  0244                     _ISR:	
+  1242                           
+  1243                           ;AndoTest.c: 253: if (RCIE && RCIF) {
+  1244  0244  1683               	bsf	3,5	;RP0=1, select bank1
+  1245  0245  1303               	bcf	3,6	;RP1=0, select bank1
+  1246  0246  1E8C               	btfss	12,5	;volatile
+  1247  0247  2A70               	goto	i1l97
+  1248  0248  1283               	bcf	3,5	;RP0=0, select bank0
+  1249  0249  1303               	bcf	3,6	;RP1=0, select bank0
+  1250  024A  1E8C               	btfss	12,5	;volatile
+  1251  024B  2A70               	goto	i1l97
+  1252                           
+  1253                           ;AndoTest.c: 254: ch = (char)RCREG;
+  1254  024C  081A               	movf	26,w	;volatile
+  1255  024D  00F0               	movwf	??_ISR
+  1256  024E  0870               	movf	??_ISR,w
+  1257  024F  00F6               	movwf	_ch
+  1258                           
+  1259                           ;AndoTest.c: 256: switch(ch)
+  1260  0250  2A62               	goto	i1l1152
+  1261  0251                     i1l1138:	
+  1262                           ;AndoTest.c: 257: {
+  1263                           ;AndoTest.c: 258: case '1':
+  1264                           
+  1265                           
+  1266                           ;AndoTest.c: 259: Command = Increase;
+  1267  0251  01AD               	clrf	_Command
+  1268                           
+  1269                           ;AndoTest.c: 260: break;
+  1270  0252  2A70               	goto	i1l97
+  1271  0253                     i1l91:	
+  1272                           ;AndoTest.c: 261: case '2':
+  1273                           
+  1274                           
+  1275                           ;AndoTest.c: 262: Command = FastIncrease;
+  1276  0253  01AD               	clrf	_Command
+  1277  0254  0AAD               	incf	_Command,f
+  1278                           
+  1279                           ;AndoTest.c: 263: break;
+  1280  0255  2A70               	goto	i1l97
+  1281  0256                     i1l1140:	
+  1282                           ;AndoTest.c: 264: case '3':
+  1283                           
+  1284  0256  2A5D               	goto	i1l1148
+  1285  0257                     i1l1142:	
+  1286                           ;AndoTest.c: 267: case '4':
+  1287                           
+  1288                           ;AndoTest.c: 266: break;
+  1289                           
+  1290                           ;AndoTest.c: 265: Command = Stop;
+  1291                           
+  1292                           
+  1293                           ;AndoTest.c: 268: Command = Decrease;
+  1294  0257  3003               	movlw	3
+  1295  0258  2A5E               	goto	L4
+  1296  0259                     i1l1144:	
+  1297                           ;AndoTest.c: 270: case '5':
+  1298                           
+  1299                           ;AndoTest.c: 269: break;
+  1300                           
+  1301                           
+  1302                           ;AndoTest.c: 271: Command = FastDecrease;
+  1303  0259  3004               	movlw	4
+  1304  025A  2A5E               	goto	L4
+  1305  025B                     i1l1146:	
+  1306                           ;AndoTest.c: 273: case '6':
+  1307                           
+  1308                           ;AndoTest.c: 272: break;
+  1309                           
+  1310                           
+  1311                           ;AndoTest.c: 274: Command = Switch_Value;
+  1312  025B  3005               	movlw	5
+  1313  025C  2A5E               	goto	L4
+  1314  025D                     i1l1148:	
+  1315                           ;AndoTest.c: 276: default:
+  1316                           
+  1317                           ;AndoTest.c: 275: break;
+  1318                           
+  1319                           
+  1320                           ;AndoTest.c: 277: Command = Stop;
+  1321  025D  3002               	movlw	2
+  1322  025E                     L4:	
+  1323  025E  00F0               	movwf	??_ISR
+  1324  025F  0870               	movf	??_ISR,w
+  1325  0260  00AD               	movwf	_Command
+  1326                           
+  1327                           ;AndoTest.c: 279: }
+  1328                           
+  1329                           ;AndoTest.c: 278: break;
+  1330  0261  2A70               	goto	i1l97
+  1331  0262                     i1l1152:	
+  1332  0262  0876               	movf	_ch,w
+  1333                           
+  1334                           ; Switch size 1, requested type "space"
+  1335                           ; Number of cases is 6, Range of values is 49 to 54
+  1336                           ; switch strategies available:
+  1337                           ; Name         Instructions Cycles
+  1338                           ; direct_byte           15     9 (fixed)
+  1339                           ; simple_byte           19    10 (average)
+  1340                           ; jumptable            263     9 (fixed)
+  1341                           ;	Chosen strategy is direct_byte
+  1342  0263  3ECF               	addlw	-49
+  1343  0264  1C03               	skipc
+  1344  0265  2A5D               	goto	i1l1148
+  1345  0266  0084               	movwf	4
+  1346  0267  3006               	movlw	6
+  1347  0268  0204               	subwf	4,w
+  1348  0269  1803               	skipnc
+  1349  026A  2A5D               	goto	i1l1148
+  1350  026B  3002               	movlw	high i1S1504
+  1351  026C  008A               	movwf	10
+  1352  026D  3099               	movlw	low i1S1504
+  1353  026E  0704               	addwf	4,w
+  1354  026F  0082               	movwf	2
+  1355  0270                     i1l97:	
+  1356                           ;AndoTest.c: 280: return;
+  1357                           
+  1358  0270  0874               	movf	??_ISR+4,w
+  1359  0271  1283               	bcf	3,5	;RP0=0, select bank0
+  1360  0272  00FF               	movwf	127
+  1361  0273  0873               	movf	??_ISR+3,w
+  1362  0274  008A               	movwf	10
+  1363  0275  0872               	movf	??_ISR+2,w
+  1364  0276  0084               	movwf	4
+  1365  0277  0E71               	swapf	(??_ISR+1)^(0+-128),w
+  1366  0278  0083               	movwf	3
+  1367  0279  0EFE               	swapf	126,f
+  1368  027A  0E7E               	swapf	126,w
+  1369  027B  0009               	retfie
+  1370  027C                     __end_of_ISR:	
+  1371  007E                     btemp	set	126	;btemp
+  1372  007E                     wtemp	set	126
+  1373  007E                     wtemp0	set	126
+  1374  0080                     wtemp1	set	128
+  1375  0082                     wtemp2	set	130
+  1376  0084                     wtemp3	set	132
+  1377  0086                     wtemp4	set	134
+  1378  0088                     wtemp5	set	136
+  1379  007F                     wtemp6	set	127
+  1380  007E                     ttemp	set	126
+  1381  007E                     ttemp0	set	126
+  1382  0081                     ttemp1	set	129
+  1383  0084                     ttemp2	set	132
+  1384  0087                     ttemp3	set	135
+  1385  007F                     ttemp4	set	127
+  1386  007E                     ltemp	set	126
+  1387  007E                     ltemp0	set	126
+  1388  0082                     ltemp1	set	130
+  1389  0086                     ltemp2	set	134
+  1390  0080                     ltemp3	set	128
+  1391                           
+  1392                           	psect	intentry
+  1393  0004                     __pintentry:	
+  1394                           ;incstack = 0
+  1395                           ; Regs used in _ISR: [wreg-fsr0h+status,2+status,0]
+  1396                           
+  1397  0004                     interrupt_function:	
+  1398  007E                     saved_w	set	btemp
+  1399  0004  00FE               	movwf	btemp
+  1400  0005  0E03               	swapf	3,w
+  1401  0006  00F1               	movwf	??_ISR+1
+  1402  0007  0804               	movf	4,w
+  1403  0008  00F2               	movwf	??_ISR+2
+  1404  0009  080A               	movf	10,w
+  1405  000A  00F3               	movwf	??_ISR+3
+  1406  000B  1283               	bcf	3,5	;RP0=0, select bank0
+  1407  000C  1303               	bcf	3,6	;RP1=0, select bank0
+  1408  000D  087F               	movf	btemp+1,w
+  1409  000E  00F4               	movwf	??_ISR+4
+  1410  000F  2A44               	ljmp	_ISR
+  1411                           
+  1412                           	psect	swtext2
+  1413  0299                     __pswtext2:	
+  1414  0299                     i1S1504:	
+  1415  0299  2A51               	ljmp	i1l1138
+  1416  029A  2A53               	ljmp	i1l91
+  1417  029B  2A56               	ljmp	i1l1140
+  1418  029C  2A57               	ljmp	i1l1142
+  1419  029D  2A59               	ljmp	i1l1144
+  1420  029E  2A5B               	ljmp	i1l1146
+
+
+Data Sizes:
+    Strings     0
+    Constant    0
+    Data        15
+    BSS         1
+    Persistent  0
+    Stack       0
+
+Auto Spaces:
+    Space          Size  Autos    Used
+    COMMON           14      6       7
+    BANK0            80      6      21
+    BANK1            32      0       0
+
+Pointer List with Targets:
+
+    None.
+
+Critical Paths under _main in COMMON
+
+    _main->_USARTWriteChar
+
+Critical Paths under _ISR in COMMON
+
+    None.
+
+Critical Paths under _main in BANK0
+
+    None.
+
+Critical Paths under _ISR in BANK0
+
+    None.
+
+Critical Paths under _main in BANK1
+
+    None.
+
+Critical Paths under _ISR in BANK1
+
+    None.
+
+Call Graph Tables:
+
+ ---------------------------------------------------------------------------------
+ (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+ ---------------------------------------------------------------------------------
+ (0) _main                                                 6     6      0     538
+                                              0 BANK0      6     6      0
+                     _USARTWriteChar
+ ---------------------------------------------------------------------------------
+ (1) _USARTWriteChar                                       1     1      0      22
+                                              5 COMMON     1     1      0
+ ---------------------------------------------------------------------------------
+ Estimated maximum stack depth 1
+ ---------------------------------------------------------------------------------
+ (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+ ---------------------------------------------------------------------------------
+ (2) _ISR                                                  5     5      0       0
+                                              0 COMMON     5     5      0
+ ---------------------------------------------------------------------------------
+ Estimated maximum stack depth 2
+ ---------------------------------------------------------------------------------
+
+ Call Graph Graphs:
+
+ _main (ROOT)
+   _USARTWriteChar
+
+ _ISR (ROOT)
+
+ Address spaces:
+Name               Size   Autos  Total    Cost      Usage
+SFR3                 0      0       0       4        0.0%
+BITSFR3              0      0       0       4        0.0%
+SFR2                 0      0       0       5        0.0%
+BITSFR2              0      0       0       5        0.0%
+BANK1               20      0       0       7        0.0%
+BITBANK1            20      0       0       6        0.0%
+SFR1                 0      0       0       2        0.0%
+BITSFR1              0      0       0       2        0.0%
+BANK0               50      6      15       5       26.3%
+BITBANK0            50      0       0       4        0.0%
+SFR0                 0      0       0       1        0.0%
+BITSFR0              0      0       0       1        0.0%
+COMMON               E      6       7       1       50.0%
+BITCOMMON            E      0       0       0        0.0%
+CODE                 0      0       0       0        0.0%
+DATA                 0      0      1C       8        0.0%
+ABS                  0      0      1C       3        0.0%
+NULL                 0      0       0       0        0.0%
+STACK                0      0       0       2        0.0%
+EEDATA              40      0       0       0        0.0%
+
+
+Microchip Technology PIC Macro Assembler V1.33 build 59893 
+Symbol Table                                                                                   Tue Jul 07 14:38:38 2015
+
+                      pc 0002                       l53 004F                       _ch 0076  
+                     fsr 0004                      l100 028C                      _GIE 005F  
+                    _RC4 003C                      _ISR 0244                      u455 004D  
+                    u465 0080                      u707 01F9                      u475 0234  
+                    u647 0058                      u657 0068                      u667 021E  
+                    u677 00FE                      u687 014B                      u697 01A6  
+                    fsr0 0004                     S1502 0293                     ?_ISR 0070  
+                   l1232 0082                     l1412 01D0                     l1316 0104  
+                   l1334 0124                     l1440 0214                     l1432 0201  
+                   l1264 009A                     l1258 021A                     l1436 020B  
+                   l1356 0151                     l1276 00AB                     l1444 0236  
+                   l1374 017D                     l1294 00D7                     l1394 01AE  
+                   _PEIE 005E                     _RCIE 0465                     _RCIF 0065  
+                   i1l91 0253                     i1l97 0270   __end_of_USARTWriteChar 0293  
+                   _main 0032                     _foot 002E                     btemp 007E  
+                   ltemp 007E                     start 0010                     ttemp 007E  
+                   wtemp 007E                    ??_ISR 0070                    ?_main 0070  
+       USARTWriteChar@ch 0075                    _RCREG 001A                    _SPBRG 0099  
+                  _PORTA 0005                    _PORTB 0006                    _PORTC 0007  
+                  _TRISA 0085                    _TRISB 0086                    _TRISC 0087  
+                  _TXREG 0019                    pclath 000A                    ltemp0 007E  
+                  ltemp1 0082                    ltemp2 0086                    ltemp3 0080  
+        ?_USARTWriteChar 0070                    ttemp0 007E                    ttemp1 0081  
+                  ttemp2 0084                    ttemp3 0087                    ttemp4 007F  
+                  status 0003                    wtemp0 007E                    wtemp1 0080  
+                  wtemp2 0082                    wtemp3 0084                    wtemp4 0086  
+                  wtemp5 0088                    wtemp6 007F          __initialization 0011  
+           __end_of_main 0244                   ??_main 002F                   _ADCON1 009F  
+                 i1S1504 0299                   i1l1140 0256                   i1l1142 0257  
+                 i1l1144 0259                   i1l1152 0262                   i1l1146 025B  
+                 i1l1138 0251                   i1l1148 025D                   _digits 002A  
+                 saved_w 007E  __end_of__initialization 0030           __pcstackCOMMON 0070  
+           __pidataBANK0 027C               __pmaintext 0032               __pintentry 0004  
+       ??_USARTWriteChar 0075                  _Command 002D                  __ptext1 028B  
+                __ptext2 0244                  _display 0020             __size_of_ISR 0038  
+   end_of_initialization 0030                _RCSTAbits 0018                _TXSTAbits 0098  
+    start_initialization 0011              __end_of_ISR 027C              __pdataBANK0 0020  
+            __pbssCOMMON 0076                ___latbits 0000            __pcstackBANK0 002F  
+              __pswtext1 0293                __pswtext2 0299        interrupt_function 0004  
+               _PIR1bits 000C                main@count 0032  __size_of_USARTWriteChar 0008  
+          __size_of_main 0212                 main@data 0034                 intlevel1 0000  
+         _USARTWriteChar 028B  

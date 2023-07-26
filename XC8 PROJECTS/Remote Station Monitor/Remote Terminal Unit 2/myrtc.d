@@ -1,0 +1,1 @@
+ myrtc.d  myrtc.obj:  E:/Study\ Material/XC8\ PROJECTS/Remote\ Station\ Monitor/Remote\ Terminal\ Unit\ 2/myrtc.C E:/Study\ Material/XC8\ PROJECTS/Remote\ Station\ Monitor/Remote\ Terminal\ Unit\ 2/myrtc.h

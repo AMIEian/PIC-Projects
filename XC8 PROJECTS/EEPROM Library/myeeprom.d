@@ -1,0 +1,1 @@
+ myeeprom.d  myeeprom.p1:  E:/Study\ Material/XC8\ PROJECTS/EEPROM\ Library/myeeprom.c E:/Study\ Material/XC8\ PROJECTS/EEPROM\ Library/myeeprom.h

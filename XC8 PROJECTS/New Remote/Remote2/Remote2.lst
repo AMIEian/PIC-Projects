@@ -1,0 +1,1766 @@
+
+
+Microchip Technology PIC18 LITE Macro Assembler V1.33 build 59893 
+                                                                                               Tue Aug 18 15:31:36 2015
+
+Microchip Technology Omniscient Code Generator (Lite mode) build 59893
+     1                           	processor	18F43K20
+     2                           	fnconf	rparam,??,?,0
+     3                           	opt	pw 120
+     4                           	opt	lm
+     5                           	psect	idataCOMRAM,global,class=CODE,delta=1
+     6                           	psect	cinit,global,reloc=2,class=CODE,delta=1
+     7                           	psect	bssCOMRAM,global,class=COMRAM,space=1,delta=1
+     8                           	psect	dataCOMRAM,global,class=COMRAM,space=1,delta=1
+     9                           	psect	cstackCOMRAM,global,class=COMRAM,space=1,delta=1
+    10                           	psect	text0,global,reloc=2,class=CODE,delta=1
+    11                           	psect	text1,global,reloc=2,class=CODE,delta=1
+    12                           	psect	text2,global,reloc=2,class=CODE,delta=1
+    13                           	psect	text3,global,reloc=2,class=CODE,delta=1
+    14                           	psect	intcode,global,reloc=2,class=CODE,delta=1
+    15                           	psect	intsave_regs,global,class=BIGRAM,space=1,delta=1
+    16                           	psect	rparam,global,class=COMRAM,space=1,delta=1
+    17  0000                     
+    18                           	psect	idataCOMRAM
+    19  00057E                     __pidataCOMRAM:
+    20                           	opt stack 0
+    21                           
+    22                           ;initializer for _Keyboard_Keys
+    23  00057E  01                 	db	1
+    24  00057F  04                 	db	4
+    25  000580  07                 	db	7
+    26  000581  0B                 	db	11
+    27  000582  02                 	db	2
+    28  000583  05                 	db	5
+    29  000584  08                 	db	8
+    30  000585  00                 	db	0
+    31  000586  03                 	db	3
+    32  000587  06                 	db	6
+    33  000588  09                 	db	9
+    34  000589  0C                 	db	12
+    35  00058A  02                 	db	2
+    36  00058B  03                 	db	3
+    37  00058C  04                 	db	4
+    38  00058D  05                 	db	5
+    39                           
+    40                           ;initializer for _Segment_Codes
+    41  00058E  3F                 	db	63
+    42  00058F  06                 	db	6
+    43  000590  5B                 	db	91
+    44  000591  4F                 	db	79
+    45  000592  66                 	db	102
+    46  000593  6D                 	db	109
+    47  000594  7D                 	db	125
+    48  000595  07                 	db	7
+    49  000596  7F                 	db	127
+    50  000597  67                 	db	103
+    51  000598  00                 	db	0
+    52                           
+    53                           ;initializer for _digits
+    54  000599  01                 	db	1
+    55  00059A  02                 	db	2
+    56  00059B  03                 	db	3
+    57                           
+    58                           ;initializer for _One_Minute_Timer
+    59  00059C  0001               	dw	1
+    60                           
+    61                           ;initializer for _digit
+    62  00059E  FF                 	db	255
+    63  0000                     _TMR0	set	4054
+    64  0000                     _ADCON1	set	4033
+    65  0000                     _INTCON	set	4082
+    66  0000                     _IOCB	set	3965
+    67  0000                     _OSCCON	set	4051
+    68  0000                     _PORTA	set	3968
+    69  0000                     _PORTB	set	3969
+    70  0000                     _PORTC	set	3970
+    71  0000                     _PORTD	set	3971
+    72  0000                     _PORTE	set	3972
+    73  0000                     _RCON	set	4048
+    74  0000                     _T0CON	set	4053
+    75  0000                     _TRISA	set	3986
+    76  0000                     _TRISB	set	3987
+    77  0000                     _TRISC	set	3988
+    78  0000                     _TRISD	set	3989
+    79  0000                     _TRISE	set	3990
+    80  0000                     _RBIE	set	32659
+    81  0000                     _RBIF	set	32656
+    82  0000                     _SWDTEN	set	32392
+    83  0000                     _TMR0IF	set	32658
+    84  0000                     _TMR0ON	set	32431
+    85                           
+    86                           ; #config settings
+    87                           
+    88                           	psect	cinit
+    89  000526                     __pcinit:
+    90                           	opt stack 0
+    91  000526                     start_initialization:
+    92                           	opt stack 0
+    93  000526                     __initialization:
+    94                           	opt stack 0
+    95                           
+    96                           ; Clear objects allocated to COMRAM (6 bytes)
+    97  000526  6A45               	clrf	(__pbssCOMRAM+5)& (0+255),c
+    98  000528  6A44               	clrf	(__pbssCOMRAM+4)& (0+255),c
+    99  00052A  6A43               	clrf	(__pbssCOMRAM+3)& (0+255),c
+   100  00052C  6A42               	clrf	(__pbssCOMRAM+2)& (0+255),c
+   101  00052E  6A41               	clrf	(__pbssCOMRAM+1)& (0+255),c
+   102  000530  6A40               	clrf	__pbssCOMRAM& (0+255),c
+   103                           
+   104                           ; Initialize objects allocated to COMRAM (33 bytes)
+   105                           ; load TBLPTR registers with __pidataCOMRAM
+   106  000532  0E7E               	movlw	low __pidataCOMRAM
+   107  000534  6EF6               	movwf	tblptrl,c
+   108  000536  0E05               	movlw	high __pidataCOMRAM
+   109  000538  6EF7               	movwf	tblptrh,c
+   110  00053A  0E00               	movlw	low (__pidataCOMRAM shr (0+16))
+   111  00053C  6EF8               	movwf	tblptru,c
+   112  00053E  EE00  F001         	lfsr	0,__pdataCOMRAM
+   113  000542  EE10 F021          	lfsr	1,33
+   114  000546                     copy_data0:
+   115  000546  0009               	tblrd		*+
+   116  000548  CFF5 FFEE          	movff	tablat,postinc0
+   117  00054C  50E5               	movf	postdec1,w,c
+   118  00054E  50E1               	movf	fsr1l,w,c
+   119  000550  E1FA               	bnz	copy_data0
+   120  000552                     end_of_initialization:
+   121                           	opt stack 0
+   122  000552                     __end_of__initialization:
+   123                           	opt stack 0
+   124  000552  0100               	movlb	0
+   125  000554  EFA3  F000         	goto	_main	;jump to C main() function
+   126                           tblptru	equ	0xFF8
+   127                           tblptrh	equ	0xFF7
+   128                           tblptrl	equ	0xFF6
+   129                           tablat	equ	0xFF5
+   130                           postinc0	equ	0xFEE
+   131                           postdec1	equ	0xFE5
+   132                           fsr1l	equ	0xFE1
+   133                           
+   134                           	psect	bssCOMRAM
+   135  000040                     __pbssCOMRAM:
+   136                           	opt stack 0
+   137  000040                     _data_timer:
+   138                           	opt stack 0
+   139  000040                     	ds	2
+   140  000042                     _Sleep_Flag:
+   141                           	opt stack 0
+   142  000042                     	ds	1
+   143  000043                     _count:
+   144                           	opt stack 0
+   145  000043                     	ds	1
+   146  000044                     _index:
+   147                           	opt stack 0
+   148  000044                     	ds	1
+   149  000045                     _t:
+   150                           	opt stack 0
+   151  000045                     	ds	1
+   152                           tblptru	equ	0xFF8
+   153                           tblptrh	equ	0xFF7
+   154                           tblptrl	equ	0xFF6
+   155                           tablat	equ	0xFF5
+   156                           postinc0	equ	0xFEE
+   157                           postdec1	equ	0xFE5
+   158                           fsr1l	equ	0xFE1
+   159                           
+   160                           	psect	dataCOMRAM
+   161  000001                     __pdataCOMRAM:
+   162                           	opt stack 0
+   163  000001                     _Keyboard_Keys:
+   164                           	opt stack 0
+   165  000001                     	ds	16
+   166  000011                     _Segment_Codes:
+   167                           	opt stack 0
+   168  000011                     	ds	11
+   169  00001C                     _digits:
+   170                           	opt stack 0
+   171  00001C                     	ds	3
+   172  00001F                     _One_Minute_Timer:
+   173                           	opt stack 0
+   174  00001F                     	ds	2
+   175  000021                     _digit:
+   176                           	opt stack 0
+   177  000021                     	ds	1
+   178                           tblptru	equ	0xFF8
+   179                           tblptrh	equ	0xFF7
+   180                           tblptrl	equ	0xFF6
+   181                           tablat	equ	0xFF5
+   182                           postinc0	equ	0xFEE
+   183                           postdec1	equ	0xFE5
+   184                           fsr1l	equ	0xFE1
+   185                           
+   186                           	psect	cstackCOMRAM
+   187  000022                     __pcstackCOMRAM:
+   188                           	opt stack 0
+   189  000022                     ??_ISR:
+   190  000022                     
+   191                           ; 1 bytes @ 0x0
+   192  000022                     	ds	15
+   193  000031                     ??_getKeyboardInput:
+   194  000031                     MY_DELAY@ms:
+   195                           	opt stack 0
+   196                           
+   197                           ; 2 bytes @ 0xF
+   198  000031                     	ds	2
+   199  000033                     getKeyboardInput@column_mask:
+   200                           	opt stack 0
+   201                           
+   202                           ; 1 bytes @ 0x11
+   203  000033                     	ds	1
+   204  000034                     getKeyboardInput@Keyboard_Input:
+   205                           	opt stack 0
+   206                           
+   207                           ; 1 bytes @ 0x12
+   208  000034                     	ds	1
+   209  000035                     getKeyboardInput@row:
+   210                           	opt stack 0
+   211                           
+   212                           ; 1 bytes @ 0x13
+   213  000035                     	ds	1
+   214  000036                     getKeyboardInput@column:
+   215                           	opt stack 0
+   216                           
+   217                           ; 1 bytes @ 0x14
+   218  000036                     	ds	1
+   219  000037                     getKeyboardInput@temp:
+   220                           	opt stack 0
+   221                           
+   222                           ; 1 bytes @ 0x15
+   223  000037                     	ds	1
+   224  000038                     ??_main:
+   225                           
+   226                           ; 0 bytes @ 0x16
+   227  000038                     	ds	8
+   228                           tblptru	equ	0xFF8
+   229                           tblptrh	equ	0xFF7
+   230                           tblptrl	equ	0xFF6
+   231                           tablat	equ	0xFF5
+   232                           postinc0	equ	0xFEE
+   233                           postdec1	equ	0xFE5
+   234                           fsr1l	equ	0xFE1
+   235                           
+   236 ;;
+   237 ;;Main: autosize = 0, tempsize = 8, incstack = 0, save=0
+   238 ;;
+   239 ;; *************** function _main *****************
+   240 ;; Defined at:
+   241 ;;		line 17 in file "E:\Study Material\XC8 PROJECTS\New Remote\Remote2\Remote.c"
+   242 ;; Parameters:    Size  Location     Type
+   243 ;;		None
+   244 ;; Auto vars:     Size  Location     Type
+   245 ;;		None
+   246 ;; Return value:  Size  Location     Type
+   247 ;;		None               void
+   248 ;; Registers used:
+   249 ;;		wreg, fsr1l, fsr1h, fsr2l, fsr2h, status,2, status,0, prodl, prodh, cstack
+   250 ;; Tracked objects:
+   251 ;;		On entry : 0/0
+   252 ;;		On exit  : 0/0
+   253 ;;		Unchanged: 0/0
+   254 ;; Data sizes:     COMRAM   BANK0   BANK1
+   255 ;;      Params:         0       0       0
+   256 ;;      Locals:         0       0       0
+   257 ;;      Temps:          8       0       0
+   258 ;;      Totals:         8       0       0
+   259 ;;Total ram usage:        8 bytes
+   260 ;; Hardware stack levels required when called:    2
+   261 ;; This function calls:
+   262 ;;		_MY_DELAY
+   263 ;;		_getKeyboardInput
+   264 ;;		_initKeyboard
+   265 ;; This function is called by:
+   266 ;;		Startup code after reset
+   267 ;; This function uses a non-reentrant model
+   268 ;;
+   269                           
+   270                           	psect	text0
+   271  000146                     __ptext0:
+   272                           	opt stack 0
+   273  000146                     _main:
+   274                           	opt stack 29
+   275                           
+   276                           ;Remote.c: 19: OSCCON = 0x17;
+   277                           
+   278                           ;incstack = 0
+   279  000146  0E17               	movlw	23
+   280  000148  6ED3               	movwf	4051,c	;volatile
+   281                           
+   282                           ;Remote.c: 21: SWDTEN = 0x00;
+   283  00014A  90D1               	bcf	4049,0,c	;volatile
+   284                           
+   285                           ;Remote.c: 22: RCON = 0x00;
+   286  00014C  0E00               	movlw	0
+   287  00014E  6ED0               	movwf	4048,c	;volatile
+   288                           
+   289                           ;Remote.c: 24: ADCON1 = 0x06;
+   290  000150  0E06               	movlw	6
+   291  000152  6EC1               	movwf	4033,c	;volatile
+   292                           
+   293                           ;Remote.c: 26: TRISA = 0x00;
+   294  000154  0E00               	movlw	0
+   295  000156  6E92               	movwf	3986,c	;volatile
+   296                           
+   297                           ;Remote.c: 27: TRISC = 0x00;
+   298  000158  0E00               	movlw	0
+   299  00015A  6E94               	movwf	3988,c	;volatile
+   300                           
+   301                           ;Remote.c: 28: TRISD = 0x00;
+   302  00015C  0E00               	movlw	0
+   303  00015E  6E95               	movwf	3989,c	;volatile
+   304                           
+   305                           ;Remote.c: 29: TRISE = 0x00;
+   306  000160  0E00               	movlw	0
+   307  000162  6E96               	movwf	3990,c	;volatile
+   308                           
+   309                           ;Remote.c: 31: PORTB = 0x00;
+   310  000164  0E00               	movlw	0
+   311  000166  6E81               	movwf	3969,c	;volatile
+   312                           
+   313                           ;Remote.c: 33: for(count = 0; count <= 5; count++)
+   314  000168  0E00               	movlw	0
+   315  00016A  6E43               	movwf	_count,c
+   316  00016C  D010               	goto	L1
+   317  00016E                     l103:
+   318                           
+   319                           ;Remote.c: 34: {
+   320                           ;Remote.c: 35: PORTE = 0xFF;
+   321  00016E  6884               	setf	3972,c	;volatile
+   322                           
+   323                           ;Remote.c: 36: MY_DELAY(1000);
+   324  000170  0E03               	movlw	3
+   325  000172  6E32               	movwf	MY_DELAY@ms+1,c
+   326  000174  0EE8               	movlw	232
+   327  000176  6E31               	movwf	MY_DELAY@ms,c
+   328  000178  ECAC  F002         	call	_MY_DELAY	;wreg free
+   329                           
+   330                           ;Remote.c: 37: PORTE = 0x00;
+   331  00017C  0E00               	movlw	0
+   332  00017E  6E84               	movwf	3972,c	;volatile
+   333                           
+   334                           ;Remote.c: 38: MY_DELAY(1000);
+   335  000180  0E03               	movlw	3
+   336  000182  6E32               	movwf	MY_DELAY@ms+1,c
+   337  000184  0EE8               	movlw	232
+   338  000186  6E31               	movwf	MY_DELAY@ms,c
+   339  000188  ECAC  F002         	call	_MY_DELAY	;wreg free
+   340  00018C  2A43               	incf	_count,f,c
+   341  00018E                     L1:
+   342  00018E  0E05               	movlw	5
+   343  000190  6443               	cpfsgt	_count,c
+   344  000192  D7ED               	goto	l103
+   345                           
+   346                           ;Remote.c: 39: }
+   347                           ;Remote.c: 40: count = 0;
+   348  000194  0E00               	movlw	0
+   349  000196  6E43               	movwf	_count,c
+   350                           
+   351                           ;Remote.c: 42: PORTC = 0x01;
+   352  000198  0E01               	movlw	1
+   353  00019A  6E82               	movwf	3970,c	;volatile
+   354                           
+   355                           ;Remote.c: 44: INTCON = 0xA0;
+   356  00019C  0EA0               	movlw	160
+   357  00019E  6EF2               	movwf	intcon,c	;volatile
+   358                           
+   359                           ;Remote.c: 45: T0CON = 0xD8;
+   360  0001A0  0ED8               	movlw	216
+   361  0001A2  6ED5               	movwf	4053,c	;volatile
+   362                           
+   363                           ;Remote.c: 47: TMR0 = 0;
+   364  0001A4  0E00               	movlw	0
+   365  0001A6  6ED7               	movwf	4055,c	;volatile
+   366  0001A8  0E00               	movlw	0
+   367  0001AA  6ED6               	movwf	4054,c	;volatile
+   368                           
+   369                           ;Remote.c: 49: initKeyboard();
+   370  0001AC  ECD0  F002         	call	_initKeyboard	;wreg free
+   371  0001B0                     l800:
+   372                           
+   373                           ;Remote.c: 52: {
+   374                           ;Remote.c: 53: digit = getKeyboardInput();
+   375  0001B0  EC29  F002         	call	_getKeyboardInput	;wreg free
+   376  0001B4  6E21               	movwf	_digit,c
+   377                           
+   378                           ;Remote.c: 55: if(digit == 0x0C)
+   379  0001B6  5021               	movf	_digit,w,c
+   380  0001B8  0A0C               	xorlw	12
+   381  0001BA  A4D8               	btfss	status,2,c
+   382  0001BC  D024               	goto	l822
+   383                           
+   384                           ;Remote.c: 56: {
+   385                           ;Remote.c: 58: digits[0] = digits[0] + 1;
+   386  0001BE  281C               	incf	_digits,w,c
+   387  0001C0  6E1C               	movwf	_digits,c
+   388                           
+   389                           ;Remote.c: 59: if(digits[0] > 9)
+   390  0001C2  501C               	movf	_digits,w,c
+   391  0001C4  0A80               	xorlw	128
+   392  0001C6  0F76               	addlw	-138
+   393  0001C8  A0D8               	btfss	status,0,c
+   394  0001CA  D018               	goto	l107
+   395                           
+   396                           ;Remote.c: 60: {
+   397                           ;Remote.c: 61: digits[0] = 0;
+   398  0001CC  0E00               	movlw	0
+   399  0001CE  6E1C               	movwf	_digits,c
+   400                           
+   401                           ;Remote.c: 62: digits[1] = digits[1] + 1;
+   402  0001D0  281D               	incf	_digits+1,w,c
+   403  0001D2  6E1D               	movwf	_digits+1,c
+   404                           
+   405                           ;Remote.c: 63: if(digits[1] > 9)
+   406  0001D4  501D               	movf	_digits+1,w,c
+   407  0001D6  0A80               	xorlw	128
+   408  0001D8  0F76               	addlw	-138
+   409  0001DA  A0D8               	btfss	status,0,c
+   410  0001DC  D00F               	goto	l107
+   411                           
+   412                           ;Remote.c: 64: {
+   413                           ;Remote.c: 65: digits[1] = 0;
+   414  0001DE  0E00               	movlw	0
+   415  0001E0  6E1D               	movwf	_digits+1,c
+   416                           
+   417                           ;Remote.c: 66: digits[2] = digits[2] + 1;
+   418  0001E2  281E               	incf	_digits+2,w,c
+   419  0001E4  6E1E               	movwf	_digits+2,c
+   420                           
+   421                           ;Remote.c: 67: if(digits[2] > 9)
+   422  0001E6  501E               	movf	_digits+2,w,c
+   423  0001E8  0A80               	xorlw	128
+   424  0001EA  0F76               	addlw	-138
+   425  0001EC  A0D8               	btfss	status,0,c
+   426  0001EE  D006               	goto	l107
+   427                           
+   428                           ;Remote.c: 68: {
+   429                           ;Remote.c: 69: digits[2] = 9;
+   430  0001F0  0E09               	movlw	9
+   431  0001F2  6E1E               	movwf	_digits+2,c
+   432                           
+   433                           ;Remote.c: 70: digits[1] = 9;
+   434  0001F4  0E09               	movlw	9
+   435  0001F6  6E1D               	movwf	_digits+1,c
+   436                           
+   437                           ;Remote.c: 71: digits[0] = 9;
+   438  0001F8  0E09               	movlw	9
+   439  0001FA  6E1C               	movwf	_digits,c
+   440  0001FC                     l107:
+   441                           
+   442                           ;Remote.c: 72: }
+   443                           ;Remote.c: 73: }
+   444                           ;Remote.c: 74: }
+   445                           ;Remote.c: 75: One_Minute_Timer = 1;
+   446  0001FC  0E00               	movlw	0
+   447  0001FE  6E20               	movwf	_One_Minute_Timer+1,c
+   448  000200  0E01               	movlw	1
+   449  000202  6E1F               	movwf	_One_Minute_Timer,c
+   450                           
+   451                           ;Remote.c: 76: digit = 0xFF;
+   452  000204  6821               	setf	_digit,c
+   453  000206                     l822:
+   454                           
+   455                           ;Remote.c: 77: }
+   456                           ;Remote.c: 79: if(digit == 0x0B)
+   457  000206  5021               	movf	_digit,w,c
+   458  000208  0A0B               	xorlw	11
+   459  00020A  A4D8               	btfss	status,2,c
+   460  00020C  D01B               	goto	l844
+   461                           
+   462                           ;Remote.c: 80: {
+   463                           ;Remote.c: 82: digits[0] = digits[0] - 1;
+   464  00020E  041C               	decf	_digits,w,c
+   465  000210  6E1C               	movwf	_digits,c
+   466                           
+   467                           ;Remote.c: 83: if(digits[0] < 0)
+   468  000212  AE1C               	btfss	_digits,7,c
+   469  000214  D012               	goto	l111
+   470                           
+   471                           ;Remote.c: 84: {
+   472                           ;Remote.c: 85: digits[0] = 9;
+   473  000216  0E09               	movlw	9
+   474  000218  6E1C               	movwf	_digits,c
+   475                           
+   476                           ;Remote.c: 86: digits[1] = digits[1] - 1;
+   477  00021A  041D               	decf	_digits+1,w,c
+   478  00021C  6E1D               	movwf	_digits+1,c
+   479                           
+   480                           ;Remote.c: 87: if(digits[1] < 0)
+   481  00021E  AE1D               	btfss	_digits+1,7,c
+   482  000220  D00C               	goto	l111
+   483                           
+   484                           ;Remote.c: 88: {
+   485                           ;Remote.c: 89: digits[1] = 9;
+   486  000222  0E09               	movlw	9
+   487  000224  6E1D               	movwf	_digits+1,c
+   488                           
+   489                           ;Remote.c: 90: digits[2] = digits[2] - 1;
+   490  000226  041E               	decf	_digits+2,w,c
+   491  000228  6E1E               	movwf	_digits+2,c
+   492                           
+   493                           ;Remote.c: 91: if(digits[2] < 0)
+   494  00022A  AE1E               	btfss	_digits+2,7,c
+   495  00022C  D006               	goto	l111
+   496                           
+   497                           ;Remote.c: 92: {
+   498                           ;Remote.c: 93: digits[2] = 0;
+   499  00022E  0E00               	movlw	0
+   500  000230  6E1E               	movwf	_digits+2,c
+   501                           
+   502                           ;Remote.c: 94: digits[1] = 0;
+   503  000232  0E00               	movlw	0
+   504  000234  6E1D               	movwf	_digits+1,c
+   505                           
+   506                           ;Remote.c: 95: digits[0] = 0;
+   507  000236  0E00               	movlw	0
+   508  000238  6E1C               	movwf	_digits,c
+   509  00023A                     l111:
+   510                           
+   511                           ;Remote.c: 96: }
+   512                           ;Remote.c: 97: }
+   513                           ;Remote.c: 98: }
+   514                           ;Remote.c: 99: One_Minute_Timer = 1;
+   515  00023A  0E00               	movlw	0
+   516  00023C  6E20               	movwf	_One_Minute_Timer+1,c
+   517  00023E  0E01               	movlw	1
+   518  000240  6E1F               	movwf	_One_Minute_Timer,c
+   519                           
+   520                           ;Remote.c: 100: digit = 0xFF;
+   521  000242  6821               	setf	_digit,c
+   522  000244                     l844:
+   523                           
+   524                           ;Remote.c: 101: }
+   525                           ;Remote.c: 103: if( digit != 0xFF )
+   526  000244  2821               	incf	_digit,w,c
+   527  000246  B4D8               	btfsc	status,2,c
+   528  000248  D0D0               	goto	l888
+   529                           
+   530                           ;Remote.c: 104: {
+   531                           ;Remote.c: 105: if(count == 0)
+   532  00024A  6643               	tstfsz	_count,c
+   533  00024C  D030               	goto	l858
+   534                           
+   535                           ;Remote.c: 106: {
+   536                           ;Remote.c: 107: digits[count] = digit;
+   537  00024E  5043               	movf	_count,w,c
+   538  000250  0D01               	mullw	1
+   539  000252  0E1C               	movlw	low _digits
+   540  000254  24F3               	addwf	prodl,w,c
+   541  000256  6ED9               	movwf	fsr2l,c
+   542  000258  0E00               	movlw	high _digits
+   543  00025A  20F4               	addwfc	prodh,w,c
+   544  00025C  6EDA               	movwf	fsr2h,c
+   545  00025E  C021  FFDF         	movff	_digit,indf2
+   546                           
+   547                           ;Remote.c: 108: digits[count+1] = 10;
+   548  000262  5043               	movf	_count,w,c
+   549  000264  6E38               	movwf	??_main& (0+255),c
+   550  000266  6A39               	clrf	(??_main+1)& (0+255),c
+   551  000268  0E01               	movlw	1
+   552  00026A  2638               	addwf	??_main,f,c
+   553  00026C  0E00               	movlw	0
+   554  00026E  2239               	addwfc	??_main+1,f,c
+   555  000270  0E1C               	movlw	low _digits
+   556  000272  2438               	addwf	??_main,w,c
+   557  000274  6ED9               	movwf	fsr2l,c
+   558  000276  0E00               	movlw	high _digits
+   559  000278  2039               	addwfc	??_main+1,w,c
+   560  00027A  6EDA               	movwf	fsr2h,c
+   561  00027C  0E0A               	movlw	10
+   562  00027E  6EDF               	movwf	indf2,c
+   563                           
+   564                           ;Remote.c: 109: digits[count+2] = 10;
+   565  000280  5043               	movf	_count,w,c
+   566  000282  6E38               	movwf	??_main& (0+255),c
+   567  000284  6A39               	clrf	(??_main+1)& (0+255),c
+   568  000286  0E02               	movlw	2
+   569  000288  2638               	addwf	??_main,f,c
+   570  00028A  0E00               	movlw	0
+   571  00028C  2239               	addwfc	??_main+1,f,c
+   572  00028E  0E1C               	movlw	low _digits
+   573  000290  2438               	addwf	??_main,w,c
+   574  000292  6ED9               	movwf	fsr2l,c
+   575  000294  0E00               	movlw	high _digits
+   576  000296  2039               	addwfc	??_main+1,w,c
+   577  000298  6EDA               	movwf	fsr2h,c
+   578  00029A  0E0A               	movlw	10
+   579  00029C  6EDF               	movwf	indf2,c
+   580                           
+   581                           ;Remote.c: 110: data_timer = 1;
+   582  00029E  0E00               	movlw	0
+   583  0002A0  6E41               	movwf	_data_timer+1,c
+   584  0002A2  0E01               	movlw	1
+   585  0002A4  6E40               	movwf	_data_timer,c
+   586                           
+   587                           ;Remote.c: 111: One_Minute_Timer = 1;
+   588  0002A6  0E00               	movlw	0
+   589  0002A8  6E20               	movwf	_One_Minute_Timer+1,c
+   590  0002AA  0E01               	movlw	1
+   591  0002AC  6E1F               	movwf	_One_Minute_Timer,c
+   592  0002AE                     l858:
+   593                           
+   594                           ;Remote.c: 112: }
+   595                           ;Remote.c: 113: if(count == 1)
+   596  0002AE  0443               	decf	_count,w,c
+   597  0002B0  A4D8               	btfss	status,2,c
+   598  0002B2  D036               	goto	l868
+   599                           
+   600                           ;Remote.c: 114: {
+   601                           ;Remote.c: 115: digits[count] = digits[count-1];
+   602  0002B4  0EFF               	movlw	255
+   603  0002B6  6E38               	movwf	??_main& (0+255),c
+   604  0002B8  0EFF               	movlw	255
+   605  0002BA  6E39               	movwf	(??_main+1)& (0+255),c
+   606  0002BC  5043               	movf	_count,w,c
+   607  0002BE  6E3A               	movwf	(??_main+2)& (0+255),c
+   608  0002C0  6A3B               	clrf	(??_main+3)& (0+255),c
+   609  0002C2  5038               	movf	??_main,w,c
+   610  0002C4  263A               	addwf	??_main+2,f,c
+   611  0002C6  5039               	movf	??_main+1,w,c
+   612  0002C8  223B               	addwfc	??_main+3,f,c
+   613  0002CA  0E1C               	movlw	low _digits
+   614  0002CC  243A               	addwf	??_main+2,w,c
+   615  0002CE  6ED9               	movwf	fsr2l,c
+   616  0002D0  0E00               	movlw	high _digits
+   617  0002D2  203B               	addwfc	??_main+3,w,c
+   618  0002D4  6EDA               	movwf	fsr2h,c
+   619  0002D6  5043               	movf	_count,w,c
+   620  0002D8  0D01               	mullw	1
+   621  0002DA  0E1C               	movlw	low _digits
+   622  0002DC  24F3               	addwf	prodl,w,c
+   623  0002DE  6EE1               	movwf	fsr1l,c
+   624  0002E0  0E00               	movlw	high _digits
+   625  0002E2  20F4               	addwfc	prodh,w,c
+   626  0002E4  6EE2               	movwf	fsr1h,c
+   627  0002E6  CFDF FFE7          	movff	indf2,indf1
+   628                           
+   629                           ;Remote.c: 116: digits[count-1] = digit;
+   630  0002EA  0EFF               	movlw	255
+   631  0002EC  6E38               	movwf	??_main& (0+255),c
+   632  0002EE  0EFF               	movlw	255
+   633  0002F0  6E39               	movwf	(??_main+1)& (0+255),c
+   634  0002F2  5043               	movf	_count,w,c
+   635  0002F4  6E3A               	movwf	(??_main+2)& (0+255),c
+   636  0002F6  6A3B               	clrf	(??_main+3)& (0+255),c
+   637  0002F8  5038               	movf	??_main,w,c
+   638  0002FA  263A               	addwf	??_main+2,f,c
+   639  0002FC  5039               	movf	??_main+1,w,c
+   640  0002FE  223B               	addwfc	??_main+3,f,c
+   641  000300  0E1C               	movlw	low _digits
+   642  000302  243A               	addwf	??_main+2,w,c
+   643  000304  6ED9               	movwf	fsr2l,c
+   644  000306  0E00               	movlw	high _digits
+   645  000308  203B               	addwfc	??_main+3,w,c
+   646  00030A  6EDA               	movwf	fsr2h,c
+   647  00030C  C021  FFDF         	movff	_digit,indf2
+   648                           
+   649                           ;Remote.c: 117: data_timer = 1;
+   650  000310  0E00               	movlw	0
+   651  000312  6E41               	movwf	_data_timer+1,c
+   652  000314  0E01               	movlw	1
+   653  000316  6E40               	movwf	_data_timer,c
+   654                           
+   655                           ;Remote.c: 118: One_Minute_Timer = 1;
+   656  000318  0E00               	movlw	0
+   657  00031A  6E20               	movwf	_One_Minute_Timer+1,c
+   658  00031C  0E01               	movlw	1
+   659  00031E  6E1F               	movwf	_One_Minute_Timer,c
+   660  000320                     l868:
+   661                           
+   662                           ;Remote.c: 119: }
+   663                           ;Remote.c: 120: if(count == 2)
+   664  000320  5043               	movf	_count,w,c
+   665  000322  0A02               	xorlw	2
+   666  000324  A4D8               	btfss	status,2,c
+   667  000326  D05A               	goto	l880
+   668                           
+   669                           ;Remote.c: 121: {
+   670                           ;Remote.c: 122: digits[count] = digits[count-1];
+   671  000328  0EFF               	movlw	255
+   672  00032A  6E38               	movwf	??_main& (0+255),c
+   673  00032C  0EFF               	movlw	255
+   674  00032E  6E39               	movwf	(??_main+1)& (0+255),c
+   675  000330  5043               	movf	_count,w,c
+   676  000332  6E3A               	movwf	(??_main+2)& (0+255),c
+   677  000334  6A3B               	clrf	(??_main+3)& (0+255),c
+   678  000336  5038               	movf	??_main,w,c
+   679  000338  263A               	addwf	??_main+2,f,c
+   680  00033A  5039               	movf	??_main+1,w,c
+   681  00033C  223B               	addwfc	??_main+3,f,c
+   682  00033E  0E1C               	movlw	low _digits
+   683  000340  243A               	addwf	??_main+2,w,c
+   684  000342  6ED9               	movwf	fsr2l,c
+   685  000344  0E00               	movlw	high _digits
+   686  000346  203B               	addwfc	??_main+3,w,c
+   687  000348  6EDA               	movwf	fsr2h,c
+   688  00034A  5043               	movf	_count,w,c
+   689  00034C  0D01               	mullw	1
+   690  00034E  0E1C               	movlw	low _digits
+   691  000350  24F3               	addwf	prodl,w,c
+   692  000352  6EE1               	movwf	fsr1l,c
+   693  000354  0E00               	movlw	high _digits
+   694  000356  20F4               	addwfc	prodh,w,c
+   695  000358  6EE2               	movwf	fsr1h,c
+   696  00035A  CFDF FFE7          	movff	indf2,indf1
+   697                           
+   698                           ;Remote.c: 123: digits[count-1] = digits[count-2];
+   699  00035E  0EFE               	movlw	254
+   700  000360  6E38               	movwf	??_main& (0+255),c
+   701  000362  0EFF               	movlw	255
+   702  000364  6E39               	movwf	(??_main+1)& (0+255),c
+   703  000366  5043               	movf	_count,w,c
+   704  000368  6E3A               	movwf	(??_main+2)& (0+255),c
+   705  00036A  6A3B               	clrf	(??_main+3)& (0+255),c
+   706  00036C  5038               	movf	??_main,w,c
+   707  00036E  263A               	addwf	??_main+2,f,c
+   708  000370  5039               	movf	??_main+1,w,c
+   709  000372  223B               	addwfc	??_main+3,f,c
+   710  000374  0E1C               	movlw	low _digits
+   711  000376  243A               	addwf	??_main+2,w,c
+   712  000378  6ED9               	movwf	fsr2l,c
+   713  00037A  0E00               	movlw	high _digits
+   714  00037C  203B               	addwfc	??_main+3,w,c
+   715  00037E  6EDA               	movwf	fsr2h,c
+   716  000380  0EFF               	movlw	255
+   717  000382  6E3C               	movwf	(??_main+4)& (0+255),c
+   718  000384  0EFF               	movlw	255
+   719  000386  6E3D               	movwf	(??_main+5)& (0+255),c
+   720  000388  5043               	movf	_count,w,c
+   721  00038A  6E3E               	movwf	(??_main+6)& (0+255),c
+   722  00038C  6A3F               	clrf	(??_main+7)& (0+255),c
+   723  00038E  503C               	movf	??_main+4,w,c
+   724  000390  263E               	addwf	??_main+6,f,c
+   725  000392  503D               	movf	??_main+5,w,c
+   726  000394  223F               	addwfc	??_main+7,f,c
+   727  000396  0E1C               	movlw	low _digits
+   728  000398  243E               	addwf	??_main+6,w,c
+   729  00039A  6EE1               	movwf	fsr1l,c
+   730  00039C  0E00               	movlw	high _digits
+   731  00039E  203F               	addwfc	??_main+7,w,c
+   732  0003A0  6EE2               	movwf	fsr1h,c
+   733  0003A2  CFDF FFE7          	movff	indf2,indf1
+   734                           
+   735                           ;Remote.c: 124: digits[count-2] = digit;
+   736  0003A6  0EFE               	movlw	254
+   737  0003A8  6E38               	movwf	??_main& (0+255),c
+   738  0003AA  0EFF               	movlw	255
+   739  0003AC  6E39               	movwf	(??_main+1)& (0+255),c
+   740  0003AE  5043               	movf	_count,w,c
+   741  0003B0  6E3A               	movwf	(??_main+2)& (0+255),c
+   742  0003B2  6A3B               	clrf	(??_main+3)& (0+255),c
+   743  0003B4  5038               	movf	??_main,w,c
+   744  0003B6  263A               	addwf	??_main+2,f,c
+   745  0003B8  5039               	movf	??_main+1,w,c
+   746  0003BA  223B               	addwfc	??_main+3,f,c
+   747  0003BC  0E1C               	movlw	low _digits
+   748  0003BE  243A               	addwf	??_main+2,w,c
+   749  0003C0  6ED9               	movwf	fsr2l,c
+   750  0003C2  0E00               	movlw	high _digits
+   751  0003C4  203B               	addwfc	??_main+3,w,c
+   752  0003C6  6EDA               	movwf	fsr2h,c
+   753  0003C8  C021  FFDF         	movff	_digit,indf2
+   754                           
+   755                           ;Remote.c: 125: data_timer = 0;
+   756  0003CC  0E00               	movlw	0
+   757  0003CE  6E41               	movwf	_data_timer+1,c
+   758  0003D0  0E00               	movlw	0
+   759  0003D2  6E40               	movwf	_data_timer,c
+   760                           
+   761                           ;Remote.c: 126: One_Minute_Timer = 1;
+   762  0003D4  0E00               	movlw	0
+   763  0003D6  6E20               	movwf	_One_Minute_Timer+1,c
+   764  0003D8  0E01               	movlw	1
+   765  0003DA  6E1F               	movwf	_One_Minute_Timer,c
+   766  0003DC                     l880:
+   767                           
+   768                           ;Remote.c: 127: }
+   769                           ;Remote.c: 128: count++;
+   770  0003DC  2A43               	incf	_count,f,c
+   771                           
+   772                           ;Remote.c: 129: if(count > 2)
+   773  0003DE  0E02               	movlw	2
+   774  0003E0  6443               	cpfsgt	_count,c
+   775  0003E2  D002               	goto	l886
+   776                           
+   777                           ;Remote.c: 130: count = 0;
+   778  0003E4  0E00               	movlw	0
+   779  0003E6  6E43               	movwf	_count,c
+   780  0003E8                     l886:
+   781                           
+   782                           ;Remote.c: 131: digit = 0xFF;
+   783  0003E8  6821               	setf	_digit,c
+   784  0003EA                     l888:
+   785                           
+   786                           ;Remote.c: 132: }
+   787                           ;Remote.c: 134: if(Sleep_Flag == 1)
+   788  0003EA  0442               	decf	_Sleep_Flag,w,c
+   789  0003EC  A4D8               	btfss	status,2,c
+   790  0003EE  D6E0               	goto	l800
+   791                           
+   792                           ;Remote.c: 135: {
+   793                           ;Remote.c: 136: PORTC = 0x00;
+   794  0003F0  0E00               	movlw	0
+   795  0003F2  6E82               	movwf	3970,c	;volatile
+   796                           
+   797                           ;Remote.c: 137: PORTD = 0x00;
+   798  0003F4  0E00               	movlw	0
+   799  0003F6  6E83               	movwf	3971,c	;volatile
+   800                           
+   801                           ;Remote.c: 138: TMR0ON = 0;
+   802  0003F8  9ED5               	bcf	4053,7,c	;volatile
+   803                           
+   804                           ;Remote.c: 139: TRISA = 0x00;
+   805  0003FA  0E00               	movlw	0
+   806  0003FC  6E92               	movwf	3986,c	;volatile
+   807                           
+   808                           ;Remote.c: 140: PORTA = 0x07;
+   809  0003FE  0E07               	movlw	7
+   810  000400  6E80               	movwf	3968,c	;volatile
+   811                           
+   812                           ;Remote.c: 141: TRISB = 0xFF;
+   813  000402  6893               	setf	3987,c	;volatile
+   814                           
+   815                           ;Remote.c: 142: TRISC = 0xFF;
+   816  000404  6894               	setf	3988,c	;volatile
+   817                           
+   818                           ;Remote.c: 143: TRISD = 0xFF;
+   819  000406  6895               	setf	3989,c	;volatile
+   820                           
+   821                           ;Remote.c: 145: INTCON = 0x88;
+   822  000408  0E88               	movlw	136
+   823  00040A  6EF2               	movwf	intcon,c	;volatile
+   824                           
+   825                           ;Remote.c: 146: IOCB = 0xFF;
+   826  00040C  687D               	setf	3965,c	;volatile
+   827  00040E  0003               	sleep		;# 
+   828                           
+   829                           ;Remote.c: 152: Sleep_Flag = 0;
+   830  000410  0E00               	movlw	0
+   831  000412  6E42               	movwf	_Sleep_Flag,c
+   832                           
+   833                           ;Remote.c: 153: RCON = 0x00;
+   834  000414  0E00               	movlw	0
+   835  000416  6ED0               	movwf	4048,c	;volatile
+   836                           
+   837                           ;Remote.c: 154: INTCON = 0xA0;
+   838  000418  0EA0               	movlw	160
+   839  00041A  6EF2               	movwf	intcon,c	;volatile
+   840                           
+   841                           ;Remote.c: 155: IOCB = 0x00;
+   842  00041C  0E00               	movlw	0
+   843  00041E  6E7D               	movwf	3965,c	;volatile
+   844                           
+   845                           ;Remote.c: 156: T0CON = 0xD8;
+   846  000420  0ED8               	movlw	216
+   847  000422  6ED5               	movwf	4053,c	;volatile
+   848                           
+   849                           ;Remote.c: 157: TMR0 = 0;
+   850  000424  0E00               	movlw	0
+   851  000426  6ED7               	movwf	4055,c	;volatile
+   852  000428  0E00               	movlw	0
+   853  00042A  6ED6               	movwf	4054,c	;volatile
+   854                           
+   855                           ;Remote.c: 158: TRISA = 0x00;
+   856  00042C  0E00               	movlw	0
+   857  00042E  6E92               	movwf	3986,c	;volatile
+   858                           
+   859                           ;Remote.c: 159: PORTA = 0x00;
+   860  000430  0E00               	movlw	0
+   861  000432  6E80               	movwf	3968,c	;volatile
+   862                           
+   863                           ;Remote.c: 160: TRISC = 0x00;
+   864  000434  0E00               	movlw	0
+   865  000436  6E94               	movwf	3988,c	;volatile
+   866                           
+   867                           ;Remote.c: 161: TRISD = 0x00;
+   868  000438  0E00               	movlw	0
+   869  00043A  6E95               	movwf	3989,c	;volatile
+   870                           
+   871                           ;Remote.c: 162: initKeyboard();
+   872  00043C  ECD0  F002         	call	_initKeyboard	;wreg free
+   873                           
+   874                           ;Remote.c: 163: PORTC = 0x01;
+   875  000440  0E01               	movlw	1
+   876  000442  6E82               	movwf	3970,c	;volatile
+   877                           
+   878                           ;Remote.c: 164: index = 0;
+   879  000444  0E00               	movlw	0
+   880  000446  6E44               	movwf	_index,c
+   881                           
+   882                           ;Remote.c: 165: One_Minute_Timer = 1;
+   883  000448  0E00               	movlw	0
+   884  00044A  6E20               	movwf	_One_Minute_Timer+1,c
+   885  00044C  0E01               	movlw	1
+   886  00044E  6E1F               	movwf	_One_Minute_Timer,c
+   887  000450  D6AF               	goto	l800
+   888  000452                     __end_of_main:
+   889                           	opt stack 0
+   890                           tblptru	equ	0xFF8
+   891                           tblptrh	equ	0xFF7
+   892                           tblptrl	equ	0xFF6
+   893                           tablat	equ	0xFF5
+   894                           prodh	equ	0xFF4
+   895                           prodl	equ	0xFF3
+   896                           intcon	equ	0xFF2
+   897                           postinc0	equ	0xFEE
+   898                           indf1	equ	0xFE7
+   899                           postdec1	equ	0xFE5
+   900                           fsr1h	equ	0xFE2
+   901                           fsr1l	equ	0xFE1
+   902                           indf2	equ	0xFDF
+   903                           fsr2h	equ	0xFDA
+   904                           fsr2l	equ	0xFD9
+   905                           status	equ	0xFD8
+   906                           
+   907 ;; *************** function _initKeyboard *****************
+   908 ;; Defined at:
+   909 ;;		line 5 in file "E:\Study Material\XC8 PROJECTS\New Remote\Remote2\keypad.c"
+   910 ;; Parameters:    Size  Location     Type
+   911 ;;		None
+   912 ;; Auto vars:     Size  Location     Type
+   913 ;;		None
+   914 ;; Return value:  Size  Location     Type
+   915 ;;		None               void
+   916 ;; Registers used:
+   917 ;;		wreg, status,2
+   918 ;; Tracked objects:
+   919 ;;		On entry : 0/0
+   920 ;;		On exit  : 0/0
+   921 ;;		Unchanged: 0/0
+   922 ;; Data sizes:     COMRAM   BANK0   BANK1
+   923 ;;      Params:         0       0       0
+   924 ;;      Locals:         0       0       0
+   925 ;;      Temps:          0       0       0
+   926 ;;      Totals:         0       0       0
+   927 ;;Total ram usage:        0 bytes
+   928 ;; Hardware stack levels used:    1
+   929 ;; Hardware stack levels required when called:    1
+   930 ;; This function calls:
+   931 ;;		Nothing
+   932 ;; This function is called by:
+   933 ;;		_main
+   934 ;; This function uses a non-reentrant model
+   935 ;;
+   936                           
+   937                           	psect	text1
+   938  0005A0                     __ptext1:
+   939                           	opt stack 0
+   940  0005A0                     _initKeyboard:
+   941                           	opt stack 29
+   942                           
+   943                           ;keypad.c: 7: TRISA = 0x00;
+   944                           
+   945                           ;incstack = 0
+   946  0005A0  0E00               	movlw	0
+   947  0005A2  6E92               	movwf	3986,c	;volatile
+   948                           
+   949                           ;keypad.c: 8: TRISB = 0xF0;
+   950  0005A4  0EF0               	movlw	240
+   951  0005A6  6E93               	movwf	3987,c	;volatile
+   952                           
+   953                           ;keypad.c: 9: PORTA = 0x00;
+   954  0005A8  0E00               	movlw	0
+   955  0005AA  6E80               	movwf	3968,c	;volatile
+   956                           
+   957                           ;keypad.c: 10: PORTB = 0x00;
+   958  0005AC  0E00               	movlw	0
+   959  0005AE  6E81               	movwf	3969,c	;volatile
+   960  0005B0  0012               	return	
+   961  0005B2                     __end_of_initKeyboard:
+   962                           	opt stack 0
+   963                           tblptru	equ	0xFF8
+   964                           tblptrh	equ	0xFF7
+   965                           tblptrl	equ	0xFF6
+   966                           tablat	equ	0xFF5
+   967                           prodh	equ	0xFF4
+   968                           prodl	equ	0xFF3
+   969                           intcon	equ	0xFF2
+   970                           postinc0	equ	0xFEE
+   971                           indf1	equ	0xFE7
+   972                           postdec1	equ	0xFE5
+   973                           fsr1h	equ	0xFE2
+   974                           fsr1l	equ	0xFE1
+   975                           indf2	equ	0xFDF
+   976                           fsr2h	equ	0xFDA
+   977                           fsr2l	equ	0xFD9
+   978                           status	equ	0xFD8
+   979                           
+   980 ;; *************** function _getKeyboardInput *****************
+   981 ;; Defined at:
+   982 ;;		line 13 in file "E:\Study Material\XC8 PROJECTS\New Remote\Remote2\keypad.c"
+   983 ;; Parameters:    Size  Location     Type
+   984 ;;		None
+   985 ;; Auto vars:     Size  Location     Type
+   986 ;;  temp            1   21[COMRAM] unsigned char 
+   987 ;;  column          1   20[COMRAM] unsigned char 
+   988 ;;  row             1   19[COMRAM] unsigned char 
+   989 ;;  Keyboard_Inp    1   18[COMRAM] unsigned char 
+   990 ;;  column_mask     1   17[COMRAM] unsigned char 
+   991 ;; Return value:  Size  Location     Type
+   992 ;;                  1    wreg      unsigned char 
+   993 ;; Registers used:
+   994 ;;		wreg, fsr2l, fsr2h, status,2, status,0, prodl, prodh
+   995 ;; Tracked objects:
+   996 ;;		On entry : 0/0
+   997 ;;		On exit  : 0/0
+   998 ;;		Unchanged: 0/0
+   999 ;; Data sizes:     COMRAM   BANK0   BANK1
+  1000 ;;      Params:         0       0       0
+  1001 ;;      Locals:         5       0       0
+  1002 ;;      Temps:          2       0       0
+  1003 ;;      Totals:         7       0       0
+  1004 ;;Total ram usage:        7 bytes
+  1005 ;; Hardware stack levels used:    1
+  1006 ;; Hardware stack levels required when called:    1
+  1007 ;; This function calls:
+  1008 ;;		Nothing
+  1009 ;; This function is called by:
+  1010 ;;		_main
+  1011 ;; This function uses a non-reentrant model
+  1012 ;;
+  1013                           
+  1014                           	psect	text2
+  1015  000452                     __ptext2:
+  1016                           	opt stack 0
+  1017  000452                     _getKeyboardInput:
+  1018                           	opt stack 29
+  1019                           
+  1020                           ;keypad.c: 15: char Keyboard_Input = 0xFF;
+  1021                           
+  1022                           ;incstack = 0
+  1023  000452  6834               	setf	getKeyboardInput@Keyboard_Input,c
+  1024                           
+  1025                           ;keypad.c: 16: char column = 0;
+  1026  000454  0E00               	movlw	0
+  1027  000456  6E36               	movwf	getKeyboardInput@column,c
+  1028                           
+  1029                           ;keypad.c: 17: char row;
+  1030                           ;keypad.c: 18: char column_mask = 0x01;
+  1031  000458  0E01               	movlw	1
+  1032  00045A  6E33               	movwf	getKeyboardInput@column_mask,c
+  1033                           
+  1034                           ;keypad.c: 19: char temp = 0x00;
+  1035  00045C  0E00               	movlw	0
+  1036  00045E  6E37               	movwf	getKeyboardInput@temp,c
+  1037                           
+  1038                           ;keypad.c: 20: for(column = 0; column < 4; column ++)
+  1039  000460  0E00               	movlw	0
+  1040  000462  6E36               	movwf	getKeyboardInput@column,c
+  1041  000464  D057               	goto	L3
+  1042  000466                     l724:
+  1043                           
+  1044                           ;keypad.c: 21: {
+  1045                           ;keypad.c: 22: PORTA = 0x00;
+  1046  000466  0E00               	movlw	0
+  1047  000468  6E80               	movwf	3968,c	;volatile
+  1048                           
+  1049                           ;keypad.c: 23: PORTB = 0x00;
+  1050  00046A  0E00               	movlw	0
+  1051  00046C  6E81               	movwf	3969,c	;volatile
+  1052                           
+  1053                           ;keypad.c: 24: PORTA = column_mask << column;
+  1054  00046E  C036  F031         	movff	getKeyboardInput@column,??_getKeyboardInput
+  1055  000472  C033  F032         	movff	getKeyboardInput@column_mask,??_getKeyboardInput+1
+  1056  000476  2A31               	incf	??_getKeyboardInput,f,c
+  1057  000478  D002               	goto	u24
+  1058  00047A                     u25:
+  1059  00047A  90D8               	bcf	status,0,c
+  1060  00047C  3632               	rlcf	??_getKeyboardInput+1,f,c
+  1061  00047E                     u24:
+  1062  00047E  2E31               	decfsz	??_getKeyboardInput,f,c
+  1063  000480  D7FC               	goto	u25
+  1064  000482  5032               	movf	??_getKeyboardInput+1,w,c
+  1065  000484  6E80               	movwf	3968,c	;volatile
+  1066                           
+  1067                           ;keypad.c: 25: _delay((unsigned long)((1)*(250000/4000.0)));
+  1068  000486  0E14               	movlw	20
+  1069  000488                     u357:
+  1070  000488  2EE8               	decfsz	wreg,f,c
+  1071  00048A  D7FE               	goto	u357
+  1072  00048C  D000               	nop2		;nop
+  1073                           
+  1074                           ;keypad.c: 27: temp = PORTB & 0xF0;
+  1075  00048E  5081               	movf	3969,w,c	;volatile
+  1076  000490  0BF0               	andlw	240
+  1077  000492  6E37               	movwf	getKeyboardInput@temp,c
+  1078                           
+  1079                           ;keypad.c: 28: if(temp != 0x00)
+  1080  000494  5037               	movf	getKeyboardInput@temp,w,c
+  1081  000496  B4D8               	btfsc	status,2,c
+  1082  000498  D003               	goto	l736
+  1083                           
+  1084                           ;keypad.c: 29: _delay((unsigned long)((5)*(250000/4000.0)));
+  1085  00049A  0E68               	movlw	104
+  1086  00049C                     u367:
+  1087  00049C  2EE8               	decfsz	wreg,f,c
+  1088  00049E  D7FE               	goto	u367
+  1089  0004A0                     l736:
+  1090                           
+  1091                           ;keypad.c: 31: temp = PORTB & 0xF0;
+  1092  0004A0  5081               	movf	3969,w,c	;volatile
+  1093  0004A2  0BF0               	andlw	240
+  1094  0004A4  6E37               	movwf	getKeyboardInput@temp,c
+  1095                           
+  1096                           ;keypad.c: 32: if(temp != 0x00)
+  1097  0004A6  5037               	movf	getKeyboardInput@temp,w,c
+  1098  0004A8  B4D8               	btfsc	status,2,c
+  1099  0004AA  D033               	goto	l762
+  1100                           
+  1101                           ;keypad.c: 33: {
+  1102                           ;keypad.c: 35: row = temp >> 4;
+  1103  0004AC  3837               	swapf	getKeyboardInput@temp,w,c
+  1104  0004AE  0B0F               	andlw	15
+  1105  0004B0  6E35               	movwf	getKeyboardInput@row,c
+  1106                           
+  1107                           ;keypad.c: 36: row = row >> 1;
+  1108  0004B2  90D8               	bcf	status,0,c
+  1109  0004B4  3035               	rrcf	getKeyboardInput@row,w,c
+  1110  0004B6  6E35               	movwf	getKeyboardInput@row,c
+  1111                           
+  1112                           ;keypad.c: 37: if(row > 3)
+  1113  0004B8  0E03               	movlw	3
+  1114  0004BA  6435               	cpfsgt	getKeyboardInput@row,c
+  1115  0004BC  D002               	goto	l746
+  1116                           
+  1117                           ;keypad.c: 38: row = 3;
+  1118  0004BE  0E03               	movlw	3
+  1119  0004C0  6E35               	movwf	getKeyboardInput@row,c
+  1120  0004C2                     l746:
+  1121                           
+  1122                           ;keypad.c: 40: Keyboard_Input = Keyboard_Keys[column][row];
+  1123  0004C2  5036               	movf	getKeyboardInput@column,w,c
+  1124  0004C4  0D04               	mullw	4
+  1125  0004C6  0E01               	movlw	low _Keyboard_Keys
+  1126  0004C8  6E31               	movwf	??_getKeyboardInput& (0+255),c
+  1127  0004CA  0E00               	movlw	high _Keyboard_Keys
+  1128  0004CC  6E32               	movwf	(??_getKeyboardInput+1)& (0+255),c
+  1129  0004CE  50F3               	movf	prodl,w,c
+  1130  0004D0  2631               	addwf	??_getKeyboardInput,f,c
+  1131  0004D2  50F4               	movf	prodh,w,c
+  1132  0004D4  2232               	addwfc	??_getKeyboardInput+1,f,c
+  1133  0004D6  5035               	movf	getKeyboardInput@row,w,c
+  1134  0004D8  0D01               	mullw	1
+  1135  0004DA  50F3               	movf	prodl,w,c
+  1136  0004DC  2431               	addwf	??_getKeyboardInput,w,c
+  1137  0004DE  6ED9               	movwf	fsr2l,c
+  1138  0004E0  50F4               	movf	prodh,w,c
+  1139  0004E2  2032               	addwfc	??_getKeyboardInput+1,w,c
+  1140  0004E4  6EDA               	movwf	fsr2h,c
+  1141  0004E6  50DF               	movf	indf2,w,c
+  1142  0004E8  6E34               	movwf	getKeyboardInput@Keyboard_Input,c
+  1143                           
+  1144                           ;keypad.c: 42: if(Keyboard_Input == 0x00)
+  1145  0004EA  6634               	tstfsz	getKeyboardInput@Keyboard_Input,c
+  1146  0004EC  D003               	goto	l23
+  1147                           
+  1148                           ;keypad.c: 43: PORTB = 0x0A;
+  1149  0004EE  0E0A               	movlw	10
+  1150  0004F0  6E81               	movwf	3969,c	;volatile
+  1151  0004F2  D007               	goto	L2
+  1152  0004F4                     l23:
+  1153                           
+  1154                           ;keypad.c: 44: else
+  1155                           ;keypad.c: 45: PORTB = Keyboard_Input;
+  1156  0004F4  C034  FF81         	movff	getKeyboardInput@Keyboard_Input,3969	;volatile
+  1157  0004F8  D004               	goto	L2
+  1158  0004FA                     l754:
+  1159                           
+  1160                           ;keypad.c: 49: {
+  1161                           ;keypad.c: 50: _delay((unsigned long)((1)*(250000/4000.0)));
+  1162  0004FA  0E14               	movlw	20
+  1163  0004FC                     u377:
+  1164  0004FC  2EE8               	decfsz	wreg,f,c
+  1165  0004FE  D7FE               	goto	u377
+  1166  000500  D000               	nop2		;nop
+  1167  000502                     L2:
+  1168                           
+  1169                           ;keypad.c: 51: temp = PORTB & 0xF0;
+  1170  000502  5081               	movf	3969,w,c	;volatile
+  1171  000504  0BF0               	andlw	240
+  1172  000506  6E37               	movwf	getKeyboardInput@temp,c
+  1173  000508  6637               	tstfsz	getKeyboardInput@temp,c
+  1174  00050A  D7F7               	goto	l754
+  1175                           
+  1176                           ;keypad.c: 52: }
+  1177                           ;keypad.c: 53: PORTB = 0x00;
+  1178  00050C  0E00               	movlw	0
+  1179  00050E  6E81               	movwf	3969,c	;volatile
+  1180                           
+  1181                           ;keypad.c: 54: break;
+  1182  000510  D004               	goto	l766
+  1183  000512                     l762:
+  1184  000512  2A36               	incf	getKeyboardInput@column,f,c
+  1185  000514                     L3:
+  1186  000514  0E03               	movlw	3
+  1187  000516  6436               	cpfsgt	getKeyboardInput@column,c
+  1188  000518  D7A6               	goto	l724
+  1189  00051A                     l766:
+  1190                           
+  1191                           ;keypad.c: 55: }
+  1192                           ;keypad.c: 56: }
+  1193                           ;keypad.c: 57: PORTA = 0x00;
+  1194  00051A  0E00               	movlw	0
+  1195  00051C  6E80               	movwf	3968,c	;volatile
+  1196                           
+  1197                           ;keypad.c: 58: PORTB = 0x00;
+  1198  00051E  0E00               	movlw	0
+  1199  000520  6E81               	movwf	3969,c	;volatile
+  1200                           
+  1201                           ;keypad.c: 59: return Keyboard_Input;
+  1202  000522  5034               	movf	getKeyboardInput@Keyboard_Input,w,c
+  1203  000524  0012               	return	
+  1204  000526                     __end_of_getKeyboardInput:
+  1205                           	opt stack 0
+  1206                           tblptru	equ	0xFF8
+  1207                           tblptrh	equ	0xFF7
+  1208                           tblptrl	equ	0xFF6
+  1209                           tablat	equ	0xFF5
+  1210                           prodh	equ	0xFF4
+  1211                           prodl	equ	0xFF3
+  1212                           intcon	equ	0xFF2
+  1213                           postinc0	equ	0xFEE
+  1214                           wreg	equ	0xFE8
+  1215                           indf1	equ	0xFE7
+  1216                           postdec1	equ	0xFE5
+  1217                           fsr1h	equ	0xFE2
+  1218                           fsr1l	equ	0xFE1
+  1219                           indf2	equ	0xFDF
+  1220                           fsr2h	equ	0xFDA
+  1221                           fsr2l	equ	0xFD9
+  1222                           status	equ	0xFD8
+  1223                           
+  1224 ;; *************** function _MY_DELAY *****************
+  1225 ;; Defined at:
+  1226 ;;		line 218 in file "E:\Study Material\XC8 PROJECTS\New Remote\Remote2\Remote.c"
+  1227 ;; Parameters:    Size  Location     Type
+  1228 ;;  ms              2   15[COMRAM] int 
+  1229 ;; Auto vars:     Size  Location     Type
+  1230 ;;		None
+  1231 ;; Return value:  Size  Location     Type
+  1232 ;;		None               void
+  1233 ;; Registers used:
+  1234 ;;		wreg, status,2, status,0, prodl
+  1235 ;; Tracked objects:
+  1236 ;;		On entry : 0/0
+  1237 ;;		On exit  : 0/0
+  1238 ;;		Unchanged: 0/0
+  1239 ;; Data sizes:     COMRAM   BANK0   BANK1
+  1240 ;;      Params:         2       0       0
+  1241 ;;      Locals:         0       0       0
+  1242 ;;      Temps:          0       0       0
+  1243 ;;      Totals:         2       0       0
+  1244 ;;Total ram usage:        2 bytes
+  1245 ;; Hardware stack levels used:    1
+  1246 ;; Hardware stack levels required when called:    1
+  1247 ;; This function calls:
+  1248 ;;		Nothing
+  1249 ;; This function is called by:
+  1250 ;;		_main
+  1251 ;; This function uses a non-reentrant model
+  1252 ;;
+  1253                           
+  1254                           	psect	text3
+  1255  000558                     __ptext3:
+  1256                           	opt stack 0
+  1257  000558                     _MY_DELAY:
+  1258                           	opt stack 29
+  1259                           
+  1260                           ;Remote.c: 220: while(ms > 0)
+  1261                           
+  1262                           ;incstack = 0
+  1263  000558  D007               	goto	l776
+  1264  00055A                     l772:
+  1265                           
+  1266                           ;Remote.c: 221: {
+  1267                           ;Remote.c: 222: _delay((unsigned long)((1)*(250000/4000.0)));
+  1268  00055A  0E14               	movlw	20
+  1269  00055C                     u387:
+  1270  00055C  2EE8               	decfsz	wreg,f,c
+  1271  00055E  D7FE               	goto	u387
+  1272  000560  D000               	nop2		;nop
+  1273                           
+  1274                           ;Remote.c: 223: ms--;
+  1275  000562  0631               	decf	MY_DELAY@ms,f,c
+  1276  000564  A0D8               	btfss	status,0,c
+  1277  000566  0632               	decf	MY_DELAY@ms+1,f,c
+  1278  000568                     l776:
+  1279  000568  5032               	movf	MY_DELAY@ms+1,w,c
+  1280  00056A  0A80               	xorlw	128
+  1281  00056C  6EF3               	movwf	prodl,c
+  1282  00056E  0E80               	movlw	128
+  1283  000570  5CF3               	subwf	prodl,w,c
+  1284  000572  0E01               	movlw	1
+  1285  000574  B4D8               	btfsc	status,2,c
+  1286  000576  5C31               	subwf	MY_DELAY@ms,w,c
+  1287  000578  A0D8               	btfss	status,0,c
+  1288                           
+  1289                           ;Remote.c: 224: }
+  1290                           ;Remote.c: 225: return;
+  1291  00057A  0012               	return	
+  1292  00057C  D7EE               	goto	l772
+  1293  00057E                     __end_of_MY_DELAY:
+  1294                           	opt stack 0
+  1295                           tblptru	equ	0xFF8
+  1296                           tblptrh	equ	0xFF7
+  1297                           tblptrl	equ	0xFF6
+  1298                           tablat	equ	0xFF5
+  1299                           prodh	equ	0xFF4
+  1300                           prodl	equ	0xFF3
+  1301                           intcon	equ	0xFF2
+  1302                           postinc0	equ	0xFEE
+  1303                           wreg	equ	0xFE8
+  1304                           indf1	equ	0xFE7
+  1305                           postdec1	equ	0xFE5
+  1306                           fsr1h	equ	0xFE2
+  1307                           fsr1l	equ	0xFE1
+  1308                           indf2	equ	0xFDF
+  1309                           fsr2h	equ	0xFDA
+  1310                           fsr2l	equ	0xFD9
+  1311                           status	equ	0xFD8
+  1312                           
+  1313 ;; *************** function _ISR *****************
+  1314 ;; Defined at:
+  1315 ;;		line 171 in file "E:\Study Material\XC8 PROJECTS\New Remote\Remote2\Remote.c"
+  1316 ;; Parameters:    Size  Location     Type
+  1317 ;;		None
+  1318 ;; Auto vars:     Size  Location     Type
+  1319 ;;		None
+  1320 ;; Return value:  Size  Location     Type
+  1321 ;;		None               void
+  1322 ;; Registers used:
+  1323 ;;		wreg, fsr2l, fsr2h, status,2, status,0, prodl, prodh
+  1324 ;; Tracked objects:
+  1325 ;;		On entry : 0/0
+  1326 ;;		On exit  : 0/0
+  1327 ;;		Unchanged: 0/0
+  1328 ;; Data sizes:     COMRAM   BANK0   BANK1
+  1329 ;;      Params:         0       0       0
+  1330 ;;      Locals:         0       0       0
+  1331 ;;      Temps:         15       0       0
+  1332 ;;      Totals:        15       0       0
+  1333 ;;Total ram usage:       15 bytes
+  1334 ;; Hardware stack levels used:    1
+  1335 ;; This function calls:
+  1336 ;;		Nothing
+  1337 ;; This function is called by:
+  1338 ;;		Interrupt level 2
+  1339 ;; This function uses a non-reentrant model
+  1340 ;;
+  1341                           
+  1342                           	psect	intcode
+  1343  000008                     __pintcode:
+  1344                           	opt stack 0
+  1345  000008                     _ISR:
+  1346                           	opt stack 29
+  1347                           
+  1348                           ;incstack = 0
+  1349  000008  CFFA F023          	movff	pclath,??_ISR+1
+  1350  00000C  CFFB F024          	movff	pclatu,??_ISR+2
+  1351  000010  CFE9 F025          	movff	fsr0l,??_ISR+3
+  1352  000014  CFEA F026          	movff	fsr0h,??_ISR+4
+  1353  000018  CFE1 F027          	movff	fsr1l,??_ISR+5
+  1354  00001C  CFE2 F028          	movff	fsr1h,??_ISR+6
+  1355  000020  CFD9 F029          	movff	fsr2l,??_ISR+7
+  1356  000024  CFDA F02A          	movff	fsr2h,??_ISR+8
+  1357  000028  CFF3 F02B          	movff	prodl,??_ISR+9
+  1358  00002C  CFF4 F02C          	movff	prodh,??_ISR+10
+  1359  000030  CFF6 F02D          	movff	tblptrl,??_ISR+11
+  1360  000034  CFF7 F02E          	movff	tblptrh,??_ISR+12
+  1361  000038  CFF8 F02F          	movff	tblptru,??_ISR+13
+  1362  00003C  CFF5 F030          	movff	tablat,??_ISR+14
+  1363                           
+  1364                           ;Remote.c: 174: if(RBIE && RBIF)
+  1365  000040  B6F2               	btfsc	intcon,3,c	;volatile
+  1366  000042  A0F2               	btfss	intcon,0,c	;volatile
+  1367  000044  D002               	goto	i2l125
+  1368                           
+  1369                           ;Remote.c: 175: {
+  1370                           ;Remote.c: 176: RBIF = 0;
+  1371  000046  90F2               	bcf	intcon,0,c	;volatile
+  1372                           
+  1373                           ;Remote.c: 177: return;
+  1374  000048  D05F               	goto	i2l126
+  1375  00004A                     i2l125:
+  1376                           
+  1377                           ;Remote.c: 178: }
+  1378                           ;Remote.c: 180: if(TMR0ON && TMR0IF)
+  1379  00004A  BED5               	btfsc	4053,7,c	;volatile
+  1380  00004C  A4F2               	btfss	intcon,2,c	;volatile
+  1381  00004E  D05C               	goto	i2l126
+  1382                           
+  1383                           ;Remote.c: 181: {
+  1384                           ;Remote.c: 182: index = index + 1;
+  1385  000050  2844               	incf	_index,w,c
+  1386  000052  6E44               	movwf	_index,c
+  1387                           
+  1388                           ;Remote.c: 183: PORTC = PORTC << 1;
+  1389  000054  5082               	movf	3970,w,c	;volatile
+  1390  000056  2482               	addwf	3970,w,c	;volatile
+  1391  000058  6E82               	movwf	3970,c	;volatile
+  1392                           
+  1393                           ;Remote.c: 184: if(index > 2)
+  1394  00005A  0E02               	movlw	2
+  1395  00005C  6444               	cpfsgt	_index,c
+  1396  00005E  D004               	goto	i2l924
+  1397                           
+  1398                           ;Remote.c: 185: {
+  1399                           ;Remote.c: 186: index = 0;
+  1400  000060  0E00               	movlw	0
+  1401  000062  6E44               	movwf	_index,c
+  1402                           
+  1403                           ;Remote.c: 187: PORTC = 0x01;
+  1404  000064  0E01               	movlw	1
+  1405  000066  6E82               	movwf	3970,c	;volatile
+  1406  000068                     i2l924:
+  1407                           
+  1408                           ;Remote.c: 188: }
+  1409                           ;Remote.c: 189: PORTD = Segment_Codes[digits[index]];
+  1410  000068  5044               	movf	_index,w,c
+  1411  00006A  0D01               	mullw	1
+  1412  00006C  0E1C               	movlw	low _digits
+  1413  00006E  24F3               	addwf	prodl,w,c
+  1414  000070  6ED9               	movwf	fsr2l,c
+  1415  000072  0E00               	movlw	high _digits
+  1416  000074  20F4               	addwfc	prodh,w,c
+  1417  000076  6EDA               	movwf	fsr2h,c
+  1418  000078  50DF               	movf	indf2,w,c
+  1419  00007A  6E22               	movwf	??_ISR& (0+255),c
+  1420  00007C  5022               	movf	??_ISR,w,c
+  1421  00007E  0D01               	mullw	1
+  1422  000080  0E11               	movlw	low _Segment_Codes
+  1423  000082  24F3               	addwf	prodl,w,c
+  1424  000084  6ED9               	movwf	fsr2l,c
+  1425  000086  0E00               	movlw	high _Segment_Codes
+  1426  000088  20F4               	addwfc	prodh,w,c
+  1427  00008A  6EDA               	movwf	fsr2h,c
+  1428  00008C  50DF               	movf	indf2,w,c
+  1429  00008E  6E83               	movwf	3971,c	;volatile
+  1430                           
+  1431                           ;Remote.c: 190: PORTD = ~(PORTD);
+  1432  000090  1E83               	comf	3971,f,c	;volatile
+  1433                           
+  1434                           ;Remote.c: 191: if(data_timer >= 1)
+  1435  000092  5041               	movf	_data_timer+1,w,c
+  1436  000094  0A80               	xorlw	128
+  1437  000096  0F80               	addlw	-128
+  1438  000098  0E01               	movlw	1
+  1439  00009A  B4D8               	btfsc	status,2,c
+  1440  00009C  5C40               	subwf	_data_timer,w,c
+  1441  00009E  A0D8               	btfss	status,0,c
+  1442  0000A0  D018               	goto	i2l934
+  1443                           
+  1444                           ;Remote.c: 192: {
+  1445                           ;Remote.c: 193: data_timer = data_timer + 1;
+  1446  0000A2  0E01               	movlw	1
+  1447  0000A4  2440               	addwf	_data_timer,w,c
+  1448  0000A6  6E40               	movwf	_data_timer,c
+  1449  0000A8  0E00               	movlw	0
+  1450  0000AA  2041               	addwfc	_data_timer+1,w,c
+  1451  0000AC  6E41               	movwf	_data_timer+1,c
+  1452                           
+  1453                           ;Remote.c: 194: if(data_timer >= 500)
+  1454  0000AE  5041               	movf	_data_timer+1,w,c
+  1455  0000B0  0A80               	xorlw	128
+  1456  0000B2  0F7F               	addlw	-129
+  1457  0000B4  0EF4               	movlw	244
+  1458  0000B6  B4D8               	btfsc	status,2,c
+  1459  0000B8  5C40               	subwf	_data_timer,w,c
+  1460  0000BA  A0D8               	btfss	status,0,c
+  1461  0000BC  D00A               	goto	i2l934
+  1462                           
+  1463                           ;Remote.c: 195: {
+  1464                           ;Remote.c: 197: data_timer = 0;
+  1465  0000BE  0E00               	movlw	0
+  1466  0000C0  6E41               	movwf	_data_timer+1,c
+  1467  0000C2  0E00               	movlw	0
+  1468  0000C4  6E40               	movwf	_data_timer,c
+  1469                           
+  1470                           ;Remote.c: 198: count = 0;
+  1471  0000C6  0E00               	movlw	0
+  1472  0000C8  6E43               	movwf	_count,c
+  1473                           
+  1474                           ;Remote.c: 199: One_Minute_Timer = 1;
+  1475  0000CA  0E00               	movlw	0
+  1476  0000CC  6E20               	movwf	_One_Minute_Timer+1,c
+  1477  0000CE  0E01               	movlw	1
+  1478  0000D0  6E1F               	movwf	_One_Minute_Timer,c
+  1479  0000D2                     i2l934:
+  1480                           
+  1481                           ;Remote.c: 200: }
+  1482                           ;Remote.c: 201: }
+  1483                           ;Remote.c: 203: if(One_Minute_Timer >= 1)
+  1484  0000D2  5020               	movf	_One_Minute_Timer+1,w,c
+  1485  0000D4  101F               	iorwf	_One_Minute_Timer,w,c
+  1486  0000D6  B4D8               	btfsc	status,2,c
+  1487  0000D8  D012               	goto	i2l131
+  1488                           
+  1489                           ;Remote.c: 204: {
+  1490                           ;Remote.c: 205: One_Minute_Timer = One_Minute_Timer + 1;
+  1491  0000DA  0E01               	movlw	1
+  1492  0000DC  241F               	addwf	_One_Minute_Timer,w,c
+  1493  0000DE  6E1F               	movwf	_One_Minute_Timer,c
+  1494  0000E0  0E00               	movlw	0
+  1495  0000E2  2020               	addwfc	_One_Minute_Timer+1,w,c
+  1496  0000E4  6E20               	movwf	_One_Minute_Timer+1,c
+  1497                           
+  1498                           ;Remote.c: 206: if(One_Minute_Timer > 2500)
+  1499  0000E6  0EC5               	movlw	197
+  1500  0000E8  5C1F               	subwf	_One_Minute_Timer,w,c
+  1501  0000EA  0E09               	movlw	9
+  1502  0000EC  5820               	subwfb	_One_Minute_Timer+1,w,c
+  1503  0000EE  A0D8               	btfss	status,0,c
+  1504  0000F0  D006               	goto	i2l131
+  1505                           
+  1506                           ;Remote.c: 207: {
+  1507                           ;Remote.c: 208: Sleep_Flag = 1;
+  1508  0000F2  0E01               	movlw	1
+  1509  0000F4  6E42               	movwf	_Sleep_Flag,c
+  1510                           
+  1511                           ;Remote.c: 209: One_Minute_Timer = 0;
+  1512  0000F6  0E00               	movlw	0
+  1513  0000F8  6E20               	movwf	_One_Minute_Timer+1,c
+  1514  0000FA  0E00               	movlw	0
+  1515  0000FC  6E1F               	movwf	_One_Minute_Timer,c
+  1516  0000FE                     i2l131:
+  1517                           
+  1518                           ;Remote.c: 210: }
+  1519                           ;Remote.c: 211: }
+  1520                           ;Remote.c: 212: TMR0 = 0;
+  1521  0000FE  0E00               	movlw	0
+  1522  000100  6ED7               	movwf	4055,c	;volatile
+  1523  000102  0E00               	movlw	0
+  1524  000104  6ED6               	movwf	4054,c	;volatile
+  1525                           
+  1526                           ;Remote.c: 213: TMR0IF = 0;
+  1527  000106  94F2               	bcf	intcon,2,c	;volatile
+  1528  000108                     i2l126:
+  1529  000108  C030  FFF5         	movff	??_ISR+14,tablat
+  1530  00010C  C02F  FFF8         	movff	??_ISR+13,tblptru
+  1531  000110  C02E  FFF7         	movff	??_ISR+12,tblptrh
+  1532  000114  C02D  FFF6         	movff	??_ISR+11,tblptrl
+  1533  000118  C02C  FFF4         	movff	??_ISR+10,prodh
+  1534  00011C  C02B  FFF3         	movff	??_ISR+9,prodl
+  1535  000120  C02A  FFDA         	movff	??_ISR+8,fsr2h
+  1536  000124  C029  FFD9         	movff	??_ISR+7,fsr2l
+  1537  000128  C028  FFE2         	movff	??_ISR+6,fsr1h
+  1538  00012C  C027  FFE1         	movff	??_ISR+5,fsr1l
+  1539  000130  C026  FFEA         	movff	??_ISR+4,fsr0h
+  1540  000134  C025  FFE9         	movff	??_ISR+3,fsr0l
+  1541  000138  C024  FFFB         	movff	??_ISR+2,pclatu
+  1542  00013C  C023  FFFA         	movff	??_ISR+1,pclath
+  1543  000140  0011               	retfie		f
+  1544  000142                     __end_of_ISR:
+  1545                           	opt stack 0
+  1546  0000                     pclatu	equ	0xFFB
+  1547                           pclath	equ	0xFFA
+  1548                           tblptru	equ	0xFF8
+  1549                           tblptrh	equ	0xFF7
+  1550                           tblptrl	equ	0xFF6
+  1551                           tablat	equ	0xFF5
+  1552                           prodh	equ	0xFF4
+  1553                           prodl	equ	0xFF3
+  1554                           intcon	equ	0xFF2
+  1555                           postinc0	equ	0xFEE
+  1556                           fsr0h	equ	0xFEA
+  1557                           fsr0l	equ	0xFE9
+  1558                           wreg	equ	0xFE8
+  1559                           indf1	equ	0xFE7
+  1560                           postdec1	equ	0xFE5
+  1561                           fsr1h	equ	0xFE2
+  1562                           fsr1l	equ	0xFE1
+  1563                           indf2	equ	0xFDF
+  1564                           fsr2h	equ	0xFDA
+  1565                           fsr2l	equ	0xFD9
+  1566                           status	equ	0xFD8
+  1567                           pclatu	equ	0xFFB
+  1568                           pclath	equ	0xFFA
+  1569                           tblptru	equ	0xFF8
+  1570                           tblptrh	equ	0xFF7
+  1571                           tblptrl	equ	0xFF6
+  1572                           tablat	equ	0xFF5
+  1573                           prodh	equ	0xFF4
+  1574                           prodl	equ	0xFF3
+  1575                           intcon	equ	0xFF2
+  1576                           postinc0	equ	0xFEE
+  1577                           fsr0h	equ	0xFEA
+  1578                           fsr0l	equ	0xFE9
+  1579                           wreg	equ	0xFE8
+  1580                           indf1	equ	0xFE7
+  1581                           postdec1	equ	0xFE5
+  1582                           fsr1h	equ	0xFE2
+  1583                           fsr1l	equ	0xFE1
+  1584                           indf2	equ	0xFDF
+  1585                           fsr2h	equ	0xFDA
+  1586                           fsr2l	equ	0xFD9
+  1587                           status	equ	0xFD8
+  1588                           
+  1589                           	psect	rparam
+  1590  0000                     pclatu	equ	0xFFB
+  1591                           pclath	equ	0xFFA
+  1592                           tblptru	equ	0xFF8
+  1593                           tblptrh	equ	0xFF7
+  1594                           tblptrl	equ	0xFF6
+  1595                           tablat	equ	0xFF5
+  1596                           prodh	equ	0xFF4
+  1597                           prodl	equ	0xFF3
+  1598                           intcon	equ	0xFF2
+  1599                           postinc0	equ	0xFEE
+  1600                           fsr0h	equ	0xFEA
+  1601                           fsr0l	equ	0xFE9
+  1602                           wreg	equ	0xFE8
+  1603                           indf1	equ	0xFE7
+  1604                           postdec1	equ	0xFE5
+  1605                           fsr1h	equ	0xFE2
+  1606                           fsr1l	equ	0xFE1
+  1607                           indf2	equ	0xFDF
+  1608                           fsr2h	equ	0xFDA
+  1609                           fsr2l	equ	0xFD9
+  1610                           status	equ	0xFD8
+
+
+Data Sizes:
+    Strings     0
+    Constant    0
+    Data        33
+    BSS         6
+    Persistent  0
+    Stack       0
+
+Auto Spaces:
+    Space          Size  Autos    Used
+    COMRAM           95     30      69
+    BANK0           160      0       0
+    BANK1           256      0       0
+
+Pointer List with Targets:
+
+    None.
+
+Critical Paths under _main in COMRAM
+
+    _main->_getKeyboardInput
+
+Critical Paths under _ISR in COMRAM
+
+    None.
+
+Critical Paths under _main in BANK0
+
+    None.
+
+Critical Paths under _ISR in BANK0
+
+    None.
+
+Critical Paths under _main in BANK1
+
+    None.
+
+Critical Paths under _ISR in BANK1
+
+    None.
+
+Call Graph Tables:
+
+ ---------------------------------------------------------------------------------
+ (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+ ---------------------------------------------------------------------------------
+ (0) _main                                                 8     8      0     308
+                                             22 COMRAM     8     8      0
+                           _MY_DELAY
+                   _getKeyboardInput
+                       _initKeyboard
+ ---------------------------------------------------------------------------------
+ (1) _initKeyboard                                         0     0      0       0
+ ---------------------------------------------------------------------------------
+ (1) _getKeyboardInput                                     7     7      0     225
+                                             15 COMRAM     7     7      0
+ ---------------------------------------------------------------------------------
+ (1) _MY_DELAY                                             2     0      2      83
+                                             15 COMRAM     2     0      2
+ ---------------------------------------------------------------------------------
+ Estimated maximum stack depth 1
+ ---------------------------------------------------------------------------------
+ (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+ ---------------------------------------------------------------------------------
+ (2) _ISR                                                 15    15      0       0
+                                              0 COMRAM    15    15      0
+ ---------------------------------------------------------------------------------
+ Estimated maximum stack depth 2
+ ---------------------------------------------------------------------------------
+
+ Call Graph Graphs:
+
+ _main (ROOT)
+   _MY_DELAY
+   _getKeyboardInput
+   _initKeyboard
+
+ _ISR (ROOT)
+
+ Address spaces:
+Name               Size   Autos  Total    Cost      Usage
+BIGRAM             1FF      0       0       8        0.0%
+EEDATA             100      0       0       0        0.0%
+BITBANK1           100      0       0       5        0.0%
+BANK1              100      0       0       6        0.0%
+BITBANK0            A0      0       0       3        0.0%
+BANK0               A0      0       0       4        0.0%
+BITCOMRAM           5F      0       0       0        0.0%
+COMRAM              5F     1E      45       1       72.6%
+BITSFR               0      0       0      40        0.0%
+SFR                  0      0       0      40        0.0%
+STACK                0      0       0       2        0.0%
+NULL                 0      0       0       0        0.0%
+ABS                  0      0      45       7        0.0%
+DATA                 0      0      45       9        0.0%
+CODE                 0      0       0       0        0.0%
+
+
+Microchip Technology PIC18 Macro Assembler V1.33 build 59893 
+Symbol Table                                                                                   Tue Aug 18 15:31:36 2015
+
+                             _t 0045                              l23 04F4                              u24 047E  
+                            u25 047A                             l111 023A                             l103 016E  
+                           l107 01FC                             l800 01B0                             l724 0466  
+                           l822 0206                             l736 04A0                             l754 04FA  
+                           l746 04C2                             l762 0512                             l772 055A  
+                           l844 0244                             l766 051A                             l776 0568  
+                           l880 03DC                             l858 02AE                             l868 0320  
+                           l886 03E8                             l888 03EA                             _ISR 0008  
+                           u357 0488                             u367 049C                             u377 04FC  
+                           u387 055C                             prod 000FF3                             wreg 000FE8  
+                          ?_ISR 0022                            _IOCB 000F7D                            _RBIE 007F93  
+                          _RBIF 007F90                            _RCON 000FD0                            _TMR0 000FD6  
+              _getKeyboardInput 0452                            _main 0146                            fsr0h 000FEA  
+                          fsr1h 000FE2                            fsr0l 000FE9                            fsr2h 000FDA  
+                          indf1 000FE7                            fsr1l 000FE1                            indf2 000FDF  
+                          fsr2l 000FD9                            pclat 000FFA                            prodh 000FF4  
+                          prodl 000FF3                            start 0142  getKeyboardInput@Keyboard_Input 0034  
+           getKeyboardInput@row 0035                           ??_ISR 0022                           ?_main 0022  
+                         _T0CON 000FD5                           i2l131 00FE                           i2l125 004A  
+                         i2l126 0108                           i2l924 0068                           i2l934 00D2  
+                         _PORTA 000F80                           _PORTB 000F81                           _PORTC 000F82  
+                         _PORTD 000F83                           _PORTE 000F84                           _TRISA 000F92  
+                         _TRISB 000F93                           _TRISC 000F94                           _TRISD 000F95  
+                         _TRISE 000F96                           _digit 0021                           _count 0043  
+                         _index 0044                __end_of_MY_DELAY 057E                           tablat 000FF5  
+                         status 000FD8                 __initialization 0526                    __end_of_main 0452  
+                 _Keyboard_Keys 0001            getKeyboardInput@temp 0037                   ?_initKeyboard 0022  
+                        ??_main 0038                   __activetblptr 000000                          _ADCON1 000FC1  
+                        _INTCON 000FF2                          _OSCCON 000FD3                          _TMR0IF 007F92  
+                        _TMR0ON 007EAF                          _SWDTEN 007E88                      _Sleep_Flag 0042  
+                ??_initKeyboard 0031                          _digits 001C                    __pdataCOMRAM 0001  
+                        tblptrh 000FF7                          tblptrl 000FF6                          tblptru 000FF8  
+                    __accesstop 0060         __end_of__initialization 0552     getKeyboardInput@column_mask 0033  
+                __pcstackCOMRAM 0022                       ?_MY_DELAY 0031        __end_of_getKeyboardInput 0526  
+                    _data_timer 0040                      ??_MY_DELAY 0033            __end_of_initKeyboard 05B2  
+                       __Hparam 0000                         __Lparam 0000                         __pcinit 0526  
+                       __ramtop 0200                         __ptext0 0146                         __ptext1 05A0  
+                       __ptext2 0452                         __ptext3 0558                    __size_of_ISR 013A  
+          end_of_initialization 0552                   _Segment_Codes 0011                         postdec1 000FE5  
+                       postinc0 000FEE                   __pidataCOMRAM 057E               ?_getKeyboardInput 0022  
+        getKeyboardInput@column 0036               __size_of_MY_DELAY 0026              ??_getKeyboardInput 0031  
+           start_initialization 0526           __size_of_initKeyboard 0012                     __end_of_ISR 0142  
+                  _initKeyboard 05A0                     __pbssCOMRAM 0040                       __pintcode 0008  
+                      _MY_DELAY 0558                      MY_DELAY@ms 0031                       copy_data0 0546  
+                      __Hrparam 0000                        __Lrparam 0000       __size_of_getKeyboardInput 00D4  
+                 __size_of_main 030C                _One_Minute_Timer 001F                        intlevel2 0000  

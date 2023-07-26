@@ -1,0 +1,14 @@
+___awdiv: CODE, 5912 0 192
+_EEByteWrite: CODE, 5680 0 232
+_IdleI2C: CODE, 6698 0 32
+___awmod: CODE, 6276 0 172
+_main: CODE, 224 0 5046
+_Read_b_eep: CODE, 6730 0 24
+_tmr_int: CODE, 8 0 212
+_Write_b_eep: CODE, 6560 0 70
+__initialization: CODE, 6630 0 30
+___lwdiv: CODE, 6448 0 112
+_WriteI2C: CODE, 6104 0 172
+_EERandomRead: CODE, 5270 0 410
+_OpenI2C: CODE, 6666 0 32
+Total: 6736
